@@ -1,0 +1,200 @@
+{
+  "snapshots": {
+    "2026年4月28日193228": {
+      "members": {
+        "m002": {
+          "zone": "28",
+          "name": "米拉",
+          "power": "410645836",
+          "last_online": "",
+          "note": "",
+          "reviewed": true
+        },
+        "m003": {
+          "zone": "205",
+          "name": "搁浅づ",
+          "power": "296419382",
+          "last_online": "",
+          "note": "",
+          "reviewed": true
+        },
+        "m004": {
+          "zone": "1",
+          "name": "Zero卐",
+          "power": "293170783",
+          "last_online": "",
+          "note": "",
+          "reviewed": true
+        },
+        "m014": {
+          "zone": "223",
+          "name": "YangJu",
+          "power": "50440551",
+          "last_online": "",
+          "note": "",
+          "reviewed": true
+        },
+        "m031": {
+          "zone": "205",
+          "name": "搁浅つ",
+          "power": "83454927",
+          "last_online": "",
+          "note": "",
+          "reviewed": true
+        },
+        "m052": {
+          "zone": "58",
+          "name": "メジロマックイーン",
+          "power": "121497901",
+          "last_online": "2026-04-27T12:42:27",
+          "note": "",
+          "reviewed": true
+        },
+        "m056": {
+          "zone": "170",
+          "name": "MaddoxRoth7",
+          "power": "64928817",
+          "last_online": "2026-04-23T04:00:18",
+          "note": "",
+          "reviewed": true
+        }
+      },
+      "boss": {
+        "b002": {
+          "zone": "205",
+          "name": "搁浅づ",
+          "rank": "2",
+          "damage_k": "11934026",
+          "note": "",
+          "reviewed": true
+        },
+        "b005": {
+          "zone": "1",
+          "name": "Zero卐",
+          "rank": "5",
+          "damage_k": "5682328",
+          "note": "",
+          "reviewed": true
+        },
+        "b026": {
+          "zone": "205",
+          "name": "搁浅つ",
+          "rank": "26",
+          "damage_k": "658142",
+          "note": "",
+          "reviewed": true
+        },
+        "b033": {
+          "zone": "58",
+          "name": "メジロマックイーン",
+          "rank": "33",
+          "damage_k": "202451",
+          "note": "",
+          "reviewed": true
+        }
+      }
+    }
+  },
+  "aliases": {
+    "members": [
+      {
+        "source_zone": 28,
+        "source_name": "米拉",
+        "zone": 28,
+        "name": "米拉",
+        "source_power": 4105836,
+        "power": 410645836
+      },
+      {
+        "source_zone": 205,
+        "source_name": "搁浅哆",
+        "zone": 205,
+        "name": "搁浅づ",
+        "source_power": 296419382,
+        "power": 296419382
+      },
+      {
+        "source_zone": 1,
+        "source_name": "Zero!Ii",
+        "zone": 1,
+        "name": "Zero卐",
+        "source_power": 293170783,
+        "power": 293170783
+      },
+      {
+        "source_zone": 223,
+        "source_name": "YangJu",
+        "zone": 223,
+        "name": "YangJu",
+        "source_power": 500551,
+        "power": 50440551
+      },
+      {
+        "source_zone": 205,
+        "source_name": "搁浅0",
+        "zone": 205,
+        "name": "搁浅つ",
+        "source_power": 83454927,
+        "power": 83454927
+      },
+      {
+        "source_zone": 58,
+        "source_name": "只头口丿夕亻一",
+        "zone": 58,
+        "name": "メジロマックイーン",
+        "source_power": 121497901,
+        "power": 121497901
+      },
+      {
+        "source_zone": 170,
+        "source_name": "MaddoxRoth7",
+        "zone": 170,
+        "name": "MaddoxRoth7",
+        "source_power": 928817,
+        "power": 64928817
+      }
+    ],
+    "boss": [
+      {
+        "source_zone": 205,
+        "source_name": "搁浅0",
+        "zone": 205,
+        "name": "搁浅づ",
+        "source_rank": 2,
+        "source_damage_k": 11934026,
+        "rank": 2,
+        "damage_k": 11934026
+      },
+      {
+        "source_zone": 1,
+        "source_name": "Zer05",
+        "zone": 1,
+        "name": "Zero卐",
+        "source_rank": 5,
+        "source_damage_k": 5682328,
+        "rank": 5,
+        "damage_k": 5682328
+      },
+      {
+        "source_zone": 205,
+        "source_name": "搁浅0",
+        "zone": 205,
+        "name": "搁浅つ",
+        "source_rank": 26,
+        "source_damage_k": 658142,
+        "rank": 26,
+        "damage_k": 658142
+      },
+      {
+        "source_zone": 58,
+        "source_name": "区冫口夕亻",
+        "zone": 58,
+        "name": "メジロマックイーン",
+        "source_rank": 33,
+        "source_damage_k": 202451,
+        "rank": 33,
+        "damage_k": 202451
+      }
+    ]
+  }
+}

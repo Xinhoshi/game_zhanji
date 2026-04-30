@@ -93,6 +93,18 @@
           "reviewed": true
         }
       }
+    },
+    "2026年4月30日122206_Boss": {
+      "boss": {
+        "b031": {
+          "zone": "58",
+          "name": "メジロマックイーン",
+          "rank": "31",
+          "damage_k": "353146",
+          "note": "",
+          "reviewed": true
+        }
+      }
     }
   },
   "aliases": {
@@ -194,6 +206,16 @@
         "source_damage_k": 202451,
         "rank": 33,
         "damage_k": 202451
+      },
+      {
+        "source_zone": 58,
+        "source_name": "只冫口,丿夕亻一",
+        "zone": 58,
+        "name": "メジロマックイーン",
+        "source_rank": 31,
+        "source_damage_k": 353146,
+        "rank": 31,
+        "damage_k": 353146
       }
     ]
   }

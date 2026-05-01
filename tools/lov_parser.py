@@ -53,8 +53,13 @@ def normalized_identity_name(name: str | None) -> str:
     return compact_text(str(name or "")).casefold()
 
 
-def identity_alias_key(zone: int | None, name: str | None) -> tuple[int, str] | None:
+def ocr_loose_identity_name(name: str | None) -> str:
     normalized = normalized_identity_name(name)
+    return normalized.translate(str.maketrans({"0": "o", "1": "l", "i": "l", "|": "l", "箫": "萧"}))
+
+
+def identity_alias_key(zone: int | None, name: str | None) -> tuple[int, str] | None:
+    normalized = ocr_loose_identity_name(name)
     if zone is None or not normalized:
         return None
     return (zone, normalized)
@@ -578,9 +583,9 @@ def register_identity_candidate(group: dict[str, Any], original: dict[str, Any] 
     if original:
         aliases.extend([original.get("name"), original.get("ocr", {}).get("name")])
     for alias in aliases:
-        normalized = normalized_identity_name(alias)
-        if normalized:
-            candidate["aliases"].add(normalized)
+        for normalized in {normalized_identity_name(alias), ocr_loose_identity_name(alias)}:
+            if normalized:
+                candidate["aliases"].add(normalized)
         add_exact_identity_alias(group, alias, candidate)
 
 
@@ -682,12 +687,14 @@ def closest_numeric_candidate(candidates: list[dict[str, Any]], value: int | Non
 
 
 def identity_similarity(name: str, candidate: dict[str, Any]) -> float:
-    normalized = normalized_identity_name(name)
-    if not normalized:
+    normalized_names = {normalized_identity_name(name), ocr_loose_identity_name(name)}
+    normalized_names = {item for item in normalized_names if item}
+    if not normalized_names:
         return 0.0
     choices = set(candidate.get("aliases", set()))
     choices.add(normalized_identity_name(candidate.get("name")))
-    return max((SequenceMatcher(None, normalized, choice).ratio() for choice in choices if choice), default=0.0)
+    choices.add(ocr_loose_identity_name(candidate.get("name")))
+    return max((SequenceMatcher(None, normalized, choice).ratio() for normalized in normalized_names for choice in choices if choice), default=0.0)
 
 
 def pick_identity_candidate(row: dict[str, Any], group: dict[str, Any], kind: str) -> dict[str, Any] | None:

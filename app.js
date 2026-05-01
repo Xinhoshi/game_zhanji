@@ -75,6 +75,46 @@ function byKey(items) {
   return new Map(items.map((item) => [item.key, item]));
 }
 
+function normalizedName(value) {
+  return String(value || "")
+    .trim()
+    .replace(/\s+/g, "")
+    .toLocaleLowerCase("zh-CN")
+    .replace(/[01i|箫]/g, (char) => ({ 0: "o", 1: "l", i: "l", "|": "l", 箫: "萧" })[char]);
+}
+
+function memberIdentity(item) {
+  const name = normalizedName(item?.name);
+  return name ? `${item?.zone ?? ""}#${name}` : String(item?.key || "");
+}
+
+function uniqueMemberNames(items) {
+  const counts = new Map();
+  items.forEach((item) => {
+    const name = normalizedName(item.name);
+    if (name) counts.set(name, (counts.get(name) || 0) + 1);
+  });
+  return counts;
+}
+
+function memberMatches(left, right, leftNameCounts = new Map(), rightNameCounts = new Map()) {
+  if (!left || !right) return false;
+  if (left.key && right.key && left.key === right.key) return true;
+  if (memberIdentity(left) && memberIdentity(left) === memberIdentity(right)) return true;
+
+  const leftName = normalizedName(left.name);
+  const rightName = normalizedName(right.name);
+  if (!leftName || leftName !== rightName) return false;
+
+  const sameZone = left.zone !== undefined && left.zone !== null && left.zone === right.zone;
+  const uniqueName = (leftNameCounts.get(leftName) || 0) === 1 && (rightNameCounts.get(rightName) || 0) === 1;
+  return sameZone || uniqueName;
+}
+
+function hasMatchingMember(item, members, itemNameCounts, memberNameCounts) {
+  return members.some((member) => memberMatches(item, member, itemNameCounts, memberNameCounts));
+}
+
 function getBossDeltas(current) {
   const previous = state.data.snapshots
     .filter((snapshot) => snapshot.week_id === current.week_id && snapshot.captured_at < current.captured_at)
@@ -136,10 +176,11 @@ function renderStats(current, previous) {
   const boss = current.boss || [];
   const powerTotal = members.reduce((sum, item) => sum + (item.power || 0), 0);
   const bossTotal = boss.reduce((sum, item) => sum + (item.damage_k || 0), 0);
-  const previousMembers = previous ? byKey(previous.members) : new Map();
-  const currentMembers = byKey(members);
-  const newCount = members.filter((item) => !previousMembers.has(item.key)).length;
-  const missingCount = previous ? previous.members.filter((item) => !currentMembers.has(item.key)).length : 0;
+  const previousList = previous?.members || [];
+  const previousNameCounts = uniqueMemberNames(previousList);
+  const currentNameCounts = uniqueMemberNames(members);
+  const newCount = previous ? members.filter((item) => !hasMatchingMember(item, previousList, currentNameCounts, previousNameCounts)).length : 0;
+  const missingCount = previous ? previousList.filter((item) => !hasMatchingMember(item, members, previousNameCounts, currentNameCounts)).length : 0;
   const reviewCount = members.filter((item) => item.needs_review?.length).length + boss.filter((item) => item.needs_review?.length).length;
   const correctedCount = members.filter((item) => item.corrected).length + boss.filter((item) => item.corrected).length;
   const archiveNote = current.boss_archived ? "Boss周数据已归档锁定" : `已人工修正 ${correctedCount} 条`;
@@ -235,21 +276,28 @@ function renderArchiveStatus() {
 
 function renderMemberTable(current, previous) {
   const search = $("#searchInput").value.trim().toLowerCase();
-  const previousMembers = previous ? byKey(previous.members) : new Map();
-  const currentMembers = byKey(current.members);
-  const missing = previous ? previous.members.filter((item) => !currentMembers.has(item.key)).map((item) => ({ ...item, missing: true })) : [];
+  const previousList = previous?.members || [];
+  const currentList = current.members || [];
+  const previousNameCounts = uniqueMemberNames(previousList);
+  const currentNameCounts = uniqueMemberNames(currentList);
+  const missing = previous
+    ? previousList
+        .filter((item) => !hasMatchingMember(item, currentList, previousNameCounts, currentNameCounts))
+        .map((item) => ({ ...item, missing: true, source_snapshot_id: previous.id }))
+    : [];
   const rows = sortMembers([...current.members, ...missing].filter((item) => !search || item.key.toLowerCase().includes(search)));
   renderMemberSortIcons();
 
   $("#memberTable").innerHTML = rows.length
     ? rows
         .map((item) => {
-          const isNew = !item.missing && previous && !previousMembers.has(item.key);
+          const isNew = !item.missing && previous && !hasMatchingMember(item, previousList, currentNameCounts, previousNameCounts);
           const tags = [
             isNew ? `<span class="tag new">新增</span>` : "",
             item.missing ? `<span class="tag missing">缺失</span>` : "",
             reviewTags(item),
           ].join("");
+          const rowSnapshotId = item.source_snapshot_id || current.id;
           const raw = item.raw
             ? `<details><summary>查看</summary><code>${escapeHtml([item.raw.identity, item.raw.power, item.raw.last_online].filter(Boolean).join("\n"))}</code></details>`
             : "";
@@ -259,7 +307,7 @@ function renderMemberTable(current, previous) {
         <td>${formatDateTime(item.last_online)}</td>
         <td>${tags || `<span class="tag">在盟</span>`}</td>
         <td>${raw}</td>
-        <td><button class="mini-button" data-edit-kind="members" data-row-id="${escapeHtml(item.row_id)}">核对</button></td>
+        <td><button class="mini-button" data-edit-kind="members" data-row-id="${escapeHtml(item.row_id)}" data-snapshot-id="${escapeHtml(rowSnapshotId)}">核对</button></td>
       </tr>`;
         })
         .join("")
@@ -323,8 +371,17 @@ async function reloadState() {
   render();
 }
 
-function findRow(kind, rowId) {
-  const snapshot = kind === "boss" ? selectedBossSnapshot() : selectedSnapshot();
+function findSnapshotById(snapshotId) {
+  return state.data.snapshots.find((snapshot) => snapshot.id === snapshotId);
+}
+
+function reviewSnapshot(kind, snapshotId = null) {
+  if (snapshotId) return findSnapshotById(snapshotId) || (kind === "boss" ? selectedBossSnapshot() : selectedSnapshot());
+  return kind === "boss" ? selectedBossSnapshot() : selectedSnapshot();
+}
+
+function findRow(kind, rowId, snapshotId = null) {
+  const snapshot = reviewSnapshot(kind, snapshotId);
   return (snapshot[kind] || []).find((item) => item.row_id === rowId);
 }
 
@@ -362,14 +419,15 @@ function field(name, label, value, type = "text") {
   return `<label><span>${label}</span><input name="${name}" type="${type}" value="${escapeHtml(value ?? "")}" /></label>`;
 }
 
-function openReview(kind, rowId = null) {
-  const snapshot = kind === "boss" ? selectedBossSnapshot() : selectedSnapshot();
-  const row = rowId ? findRow(kind, rowId) : null;
+function openReview(kind, rowId = null, snapshotId = null) {
+  const snapshot = reviewSnapshot(kind, snapshotId);
+  const row = rowId ? findRow(kind, rowId, snapshot.id) : null;
   const isMember = kind === "members";
   const generatedRowId = rowId || `manual-${isMember ? "m" : "b"}-${Date.now()}`;
   const modal = ensureReviewModal();
   modal.dataset.kind = kind;
   modal.dataset.rowId = generatedRowId;
+  modal.dataset.snapshotId = snapshot.id;
   $("#reviewTitle").textContent = row ? `核对 ${row.key}` : `手动补录${isMember ? "成员" : "Boss记录"}`;
 
   $("#reviewFields").innerHTML = isMember
@@ -409,7 +467,7 @@ async function saveCorrection(event) {
     const response = await fetch("/api/corrections", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ snapshot_id: (kind === "boss" ? selectedBossSnapshot() : selectedSnapshot()).id, kind, row_id: rowId, values }),
+      body: JSON.stringify({ snapshot_id: modal.dataset.snapshotId || (kind === "boss" ? selectedBossSnapshot() : selectedSnapshot()).id, kind, row_id: rowId, values }),
     });
     const payload = await response.json();
     if (!response.ok) throw new Error(payload.error || "保存失败");
@@ -424,7 +482,7 @@ async function saveCorrection(event) {
 document.addEventListener("click", (event) => {
   const editButton = event.target.closest("[data-edit-kind]");
   if (editButton) {
-    openReview(editButton.dataset.editKind, editButton.dataset.rowId);
+    openReview(editButton.dataset.editKind, editButton.dataset.rowId, editButton.dataset.snapshotId);
     return;
   }
   if (event.target.closest("#addMemberButton")) {

@@ -1,7 +1,7 @@
 {
-  "id": "2026年4月30日123940_Boss",
-  "folder": "records/boss/2026年4月30日123940_Boss",
-  "captured_at": "2026-04-30T12:39:40",
+  "id": "2026年5月1日211113_Boss",
+  "folder": "records/boss/2026年5月1日211113_Boss",
+  "captured_at": "2026-05-01T21:11:13",
   "week_id": "2026-04-27",
   "images": {
     "members": null,
@@ -14,12 +14,12 @@
       "name": "米拉",
       "key": "28#米拉",
       "rank": 1,
-      "damage_k": 52749889,
-      "damage": 52749889000,
+      "damage_k": 61727143,
+      "damage": 61727143000,
       "raw": {
         "identity": "28 # 米 拉",
-        "rank": "No ， 1",
-        "damage": "伤 害 ： 52 ， 749 ， 889k"
+        "rank": "No ． 1",
+        "damage": "伤 害 ： 61 ， 727 ， 143k"
       },
       "needs_review": [],
       "row_id": "b001",
@@ -28,7 +28,7 @@
         "name": "米拉",
         "key": "28#米拉",
         "rank": 1,
-        "damage_k": 52749889
+        "damage_k": 61727143
       }
     },
     {
@@ -36,12 +36,12 @@
       "name": "搁浅0",
       "key": "205#搁浅0",
       "rank": 2,
-      "damage_k": 18553564,
-      "damage": 18553564000,
+      "damage_k": 22460970,
+      "damage": 22460970000,
       "raw": {
         "identity": "205 # 搁 浅 0",
-        "rank": "No ， 2",
-        "damage": "伤 害 ： 18 ， 553 ， 564k"
+        "rank": "No ． 2",
+        "damage": "伤 害 ： 22 ， 460 ， 970k"
       },
       "needs_review": [],
       "row_id": "b002",
@@ -50,54 +50,51 @@
         "name": "搁浅0",
         "key": "205#搁浅0",
         "rank": 2,
-        "damage_k": 18553564
+        "damage_k": 22460970
       }
     },
     {
-      "zone": null,
-      "name": "",
-      "key": "未知Boss#3",
+      "zone": 28,
+      "name": "伊之猪",
+      "key": "28#伊之猪",
       "rank": 3,
-      "damage_k": 14020087,
-      "damage": 14020087000,
+      "damage_k": 16946877,
+      "damage": 16946877000,
       "raw": {
-        "identity": "",
+        "identity": "28 # 伊 之 猪",
         "rank": "No ． 3",
-        "damage": "伤 害 ： 14 ， 020 ， 087k"
+        "damage": "伤 害 ： 16 ， 946 ， 877k"
       },
-      "needs_review": [
-        "name"
-      ],
-      "missing_identity": true,
+      "needs_review": [],
       "row_id": "b003",
       "ocr": {
-        "zone": null,
-        "name": "",
-        "key": "未知Boss#3",
+        "zone": 28,
+        "name": "伊之猪",
+        "key": "28#伊之猪",
         "rank": 3,
-        "damage_k": 14020087
+        "damage_k": 16946877
       }
     },
     {
       "zone": 1,
-      "name": "Zer05",
-      "key": "1#Zer05",
+      "name": "Zero",
+      "key": "1#Zero",
       "rank": 4,
-      "damage_k": 13853037,
-      "damage": 13853037000,
+      "damage_k": 16596368,
+      "damage": 16596368000,
       "raw": {
-        "identity": "1#Zer05",
-        "rank": "NO ． 4",
-        "damage": "伤 害 ： 13 ， 853 ， 037k"
+        "identity": "1#Zero",
+        "rank": "No ． 4",
+        "damage": "伤 害 ： 16 ， 596 ， 368k"
       },
       "needs_review": [],
       "row_id": "b004",
       "ocr": {
         "zone": 1,
-        "name": "Zer05",
-        "key": "1#Zer05",
+        "name": "Zero",
+        "key": "1#Zero",
         "rank": 4,
-        "damage_k": 13853037
+        "damage_k": 16596368
       }
     },
     {
@@ -105,12 +102,12 @@
       "name": "梁师娘LUONG",
       "key": "71#梁师娘LUONG",
       "rank": 5,
-      "damage_k": 11315608,
-      "damage": 11315608000,
+      "damage_k": 13213771,
+      "damage": 13213771000,
       "raw": {
         "identity": "71 # 梁 师 娘 LUONG",
         "rank": "NO ． 5",
-        "damage": "伤 害 ： 11 ， 315 ， 608k"
+        "damage": "伤 害 ： 13 ， 213 ， 771k"
       },
       "needs_review": [],
       "row_id": "b005",
@@ -119,7 +116,7 @@
         "name": "梁师娘LUONG",
         "key": "71#梁师娘LUONG",
         "rank": 5,
-        "damage_k": 11315608
+        "damage_k": 13213771
       }
     },
     {
@@ -145,135 +142,135 @@
       }
     },
     {
-      "zone": 78,
-      "name": "燃烧的俗物",
-      "key": "78#燃烧的俗物",
+      "zone": 75,
+      "name": "半个西瓜",
+      "key": "75#半个西瓜",
       "rank": 7,
-      "damage_k": 6086379,
-      "damage": 6086379000,
+      "damage_k": 6279068,
+      "damage": 6279068000,
       "raw": {
-        "identity": "78 # 燃 烧 的 俗 物",
+        "identity": "75 # 半 个 西 瓜",
         "rank": "No ， 7",
-        "damage": "伤 害 ： 6 ， 086 ， 379k"
+        "damage": "伤 害 ： 6 ， 279 ， 068k"
       },
       "needs_review": [],
       "row_id": "b007",
       "ocr": {
-        "zone": 78,
-        "name": "燃烧的俗物",
-        "key": "78#燃烧的俗物",
+        "zone": 75,
+        "name": "半个西瓜",
+        "key": "75#半个西瓜",
         "rank": 7,
-        "damage_k": 6086379
+        "damage_k": 6279068
       }
     },
     {
-      "zone": 202,
-      "name": "ElsieBlaker",
-      "key": "202#ElsieBlaker",
+      "zone": 78,
+      "name": "燃烧的俗物",
+      "key": "78#燃烧的俗物",
       "rank": 8,
-      "damage_k": 5523660,
-      "damage": 5523660000,
+      "damage_k": 6086379,
+      "damage": 6086379000,
       "raw": {
-        "identity": "202#ElsieBlaker",
+        "identity": "78 # 燃 烧 的 俗 物",
         "rank": "No ． 8",
-        "damage": "伤 害 ： 5 ， 523 ， 660k"
+        "damage": "伤 害 ： 6 ， 086 ， 379k"
       },
       "needs_review": [],
       "row_id": "b008",
       "ocr": {
-        "zone": 202,
-        "name": "ElsieBlaker",
-        "key": "202#ElsieBlaker",
+        "zone": 78,
+        "name": "燃烧的俗物",
+        "key": "78#燃烧的俗物",
         "rank": 8,
-        "damage_k": 5523660
-      }
-    },
-    {
-      "zone": 75,
-      "name": "半个西瓜",
-      "key": "75#半个西瓜",
-      "rank": 9,
-      "damage_k": 5445119,
-      "damage": 5445119000,
-      "raw": {
-        "identity": "75 # 半 个 西 瓜",
-        "rank": "No ． 9",
-        "damage": "伤 害 ： 5 ， 445 ， 119k"
-      },
-      "needs_review": [],
-      "row_id": "b009",
-      "ocr": {
-        "zone": 75,
-        "name": "半个西瓜",
-        "key": "75#半个西瓜",
-        "rank": 9,
-        "damage_k": 5445119
+        "damage_k": 6086379
       }
     },
     {
       "zone": 241,
       "name": "小野莓",
       "key": "241#小野莓",
-      "rank": 10,
-      "damage_k": 5256947,
-      "damage": 5256947000,
+      "rank": 9,
+      "damage_k": 5629432,
+      "damage": 5629432000,
       "raw": {
         "identity": "241 # 小 野 莓",
-        "rank": "No ． 10",
-        "damage": "伤 害 ： 5 ， 256 ， 947k"
+        "rank": "No ． 9",
+        "damage": "伤 害 ： 5 ， 629 ， 432k"
       },
       "needs_review": [],
-      "row_id": "b010",
+      "row_id": "b009",
       "ocr": {
         "zone": 241,
         "name": "小野莓",
         "key": "241#小野莓",
-        "rank": 10,
-        "damage_k": 5256947
+        "rank": 9,
+        "damage_k": 5629432
       }
     },
     {
-      "zone": 72,
-      "name": "随风倒柳",
-      "key": "72#随风倒柳",
-      "rank": 11,
-      "damage_k": 4278081,
-      "damage": 4278081000,
+      "zone": 202,
+      "name": "ElsieBlaker",
+      "key": "202#ElsieBlaker",
+      "rank": 10,
+      "damage_k": 5523660,
+      "damage": 5523660000,
       "raw": {
-        "identity": "72 # 随 风 倒 柳",
-        "rank": "NO ． 11",
-        "damage": "伤 害 ： 4 ， 278 ， 081k"
+        "identity": "202#ElsieBlaker",
+        "rank": "NO ， 10",
+        "damage": "伤 害 ： 5 ， 523 ， 660k"
       },
       "needs_review": [],
-      "row_id": "b011",
+      "row_id": "b010",
       "ocr": {
-        "zone": 72,
-        "name": "随风倒柳",
-        "key": "72#随风倒柳",
-        "rank": 11,
-        "damage_k": 4278081
+        "zone": 202,
+        "name": "ElsieBlaker",
+        "key": "202#ElsieBlaker",
+        "rank": 10,
+        "damage_k": 5523660
       }
     },
     {
       "zone": 117,
       "name": "合欢宗宗主",
       "key": "117#合欢宗宗主",
-      "rank": 12,
-      "damage_k": 3991883,
-      "damage": 3991883000,
+      "rank": 11,
+      "damage_k": 4299665,
+      "damage": 4299665000,
       "raw": {
         "identity": "117 # 合 欢 宗 宗 主",
-        "rank": "NO ． 12",
-        "damage": "伤 害 ： 3 ， 991 ， 883k"
+        "rank": "NO ． 11",
+        "damage": "伤 害 ： 4 ， 299 ， 665k"
       },
       "needs_review": [],
-      "row_id": "b012",
+      "row_id": "b011",
       "ocr": {
         "zone": 117,
         "name": "合欢宗宗主",
         "key": "117#合欢宗宗主",
+        "rank": 11,
+        "damage_k": 4299665
+      }
+    },
+    {
+      "zone": 72,
+      "name": "随风倒柳",
+      "key": "72#随风倒柳",
+      "rank": 12,
+      "damage_k": 4278081,
+      "damage": 4278081000,
+      "raw": {
+        "identity": "72 # 随 风 倒 柳",
+        "rank": "NO ． 12",
+        "damage": "伤 害 ： 4 ， 278 ， 081k"
+      },
+      "needs_review": [],
+      "row_id": "b012",
+      "ocr": {
+        "zone": 72,
+        "name": "随风倒柳",
+        "key": "72#随风倒柳",
         "rank": 12,
-        "damage_k": 3991883
+        "damage_k": 4278081
       }
     },
     {
@@ -281,12 +278,12 @@
       "name": "ArcheNorth",
       "key": "7#ArcheNorth",
       "rank": 13,
-      "damage_k": 3277268,
-      "damage": 3277268000,
+      "damage_k": 3523413,
+      "damage": 3523413000,
       "raw": {
         "identity": "7#Arche North",
-        "rank": "NO ， 13",
-        "damage": "伤 害 ： 3 ， 277 ， 268k"
+        "rank": "NO ． 13",
+        "damage": "伤 害 ： 3 ， 523 ， 413k"
       },
       "needs_review": [],
       "row_id": "b013",
@@ -295,7 +292,7 @@
         "name": "ArcheNorth",
         "key": "7#ArcheNorth",
         "rank": 13,
-        "damage_k": 3277268
+        "damage_k": 3523413
       }
     },
     {
@@ -321,24 +318,46 @@
       }
     },
     {
-      "zone": 226,
-      "name": "禾田",
-      "key": "226#禾田",
+      "zone": 58,
+      "name": "SOULBS",
+      "key": "58#SOULBS",
       "rank": 15,
-      "damage_k": 2809106,
-      "damage": 2809106000,
+      "damage_k": 3012482,
+      "damage": 3012482000,
       "raw": {
-        "identity": "226 # 禾 田",
+        "identity": "58#SOULBS",
         "rank": "NO ． 15",
-        "damage": "伤 害 ： 2 ， 809 ， 106k"
+        "damage": "伤 害 ： 3 ， 012 ， 482k"
       },
       "needs_review": [],
       "row_id": "b015",
       "ocr": {
+        "zone": 58,
+        "name": "SOULBS",
+        "key": "58#SOULBS",
+        "rank": 15,
+        "damage_k": 3012482
+      }
+    },
+    {
+      "zone": 226,
+      "name": "禾田",
+      "key": "226#禾田",
+      "rank": 16,
+      "damage_k": 2809106,
+      "damage": 2809106000,
+      "raw": {
+        "identity": "226 # 禾 田",
+        "rank": "NO ． 16",
+        "damage": "伤 害 ： 2 ， 809 ， 106k"
+      },
+      "needs_review": [],
+      "row_id": "b016",
+      "ocr": {
         "zone": 226,
         "name": "禾田",
         "key": "226#禾田",
-        "rank": 15,
+        "rank": 16,
         "damage_k": 2809106
       }
     },
@@ -346,44 +365,22 @@
       "zone": 283,
       "name": "夏一鸽",
       "key": "283#夏一鸽",
-      "rank": 16,
-      "damage_k": 2705585,
-      "damage": 2705585000,
+      "rank": 17,
+      "damage_k": 2765538,
+      "damage": 2765538000,
       "raw": {
         "identity": "283 # 夏 一 鸽",
-        "rank": "NO ， 16",
-        "damage": "伤 害 ： 2 ， 705 ， 585k"
-      },
-      "needs_review": [],
-      "row_id": "b016",
-      "ocr": {
-        "zone": 283,
-        "name": "夏一鸽",
-        "key": "283#夏一鸽",
-        "rank": 16,
-        "damage_k": 2705585
-      }
-    },
-    {
-      "zone": 58,
-      "name": "SOULBS",
-      "key": "58#SOULBS",
-      "rank": 17,
-      "damage_k": 2565368,
-      "damage": 2565368000,
-      "raw": {
-        "identity": "58#SOULBS",
-        "rank": "NO ． 17",
-        "damage": "伤 害 ： 2 ， 565 ， 368k"
+        "rank": "No ． 17",
+        "damage": "伤 害 ： 2 ， 765 ， 538k"
       },
       "needs_review": [],
       "row_id": "b017",
       "ocr": {
-        "zone": 58,
-        "name": "SOULBS",
-        "key": "58#SOULBS",
+        "zone": 283,
+        "name": "夏一鸽",
+        "key": "283#夏一鸽",
         "rank": 17,
-        "damage_k": 2565368
+        "damage_k": 2765538
       }
     },
     {
@@ -391,12 +388,12 @@
       "name": "积极又向上",
       "key": "101#积极又向上",
       "rank": 18,
-      "damage_k": 2048114,
-      "damage": 2048114000,
+      "damage_k": 2389102,
+      "damage": 2389102000,
       "raw": {
         "identity": "101 # 积 极 又 向 上",
-        "rank": "No ． 18",
-        "damage": "伤 害 ： 2 ， 048 ， 114k"
+        "rank": "NO ． 18",
+        "damage": "伤 害 ： 2 ， 389 ， 102k"
       },
       "needs_review": [],
       "row_id": "b018",
@@ -405,7 +402,7 @@
         "name": "积极又向上",
         "key": "101#积极又向上",
         "rank": 18,
-        "damage_k": 2048114
+        "damage_k": 2389102
       }
     },
     {
@@ -413,12 +410,12 @@
       "name": "大根珍珠棒",
       "key": "87#大根珍珠棒",
       "rank": 19,
-      "damage_k": 1993287,
-      "damage": 1993287000,
+      "damage_k": 2153250,
+      "damage": 2153250000,
       "raw": {
         "identity": "87 # 大 根 珍 珠 棒",
-        "rank": "NO ． 19",
-        "damage": "伤 害 ： 1 ， 993 ， 287k"
+        "rank": "》 NO ， 19",
+        "damage": "伤 害 ： 2 ， 153 ， 250k"
       },
       "needs_review": [],
       "row_id": "b019",
@@ -427,7 +424,7 @@
         "name": "大根珍珠棒",
         "key": "87#大根珍珠棒",
         "rank": 19,
-        "damage_k": 1993287
+        "damage_k": 2153250
       }
     },
     {
@@ -435,12 +432,12 @@
       "name": "炖煮红尘",
       "key": "231#炖煮红尘",
       "rank": 20,
-      "damage_k": 1899535,
-      "damage": 1899535000,
+      "damage_k": 1971199,
+      "damage": 1971199000,
       "raw": {
         "identity": "231 # 炖 煮 红 尘",
         "rank": "No ． 20",
-        "damage": "伤 害 ： 1 ， 899 ， 535k"
+        "damage": "伤 害 ： 1 ， 971 ， 199k"
       },
       "needs_review": [],
       "row_id": "b020",
@@ -449,7 +446,7 @@
         "name": "炖煮红尘",
         "key": "231#炖煮红尘",
         "rank": 20,
-        "damage_k": 1899535
+        "damage_k": 1971199
       }
     },
     {
@@ -476,22 +473,22 @@
     },
     {
       "zone": 223,
-      "name": "八方來財",
-      "key": "223#八方來財",
+      "name": "八方夾財",
+      "key": "223#八方夾財",
       "rank": 22,
       "damage_k": 1640332,
       "damage": 1640332000,
       "raw": {
-        "identity": "223 # 八 方 來 財",
-        "rank": "NO ． 22",
+        "identity": "223 # 八 方 夾 財",
+        "rank": "No ． 22",
         "damage": "伤 害 ： 1 ， 640 ， 332k"
       },
       "needs_review": [],
       "row_id": "b022",
       "ocr": {
         "zone": 223,
-        "name": "八方來財",
-        "key": "223#八方來財",
+        "name": "八方夾財",
+        "key": "223#八方夾財",
         "rank": 22,
         "damage_k": 1640332
       }
@@ -501,12 +498,12 @@
       "name": "师娘",
       "key": "69#师娘",
       "rank": 23,
-      "damage_k": 1384808,
-      "damage": 1384808000,
+      "damage_k": 1578675,
+      "damage": 1578675000,
       "raw": {
         "identity": "69 # 师 娘",
-        "rank": "NO ． 23",
-        "damage": "伤 害 ： 1 ， 384 ， 808k"
+        "rank": "NO ， 23",
+        "damage": "伤 害 ： 1 ， 578 ， 675k"
       },
       "needs_review": [],
       "row_id": "b023",
@@ -515,7 +512,7 @@
         "name": "师娘",
         "key": "69#师娘",
         "rank": 23,
-        "damage_k": 1384808
+        "damage_k": 1578675
       }
     },
     {
@@ -523,12 +520,12 @@
       "name": "縫星辰",
       "key": "252#縫星辰",
       "rank": 24,
-      "damage_k": 1337813,
-      "damage": 1337813000,
+      "damage_k": 1394067,
+      "damage": 1394067000,
       "raw": {
         "identity": "252 # 縫 星 辰",
         "rank": "NO ． 24",
-        "damage": "伤 害 ： 1 ， 337 ， 813k"
+        "damage": "伤 害 ： 1 ， 394 ， 067k"
       },
       "needs_review": [],
       "row_id": "b024",
@@ -537,7 +534,7 @@
         "name": "縫星辰",
         "key": "252#縫星辰",
         "rank": 24,
-        "damage_k": 1337813
+        "damage_k": 1394067
       }
     },
     {
@@ -545,12 +542,12 @@
       "name": "菜豆芽",
       "key": "83#菜豆芽",
       "rank": 25,
-      "damage_k": 936492,
-      "damage": 936492000,
+      "damage_k": 1024912,
+      "damage": 1024912000,
       "raw": {
         "identity": "83 # 菜 豆 芽",
-        "rank": "No ． 25",
-        "damage": "伤 害 ： 936 ， 492k"
+        "rank": "NO ． 25",
+        "damage": "伤 害 ： 1 ， 024 ， 912k"
       },
       "needs_review": [],
       "row_id": "b025",
@@ -559,7 +556,7 @@
         "name": "菜豆芽",
         "key": "83#菜豆芽",
         "rank": 25,
-        "damage_k": 936492
+        "damage_k": 1024912
       }
     },
     {
@@ -567,12 +564,12 @@
       "name": "亚加拉达",
       "key": "301#亚加拉达",
       "rank": 26,
-      "damage_k": 804716,
-      "damage": 804716000,
+      "damage_k": 859474,
+      "damage": 859474000,
       "raw": {
         "identity": "301 # 亚 加 拉 达",
         "rank": "NO ． 26",
-        "damage": "伤 害 ： 804 ， 716k"
+        "damage": "伤 害 ： 859 ， 474k"
       },
       "needs_review": [],
       "row_id": "b026",
@@ -581,7 +578,7 @@
         "name": "亚加拉达",
         "key": "301#亚加拉达",
         "rank": 26,
-        "damage_k": 804716
+        "damage_k": 859474
       }
     },
     {
@@ -589,12 +586,12 @@
       "name": "arianacomodo",
       "key": "103#arianacomodo",
       "rank": 27,
-      "damage_k": 755408,
-      "damage": 755408000,
+      "damage_k": 813559,
+      "damage": 813559000,
       "raw": {
         "identity": "103#arianacomodo",
         "rank": "NO ． 27",
-        "damage": "伤 害 ： 755 ， 408k"
+        "damage": "伤 害 ： 813 ， 559k"
       },
       "needs_review": [],
       "row_id": "b027",
@@ -603,7 +600,7 @@
         "name": "arianacomodo",
         "key": "103#arianacomodo",
         "rank": 27,
-        "damage_k": 755408
+        "damage_k": 813559
       }
     },
     {
@@ -611,12 +608,12 @@
       "name": "搁浅0",
       "key": "205#搁浅0",
       "rank": 28,
-      "damage_k": 752584,
-      "damage": 752584000,
+      "damage_k": 796218,
+      "damage": 796218000,
       "raw": {
         "identity": "205 # 搁 浅 0",
-        "rank": "NO ， 28",
-        "damage": "伤 害 ： 752 ， 584k"
+        "rank": "NO ． 28",
+        "damage": "伤 害 ： 796 ， 218k"
       },
       "needs_review": [],
       "row_id": "b028",
@@ -625,75 +622,73 @@
         "name": "搁浅0",
         "key": "205#搁浅0",
         "rank": 28,
-        "damage_k": 752584
+        "damage_k": 796218
+      }
+    },
+    {
+      "zone": 58,
+      "name": "只口,丿夕亻",
+      "key": "58#只口,丿夕亻",
+      "rank": 29,
+      "damage_k": 472105,
+      "damage": 472105000,
+      "raw": {
+        "identity": "58 # 只 口 , 丿 夕 亻",
+        "rank": "NO ． 29",
+        "damage": "伤 害 ： 472 ， 105k"
+      },
+      "needs_review": [],
+      "row_id": "b029",
+      "ocr": {
+        "zone": 58,
+        "name": "只口,丿夕亻",
+        "key": "58#只口,丿夕亻",
+        "rank": 29,
+        "damage_k": 472105
       }
     },
     {
       "zone": 288,
       "name": "EricJ",
       "key": "288#EricJ",
-      "rank": 29,
-      "damage_k": 417498,
-      "damage": 417498000,
+      "rank": 30,
+      "damage_k": 418426,
+      "damage": 418426000,
       "raw": {
         "identity": "288 # E ricJ",
-        "rank": "NO ． 29",
-        "damage": "伤 害 ： 417 ， 498k"
+        "rank": "No ． 30",
+        "damage": "伤 害 ： 418 ， 426k"
       },
       "needs_review": [],
-      "row_id": "b029",
+      "row_id": "b030",
       "ocr": {
         "zone": 288,
         "name": "EricJ",
         "key": "288#EricJ",
-        "rank": 29,
-        "damage_k": 417498
+        "rank": 30,
+        "damage_k": 418426
       }
     },
     {
       "zone": 205,
       "name": "水寅月星夢",
       "key": "205#水寅月星夢",
-      "rank": 30,
+      "rank": 31,
       "damage_k": 413913,
       "damage": 413913000,
       "raw": {
         "identity": "205 # 水 寅 月 星 夢",
-        "rank": "NO ． 30",
+        "rank": "NO ． 31",
         "damage": "伤 害 ： 413 ， 913k"
       },
       "needs_review": [],
-      "row_id": "b030",
+      "row_id": "b031",
       "ocr": {
         "zone": 205,
         "name": "水寅月星夢",
         "key": "205#水寅月星夢",
-        "rank": 30,
-        "damage_k": 413913
-      }
-    },
-    {
-      "zone": 58,
-      "name": "区冫囗,丿夕亻一",
-      "key": "58#区冫囗,丿夕亻一",
-      "rank": 31,
-      "damage_k": 404874,
-      "damage": 404874000,
-      "raw": {
-        "identity": "58 # 区 冫 囗 , 丿 夕 亻 一",
-        "rank": "No ． 31",
-        "damage": "伤 害 ： 404 ， 874k"
-      },
-      "needs_review": [
-        "name"
-      ],
-      "row_id": "b031",
-      "ocr": {
-        "zone": 58,
-        "name": "区冫囗,丿夕亻一",
-        "key": "58#区冫囗,丿夕亻一",
         "rank": 31,
-        "damage_k": 404874
+        "damage_k": 413913
       }
     },
     {
@@ -701,12 +696,12 @@
       "name": "HoneyKoch",
       "key": "200#HoneyKoch",
       "rank": 32,
-      "damage_k": 337139,
-      "damage": 337139000,
+      "damage_k": 364508,
+      "damage": 364508000,
       "raw": {
         "identity": "200#HoneyKoch",
         "rank": "No ． 32",
-        "damage": "伤 害 ： 337 ， 139k"
+        "damage": "伤 害 ： 364 ， 508k"
       },
       "needs_review": [],
       "row_id": "b032",
@@ -715,7 +710,7 @@
         "name": "HoneyKoch",
         "key": "200#HoneyKoch",
         "rank": 32,
-        "damage_k": 337139
+        "damage_k": 364508
       }
     },
     {
@@ -723,12 +718,12 @@
       "name": "ShuA",
       "key": "264#ShuA",
       "rank": 33,
-      "damage_k": 289826,
-      "damage": 289826000,
+      "damage_k": 294333,
+      "damage": 294333000,
       "raw": {
-        "identity": "264 # Sh uA",
+        "identity": "264#ShuA",
         "rank": "No ． 33",
-        "damage": "伤 害 ： 289 ， 826k"
+        "damage": "伤 害 ： 294 ， 333k"
       },
       "needs_review": [],
       "row_id": "b033",
@@ -737,7 +732,7 @@
         "name": "ShuA",
         "key": "264#ShuA",
         "rank": 33,
-        "damage_k": 289826
+        "damage_k": 294333
       }
     },
     {
@@ -745,12 +740,12 @@
       "name": "玄枵",
       "key": "301#玄枵",
       "rank": 34,
-      "damage_k": 201433,
-      "damage": 201433000,
+      "damage_k": 201479,
+      "damage": 201479000,
       "raw": {
         "identity": "301 # 玄 枵",
-        "rank": "NO ， 34",
-        "damage": "伤 害 ： 201 ， 433k"
+        "rank": "No ． 34",
+        "damage": "伤 害 ： 201 ， 479k"
       },
       "needs_review": [],
       "row_id": "b034",
@@ -759,27 +754,27 @@
         "name": "玄枵",
         "key": "301#玄枵",
         "rank": 34,
-        "damage_k": 201433
+        "damage_k": 201479
       }
     },
     {
       "zone": 284,
-      "name": "louyexue",
-      "key": "284#louyexue",
+      "name": "Iouyexue",
+      "key": "284#Iouyexue",
       "rank": 35,
       "damage_k": 195942,
       "damage": 195942000,
       "raw": {
-        "identity": "284#louyexue",
-        "rank": "No ． 35",
+        "identity": "284#Iouyexue",
+        "rank": "NO ． 35",
         "damage": "伤 害 ： 195 ， 942k"
       },
       "needs_review": [],
       "row_id": "b035",
       "ocr": {
         "zone": 284,
-        "name": "louyexue",
-        "key": "284#louyexue",
+        "name": "Iouyexue",
+        "key": "284#Iouyexue",
         "rank": 35,
         "damage_k": 195942
       }
@@ -789,12 +784,12 @@
       "name": "神王婉",
       "key": "300#神王婉",
       "rank": 36,
-      "damage_k": 134811,
-      "damage": 134811000,
+      "damage_k": 135934,
+      "damage": 135934000,
       "raw": {
         "identity": "300 # 神 王 婉",
         "rank": "NO ． 36",
-        "damage": "伤 害 ： 134 ， 811k"
+        "damage": "伤 害 ： 135 ， 934k"
       },
       "needs_review": [],
       "row_id": "b036",
@@ -803,29 +798,29 @@
         "name": "神王婉",
         "key": "300#神王婉",
         "rank": 36,
-        "damage_k": 134811
+        "damage_k": 135934
       }
     },
     {
-      "zone": 306,
-      "name": "梁师娘",
-      "key": "306#梁师娘",
+      "zone": 179,
+      "name": "波蒙的狗狗",
+      "key": "179#波蒙的狗狗",
       "rank": 37,
-      "damage_k": 87937,
-      "damage": 87937000,
+      "damage_k": 96978,
+      "damage": 96978000,
       "raw": {
-        "identity": "306 # 梁 师 娘",
+        "identity": "179 # 波 蒙 的 狗 狗",
         "rank": "NO ． 37",
-        "damage": "伤 害 ： 87 ， 937k"
+        "damage": "伤 害 ： 96 ， 978k"
       },
       "needs_review": [],
       "row_id": "b037",
       "ocr": {
-        "zone": 306,
-        "name": "梁师娘",
-        "key": "306#梁师娘",
+        "zone": 179,
+        "name": "波蒙的狗狗",
+        "key": "179#波蒙的狗狗",
         "rank": 37,
-        "damage_k": 87937
+        "damage_k": 96978
       }
     },
     {
@@ -833,12 +828,12 @@
       "name": "AshtonParry",
       "key": "28#AshtonParry",
       "rank": 38,
-      "damage_k": 85726,
-      "damage": 85726000,
+      "damage_k": 88848,
+      "damage": 88848000,
       "raw": {
         "identity": "28#AshtonParry",
-        "rank": "No ． 38",
-        "damage": "伤 害 ： 85 ， 726k"
+        "rank": "NO ． 38",
+        "damage": "伤 害 ： 88 ， 848k"
       },
       "needs_review": [],
       "row_id": "b038",
@@ -847,51 +842,51 @@
         "name": "AshtonParry",
         "key": "28#AshtonParry",
         "rank": 38,
-        "damage_k": 85726
+        "damage_k": 88848
+      }
+    },
+    {
+      "zone": 306,
+      "name": "梁师娘",
+      "key": "306#梁师娘",
+      "rank": 39,
+      "damage_k": 87937,
+      "damage": 87937000,
+      "raw": {
+        "identity": "306 # 梁 师 娘",
+        "rank": "NO ． 39",
+        "damage": "伤 害 ： 87 ， 937k"
+      },
+      "needs_review": [],
+      "row_id": "b039",
+      "ocr": {
+        "zone": 306,
+        "name": "梁师娘",
+        "key": "306#梁师娘",
+        "rank": 39,
+        "damage_k": 87937
       }
     },
     {
       "zone": 1,
       "name": "WuDan",
       "key": "1#WuDan",
-      "rank": 39,
-      "damage_k": 62683,
-      "damage": 62683000,
+      "rank": 40,
+      "damage_k": 74820,
+      "damage": 74820000,
       "raw": {
         "identity": "1#WuDan",
-        "rank": "No ． 39",
-        "damage": "伤 害 ： 62 ， 683 k"
-      },
-      "needs_review": [],
-      "row_id": "b039",
-      "ocr": {
-        "zone": 1,
-        "name": "WuDan",
-        "key": "1#WuDan",
-        "rank": 39,
-        "damage_k": 62683
-      }
-    },
-    {
-      "zone": 179,
-      "name": "波蒙的狗狗",
-      "key": "179#波蒙的狗狗",
-      "rank": 40,
-      "damage_k": 46096,
-      "damage": 46096000,
-      "raw": {
-        "identity": "179 # 波 蒙 的 狗 狗",
-        "rank": "No ． 40",
-        "damage": "伤 害 ： 46 ， 096k"
+        "rank": "NO ， 40",
+        "damage": "伤 害 ： 74 ， 820k"
       },
       "needs_review": [],
       "row_id": "b040",
       "ocr": {
-        "zone": 179,
-        "name": "波蒙的狗狗",
-        "key": "179#波蒙的狗狗",
+        "zone": 1,
+        "name": "WuDan",
+        "key": "1#WuDan",
         "rank": 40,
-        "damage_k": 46096
+        "damage_k": 74820
       }
     },
     {
@@ -899,12 +894,12 @@
       "name": "摆烂小咸鱼",
       "key": "86#摆烂小咸鱼",
       "rank": 41,
-      "damage_k": 41818,
-      "damage": 41818000,
+      "damage_k": 47746,
+      "damage": 47746000,
       "raw": {
         "identity": "86 # 摆 烂 小 咸 鱼",
         "rank": "NO ． 41",
-        "damage": "伤 害 ： 41 ， 818k"
+        "damage": "伤 害 ： 47 ， 746k"
       },
       "needs_review": [],
       "row_id": "b041",
@@ -913,51 +908,51 @@
         "name": "摆烂小咸鱼",
         "key": "86#摆烂小咸鱼",
         "rank": 41,
-        "damage_k": 41818
-      }
-    },
-    {
-      "zone": 311,
-      "name": "SNK梁师娘",
-      "key": "311#SNK梁师娘",
-      "rank": 42,
-      "damage_k": 37351,
-      "damage": 37351000,
-      "raw": {
-        "identity": "311 # SNK 梁 师 娘",
-        "rank": "NO ． 42",
-        "damage": "伤 害 ： 37 ， 351k"
-      },
-      "needs_review": [],
-      "row_id": "b042",
-      "ocr": {
-        "zone": 311,
-        "name": "SNK梁师娘",
-        "key": "311#SNK梁师娘",
-        "rank": 42,
-        "damage_k": 37351
+        "damage_k": 47746
       }
     },
     {
       "zone": 63,
       "name": "若语",
       "key": "63#若语",
-      "rank": 43,
-      "damage_k": 31980,
-      "damage": 31980000,
+      "rank": 42,
+      "damage_k": 38931,
+      "damage": 38931000,
       "raw": {
         "identity": "63 # 若 语",
-        "rank": "NO ． 43",
-        "damage": "伤 害 ： 31 ， 980k"
+        "rank": "No ． 42",
+        "damage": "伤 害 ： 38 ， 931k"
       },
       "needs_review": [],
-      "row_id": "b043",
+      "row_id": "b042",
       "ocr": {
         "zone": 63,
         "name": "若语",
         "key": "63#若语",
+        "rank": 42,
+        "damage_k": 38931
+      }
+    },
+    {
+      "zone": 311,
+      "name": "SNK梁师娘",
+      "key": "311#SNK梁师娘",
+      "rank": 43,
+      "damage_k": 37406,
+      "damage": 37406000,
+      "raw": {
+        "identity": "311 # SNK 梁 师 娘",
+        "rank": "NO ． 43",
+        "damage": "伤 害 ： 37 ， 406k"
+      },
+      "needs_review": [],
+      "row_id": "b043",
+      "ocr": {
+        "zone": 311,
+        "name": "SNK梁师娘",
+        "key": "311#SNK梁师娘",
         "rank": 43,
-        "damage_k": 31980
+        "damage_k": 37406
       }
     },
     {
@@ -965,12 +960,12 @@
       "name": "花田綽",
       "key": "288#花田綽",
       "rank": 44,
-      "damage_k": 16017,
-      "damage": 16017000,
+      "damage_k": 16397,
+      "damage": 16397000,
       "raw": {
         "identity": "288 # 花 田 綽",
-        "rank": "NO ． 44",
-        "damage": "伤 害 ： 16 ， 017k"
+        "rank": "No ， 44",
+        "damage": "伤 害 ： 16 ， 397k"
       },
       "needs_review": [],
       "row_id": "b044",
@@ -979,7 +974,7 @@
         "name": "花田綽",
         "key": "288#花田綽",
         "rank": 44,
-        "damage_k": 16017
+        "damage_k": 16397
       }
     },
     {
@@ -987,12 +982,12 @@
       "name": "CaseyDyer",
       "key": "75#CaseyDyer",
       "rank": 45,
-      "damage_k": 11804,
-      "damage": 11804000,
+      "damage_k": 14981,
+      "damage": 14981000,
       "raw": {
         "identity": "75#CaseyDyer",
-        "rank": "No ． 45",
-        "damage": "伤 害 ： 11 ， 804k"
+        "rank": "NO ． 45",
+        "damage": "伤 害 ： 14 ， 981k"
       },
       "needs_review": [],
       "row_id": "b045",
@@ -1001,51 +996,51 @@
         "name": "CaseyDyer",
         "key": "75#CaseyDyer",
         "rank": 45,
-        "damage_k": 11804
-      }
-    },
-    {
-      "zone": 200,
-      "name": "關你屁事",
-      "key": "200#關你屁事",
-      "rank": 46,
-      "damage_k": 10201,
-      "damage": 10201000,
-      "raw": {
-        "identity": "200 # 關 你 屁 事",
-        "rank": "NO ， 46",
-        "damage": "伤 害 ： 10 ， 201k"
-      },
-      "needs_review": [],
-      "row_id": "b046",
-      "ocr": {
-        "zone": 200,
-        "name": "關你屁事",
-        "key": "200#關你屁事",
-        "rank": 46,
-        "damage_k": 10201
+        "damage_k": 14981
       }
     },
     {
       "zone": 80,
       "name": "BUBULAW",
       "key": "80#BUBULAW",
-      "rank": 47,
-      "damage_k": 8256,
-      "damage": 8256000,
+      "rank": 46,
+      "damage_k": 10737,
+      "damage": 10737000,
       "raw": {
         "identity": "80#BUBULAW",
-        "rank": "NO ． 47",
-        "damage": "伤 害 ： 8 ， 256k"
+        "rank": "No ． 46",
+        "damage": "伤 害 ： 10 ， 737k"
       },
       "needs_review": [],
-      "row_id": "b047",
+      "row_id": "b046",
       "ocr": {
         "zone": 80,
         "name": "BUBULAW",
         "key": "80#BUBULAW",
+        "rank": 46,
+        "damage_k": 10737
+      }
+    },
+    {
+      "zone": 200,
+      "name": "關你屁事",
+      "key": "200#關你屁事",
+      "rank": 47,
+      "damage_k": 10201,
+      "damage": 10201000,
+      "raw": {
+        "identity": "200 # 關 你 屁 事",
+        "rank": "No ． 47",
+        "damage": "伤 害 ： 10 ， 201k"
+      },
+      "needs_review": [],
+      "row_id": "b047",
+      "ocr": {
+        "zone": 200,
+        "name": "關你屁事",
+        "key": "200#關你屁事",
         "rank": 47,
-        "damage_k": 8256
+        "damage_k": 10201
       }
     },
     {
@@ -1053,12 +1048,12 @@
       "name": "YangJu",
       "key": "223#YangJu",
       "rank": 48,
-      "damage_k": 8166,
-      "damage": 8166000,
+      "damage_k": 8983,
+      "damage": 8983000,
       "raw": {
         "identity": "223#YangJu",
-        "rank": "No ． 48",
-        "damage": "伤 害 ： 8 ， 166k"
+        "rank": "NO ． 48",
+        "damage": "伤 害 ： 8 ， 983k"
       },
       "needs_review": [],
       "row_id": "b048",
@@ -1067,7 +1062,7 @@
         "name": "YangJu",
         "key": "223#YangJu",
         "rank": 48,
-        "damage_k": 8166
+        "damage_k": 8983
       }
     },
     {
@@ -1075,12 +1070,12 @@
       "name": "KaiserL",
       "key": "305#KaiserL",
       "rank": 49,
-      "damage_k": 5204,
-      "damage": 5204000,
+      "damage_k": 6569,
+      "damage": 6569000,
       "raw": {
         "identity": "305 # Ka iserL",
         "rank": "NO ． 49",
-        "damage": "伤 害 ： 5 ， 204k"
+        "damage": "伤 害 ： 6 ， 569k"
       },
       "needs_review": [],
       "row_id": "b049",
@@ -1089,7 +1084,7 @@
         "name": "KaiserL",
         "key": "305#KaiserL",
         "rank": 49,
-        "damage_k": 5204
+        "damage_k": 6569
       }
     },
     {
@@ -1119,12 +1114,12 @@
       "name": "伐克斯",
       "key": "288#伐克斯",
       "rank": 51,
-      "damage_k": 2236,
-      "damage": 2236000,
+      "damage_k": 2281,
+      "damage": 2281000,
       "raw": {
         "identity": "288 # 伐 克 斯",
-        "rank": "No ． 51",
-        "damage": "伤 害 ： 2 ， 236k"
+        "rank": "NO ． 51",
+        "damage": "伤 害 ： 2 ， 281k"
       },
       "needs_review": [],
       "row_id": "b051",
@@ -1133,7 +1128,7 @@
         "name": "伐克斯",
         "key": "288#伐克斯",
         "rank": 51,
-        "damage_k": 2236
+        "damage_k": 2281
       }
     },
     {
@@ -1145,7 +1140,7 @@
       "damage": 1913000,
       "raw": {
         "identity": "170#MaddoxRoth7",
-        "rank": "NO ， 52",
+        "rank": "No ． 52",
         "damage": "伤 害 ： 1 ， 913k"
       },
       "needs_review": [],
@@ -1159,112 +1154,134 @@
       }
     },
     {
-      "zone": 288,
-      "name": "紫星塵",
-      "key": "288#紫星塵",
+      "zone": 28,
+      "name": "CadenWise",
+      "key": "28#CadenWise",
       "rank": 53,
-      "damage_k": 1406,
-      "damage": 1406000,
+      "damage_k": 1541,
+      "damage": 1541000,
       "raw": {
-        "identity": "288 # 紫 星 塵",
-        "rank": "No ． 53",
-        "damage": "伤 害 ： 1 ， 406k"
+        "identity": "28#CadenWise",
+        "rank": "NO ． 53",
+        "damage": "伤 害 ： 1 ， 541k"
       },
       "needs_review": [],
       "row_id": "b053",
       "ocr": {
+        "zone": 28,
+        "name": "CadenWise",
+        "key": "28#CadenWise",
+        "rank": 53,
+        "damage_k": 1541
+      }
+    },
+    {
+      "zone": 288,
+      "name": "紫星塵",
+      "key": "288#紫星塵",
+      "rank": 54,
+      "damage_k": 1508,
+      "damage": 1508000,
+      "raw": {
+        "identity": "288 # 紫 星 塵",
+        "rank": "No ． 54",
+        "damage": "伤 害 ： 1 ， 508k"
+      },
+      "needs_review": [],
+      "row_id": "b054",
+      "ocr": {
         "zone": 288,
         "name": "紫星塵",
         "key": "288#紫星塵",
-        "rank": 53,
-        "damage_k": 1406
+        "rank": 54,
+        "damage_k": 1508
+      }
+    },
+    {
+      "zone": 306,
+      "name": "大雷芙提雅",
+      "key": "306#大雷芙提雅",
+      "rank": 55,
+      "damage_k": 1504,
+      "damage": 1504000,
+      "raw": {
+        "identity": "306 # 大 雷 芙 提 雅",
+        "rank": "NO ． 55",
+        "damage": "伤 害 ： 1 ， 504k"
+      },
+      "needs_review": [],
+      "row_id": "b055",
+      "ocr": {
+        "zone": 306,
+        "name": "大雷芙提雅",
+        "key": "306#大雷芙提雅",
+        "rank": 55,
+        "damage_k": 1504
       }
     },
     {
       "zone": 308,
       "name": "RfkchzXqhgthxz",
       "key": "308#RfkchzXqhgthxz",
-      "rank": 54,
+      "rank": 56,
       "damage_k": 1252,
       "damage": 1252000,
       "raw": {
         "identity": "308 # RfkchzXq hgthxz",
-        "rank": "NO ． 54",
+        "rank": "NO ． 56",
         "damage": "伤 害 ： 1 ， 252k"
       },
       "needs_review": [],
-      "row_id": "b054",
+      "row_id": "b056",
       "ocr": {
         "zone": 308,
         "name": "RfkchzXqhgthxz",
         "key": "308#RfkchzXqhgthxz",
-        "rank": 54,
+        "rank": 56,
         "damage_k": 1252
       }
     },
     {
       "zone": 304,
-      "name": "PueqrnVebnsyxI",
-      "key": "304#PueqrnVebnsyxI",
-      "rank": 55,
-      "damage_k": 931,
-      "damage": 931000,
+      "name": "PueqrnVebnsyxl",
+      "key": "304#PueqrnVebnsyxl",
+      "rank": 57,
+      "damage_k": 1134,
+      "damage": 1134000,
       "raw": {
-        "identity": "304#PueqrnVebnsyxI",
-        "rank": "NO ． 55",
-        "damage": "伤 害 ： 931k"
+        "identity": "304 # Pu eq rnVeb nsyxl",
+        "rank": "No ． 57",
+        "damage": "伤 害 ： 1 ， 134k"
       },
       "needs_review": [],
-      "row_id": "b055",
+      "row_id": "b057",
       "ocr": {
         "zone": 304,
-        "name": "PueqrnVebnsyxI",
-        "key": "304#PueqrnVebnsyxI",
-        "rank": 55,
-        "damage_k": 931
-      }
-    },
-    {
-      "zone": 28,
-      "name": "CadenWise",
-      "key": "28#CadenWise",
-      "rank": 56,
-      "damage_k": 687,
-      "damage": 687000,
-      "raw": {
-        "identity": "28#CadenWise",
-        "rank": "NO ． 56",
-        "damage": "伤 害 ： 687k"
-      },
-      "needs_review": [],
-      "row_id": "b056",
-      "ocr": {
-        "zone": 28,
-        "name": "CadenWise",
-        "key": "28#CadenWise",
-        "rank": 56,
-        "damage_k": 687
+        "name": "PueqrnVebnsyxl",
+        "key": "304#PueqrnVebnsyxl",
+        "rank": 57,
+        "damage_k": 1134
       }
     },
     {
       "zone": 293,
       "name": "FvwJcjz",
       "key": "293#FvwJcjz",
-      "rank": 57,
+      "rank": 58,
       "damage_k": 434,
       "damage": 434000,
       "raw": {
         "identity": "293 # FvwJcjz",
-        "rank": "NO ． 57",
+        "rank": "No ． 58",
         "damage": "伤 害 ： 434k"
       },
       "needs_review": [],
-      "row_id": "b057",
+      "row_id": "b058",
       "ocr": {
         "zone": 293,
         "name": "FvwJcjz",
         "key": "293#FvwJcjz",
-        "rank": 57,
+        "rank": 58,
         "damage_k": 434
       }
     }
@@ -1272,176 +1289,180 @@
   "raw_ocr": {
     "members": [],
     "boss": [
+      "刂",
       "28 # 米 拉",
-      "No ， 1",
-      "伤 害 ： 52 ， 749 ， 889k",
+      "No ． 1",
+      "伤 害 ： 61 ， 727 ， 143k",
       "205 # 搁 浅 0",
-      "No ， 2",
-      "伤 害 ： 18 ， 553 ， 564k",
-      "〕 g # 伊 之 猪",
+      "No ． 2",
+      "伤 害 ： 22 ， 460 ， 970k",
+      "28 # 伊 之 猪",
       "No ． 3",
-      "伤 害 ： 14 ， 020 ， 087k",
-      "1#Zer05",
-      "NO ． 4",
-      "伤 害 ： 13 ， 853 ， 037k",
+      "伤 害 ： 16 ， 946 ， 877k",
+      "1#Zero",
+      "No ． 4",
+      "伤 害 ： 16 ， 596 ， 368k",
       "71 # 梁 师 娘 LUONG",
       "NO ． 5",
-      "伤 害 ： 11 ， 315 ， 608k",
+      "伤 害 ： 13 ， 213 ， 771k",
       "72 # 远 青",
       "No ． 6",
       "伤 害 ： 9 ， 836 ， 206k",
-      "78 # 燃 烧 的 俗 物",
-      "No ， 7",
-      "伤 害 ： 6 ， 086 ， 379k",
-      "202#ElsieBlaker",
-      "No ． 8",
-      "伤 害 ： 5 ， 523 ， 660k",
       "75 # 半 个 西 瓜",
-      "No ． 9",
-      "伤 害 ： 5 ， 445 ， 119k",
+      "No ， 7",
+      "伤 害 ： 6 ， 279 ， 068k",
+      "78 # 燃 烧 的 俗 物",
+      "No ． 8",
+      "伤 害 ： 6 ， 086 ， 379k",
       "241 # 小 野 莓",
-      "No ． 10",
-      "伤 害 ： 5 ， 256 ， 947k",
-      "72 # 随 风 倒 柳",
-      "NO ． 11",
-      "伤 害 ： 4 ， 278 ， 081k",
+      "No ． 9",
+      "伤 害 ： 5 ， 629 ， 432k",
+      "202#ElsieBlaker",
+      "NO ， 10",
+      "伤 害 ： 5 ， 523 ， 660k",
       "117 # 合 欢 宗 宗 主",
+      "NO ． 11",
+      "伤 害 ： 4 ， 299 ， 665k",
+      "72 # 随 风 倒 柳",
       "NO ． 12",
-      "伤 害 ： 3 ， 991 ， 883k",
+      "伤 害 ： 4 ， 278 ， 081k",
       "7#Arche North",
-      "NO ， 13",
-      "伤 害 ： 3 ， 277 ， 268k",
+      "NO ． 13",
+      "伤 害 ： 3 ， 523 ， 413k",
       "81 # 师 娘 小 号 玲",
       "NO ． 14",
       "伤 害 ： 3 ， 066 ， 192k",
-      "226 # 禾 田",
+      "58#SOULBS",
       "NO ． 15",
+      "伤 害 ： 3 ， 012 ， 482k",
+      "226 # 禾 田",
+      "NO ． 16",
       "伤 害 ： 2 ， 809 ， 106k",
       "283 # 夏 一 鸽",
-      "NO ， 16",
-      "伤 害 ： 2 ， 705 ， 585k",
-      "58#SOULBS",
-      "NO ． 17",
-      "伤 害 ： 2 ， 565 ， 368k",
+      "No ． 17",
+      "伤 害 ： 2 ， 765 ， 538k",
       "101 # 积 极 又 向 上",
-      "No ． 18",
-      "伤 害 ： 2 ， 048 ， 114k",
+      "NO ． 18",
+      "伤 害 ： 2 ， 389 ， 102k",
       "87 # 大 根 珍 珠 棒",
-      "NO ． 19",
-      "伤 害 ： 1 ， 993 ， 287k",
+      "》 NO ， 19",
+      "伤 害 ： 2 ， 153 ， 250k",
       "231 # 炖 煮 红 尘",
       "No ． 20",
-      "伤 害 ： 1 ， 899 ， 535k",
+      "伤 害 ： 1 ， 971 ， 199k",
       "208 # 咸 鱼 W",
       "No ． 21",
       "伤 害 ： 1 ， 897 ， 249k",
-      "223 # 八 方 來 財",
-      "NO ． 22",
+      "223 # 八 方 夾 財",
+      "No ． 22",
       "伤 害 ： 1 ， 640 ， 332k",
       "69 # 师 娘",
-      "NO ． 23",
-      "伤 害 ： 1 ， 384 ， 808k",
+      "NO ， 23",
+      "伤 害 ： 1 ， 578 ， 675k",
       "252 # 縫 星 辰",
       "NO ． 24",
-      "伤 害 ： 1 ， 337 ， 813k",
+      "伤 害 ： 1 ， 394 ， 067k",
       "83 # 菜 豆 芽",
-      "No ． 25",
-      "伤 害 ： 936 ， 492k",
+      "NO ． 25",
+      "伤 害 ： 1 ， 024 ， 912k",
       "301 # 亚 加 拉 达",
       "NO ． 26",
-      "伤 害 ： 804 ， 716k",
+      "伤 害 ： 859 ， 474k",
       "103#arianacomodo",
       "NO ． 27",
-      "伤 害 ： 755 ， 408k",
+      "伤 害 ： 813 ， 559k",
       "205 # 搁 浅 0",
-      "NO ， 28",
-      "伤 害 ： 752 ， 584k",
-      "288 # E ricJ",
+      "NO ． 28",
+      "伤 害 ： 796 ， 218k",
+      "58 # 只 口 、 丿 夕 亻",
       "NO ． 29",
-      "伤 害 ： 417 ， 498k",
+      "伤 害 ： 472 ， 105k",
+      "288 # E ricJ",
+      "No ． 30",
+      "伤 害 ： 418 ， 426k",
       "205 # 水 寅 月 星 夢",
-      "NO ． 30",
+      "NO ． 31",
       "伤 害 ： 413 ， 913k",
-      "58 # 区 冫 囗 、 丿 夕 亻 一",
-      "No ． 31",
-      "伤 害 ： 404 ， 874k",
       "200#HoneyKoch",
       "No ． 32",
-      "伤 害 ： 337 ， 139k",
-      "264 # Sh uA",
+      "伤 害 ： 364 ， 508k",
+      "264#ShuA",
       "No ． 33",
-      "伤 害 ： 289 ， 826k",
+      "伤 害 ： 294 ， 333k",
       "301 # 玄 枵",
-      "NO ， 34",
-      "伤 害 ： 201 ， 433k",
-      "284#louyexue",
-      "No ． 35",
+      "No ． 34",
+      "伤 害 ： 201 ， 479k",
+      "284#Iouyexue",
+      "NO ． 35",
       "伤 害 ： 195 ， 942k",
       "300 # 神 王 婉",
       "NO ． 36",
-      "伤 害 ： 134 ， 811k",
-      "306 # 梁 师 娘",
-      "NO ． 37",
-      "伤 害 ： 87 ， 937k",
-      "28#AshtonParry",
-      "No ． 38",
-      "伤 害 ： 85 ， 726k",
-      "1#WuDan",
-      "No ． 39",
-      "伤 害 ： 62 ， 683 k",
+      "伤 害 ： 135 ， 934k",
       "179 # 波 蒙 的 狗 狗",
-      "No ． 40",
-      "伤 害 ： 46 ， 096k",
+      "NO ． 37",
+      "伤 害 ： 96 ， 978k",
+      "28#AshtonParry",
+      "NO ． 38",
+      "伤 害 ： 88 ， 848k",
+      "306 # 梁 师 娘",
+      "NO ． 39",
+      "伤 害 ： 87 ， 937k",
+      "1#WuDan",
+      "NO ， 40",
+      "伤 害 ： 74 ， 820k",
       "86 # 摆 烂 小 咸 鱼",
       "NO ． 41",
-      "伤 害 ： 41 ， 818k",
-      "311 # SNK 梁 师 娘",
-      "NO ． 42",
-      "伤 害 ： 37 ， 351k",
+      "伤 害 ： 47 ， 746k",
       "63 # 若 语",
+      "No ． 42",
+      "伤 害 ： 38 ， 931k",
+      "311 # SNK 梁 师 娘",
       "NO ． 43",
-      "伤 害 ： 31 ， 980k",
+      "伤 害 ： 37 ， 406k",
       "288 # 花 田 綽",
-      "NO ． 44",
-      "伤 害 ： 16 ， 017k",
+      "No ， 44",
+      "伤 害 ： 16 ， 397k",
       "75#CaseyDyer",
-      "No ． 45",
-      "伤 害 ： 11 ， 804k",
-      "200 # 關 你 屁 事",
-      "NO ， 46",
-      "伤 害 ： 10 ， 201k",
+      "NO ． 45",
+      "伤 害 ： 14 ， 981k",
       "80#BUBULAW",
-      "NO ． 47",
-      "伤 害 ： 8 ， 256k",
+      "No ． 46",
+      "伤 害 ： 10 ， 737k",
+      "200 # 關 你 屁 事",
+      "No ． 47",
+      "伤 害 ： 10 ， 201k",
       "223#YangJu",
-      "No ． 48",
-      "伤 害 ： 8 ， 166k",
+      "NO ． 48",
+      "伤 害 ： 8 ， 983k",
       "305 # Ka iserL",
       "NO ． 49",
-      "伤 害 ： 5 ， 204k",
+      "伤 害 ： 6 ， 569k",
       "289 # 不 是 笨 蛋",
       "NO ． 50",
       "伤 害 ： 2 ， 677k",
       "288 # 伐 克 斯",
-      "No ． 51",
-      "伤 害 ： 2 ， 236k",
+      "NO ． 51",
+      "伤 害 ： 2 ， 281k",
       "170#MaddoxRoth7",
-      "NO ， 52",
+      "No ． 52",
       "伤 害 ： 1 ， 913k",
-      "288 # 紫 星 塵",
-      "No ． 53",
-      "伤 害 ： 1 ， 406k",
-      "308 # RfkchzXq hgthxz",
-      "NO ． 54",
-      "伤 害 ： 1 ， 252k",
-      "304#PueqrnVebnsyxI",
-      "NO ． 55",
-      "伤 害 ： 931k",
       "28#CadenWise",
+      "NO ． 53",
+      "伤 害 ： 1 ， 541k",
+      "288 # 紫 星 塵",
+      "No ． 54",
+      "伤 害 ： 1 ， 508k",
+      "306 # 大 雷 芙 提 雅",
+      "NO ． 55",
+      "伤 害 ： 1 ， 504k",
+      "308 # RfkchzXq hgthxz",
       "NO ． 56",
-      "伤 害 ： 687k",
+      "伤 害 ： 1 ， 252k",
+      "304 # Pu eq rnVeb nsyxl",
+      "No ． 57",
+      "伤 害 ： 1 ， 134k",
       "293 # FvwJcjz",
-      "NO ． 57",
+      "No ． 58",
       "伤 害 ： 434k"
     ]
   }

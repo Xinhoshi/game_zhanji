@@ -105,6 +105,62 @@
           "reviewed": true
         }
       }
+    },
+    "2026年5月1日021512_联盟": {
+      "members": {
+        "m017": {
+          "zone": "311",
+          "name": "SNK梁师娘",
+          "power": "12440616",
+          "last_online": "",
+          "note": "",
+          "reviewed": true
+        },
+        "m041": {
+          "zone": "103",
+          "name": "arianacomodo",
+          "power": "126623149",
+          "last_online": "2026-04-30T08:30:05",
+          "note": "",
+          "reviewed": true
+        },
+        "m053": {
+          "zone": "80",
+          "name": "BUBULAW",
+          "power": "64364020",
+          "last_online": "2026-04-29T15:18:51",
+          "note": "",
+          "reviewed": true
+        },
+        "m003": {
+          "zone": "205",
+          "name": "搁浅づ",
+          "power": "296746583",
+          "last_online": "",
+          "note": "",
+          "reviewed": true
+        }
+      }
+    },
+    "2026年5月1日211113_Boss": {
+      "boss": {
+        "b022": {
+          "zone": "223",
+          "name": "八方來財",
+          "rank": "22",
+          "damage_k": "1640332",
+          "note": "",
+          "reviewed": true
+        },
+        "b035": {
+          "zone": "284",
+          "name": "Iouyexue",
+          "rank": "35",
+          "damage_k": "195942",
+          "note": "",
+          "reviewed": true
+        }
+      }
     }
   },
   "aliases": {
@@ -164,6 +220,38 @@
         "name": "MaddoxRoth7",
         "source_power": 928817,
         "power": 64928817
+      },
+      {
+        "source_zone": 311,
+        "source_name": "SNK梁师娘",
+        "zone": 311,
+        "name": "SNK梁师娘",
+        "source_power": 120616,
+        "power": 12440616
+      },
+      {
+        "source_zone": 103,
+        "source_name": "arianacomodo",
+        "zone": 103,
+        "name": "arianacomodo",
+        "source_power": 126623149,
+        "power": 126623149
+      },
+      {
+        "source_zone": 80,
+        "source_name": "BUBULAW",
+        "zone": 80,
+        "name": "BUBULAW",
+        "source_power": 3020,
+        "power": 64364020
+      },
+      {
+        "source_zone": 205,
+        "source_name": "搁浅0",
+        "zone": 205,
+        "name": "搁浅づ",
+        "source_power": 296746583,
+        "power": 296746583
       }
     ],
     "boss": [
@@ -216,6 +304,26 @@
         "source_damage_k": 353146,
         "rank": 31,
         "damage_k": 353146
+      },
+      {
+        "source_zone": 223,
+        "source_name": "八方夾財",
+        "zone": 223,
+        "name": "八方來財",
+        "source_rank": 22,
+        "source_damage_k": 1640332,
+        "rank": 22,
+        "damage_k": 1640332
+      },
+      {
+        "source_zone": 284,
+        "source_name": "Iouyexue",
+        "zone": 284,
+        "name": "Iouyexue",
+        "source_rank": 35,
+        "source_damage_k": 195942,
+        "rank": 35,
+        "damage_k": 195942
       }
     ]
   }

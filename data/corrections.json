@@ -161,6 +161,18 @@
           "reviewed": true
         }
       }
+    },
+    "2026年5月3日233904_Boss": {
+      "boss": {
+        "b006": {
+          "zone": "71",
+          "name": "梁师娘LUONG",
+          "rank": "6",
+          "damage_k": "16745016",
+          "note": "",
+          "reviewed": true
+        }
+      }
     }
   },
   "aliases": {
@@ -324,6 +336,26 @@
         "source_damage_k": 195942,
         "rank": 35,
         "damage_k": 195942
+      },
+      {
+        "source_zone": 71,
+        "source_name": "梁师娘LUONG",
+        "zone": 71,
+        "name": "梁师娘LUONG",
+        "source_rank": 7,
+        "source_damage_k": 8075741,
+        "rank": 7,
+        "damage_k": 16745016
+      },
+      {
+        "source_zone": 71,
+        "source_name": "梁师娘LUONG",
+        "zone": 71,
+        "name": "梁师娘LUONG",
+        "source_rank": 6,
+        "source_damage_k": 8075741,
+        "rank": 6,
+        "damage_k": 16745016
       }
     ]
   }

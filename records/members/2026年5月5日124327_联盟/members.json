@@ -4,12 +4,12 @@
     "name": "伊之猪",
     "key": "28#伊之猪",
     "role": "职务盟主",
-    "power": 2532569,
+    "power": 253396556,
     "last_online": null,
     "raw": {
       "identity": "28 # 伊 之 猪",
       "role": "职 务 ： 盟 主",
-      "power": "战 斗 力 ： 253 ， 256 ， 9",
+      "power": "战 斗 力 ： 253 ， 396 ， 556",
       "last_online": ""
     },
     "needs_review": [],
@@ -18,7 +18,7 @@
       "zone": 28,
       "name": "伊之猪",
       "key": "28#伊之猪",
-      "power": 2532569,
+      "power": 253396556,
       "last_online": null
     }
   },
@@ -53,7 +53,7 @@
     "power": 282704094,
     "last_online": null,
     "raw": {
-      "identity": "71#梁师 娘 LUONG",
+      "identity": "71 # 梁 师 娘 LUONG",
       "role": "职 务 ： 副 盟 主 2",
       "power": "战 斗 力 ： 282 ， 704 ， 094",
       "last_online": ""
@@ -69,25 +69,48 @@
     }
   },
   {
-    "zone": 179,
-    "name": "汲蒙的狗狗",
-    "key": "179#汲蒙的狗狗",
+    "zone": 301,
+    "name": "玄枵",
+    "key": "301#玄枵",
     "role": "职务成员",
-    "power": 87286294,
+    "power": 27924106,
     "last_online": null,
     "raw": {
-      "identity": "179 # 汲 蒙 的 狗 狗",
+      "identity": "301 # 玄 枵",
       "role": "职 务 ： 成 员",
-      "power": "战 斗 力 ： 87 ， 286 ， 294",
+      "power": "战 斗 力 ： 27 ， 924 ， 106",
       "last_online": ""
     },
     "needs_review": [],
     "row_id": "m004",
     "ocr": {
+      "zone": 301,
+      "name": "玄枵",
+      "key": "301#玄枵",
+      "power": 27924106,
+      "last_online": null
+    }
+  },
+  {
+    "zone": 179,
+    "name": "波蒙的狗狗",
+    "key": "179#波蒙的狗狗",
+    "role": "职务成员",
+    "power": 87286224,
+    "last_online": null,
+    "raw": {
+      "identity": "179 # 波 蒙 的 狗 狗",
+      "role": "职 务 ： 成 员",
+      "power": "战 斗 力 ： 87 ， 286 ， 224",
+      "last_online": ""
+    },
+    "needs_review": [],
+    "row_id": "m005",
+    "ocr": {
       "zone": 179,
-      "name": "汲蒙的狗狗",
-      "key": "179#汲蒙的狗狗",
-      "power": 87286294,
+      "name": "波蒙的狗狗",
+      "key": "179#波蒙的狗狗",
+      "power": 87286224,
       "last_online": null
     }
   },
@@ -105,7 +128,7 @@
       "last_online": ""
     },
     "needs_review": [],
-    "row_id": "m005",
+    "row_id": "m006",
     "ocr": {
       "zone": 241,
       "name": "小野莓",
@@ -128,7 +151,7 @@
       "last_online": ""
     },
     "needs_review": [],
-    "row_id": "m006",
+    "row_id": "m007",
     "ocr": {
       "zone": 306,
       "name": "大雷芙提雅",
@@ -151,7 +174,7 @@
       "last_online": ""
     },
     "needs_review": [],
-    "row_id": "m007",
+    "row_id": "m008",
     "ocr": {
       "zone": 252,
       "name": "縫星辰",
@@ -174,35 +197,12 @@
       "last_online": ""
     },
     "needs_review": [],
-    "row_id": "m008",
+    "row_id": "m009",
     "ocr": {
       "zone": 306,
       "name": "梁师娘",
       "key": "306#梁师娘",
       "power": 25124827,
-      "last_online": null
-    }
-  },
-  {
-    "zone": 301,
-    "name": "玄枵",
-    "key": "301#玄枵",
-    "role": "职务成员",
-    "power": 27924106,
-    "last_online": null,
-    "raw": {
-      "identity": "301 # 玄 枵",
-      "role": "职 务 ： 成 员",
-      "power": "战 斗 力 ： 27 ， 924 ， 106",
-      "last_online": ""
-    },
-    "needs_review": [],
-    "row_id": "m009",
-    "ocr": {
-      "zone": 301,
-      "name": "玄枵",
-      "key": "301#玄枵",
-      "power": 27924106,
       "last_online": null
     }
   },
@@ -441,12 +441,12 @@
     "name": "夏一鸽",
     "key": "283#夏一鸽",
     "role": "职务成员",
-    "power": 20069352,
+    "power": 110265712,
     "last_online": null,
     "raw": {
       "identity": "283 # 夏 一 鸽",
       "role": "职 务 ： 成 员",
-      "power": "战 斗 力 ： 20 ， 069 ， 352",
+      "power": "战 斗 力 ： 110 ， 265 ， 712",
       "last_online": ""
     },
     "needs_review": [],
@@ -455,6 +455,29 @@
       "zone": 283,
       "name": "夏一鸽",
       "key": "283#夏一鸽",
+      "power": 110265712,
+      "last_online": null
+    }
+  },
+  {
+    "zone": 304,
+    "name": "PueqrnVebnsyxl",
+    "key": "304#PueqrnVebnsyxl",
+    "role": "职务成员",
+    "power": 20069352,
+    "last_online": null,
+    "raw": {
+      "identity": "304#PueqrnVebnsyxl",
+      "role": "职 务 ： 成 员",
+      "power": "战 斗 力 ： 20 ， 069 ， 352",
+      "last_online": ""
+    },
+    "needs_review": [],
+    "row_id": "m021",
+    "ocr": {
+      "zone": 304,
+      "name": "PueqrnVebnsyxl",
+      "key": "304#PueqrnVebnsyxl",
       "power": 20069352,
       "last_online": null
     }
@@ -468,12 +491,12 @@
     "last_online": null,
     "raw": {
       "identity": "202#ElsieBlaker",
-      "role": "职 务 ： 成 员",
+      "role": "' 职 务 ： 成 员",
       "power": "战 斗 力 ： 201 ， 889 ， 094",
       "last_online": ""
     },
     "needs_review": [],
-    "row_id": "m021",
+    "row_id": "m022",
     "ocr": {
       "zone": 202,
       "name": "ElsieBlaker",
@@ -492,11 +515,11 @@
     "raw": {
       "identity": "58#SOULBS",
       "role": "职 务 ： 成 员",
-      "power": "战 斗 力 ： 157 ， 225 ， 591",
+      "power": "” 战 斗 力 ： 157 ， 225 ， 591",
       "last_online": ""
     },
     "needs_review": [],
-    "row_id": "m022",
+    "row_id": "m023",
     "ocr": {
       "zone": 58,
       "name": "SOULBS",
@@ -519,7 +542,7 @@
       "last_online": ""
     },
     "needs_review": [],
-    "row_id": "m023",
+    "row_id": "m024",
     "ocr": {
       "zone": 103,
       "name": "arianacomodo",
@@ -542,7 +565,7 @@
       "last_online": ""
     },
     "needs_review": [],
-    "row_id": "m024",
+    "row_id": "m025",
     "ocr": {
       "zone": 81,
       "name": "酒酿圓子",
@@ -565,7 +588,7 @@
       "last_online": ""
     },
     "needs_review": [],
-    "row_id": "m025",
+    "row_id": "m026",
     "ocr": {
       "zone": 288,
       "name": "伐克斯",
@@ -576,23 +599,23 @@
   },
   {
     "zone": 288,
-    "name": "花田绰",
-    "key": "288#花田绰",
+    "name": "花田綽",
+    "key": "288#花田綽",
     "role": "职务成员",
     "power": 51253872,
     "last_online": null,
     "raw": {
-      "identity": "288 # 花 田 绰",
+      "identity": "288 # 花 田 綽",
       "role": "职 务 ： 成 员",
       "power": "战 斗 力 ： 51 ， 253 ， 872",
       "last_online": ""
     },
     "needs_review": [],
-    "row_id": "m026",
+    "row_id": "m027",
     "ocr": {
       "zone": 288,
-      "name": "花田绰",
-      "key": "288#花田绰",
+      "name": "花田綽",
+      "key": "288#花田綽",
       "power": 51253872,
       "last_online": null
     }
@@ -611,7 +634,7 @@
       "last_online": ""
     },
     "needs_review": [],
-    "row_id": "m027",
+    "row_id": "m028",
     "ocr": {
       "zone": 7,
       "name": "ArcheNorth",
@@ -622,23 +645,23 @@
   },
   {
     "zone": 1,
-    "name": "Zero'fi",
-    "key": "1#Zero'fi",
+    "name": "Zer04i",
+    "key": "1#Zer04i",
     "role": "职务成员",
     "power": 293412314,
     "last_online": null,
     "raw": {
-      "identity": "1#Zero'fi",
+      "identity": "1#Zer04i",
       "role": "职 务 ： 成 员",
       "power": "战 斗 力 ： 293 ， 412 ， 314",
       "last_online": ""
     },
     "needs_review": [],
-    "row_id": "m028",
+    "row_id": "m029",
     "ocr": {
       "zone": 1,
-      "name": "Zero'fi",
-      "key": "1#Zero'fi",
+      "name": "Zer04i",
+      "key": "1#Zer04i",
       "power": 293412314,
       "last_online": null
     }
@@ -657,7 +680,7 @@
       "last_online": ""
     },
     "needs_review": [],
-    "row_id": "m029",
+    "row_id": "m030",
     "ocr": {
       "zone": 223,
       "name": "YangJu",
@@ -680,7 +703,7 @@
       "last_online": ""
     },
     "needs_review": [],
-    "row_id": "m030",
+    "row_id": "m031",
     "ocr": {
       "zone": 288,
       "name": "EricJ",
@@ -703,7 +726,7 @@
       "last_online": "2026 ． 05 ． 04 18 ： 45 ： 26"
     },
     "needs_review": [],
-    "row_id": "m031",
+    "row_id": "m032",
     "ocr": {
       "zone": 226,
       "name": "禾田",
@@ -726,7 +749,7 @@
       "last_online": ""
     },
     "needs_review": [],
-    "row_id": "m032",
+    "row_id": "m033",
     "ocr": {
       "zone": 75,
       "name": "半个西瓜",
@@ -749,7 +772,7 @@
       "last_online": "2026 ． 05 ． 04 17 ： 23 ： 51"
     },
     "needs_review": [],
-    "row_id": "m033",
+    "row_id": "m034",
     "ocr": {
       "zone": 72,
       "name": "远青",
@@ -772,7 +795,7 @@
       "last_online": "2026 ． 05 ． 04 17 ： 19 ： 54"
     },
     "needs_review": [],
-    "row_id": "m034",
+    "row_id": "m035",
     "ocr": {
       "zone": 72,
       "name": "随风倒柳",
@@ -795,7 +818,7 @@
       "last_online": "2026 ． 05 ． 04 17 ： 07 ： 45"
     },
     "needs_review": [],
-    "row_id": "m035",
+    "row_id": "m036",
     "ocr": {
       "zone": 83,
       "name": "菜豆芽",
@@ -814,11 +837,11 @@
     "raw": {
       "identity": "117 # 合 欢 宗 宗 主",
       "role": "职 务 ： 成 员",
-      "power": "战 斗 力 ： 148 ， 208 ， 604",
+      "power": "丿 战 斗 力 ： 148 ， 208 ， 604",
       "last_online": "2026 ． 05 ． 04 17 ： 00 ： 49"
     },
     "needs_review": [],
-    "row_id": "m036",
+    "row_id": "m037",
     "ocr": {
       "zone": 117,
       "name": "合欢宗宗主",
@@ -837,11 +860,11 @@
     "raw": {
       "identity": "87 # 大 根 珍 珠 棒",
       "role": "职 务 ： 成 员",
-      "power": "战 斗 力 ： 152 ， 581 ， 997",
+      "power": "驴 战 斗 力 ： 152 ， 581 ， 997",
       "last_online": "2026 ． 05 ． 04 16 ： 09 ： 58"
     },
     "needs_review": [],
-    "row_id": "m037",
+    "row_id": "m038",
     "ocr": {
       "zone": 87,
       "name": "大根珍珠棒",
@@ -852,23 +875,23 @@
   },
   {
     "zone": 293,
-    "name": "FvwJCJz",
-    "key": "293#FvwJCJz",
+    "name": "FvwJcjz",
+    "key": "293#FvwJcjz",
     "role": "职务成员",
     "power": 23355690,
     "last_online": "2026-05-04T15:50:17",
     "raw": {
-      "identity": "293#FvwJCJz",
+      "identity": "293#FvwJcjz",
       "role": "职 务 ： 成 员",
       "power": "战 斗 力 ： 23 ， 355 ， 690",
       "last_online": "2026 ． 05 ． 04 15 ： 50 ： 17"
     },
     "needs_review": [],
-    "row_id": "m038",
+    "row_id": "m039",
     "ocr": {
       "zone": 293,
-      "name": "FvwJCJz",
-      "key": "293#FvwJCJz",
+      "name": "FvwJcjz",
+      "key": "293#FvwJcjz",
       "power": 23355690,
       "last_online": "2026-05-04T15:50:17"
     }
@@ -887,7 +910,7 @@
       "last_online": ""
     },
     "needs_review": [],
-    "row_id": "m039",
+    "row_id": "m040",
     "ocr": {
       "zone": 63,
       "name": "若语",
@@ -910,7 +933,7 @@
       "last_online": ""
     },
     "needs_review": [],
-    "row_id": "m040",
+    "row_id": "m041",
     "ocr": {
       "zone": 305,
       "name": "KaiserL",
@@ -924,21 +947,21 @@
     "name": "神王婉",
     "key": "300#神王婉",
     "role": "职务成员",
-    "power": 61791502,
+    "power": 60078588,
     "last_online": null,
     "raw": {
       "identity": "300 # 神 王 婉",
       "role": "职 务 ： 成 员",
-      "power": "战 斗 力 ： 61 ， 791 ， 502",
+      "power": "战 斗 力 ： 60 ， 078 ， 588",
       "last_online": ""
     },
     "needs_review": [],
-    "row_id": "m041",
+    "row_id": "m042",
     "ocr": {
       "zone": 300,
       "name": "神王婉",
       "key": "300#神王婉",
-      "power": 61791502,
+      "power": 60078588,
       "last_online": null
     }
   },
@@ -947,21 +970,23 @@
     "name": "BUBULAW",
     "key": "80#BUBULAW",
     "role": "职务成员",
-    "power": 64364020,
+    "power": 3020,
     "last_online": "2026-05-04T13:30:51",
     "raw": {
       "identity": "80#BUBULAW",
       "role": "职 务 ： 成 员",
-      "power": "战 斗 力 ： 64 ， 364 ， 020",
+      "power": "战 斗 力 ： 糾 ， 3 糾 ， 020",
       "last_online": "2026 ． 05 ． 04 13 ： 30 ： 51"
     },
-    "needs_review": [],
-    "row_id": "m042",
+    "needs_review": [
+      "power"
+    ],
+    "row_id": "m043",
     "ocr": {
       "zone": 80,
       "name": "BUBULAW",
       "key": "80#BUBULAW",
-      "power": 64364020,
+      "power": 3020,
       "last_online": "2026-05-04T13:30:51"
     }
   },
@@ -979,7 +1004,7 @@
       "last_online": "2026 ． 05 ． 04 13 ： 28 ： 35"
     },
     "needs_review": [],
-    "row_id": "m043",
+    "row_id": "m044",
     "ocr": {
       "zone": 101,
       "name": "积极又向上",
@@ -1002,7 +1027,7 @@
       "last_online": ""
     },
     "needs_review": [],
-    "row_id": "m044",
+    "row_id": "m045",
     "ocr": {
       "zone": 208,
       "name": "咸鱼W",
@@ -1025,7 +1050,7 @@
       "last_online": "2026 ． 05 ． 04 12 ： 46 ： 46"
     },
     "needs_review": [],
-    "row_id": "m045",
+    "row_id": "m046",
     "ocr": {
       "zone": 288,
       "name": "紫星塵",
@@ -1048,7 +1073,7 @@
       "last_online": "2026 ． 05 ． 04 12 ： 04 ： 15"
     },
     "needs_review": [],
-    "row_id": "m046",
+    "row_id": "m047",
     "ocr": {
       "zone": 200,
       "name": "關你屁事",
@@ -1071,7 +1096,7 @@
       "last_online": "2026 ． 05 ． 04 12 ： 01 ： 10"
     },
     "needs_review": [],
-    "row_id": "m047",
+    "row_id": "m048",
     "ocr": {
       "zone": 284,
       "name": "Iouyexue",
@@ -1094,7 +1119,7 @@
       "last_online": "2026 ． 05 ． 04 11 ： 57 ： 04"
     },
     "needs_review": [],
-    "row_id": "m048",
+    "row_id": "m049",
     "ocr": {
       "zone": 289,
       "name": "不是笨蛋",
@@ -1105,23 +1130,23 @@
   },
   {
     "zone": 58,
-    "name": "口彳夕亻",
-    "key": "58#口彳夕亻",
+    "name": "口夕亻",
+    "key": "58#口夕亻",
     "role": "职务成员",
     "power": 128712704,
     "last_online": "2026-05-04T11:47:03",
     "raw": {
-      "identity": "58 # 口 彳 夕 亻",
+      "identity": "58 # 口 夕 亻",
       "role": "职 务 ： 成 员",
       "power": "战 斗 力 ： 128 ， 712 ， 704",
       "last_online": "2026 ． 05 ． 04 11 ： 47 ： 03"
     },
     "needs_review": [],
-    "row_id": "m049",
+    "row_id": "m050",
     "ocr": {
       "zone": 58,
-      "name": "口彳夕亻",
-      "key": "58#口彳夕亻",
+      "name": "口夕亻",
+      "key": "58#口夕亻",
       "power": 128712704,
       "last_online": "2026-05-04T11:47:03"
     }
@@ -1140,7 +1165,7 @@
       "last_online": "2026 ． 05 ． 04 11 ： 17 ： 05"
     },
     "needs_review": [],
-    "row_id": "m050",
+    "row_id": "m051",
     "ocr": {
       "zone": 75,
       "name": "CaseyDyer",
@@ -1163,7 +1188,7 @@
       "last_online": "2026 ． 05 ． 04 10 ： 25 ： 18"
     },
     "needs_review": [],
-    "row_id": "m051",
+    "row_id": "m052",
     "ocr": {
       "zone": 28,
       "name": "CadenWise",
@@ -1186,7 +1211,7 @@
       "last_online": "2026 ． 05 ． 04 09 ： 34 ： 30"
     },
     "needs_review": [],
-    "row_id": "m052",
+    "row_id": "m053",
     "ocr": {
       "zone": 86,
       "name": "摆烂小咸鱼",
@@ -1209,7 +1234,7 @@
       "last_online": "2026 ． 05 ． 03 17 ： 14 ： 26"
     },
     "needs_review": [],
-    "row_id": "m053",
+    "row_id": "m054",
     "ocr": {
       "zone": 1,
       "name": "WuDan",
@@ -1234,7 +1259,7 @@
     "needs_review": [
       "power"
     ],
-    "row_id": "m054",
+    "row_id": "m055",
     "ocr": {
       "zone": 231,
       "name": "炖煮红尘",
@@ -1245,23 +1270,23 @@
   },
   {
     "zone": 308,
-    "name": "RfkchzXqhgthxz",
-    "key": "308#RfkchzXqhgthxz",
+    "name": "Rfl€chzXqhgthxz",
+    "key": "308#Rfl€chzXqhgthxz",
     "role": "职务成员",
     "power": 12311189,
     "last_online": "2026-05-01T13:09:03",
     "raw": {
-      "identity": "308#RfkchzXqhgthxz",
+      "identity": "308#Rfl€chzXqhgthxz",
       "role": "职 务 ： 成 员",
       "power": "战 斗 力 ： 12 ， 311 ， 189",
       "last_online": "2026 ． 05 ． 01 13 ： 09 ： 03"
     },
     "needs_review": [],
-    "row_id": "m055",
+    "row_id": "m056",
     "ocr": {
       "zone": 308,
-      "name": "RfkchzXqhgthxz",
-      "key": "308#RfkchzXqhgthxz",
+      "name": "Rfl€chzXqhgthxz",
+      "key": "308#Rfl€chzXqhgthxz",
       "power": 12311189,
       "last_online": "2026-05-01T13:09:03"
     }
@@ -1271,21 +1296,23 @@
     "name": "MaddoxRoth7",
     "key": "170#MaddoxRoth7",
     "role": "职务成员",
-    "power": 64836588,
+    "power": 836588,
     "last_online": "2026-04-30T00:41:51",
     "raw": {
       "identity": "170#MaddoxRoth7",
       "role": "职 务 ： 成 员",
-      "power": "战 斗 力 ： 64 ， 836 ， 588",
+      "power": "战 斗 力 ： ， 836 ， 588",
       "last_online": "2026 ． 04 ． 30 00 ： 41 ： 51"
     },
-    "needs_review": [],
-    "row_id": "m056",
+    "needs_review": [
+      "power"
+    ],
+    "row_id": "m057",
     "ocr": {
       "zone": 170,
       "name": "MaddoxRoth7",
       "key": "170#MaddoxRoth7",
-      "power": 64836588,
+      "power": 836588,
       "last_online": "2026-04-30T00:41:51"
     }
   },
@@ -1303,7 +1330,7 @@
       "last_online": "2026 ． 04 ． 27 22 ： 34 ： 38"
     },
     "needs_review": [],
-    "row_id": "m057",
+    "row_id": "m058",
     "ocr": {
       "zone": 223,
       "name": "八方來財",
@@ -1323,10 +1350,10 @@
       "identity": "205 # 水 寅 月 星 夢",
       "role": "职 务 ： 成 员",
       "power": "战 斗 力 ： 110 ， 112 ， 438",
-      "last_online": "2026 ． 04 一 27 15 ： 04 ： 57"
+      "last_online": "2026 ． 04 ． 27 15 ： 04 ： 57"
     },
     "needs_review": [],
-    "row_id": "m058",
+    "row_id": "m059",
     "ocr": {
       "zone": 205,
       "name": "水寅月星夢",
@@ -1337,25 +1364,27 @@
   },
   {
     "zone": 37,
-    "name": "№婷私密处",
-    "key": "37#№婷私密处",
+    "name": "雨婷私密处",
+    "key": "37#雨婷私密处",
     "role": "职务成员",
     "power": 23816049,
-    "last_online": "2025-10-28T01:10:23",
+    "last_online": null,
     "raw": {
-      "identity": "37 # № 婷 私 密 处",
+      "identity": "37 # 雨 婷 私 密 处",
       "role": "职 务 ： 成 员",
       "power": "战 斗 力 ： 23 ， 816 ， 049",
-      "last_online": "2025 ． 10 ． 28 01 ： 10 ： 23"
+      "last_online": "2025 彐 0 ． 28 01 ： 10 ： 23"
     },
-    "needs_review": [],
-    "row_id": "m059",
+    "needs_review": [
+      "last_online"
+    ],
+    "row_id": "m060",
     "ocr": {
       "zone": 37,
-      "name": "№婷私密处",
-      "key": "37#№婷私密处",
+      "name": "雨婷私密处",
+      "key": "37#雨婷私密处",
       "power": 23816049,
-      "last_online": "2025-10-28T01:10:23"
+      "last_online": null
     }
   }
 ]

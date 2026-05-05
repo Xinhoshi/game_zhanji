@@ -271,6 +271,26 @@
           "reviewed": true
         }
       }
+    },
+    "2026年5月5日124327_联盟": {
+      "members": {
+        "m056": {
+          "zone": "308",
+          "name": "RfkchzXqhgthxz",
+          "power": "12311189",
+          "last_online": "2026-05-01T13:09:03",
+          "note": "",
+          "reviewed": true
+        },
+        "m060": {
+          "zone": "37",
+          "name": "雨婷私密处",
+          "power": "23816049",
+          "last_online": "2025-10-28T01:10:23",
+          "note": "",
+          "reviewed": true
+        }
+      }
     }
   },
   "aliases": {
@@ -362,6 +382,22 @@
         "name": "搁浅づ",
         "source_power": 296746583,
         "power": 296746583
+      },
+      {
+        "source_zone": 308,
+        "source_name": "Rfl€chzXqhgthxz",
+        "zone": 308,
+        "name": "RfkchzXqhgthxz",
+        "source_power": 12311189,
+        "power": 12311189
+      },
+      {
+        "source_zone": 37,
+        "source_name": "雨婷私密处",
+        "zone": 37,
+        "name": "雨婷私密处",
+        "source_power": 23816049,
+        "power": 23816049
       }
     ],
     "boss": [

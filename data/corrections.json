@@ -173,6 +173,104 @@
           "reviewed": true
         }
       }
+    },
+    "2026年5月5日121354_Boss": {
+      "boss": {
+        "b007": {
+          "zone": "1",
+          "name": "Zero卐",
+          "rank": "8",
+          "damage_k": "4891663",
+          "note": "",
+          "reviewed": true
+        },
+        "b006": {
+          "zone": "205",
+          "name": "搁浅づ",
+          "rank": "6",
+          "damage_k": "6474968",
+          "note": "",
+          "reviewed": true
+        }
+      },
+      "members": {
+        "m004": {
+          "zone": "179",
+          "name": "波蒙的狗狗",
+          "power": "87286294",
+          "last_online": "",
+          "note": "",
+          "reviewed": true
+        },
+        "m024": {
+          "zone": "81",
+          "name": "酒酿圆子",
+          "power": "374031637",
+          "last_online": "",
+          "note": "",
+          "reviewed": true
+        },
+        "m026": {
+          "zone": "288",
+          "name": "花田綽",
+          "power": "51253872",
+          "last_online": "",
+          "note": "",
+          "reviewed": true
+        },
+        "m049": {
+          "zone": "58",
+          "name": "メジロマックイーン",
+          "power": "128712704",
+          "last_online": "2026-05-04T11:47:03",
+          "note": "",
+          "reviewed": true
+        },
+        "m059": {
+          "zone": "37",
+          "name": "雨婷私密处",
+          "power": "23816049",
+          "last_online": "2025-10-28T01:10:23",
+          "note": "",
+          "reviewed": true
+        },
+        "m054": {
+          "zone": "231",
+          "name": "炖煮红尘",
+          "power": "94344311",
+          "last_online": "",
+          "note": "",
+          "reviewed": true
+        },
+        "m001": {
+          "zone": "28",
+          "name": "伊之猪",
+          "power": "253256964",
+          "last_online": "",
+          "note": "",
+          "reviewed": true
+        },
+        "m033": {
+          "zone": "72",
+          "name": "远青",
+          "power": "267192447",
+          "last_online": "2026-05-04T17:23:51",
+          "note": "",
+          "reviewed": true
+        }
+      }
+    },
+    "2026年5月4日190856_Boss": {
+      "boss": {
+        "b005": {
+          "zone": "1",
+          "name": "Zero卐",
+          "rank": "5",
+          "damage_k": "5379640",
+          "note": "",
+          "reviewed": true
+        }
+      }
     }
   },
   "aliases": {
@@ -356,6 +454,36 @@
         "source_damage_k": 8075741,
         "rank": 6,
         "damage_k": 16745016
+      },
+      {
+        "source_zone": 1,
+        "source_name": "Zer051",
+        "zone": 1,
+        "name": "Zero卐",
+        "source_rank": 8,
+        "source_damage_k": 4891663,
+        "rank": 8,
+        "damage_k": 4891663
+      },
+      {
+        "source_zone": 1,
+        "source_name": "Zero!fi",
+        "zone": 1,
+        "name": "Zero卐",
+        "source_rank": 5,
+        "source_damage_k": 5379640,
+        "rank": 5,
+        "damage_k": 5379640
+      },
+      {
+        "source_zone": 205,
+        "source_name": "搁浅0",
+        "zone": 205,
+        "name": "搁浅づ",
+        "source_rank": 6,
+        "source_damage_k": 6474968,
+        "rank": 6,
+        "damage_k": 6474968
       }
     ]
   }

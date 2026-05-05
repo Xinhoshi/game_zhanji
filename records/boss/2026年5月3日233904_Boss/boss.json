@@ -113,7 +113,7 @@
     "zone": 71,
     "name": "梁师娘LUONG",
     "key": "71#梁师娘LUONG",
-    "rank": 6,
+    "rank": 7,
     "damage_k": 8075741,
     "damage": 8075741000,
     "raw": {
@@ -127,28 +127,6 @@
       "zone": 71,
       "name": "梁师娘LUONG",
       "key": "71#梁师娘LUONG",
-      "rank": 6,
-      "damage_k": 8075741
-    }
-  },
-  {
-    "zone": 78,
-    "name": "燃烧的俗物",
-    "key": "78#燃烧的俗物",
-    "rank": 7,
-    "damage_k": 8075741,
-    "damage": 8075741000,
-    "raw": {
-      "identity": "78 # 燃 烧 的 俗 物",
-      "rank": "No ， 7",
-      "damage": "伤 害 ： 8 ， 075 ， 741k"
-    },
-    "needs_review": [],
-    "row_id": "b007",
-    "ocr": {
-      "zone": 78,
-      "name": "燃烧的俗物",
-      "key": "78#燃烧的俗物",
       "rank": 7,
       "damage_k": 8075741
     }

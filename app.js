@@ -2,6 +2,8 @@ const state = {
   data: null,
   selectedId: null,
   selectedWeek: null,
+  selectedArchiveWeek: null,
+  memberGroupFilter: "all",
   memberSort: {
     key: "default",
     dir: "asc",
@@ -24,14 +26,19 @@ const formatNumber = (value) => {
 };
 
 const formatDamage = (valueK) => {
-  if (valueK === null || valueK === undefined) return "基线";
+  if (valueK === null || valueK === undefined) return "\u57fa\u7ebf";
   return `${formatNumber(valueK)}k`;
+};
+
+const formatDelta = (valueK) => {
+  if (valueK === null || valueK === undefined) return "-";
+  return `+${formatDamage(valueK)}`;
 };
 
 const compactNumber = (value) => {
   const number = Number(value || 0);
-  if (number >= 100000000) return `${(number / 100000000).toFixed(2)}亿`;
-  if (number >= 10000) return `${(number / 10000).toFixed(1)}万`;
+  if (number >= 100000000) return `${(number / 100000000).toFixed(2)}\u4ebf`;
+  if (number >= 10000) return `${(number / 10000).toFixed(1)}\u4e07`;
   return formatNumber(number);
 };
 
@@ -58,12 +65,23 @@ async function fetchState() {
   }
   if (window.LOV_INITIAL_STATE) return window.LOV_INITIAL_STATE;
   const fileResponse = await fetch("./data/state.json", { cache: "no-store" });
-  if (!fileResponse.ok) throw new Error("没有找到 data/state.json，请先运行 python server.py 或 tools/lov_parser.py");
+  if (!fileResponse.ok) throw new Error("\u6ca1\u6709\u627e\u5230 data/state.json\uff0c\u8bf7\u5148\u8fd0\u884c python server.py \u6216 tools/lov_parser.py");
   return fileResponse.json();
 }
 
 function selectedSnapshot() {
   return state.data.snapshots.at(-1);
+}
+
+function latestSnapshotWith(kind) {
+  return state.data.snapshots.filter((snapshot) => snapshot.images?.[kind] || snapshot[kind]?.length).at(-1) || selectedSnapshot();
+}
+
+function latestSnapshotImageSource(kind) {
+  if (kind === "members") {
+    return state.data.snapshots.filter((snapshot) => snapshot.folder?.includes("records/members/") || snapshot.id?.endsWith("_\u8054\u76df")).at(-1) || latestSnapshotWith(kind);
+  }
+  return state.data.snapshots.filter((snapshot) => snapshot.images?.[kind]).at(-1) || latestSnapshotWith(kind);
 }
 
 function previousSnapshot(current) {
@@ -80,7 +98,7 @@ function normalizedName(value) {
     .trim()
     .replace(/\s+/g, "")
     .toLocaleLowerCase("zh-CN")
-    .replace(/[01i|箫]/g, (char) => ({ 0: "o", 1: "l", i: "l", "|": "l", 箫: "萧" })[char]);
+    .replace(/[01i|]/g, (char) => ({ 0: "o", 1: "l", i: "l", "|": "l" })[char]);
 }
 
 function memberIdentity(item) {
@@ -156,19 +174,98 @@ function renderWeekOptions() {
   state.selectedWeek = state.selectedWeek || current.week_id;
   const weeks = availableWeeks();
   select.innerHTML = weeks
-    .map((week) => `<option value="${escapeHtml(week)}">周起始 ${escapeHtml(week)}${isWeekArchived(week) ? " · 已归档" : ""}</option>`)
+    .map((week) => `<option value="${escapeHtml(week)}">\u5468\u8d77\u59cb ${escapeHtml(week)}${isWeekArchived(week) ? " \u00b7 \u5df2\u5f52\u6863" : ""}</option>`)
     .join("");
-  if (!weeks.includes(state.selectedWeek)) {
-    state.selectedWeek = weeks[0] || current.week_id;
-  }
+  if (!weeks.includes(state.selectedWeek)) state.selectedWeek = weeks[0] || current.week_id;
   select.value = state.selectedWeek;
 }
 
 function selectedBossSnapshot() {
   const current = selectedSnapshot();
   const week = state.selectedWeek || current.week_id;
-  const snapshots = state.data.snapshots.filter((snapshot) => snapshot.week_id === week);
+  const snapshots = state.data.snapshots.filter((snapshot) => snapshot.week_id === week && snapshot.boss?.length);
   return snapshots.find((snapshot) => snapshot.id === state.selectedId) || snapshots.at(-1) || current;
+}
+
+function bossSnapshotsForWeek(weekId) {
+  return state.data.snapshots.filter((snapshot) => snapshot.week_id === weekId && snapshot.boss?.length);
+}
+
+function snapshotDayIndex(snapshot) {
+  const date = new Date(snapshot.captured_at);
+  if (Number.isNaN(date.getTime())) return null;
+  return (date.getDay() + 6) % 7;
+}
+
+function latestBossSnapshotsByDay(weekId) {
+  const byDay = new Map();
+  bossSnapshotsForWeek(weekId).forEach((snapshot) => {
+    const day = snapshotDayIndex(snapshot);
+    if (day === null) return;
+    const previous = byDay.get(day);
+    if (!previous || snapshot.captured_at > previous.captured_at) byDay.set(day, snapshot);
+  });
+  return byDay;
+}
+
+function bossMap(snapshot) {
+  return new Map((snapshot?.boss || []).map((item) => [item.key, item]));
+}
+
+function previousBossSnapshotInWeek(current) {
+  return bossSnapshotsForWeek(current.week_id).filter((snapshot) => snapshot.captured_at < current.captured_at).at(-1);
+}
+
+function bossDailyDelta(item, daySnapshot, weekSnapshots) {
+  if (!daySnapshot) return null;
+  const dayBoss = bossMap(daySnapshot).get(item.key);
+  if (!dayBoss || dayBoss.damage_k === null || dayBoss.damage_k === undefined) return null;
+  const previous = weekSnapshots.filter((snapshot) => snapshot.captured_at < daySnapshot.captured_at).at(-1);
+  const previousBoss = previous ? bossMap(previous).get(item.key) : null;
+  if (!previousBoss || previousBoss.damage_k === null || previousBoss.damage_k === undefined) return dayBoss.damage_k;
+  const delta = dayBoss.damage_k - previousBoss.damage_k;
+  return delta >= 0 ? delta : null;
+}
+
+const bossDayLabels = new Map([
+  [0, "\u5468\u4e00"],
+  [1, "\u5468\u4e8c"],
+  [2, "\u5468\u4e09"],
+  [3, "\u5468\u56db"],
+  [4, "\u5468\u4e94"],
+  [5, "\u5468\u516d"],
+  [6, "\u5468\u65e5"],
+]);
+
+function visibleBossDayOrder(current) {
+  const currentDay = snapshotDayIndex(current);
+  const allDays = [6, 5, 4, 3, 2, 1, 0];
+  if (currentDay === null) return allDays;
+  return allDays.filter((day) => day <= currentDay);
+}
+
+function renderRankingBars(target, rows, metricKey, valueFormatter, emptyText) {
+  const maxValue = Math.max(...rows.map((item) => item[metricKey] || 0), 1);
+  target.innerHTML = rows.length
+    ? rows.map((item, index) => {
+        const width = Math.max(2, ((item[metricKey] || 0) / maxValue) * 100);
+        return `<div class="bar-row rank-top-${index + 1}" title="${escapeHtml(item.key)} ${valueFormatter(item[metricKey])}"><span class="rank-pill">No.${item.rank || index + 1}</span><span class="bar-name">${escapeHtml(item.key)}</span><span class="bar-track" aria-hidden="true"><span class="bar-fill" style="width:${width}%"></span></span><strong>${valueFormatter(item[metricKey])}</strong></div>`;
+      }).join("")
+    : `<div class="empty-state">${emptyText}</div>`;
+}
+
+function archiveByWeek(weekId) {
+  return (state.data.boss_archives || []).find((archive) => archive.week_id === weekId);
+}
+
+function renderRankingBarsHtml(rows, metricKey, valueFormatter, emptyText) {
+  const maxValue = Math.max(...rows.map((item) => item[metricKey] || 0), 1);
+  return rows.length
+    ? rows.map((item, index) => {
+        const width = Math.max(2, ((item[metricKey] || 0) / maxValue) * 100);
+        return `<div class="bar-row rank-top-${index + 1}" title="${escapeHtml(item.key)} ${valueFormatter(item[metricKey])}"><span class="rank-pill">No.${item.rank || index + 1}</span><span class="bar-name">${escapeHtml(item.key)}</span><span class="bar-track" aria-hidden="true"><span class="bar-fill" style="width:${width}%"></span></span><strong>${valueFormatter(item[metricKey])}</strong></div>`;
+      }).join("")
+    : `<div class="empty-state">${emptyText}</div>`;
 }
 
 function renderStats(current, previous) {
@@ -183,99 +280,96 @@ function renderStats(current, previous) {
   const missingCount = previous ? previousList.filter((item) => !hasMatchingMember(item, members, previousNameCounts, currentNameCounts)).length : 0;
   const reviewCount = members.filter((item) => item.needs_review?.length).length + boss.filter((item) => item.needs_review?.length).length;
   const correctedCount = members.filter((item) => item.corrected).length + boss.filter((item) => item.corrected).length;
-  const archiveNote = current.boss_archived ? "Boss周数据已归档锁定" : `已人工修正 ${correctedCount} 条`;
-  $("#captureMeta").textContent = `最新节点 ${formatDateTime(current.captured_at)}`;
-  $("#archiveMeta").textContent = current.boss_archived ? `Boss周 ${current.week_id} 已归档锁定` : `Boss周 ${current.week_id} 可继续核对`;
-
-  $("#statsGrid").innerHTML = [
-    ["members", "成员数", members.length, `新增 ${newCount} / 缺失 ${missingCount}`],
-    ["power", "总战斗力", formatNumber(powerTotal), `约 ${compactNumber(powerTotal)}`],
-    ["boss", "Boss本周累计", `${formatNumber(bossTotal)}k`, `统计 ${boss.length} 人`],
-    ["review", "需复核", reviewCount, archiveNote],
-  ]
-    .map(([type, label, value, note]) => `<article class="stat stat-${type}"><span>${label}</span><strong>${value}</strong><small>${note}</small></article>`)
-    .join("");
+  const archiveNote = current.boss_archived ? "Boss\u5468\u6570\u636e\u5df2\u5f52\u6863\u9501\u5b9a" : `\u5df2\u4eba\u5de5\u4fee\u6b63 ${correctedCount} \u6761`;
+  $("#captureMeta").textContent = `\u6700\u65b0\u8282\u70b9 ${formatDateTime(current.captured_at)}`;
+  $("#archiveMeta").textContent = current.boss_archived ? `Boss\u5468 ${current.week_id} \u5df2\u5f52\u6863\u9501\u5b9a` : `Boss\u5468 ${current.week_id} \u53ef\u7ee7\u7eed\u6838\u5bf9`;
+  $("#statsGrid").innerHTML = [["members", "\u6210\u5458\u6570", members.length, `\u65b0\u589e ${newCount} / \u7f3a\u5931 ${missingCount}`], ["power", "\u603b\u6218\u6597\u529b", formatNumber(powerTotal), `\u7ea6 ${compactNumber(powerTotal)}`], ["boss", "Boss\u672c\u5468\u7d2f\u8ba1", `${formatNumber(bossTotal)}k`, `\u7edf\u8ba1 ${boss.length} \u4eba`], ["review", "\u9700\u590d\u6838", reviewCount, archiveNote]].map(([type, label, value, note]) => `<article class="stat stat-${type}"><span>${label}</span><strong>${value}</strong><small>${note}</small></article>`).join("");
 }
 
 function renderBars(current) {
   const boss = current.boss.slice(0, 10);
-  const maxDamage = Math.max(...boss.map((item) => item.damage_k || 0), 1);
-  $("#bossWeekLabel").textContent = `周起始 ${current.week_id}`;
-  $("#bossBars").innerHTML = boss.length
-    ? boss
-        .map((item, index) => {
-          const width = Math.max(2, ((item.damage_k || 0) / maxDamage) * 100);
-          return `<div class="bar-row rank-top-${index + 1}" title="${escapeHtml(item.key)} ${formatDamage(item.damage_k)}">
-        <span class="rank-pill">No.${item.rank || index + 1}</span>
-        <span class="bar-name">${escapeHtml(item.key)}</span>
-        <span class="bar-track" aria-hidden="true"><span class="bar-fill" style="width:${width}%"></span></span>
-        <strong>${formatDamage(item.damage_k)}</strong>
-      </div>`;
-        })
-        .join("")
-    : `<div class="empty-state">还没有 Boss 识别数据</div>`;
+  $("#bossWeekLabel").textContent = `\u5468\u8d77\u59cb ${current.week_id}`;
+  renderRankingBars($("#bossBars"), boss, "damage_k", formatDamage, "\u8fd8\u6ca1\u6709 Boss \u8bc6\u522b\u6570\u636e");
 
   const members = current.members
     .filter((item) => item.power)
     .slice()
     .sort((a, b) => (b.power || 0) - (a.power || 0))
-    .slice(0, 10);
-  const maxPower = Math.max(...members.map((item) => item.power || 0), 1);
-  $("#powerBars").innerHTML = members.length
-    ? members
-        .map((item, index) => {
-          const width = Math.max(2, ((item.power || 0) / maxPower) * 100);
-          return `<div class="bar-row power rank-top-${index + 1}" title="${escapeHtml(item.key)} ${formatNumber(item.power)}">
-        <span class="rank-pill">${String(index + 1).padStart(2, "0")}</span>
-        <span class="bar-name">${escapeHtml(item.key)}</span>
-        <span class="bar-track" aria-hidden="true"><span class="bar-fill" style="width:${width}%"></span></span>
-        <strong>${formatNumber(item.power)}</strong>
-      </div>`;
-        })
-        .join("")
-    : `<div class="empty-state">还没有联盟成员战斗力数据</div>`;
+    .slice(0, 10)
+    .map((item, index) => ({ ...item, rank: index + 1 }));
+  renderRankingBars($("#powerBars"), members, "power", formatNumber, "\u8fd8\u6ca1\u6709\u8054\u76df\u6210\u5458\u6218\u6597\u529b\u6570\u636e");
 }
 
 function reviewTags(item) {
-  return [
-    item.corrected ? `<span class="tag corrected">已修正</span>` : "",
-    item.manual ? `<span class="tag new">手动补录</span>` : "",
-    item.needs_review?.length ? `<span class="tag review">复核 ${escapeHtml(item.needs_review.join(", "))}</span>` : "",
-  ].join("");
+  return [item.corrected ? `<span class="tag corrected">\u5df2\u4fee\u6b63</span>` : "", item.manual ? `<span class="tag new">\u624b\u52a8\u8865\u5f55</span>` : "", item.needs_review?.length ? `<span class="tag review">\u590d\u6838 ${escapeHtml(item.needs_review.join(", "))}</span>` : ""].join("");
 }
 
 function renderBossTable(current) {
-  const rows = getBossDeltas(current);
+  const weekSnapshots = bossSnapshotsForWeek(current.week_id);
+  const previousSnapshot = previousBossSnapshotInWeek(current);
+  const previousMap = bossMap(previousSnapshot);
+  const dailySnapshots = latestBossSnapshotsByDay(current.week_id);
+  const dayOrder = visibleBossDayOrder(current);
+  const headerRow = $("#bossHeaderRow");
+  if (headerRow) {
+    headerRow.innerHTML = ["\u6392\u884c", "\u6210\u5458", "\u672c\u5468\u7d2f\u8ba1", ...dayOrder.map((day) => bossDayLabels.get(day)), "\u672c\u6b21\u589e\u91cf", "\u8bc6\u522b\u72b6\u6001", "\u64cd\u4f5c"].map((label) => `<th>${label}</th>`).join("");
+  }
+  const rows = current.boss.map((boss) => {
+    const old = previousMap.get(boss.key);
+    const delta = old && boss.damage_k !== null && old.damage_k !== null ? boss.damage_k - old.damage_k : null;
+    return { ...boss, delta_k: delta !== null && delta >= 0 ? delta : null, is_baseline: !old, daily_deltas: Object.fromEntries(dayOrder.map((day) => [day, bossDailyDelta(boss, dailySnapshots.get(day), weekSnapshots)])) };
+  });
   const locked = isWeekArchived(current.week_id);
-  $("#bossTable").innerHTML = rows.length
-    ? rows
-        .map((item) => {
-          const review = reviewTags(item) || `<span class="tag">正常</span>`;
-          const delta = item.is_baseline ? `<span class="warn">本周累计基线</span>` : `<span class="delta">+${formatDamage(item.delta_k || 0)}</span>`;
-          return `<tr class="${item.rank && item.rank <= 3 ? `rank-table-top-${item.rank}` : ""}">
-        <td><span class="rank-pill table-rank">No.${item.rank || "-"}</span></td>
-        <td><strong class="cell-name">${escapeHtml(item.key)}</strong></td>
-        <td class="metric-cell">${formatDamage(item.damage_k)}</td>
-        <td class="metric-cell">${delta}</td>
-        <td>${locked ? `${review}<span class="tag corrected">已归档</span>` : review}</td>
-        <td><button class="mini-button" data-edit-kind="boss" data-row-id="${escapeHtml(item.row_id)}" ${locked ? "disabled" : ""}>${locked ? "锁定" : "核对"}</button></td>
-      </tr>`;
-        })
-        .join("")
-    : `<tr><td colspan="6"><div class="empty-state table-empty">当前周还没有 Boss 数据</div></td></tr>`;
+  const columnCount = dayOrder.length + 6;
+  $("#bossTable").innerHTML = rows.length ? rows.map((item) => {
+    const review = reviewTags(item) || `<span class="tag">\u6b63\u5e38</span>`;
+    const dailyCells = dayOrder.map((day) => `<td class="metric-cell day-cell">${formatDelta(item.daily_deltas[day])}</td>`).join("");
+    const delta = item.is_baseline ? `<span class="warn">\u672c\u5468\u7d2f\u8ba1\u57fa\u7ebf</span>` : `<span class="delta">${formatDelta(item.delta_k || 0)}</span>`;
+    return `<tr class="${item.rank && item.rank <= 3 ? `rank-table-top-${item.rank}` : ""}"><td><span class="rank-pill table-rank">No.${item.rank || "-"}</span></td><td><strong class="cell-name">${escapeHtml(item.key)}</strong></td><td class="metric-cell">${formatDamage(item.damage_k)}</td>${dailyCells}<td class="metric-cell">${delta}</td><td>${locked ? `${review}<span class="tag corrected">\u5df2\u5f52\u6863</span>` : review}</td><td><button class="mini-button" data-edit-kind="boss" data-row-id="${escapeHtml(item.row_id)}" ${locked ? "disabled" : ""}>${locked ? "\u9501\u5b9a" : "\u6838\u5bf9"}</button></td></tr>`;
+  }).join("") : `<tr><td colspan="${columnCount}"><div class="empty-state table-empty">\u5f53\u524d\u5468\u8fd8\u6ca1\u6709 Boss \u6570\u636e</div></td></tr>`;
 }
 
 function renderArchiveStatus() {
-  const status = $("#archiveStatus");
-  const button = $("#archiveButton");
-  if (!status || !button) return;
+  const status = $("#archiveStatus"); const button = $("#archiveButton"); if (!status || !button) return;
   const archived = state.data.archived_boss_weeks || [];
-  status.textContent = archived.length ? `已归档：${archived.join("、")}` : "暂无已结束周可归档";
+  status.textContent = archived.length ? `\u5df2\u5f52\u6863\uff1a${archived.join("\u3001")}` : "\u6682\u65e0\u5df2\u7ed3\u675f\u5468\u53ef\u5f52\u6863";
   button.disabled = availableWeeks().length <= 1;
 }
 
+function renderArchiveHistory() {
+  const stats = state.data.archive_stats || { rows: [], week_count: 0, total_damage_k: 0, member_count: 0 };
+  const summary = $("#archiveSummary");
+  const table = $("#archiveTable");
+  if (!summary || !table) return;
+  summary.innerHTML = [["\u5f52\u6863\u5468\u6570", stats.week_count || 0], ["\u5386\u53f2\u603b\u4f24\u5bb3", `${formatNumber(stats.total_damage_k || 0)}k`], ["\u53c2\u4e0e\u6210\u5458", stats.member_count || 0]].map(([label, value]) => `<article class="archive-stat"><span>${label}</span><strong>${value}</strong></article>`).join("");
+  if (!stats.rows?.length) {
+    table.innerHTML = `<tr><td colspan="7"><div class="empty-state table-empty">\u6682\u65e0\u5386\u53f2\u5f52\u6863</div></td></tr>`;
+    return;
+  }
+  table.innerHTML = stats.rows.map((row) => {
+    const selected = state.selectedArchiveWeek === row.week_id;
+    const baseRow = `<tr class="archive-row ${selected ? "is-selected" : ""}" data-archive-week="${escapeHtml(row.week_id || "")}" tabindex="0"><td>${escapeHtml(row.week_id || "-")}</td><td>${formatDateTime(row.archived_at)}</td><td>${escapeHtml(row.source_snapshot_id || "-")}</td><td class="metric-cell">${formatNumber(row.member_count)}</td><td class="metric-cell">${formatDamage(row.total_damage_k)}</td><td>${escapeHtml(row.leader_key || "-")}</td><td class="metric-cell">${formatDamage(row.leader_damage_k)}</td></tr>`;
+    return selected ? baseRow + renderArchiveExpandedRow(row.week_id) : baseRow;
+  }).join("");
+}
+
+function renderArchiveExpandedRow(weekId) {
+  const archive = archiveByWeek(weekId);
+  if (!archive) return "";
+  const bossRows = (archive.boss || []).slice().sort((a, b) => (a.rank || 9999) - (b.rank || 9999));
+  const totalDamage = archive.total_damage_k ?? bossRows.reduce((sum, item) => sum + (item.damage_k || 0), 0);
+  const leader = bossRows[0] || {};
+  const statCards = [["boss", "Boss\u603b\u4f24\u5bb3", `${formatNumber(totalDamage)}k`, `\u7edf\u8ba1 ${bossRows.length} \u4eba`], ["members", "\u53c2\u4e0e\u6210\u5458", bossRows.length, archive.week_id], ["review", "\u7b2c\u4e00\u540d", escapeHtml(leader.key || "-"), formatDamage(leader.damage_k)], ["power", "\u5f52\u6863\u72b6\u6001", archive.locked ? "\u5df2\u9501\u5b9a" : "-", "\u5386\u53f2\u6570\u636e"]].map(([type, label, value, note]) => `<article class="stat stat-${type}"><span>${label}</span><strong>${value}</strong><small>${note}</small></article>`).join("");
+  const bars = renderRankingBarsHtml(bossRows.slice(0, 10), "damage_k", formatDamage, "\u6682\u65e0 Boss \u5f52\u6863\u6570\u636e");
+  const memberBars = renderRankingBarsHtml(bossRows.slice(0, 10), "damage_k", formatDamage, "\u6682\u65e0\u5f52\u6863\u6210\u5458\u6570\u636e");
+  return `<tr class="archive-expanded-row"><td colspan="7"><section class="archive-inline-detail"><div class="panel-head archive-detail-head"><div><p class="eyebrow">Archive Detail</p><h3>\u5386\u53f2\u5f52\u6863 ${escapeHtml(archive.week_id)}</h3><p class="hint">\u6765\u6e90\u8282\u70b9 ${escapeHtml(archive.source_snapshot_id || "-")} \u00b7 \u5f52\u6863\u65f6\u95f4 ${formatDateTime(archive.archived_at)}</p></div></div><section class="stats-grid">${statCards}</section><section class="leaderboard-grid"><article class="panel ranking-panel"><div class="panel-head compact"><div><p class="eyebrow">Boss</p><h2>Boss \u5386\u53f2\u4f24\u5bb3\u6392\u884c</h2></div><span class="badge">\u5468\u8d77\u59cb ${escapeHtml(archive.week_id)}</span></div><div class="bars">${bars}</div></article><article class="panel ranking-panel"><div class="panel-head compact"><div><p class="eyebrow">Members</p><h2>\u5f52\u6863\u6210\u5458 Top 10</h2></div></div><div class="bars">${memberBars}</div></article></section></section></td></tr>`;
+}
+
+function renderArchiveDetail() {}
+
 function renderMemberTable(current, previous) {
   const search = $("#searchInput").value.trim().toLowerCase();
+  const groupFilter = state.memberGroupFilter || "all";
   const previousList = previous?.members || [];
   const currentList = current.members || [];
   const previousNameCounts = uniqueMemberNames(previousList);
@@ -285,7 +379,13 @@ function renderMemberTable(current, previous) {
         .filter((item) => !hasMatchingMember(item, currentList, previousNameCounts, currentNameCounts))
         .map((item) => ({ ...item, missing: true, source_snapshot_id: previous.id }))
     : [];
-  const rows = sortMembers([...current.members, ...missing].filter((item) => !search || item.key.toLowerCase().includes(search)));
+  const rows = sortMembers(
+    [...current.members, ...missing].filter((item) => {
+      const matchesText = !search || item.key.toLowerCase().includes(search);
+      const matchesGroup = groupFilter === "all" || (groupFilter === "in" ? !!item.in_group : !item.in_group);
+      return matchesText && matchesGroup;
+    }),
+  );
   renderMemberSortIcons();
 
   $("#memberTable").innerHTML = rows.length
@@ -293,25 +393,19 @@ function renderMemberTable(current, previous) {
         .map((item) => {
           const isNew = !item.missing && previous && !hasMatchingMember(item, previousList, currentNameCounts, previousNameCounts);
           const tags = [
-            isNew ? `<span class="tag new">新增</span>` : "",
-            item.missing ? `<span class="tag missing">缺失</span>` : "",
+            isNew ? `<span class="tag new">\u65b0\u589e</span>` : "",
+            item.missing ? `<span class="tag missing">\u7f3a\u5931</span>` : "",
             reviewTags(item),
           ].join("");
-          const rowSnapshotId = item.source_snapshot_id || current.id;
-          const raw = item.raw
-            ? `<details><summary>查看</summary><code>${escapeHtml([item.raw.identity, item.raw.power, item.raw.last_online].filter(Boolean).join("\n"))}</code></details>`
-            : "";
-          return `<tr>
-        <td><strong class="cell-name">${escapeHtml(item.key)}</strong></td>
-        <td class="metric-cell">${formatNumber(item.power)}</td>
-        <td>${formatDateTime(item.last_online)}</td>
-        <td>${tags || `<span class="tag">在盟</span>`}</td>
-        <td>${raw}</td>
-        <td><button class="mini-button" data-edit-kind="members" data-row-id="${escapeHtml(item.row_id)}" data-snapshot-id="${escapeHtml(rowSnapshotId)}">核对</button></td>
-      </tr>`;
+          const rowSnapshotId = current.id;
+          const saveSnapshotId = item.source_snapshot_id || current.member_source_id || current.id;
+          const raw = item.raw ? `<details><summary>\u67e5\u770b</summary><code>${escapeHtml([item.raw.identity, item.raw.power, item.raw.last_online].filter(Boolean).join("\n"))}</code></details>` : "";
+          const nameClass = item.in_group ? "cell-name in-group-name" : "cell-name";
+          const deleteButton = item.manual && !item.missing ? `<button class="mini-button danger-button" data-delete-kind="members" data-row-id="${escapeHtml(item.row_id)}" data-save-snapshot-id="${escapeHtml(saveSnapshotId)}">\u5220\u9664</button>` : "";
+          return `<tr class="${item.in_group ? "member-in-group" : ""}"><td><strong class="${nameClass}">${escapeHtml(item.key)}</strong></td><td class="metric-cell">${formatNumber(item.power)}</td><td>${formatDateTime(item.last_online)}</td><td>${tags || `<span class="tag">\u5728\u76df</span>`}</td><td>${raw}</td><td><div class="row-actions"><button class="mini-button" data-edit-kind="members" data-row-id="${escapeHtml(item.row_id)}" data-snapshot-id="${escapeHtml(rowSnapshotId)}" data-save-snapshot-id="${escapeHtml(saveSnapshotId)}">\u6838\u5bf9</button>${deleteButton}</div></td></tr>`;
         })
         .join("")
-    : `<tr><td colspan="6"><div class="empty-state table-empty">没有匹配的成员</div></td></tr>`;
+    : `<tr><td colspan="6"><div class="empty-state table-empty">\u6ca1\u6709\u5339\u914d\u7684\u6210\u5458</div></td></tr>`;
 }
 
 function sortMembers(rows) {
@@ -327,16 +421,11 @@ function sortMembers(rows) {
 }
 
 function renderMemberSortIcons() {
-  const zoneIcon = $("#memberSortIcon");
-  const powerIcon = $("#powerSortIcon");
-  const resetButton = $("#resetMemberSortButton");
+  const zoneIcon = $("#memberSortIcon"); const powerIcon = $("#powerSortIcon"); const resetButton = $("#resetMemberSortButton");
   if (!zoneIcon || !powerIcon) return;
-  zoneIcon.textContent = state.memberSort.key === "zone" ? (state.memberSort.dir === "asc" ? "↑" : "↓") : "↕";
-  powerIcon.textContent = state.memberSort.key === "power" ? (state.memberSort.dir === "asc" ? "↑" : "↓") : "↕";
-  if (resetButton) {
-    resetButton.disabled = state.memberSort.key === "default";
-    resetButton.classList.toggle("is-active", state.memberSort.key === "default");
-  }
+  zoneIcon.textContent = state.memberSort.key === "zone" ? (state.memberSort.dir === "asc" ? "\u2191" : "\u2193") : "\u2195";
+  powerIcon.textContent = state.memberSort.key === "power" ? (state.memberSort.dir === "asc" ? "\u2191" : "\u2193") : "\u2195";
+  if (resetButton) { resetButton.disabled = state.memberSort.key === "default"; resetButton.classList.toggle("is-active", state.memberSort.key === "default"); }
 }
 
 function renderImages(current) {
@@ -362,6 +451,8 @@ function render() {
   renderMemberTable(current, previous);
   renderImages(current);
   renderArchiveStatus();
+  renderArchiveHistory();
+  renderArchiveDetail();
 }
 
 async function reloadState() {
@@ -391,36 +482,84 @@ function ensureReviewModal() {
   document.body.insertAdjacentHTML(
     "beforeend",
     `<dialog id="reviewModal" class="review-modal">
-      <form method="dialog" id="reviewForm">
-        <div class="modal-head">
+      <form method="dialog" id="reviewForm" class="review-shell">
+        <header class="review-head">
           <div>
-            <p class="eyebrow">Review</p>
-            <h2 id="reviewTitle">识别核对</h2>
+            <p class="eyebrow">OCR Review</p>
+            <h2 id="reviewTitle">\u8bc6\u522b\u6838\u5bf9</h2>
+            <p id="reviewSubtitle" class="review-subtitle"></p>
           </div>
-          <button type="button" class="icon-button" data-close-review>×</button>
+          <button type="button" class="icon-button close-review-button" data-close-review aria-label="\u5173\u95ed"><span aria-hidden="true">\u00d7</span></button>
+        </header>
+        <div class="review-body">
+          <section class="review-main" id="reviewFields"></section>
+          <aside class="review-side" id="reviewRaw"></aside>
         </div>
-        <div id="reviewFields" class="review-fields"></div>
-        <div id="reviewRaw" class="review-raw"></div>
-        <div class="modal-actions">
-          <button type="button" class="secondary-button" data-close-review>取消</button>
-          <button type="submit">保存修正</button>
-        </div>
-        <p id="reviewStatus" class="hint"></p>
+        <footer class="review-actions">
+          <p id="reviewStatus" class="hint"></p>
+          <div class="review-action-buttons">
+            <button type="button" class="secondary-button" data-close-review>\u53d6\u6d88</button>
+            <button type="submit">\u4fdd\u5b58</button>
+          </div>
+        </footer>
       </form>
     </dialog>`,
   );
   modal = $("#reviewModal");
   modal.querySelectorAll("[data-close-review]").forEach((button) => button.addEventListener("click", () => modal.close()));
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) modal.close();
+  });
+  modal.addEventListener("click", (event) => {
+    const switchButton = event.target.closest("[data-switch-field]");
+    if (!switchButton) return;
+    const input = modal.querySelector(`#${CSS.escape(switchButton.dataset.switchField)}`);
+    if (!input) return;
+    input.checked = !input.checked;
+    switchButton.setAttribute("aria-checked", input.checked ? "true" : "false");
+    switchButton.classList.toggle("is-checked", input.checked);
+    input.dispatchEvent(new Event("input", { bubbles: true }));
+  });
+  modal.addEventListener("pointerdown", (event) => {
+    const rawBlock = event.target.closest(".review-raw pre");
+    if (!rawBlock) return;
+    rawBlock.dataset.dragging = "true";
+    rawBlock.dataset.dragStartX = String(event.clientX);
+    rawBlock.dataset.dragScrollLeft = String(rawBlock.scrollLeft);
+    rawBlock.setPointerCapture?.(event.pointerId);
+  });
+  modal.addEventListener("pointermove", (event) => {
+    const rawBlock = event.target.closest(".review-raw pre");
+    if (!rawBlock || rawBlock.dataset.dragging !== "true") return;
+    const startX = Number(rawBlock.dataset.dragStartX || event.clientX);
+    const startScrollLeft = Number(rawBlock.dataset.dragScrollLeft || rawBlock.scrollLeft);
+    rawBlock.scrollLeft = startScrollLeft - (event.clientX - startX);
+  });
+  modal.addEventListener("pointerup", (event) => {
+    const rawBlock = event.target.closest(".review-raw pre");
+    if (!rawBlock) return;
+    rawBlock.dataset.dragging = "false";
+    rawBlock.releasePointerCapture?.(event.pointerId);
+  });
   $("#reviewForm").addEventListener("submit", saveCorrection);
   return modal;
 }
 
-function field(name, label, value, type = "text") {
-  return `<label><span>${label}</span><input name="${name}" type="${type}" value="${escapeHtml(value ?? "")}" /></label>`;
+function field(name, label, value, type = "text", hint = "") {
+  return `<label class="review-field"><span>${label}</span><input name="${name}" type="${type}" value="${escapeHtml(value ?? "")}" />${hint ? `<small>${hint}</small>` : ""}</label>`;
 }
 
-function openReview(kind, rowId = null, snapshotId = null) {
-  const snapshot = reviewSnapshot(kind, snapshotId);
+function checkboxField(name, label, checked = false, hint = "") {
+  const fieldId = `review-${name}`;
+  return `<div class="switch-field"><input id="${fieldId}" class="switch-input" name="${name}" type="checkbox" ${checked ? "checked" : ""} tabindex="-1" aria-hidden="true" /><button type="button" class="switch-control ${checked ? "is-checked" : ""}" data-switch-field="${fieldId}" role="switch" aria-checked="${checked ? "true" : "false"}"><span class="switch-track" aria-hidden="true"></span><span><strong>${label}</strong>${hint ? `<small>${hint}</small>` : ""}</span></button></div>`;
+}
+
+function reviewSection(title, fields) {
+  return `<fieldset class="review-section"><legend>${title}</legend>${fields.join("")}</fieldset>`;
+}
+
+function openReview(kind, rowId = null, snapshotId = null, saveSnapshotId = null) {
+  const snapshot = snapshotId ? reviewSnapshot(kind, snapshotId) : kind === "members" ? selectedSnapshot() : selectedBossSnapshot();
   const row = rowId ? findRow(kind, rowId, snapshot.id) : null;
   const isMember = kind === "members";
   const generatedRowId = rowId || `manual-${isMember ? "m" : "b"}-${Date.now()}`;
@@ -428,71 +567,110 @@ function openReview(kind, rowId = null, snapshotId = null) {
   modal.dataset.kind = kind;
   modal.dataset.rowId = generatedRowId;
   modal.dataset.snapshotId = snapshot.id;
-  $("#reviewTitle").textContent = row ? `核对 ${row.key}` : `手动补录${isMember ? "成员" : "Boss记录"}`;
+  modal.dataset.saveSnapshotId = saveSnapshotId || snapshot.id;
+  modal.dataset.groupOnly = "false";
+  $("#reviewTitle").textContent = row ? `\u6838\u5bf9 ${row.key}` : `\u624b\u52a8\u8865\u5f55${isMember ? "\u6210\u5458" : "Boss\u8bb0\u5f55"}`;
+  $("#reviewSubtitle").textContent = `${isMember ? "\u8054\u76df\u6210\u5458" : "Boss\u4f24\u5bb3"} \u00b7 ${snapshot.id}`;
 
   $("#reviewFields").innerHTML = isMember
     ? [
-        field("zone", "区服", row?.zone ?? "", "number"),
-        field("name", "人名（支持日文、特殊符号）", row?.name ?? ""),
-        field("power", "战斗力", row?.power ?? "", "number"),
-        field("last_online", "上线时间（YYYY-MM-DDTHH:mm:ss，可留空）", row?.last_online ?? ""),
-        field("note", "修正备注", row?.raw?.correction_note ?? ""),
+        reviewSection("\u57fa\u672c\u8eab\u4efd", [
+          field("zone", "\u533a\u670d", row?.zone ?? "", "number"),
+          field("name", "\u4eba\u540d", row?.name ?? "", "text", "\u652f\u6301\u65e5\u6587\u548c\u7279\u6b8a\u7b26\u53f7"),
+        ]),
+        reviewSection("\u6210\u5458\u6570\u636e", [
+          field("power", "\u6218\u6597\u529b", row?.power ?? "", "number"),
+          field("last_online", "\u4e0a\u7ebf\u65f6\u95f4", row?.last_online ?? "", "text", "YYYY-MM-DDTHH:mm:ss"),
+        ]),
+        reviewSection("\u7fa4\u72b6\u6001", [checkboxField("in_group", "\u662f\u5426\u5728\u7fa4", row?.in_group ?? false, "\u53ea\u4fee\u6539\u6b64\u9879\u4e0d\u4f1a\u8bb0\u4e3a\u5df2\u4fee\u6b63")]),
+        reviewSection("\u5907\u6ce8", [field("note", "\u4fee\u6b63\u5907\u6ce8", row?.raw?.correction_note ?? "")]),
       ].join("")
     : [
-        field("zone", "区服", row?.zone ?? "", "number"),
-        field("name", "人名（支持日文、特殊符号）", row?.name ?? ""),
-        field("rank", "排行", row?.rank ?? "", "number"),
-        field("damage_k", "伤害（单位 k，只填数字）", row?.damage_k ?? "", "number"),
-        field("note", "修正备注", row?.raw?.correction_note ?? ""),
+        reviewSection("\u57fa\u672c\u8eab\u4efd", [field("zone", "\u533a\u670d", row?.zone ?? "", "number"), field("name", "\u4eba\u540d", row?.name ?? "")]),
+        reviewSection("Boss \u6570\u636e", [field("rank", "\u6392\u884c", row?.rank ?? "", "number"), field("damage_k", "\u4f24\u5bb3\uff08k\uff09", row?.damage_k ?? "", "number", "\u53ea\u586b\u6570\u5b57")]),
+        reviewSection("\u5907\u6ce8", [field("note", "\u4fee\u6b63\u5907\u6ce8", row?.raw?.correction_note ?? "")]),
       ].join("");
 
-  const rawText = row?.raw ? Object.entries(row.raw).map(([key, value]) => `${key}: ${value}`).join("\n") : "手动补录";
-  $("#reviewRaw").innerHTML = `<h3>原始识别</h3><pre>${escapeHtml(rawText)}</pre><p>当前时间节点：${escapeHtml(snapshot.id)}</p>`;
+  if (isMember && row) {
+    const initialValues = {
+      zone: String(row.zone ?? ""),
+      name: String(row.name ?? ""),
+      power: String(row.power ?? ""),
+      last_online: String(row.last_online ?? ""),
+      note: String(row.raw?.correction_note ?? ""),
+    };
+    $("#reviewFields").addEventListener("input", () => {
+      const form = $("#reviewForm");
+      modal.dataset.groupOnly = ["zone", "name", "power", "last_online", "note"].every((key) => String(form.elements[key]?.value ?? "") === initialValues[key]) ? "true" : "false";
+    }, { once: false });
+  }
+  const rawText = row?.raw ? Object.entries(row.raw).map(([key, value]) => `${key}: ${value}`).join("\n") : "\u624b\u52a8\u8865\u5f55";
+  $("#reviewRaw").innerHTML = `<h3>\u539f\u59cb\u8bc6\u522b</h3><pre>${escapeHtml(rawText)}</pre><dl><dt>\u4fdd\u5b58\u5230</dt><dd>${escapeHtml(modal.dataset.saveSnapshotId)}</dd><dt>\u5f53\u524d\u5c55\u793a</dt><dd>${escapeHtml(snapshot.id)}</dd></dl>`;
   $("#reviewStatus").textContent = "";
   modal.showModal();
 }
 
 async function saveCorrection(event) {
-  event.preventDefault();
-  const modal = $("#reviewModal");
-  const form = event.currentTarget;
-  const formData = new FormData(form);
-  const kind = modal.dataset.kind;
-  const rowId = modal.dataset.rowId;
-  const values = Object.fromEntries(formData.entries());
-  values.reviewed = true;
+  event.preventDefault(); const modal = $("#reviewModal"); const form = event.currentTarget; const formData = new FormData(form); const kind = modal.dataset.kind; const rowId = modal.dataset.rowId; const values = Object.fromEntries(formData.entries()); if (kind === "members") { values.in_group = formData.has("in_group"); values.group_only = modal.dataset.groupOnly === "true"; } values.reviewed = true;
+  $("#reviewStatus").textContent = "\u6b63\u5728\u4fdd\u5b58...";
+  try { const response = await fetch("/api/corrections", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ snapshot_id: modal.dataset.saveSnapshotId || modal.dataset.snapshotId || (kind === "boss" ? selectedBossSnapshot() : selectedSnapshot()).id, kind, row_id: rowId, values }) }); const payload = await response.json(); if (!response.ok) throw new Error(payload.error || "\u4fdd\u5b58\u5931\u8d25"); state.data = payload.state; modal.close(); render(); } catch (error) { $("#reviewStatus").textContent = `\u4fdd\u5b58\u5931\u8d25\uff1a${error.message}\u3002\u8bf7\u786e\u8ba4\u662f\u901a\u8fc7 python server.py \u6253\u5f00\u7684\u9875\u9762\u3002`; }
+}
 
-  $("#reviewStatus").textContent = "正在保存...";
+
+async function deleteCorrection(kind, rowId, snapshotId) {
+  if (!rowId || !snapshotId) return;
+  const confirmed = window.confirm("\u786e\u5b9a\u5220\u9664\u8fd9\u6761\u624b\u52a8\u8865\u5f55\u6210\u5458\u5417\uff1f");
+  if (!confirmed) return;
   try {
     const response = await fetch("/api/corrections", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ snapshot_id: modal.dataset.snapshotId || (kind === "boss" ? selectedBossSnapshot() : selectedSnapshot()).id, kind, row_id: rowId, values }),
+      body: JSON.stringify({ snapshot_id: snapshotId, kind, row_id: rowId, delete: true }),
     });
     const payload = await response.json();
-    if (!response.ok) throw new Error(payload.error || "保存失败");
+    if (!response.ok) throw new Error(payload.error || "\u5220\u9664\u5931\u8d25");
     state.data = payload.state;
-    modal.close();
     render();
   } catch (error) {
-    $("#reviewStatus").textContent = `保存失败：${error.message}。请确认是通过 python server.py 打开的页面。`;
+    window.alert(`\u5220\u9664\u5931\u8d25\uff1a${error.message}`);
   }
 }
 
 document.addEventListener("click", (event) => {
   const editButton = event.target.closest("[data-edit-kind]");
   if (editButton) {
-    openReview(editButton.dataset.editKind, editButton.dataset.rowId, editButton.dataset.snapshotId);
+    openReview(editButton.dataset.editKind, editButton.dataset.rowId, editButton.dataset.snapshotId, editButton.dataset.saveSnapshotId);
     return;
   }
   if (event.target.closest("#addMemberButton")) {
-    openReview("members");
+    const current = selectedSnapshot();
+    openReview("members", null, current.id, current.member_source_id || current.id);
+  }
+  const deleteButton = event.target.closest("[data-delete-kind]");
+  if (deleteButton) {
+    deleteCorrection(deleteButton.dataset.deleteKind, deleteButton.dataset.rowId, deleteButton.dataset.saveSnapshotId);
+    return;
   }
   if (event.target.closest("#resetMemberSortButton")) {
     state.memberSort = { key: "default", dir: "asc" };
     render();
   }
 });
+
+document.addEventListener("click", (event) => {
+  const row = event.target.closest("[data-archive-week]");
+  if (!row) return;
+  state.selectedArchiveWeek = state.selectedArchiveWeek === row.dataset.archiveWeek ? null : row.dataset.archiveWeek;
+  renderArchiveHistory();
+});
+
+document.addEventListener("keydown", (event) => {
+  const row = event.target.closest?.("[data-archive-week]");
+  if (!row || !["Enter", " "].includes(event.key)) return;
+  event.preventDefault();
+  row.click();
+});
+
 
 $("#snapshotSelect").addEventListener("change", (event) => {
   state.selectedId = event.target.value;
@@ -506,6 +684,10 @@ $("#weekSelect").addEventListener("change", (event) => {
 });
 
 $("#searchInput").addEventListener("input", render);
+$("#groupFilter").addEventListener("change", (event) => {
+  state.memberGroupFilter = event.target.value;
+  render();
+});
 
 document.querySelectorAll("[data-member-sort]").forEach((button) => {
   button.addEventListener("click", () => {
@@ -531,54 +713,54 @@ $("#uploadForm").addEventListener("submit", async (event) => {
   const memberFile = form.elements.member.files[0];
   const bossFile = form.elements.boss.files[0];
   if (!memberFile && !bossFile) {
-    status.textContent = "请至少选择联盟截图或 Boss 截图中的一张。";
+    status.textContent = "\u8bf7\u81f3\u5c11\u9009\u62e9\u8054\u76df\u622a\u56fe\u6216 Boss \u622a\u56fe\u4e2d\u7684\u4e00\u5f20\u3002";
     return;
   }
-  status.textContent = "正在上传并识别...";
+  status.textContent = "\u6b63\u5728\u4e0a\u4f20\u5e76\u8bc6\u522b...";
   try {
     const response = await fetch("/api/upload", { method: "POST", body: new FormData(form) });
     const payload = await response.json();
-    if (!response.ok) throw new Error(payload.error || "上传失败");
+    if (!response.ok) throw new Error(payload.error || "\u4e0a\u4f20\u5931\u8d25");
     state.data = payload.state;
     state.selectedWeek = payload.snapshot.week_id;
     state.selectedId = payload.state.snapshots.filter((snapshot) => snapshot.week_id === state.selectedWeek).at(-1)?.id;
     form.reset();
-    status.textContent = `已分开保存并识别：${payload.snapshot.id}`;
+    status.textContent = `\u5df2\u4fdd\u5b58\u5e76\u8bc6\u522b\uff1a${payload.snapshot.id}`;
     render();
   } catch (error) {
-    status.textContent = `上传失败：${error.message}`;
+    status.textContent = `\u4e0a\u4f20\u5931\u8d25\uff1a${error.message}`;
   }
 });
 
 $("#reparseButton").addEventListener("click", async () => {
   const status = $("#uploadStatus");
-  status.textContent = "正在重新识别所有本地时间节点...";
+  status.textContent = "\u6b63\u5728\u91cd\u65b0\u8bc6\u522b\u6240\u6709\u672c\u5730\u65f6\u95f4\u8282\u70b9...";
   try {
     const response = await fetch("/api/reparse", { method: "POST" });
     const payload = await response.json();
-    if (!response.ok) throw new Error(payload.error || "重新识别失败");
+    if (!response.ok) throw new Error(payload.error || "\u91cd\u65b0\u8bc6\u522b\u5931\u8d25");
     state.data = payload;
     state.selectedWeek = payload.snapshots.at(-1)?.week_id;
     state.selectedId = payload.snapshots.filter((snapshot) => snapshot.week_id === state.selectedWeek).at(-1)?.id;
-    status.textContent = `已重新识别 ${payload.snapshot_count} 个时间节点，人工修正会继续生效`;
+    status.textContent = `\u5df2\u91cd\u65b0\u8bc6\u522b ${payload.snapshot_count} \u4e2a\u65f6\u95f4\u8282\u70b9\uff0c\u4eba\u5de5\u4fee\u6b63\u4f1a\u7ee7\u7eed\u751f\u6548`;
     render();
   } catch (error) {
-    status.textContent = `重新识别失败：${error.message}`;
+    status.textContent = `\u91cd\u65b0\u8bc6\u522b\u5931\u8d25\uff1a${error.message}`;
   }
 });
 
 $("#archiveButton")?.addEventListener("click", async () => {
   const status = $("#archiveStatus");
-  status.textContent = "正在归档已结束周...";
+  status.textContent = "\u6b63\u5728\u5f52\u6863\u5df2\u7ed3\u675f\u5468...";
   try {
     const response = await fetch("/api/archive-boss-weeks", { method: "POST" });
     const payload = await response.json();
-    if (!response.ok) throw new Error(payload.error || "归档失败");
+    if (!response.ok) throw new Error(payload.error || "\u5f52\u6863\u5931\u8d25");
     state.data = payload.state;
-    status.textContent = payload.archived_boss_weeks?.length ? `已归档：${payload.archived_boss_weeks.join("、")}` : "暂无已结束周可归档";
+    status.textContent = payload.archived_boss_weeks?.length ? `\u5df2\u5f52\u6863\uff1a${payload.archived_boss_weeks.join("\u3001")}` : "\u6682\u65e0\u5df2\u7ed3\u675f\u5468\u53ef\u5f52\u6863";
     render();
   } catch (error) {
-    status.textContent = `归档失败：${error.message}`;
+    status.textContent = `\u5f52\u6863\u5931\u8d25\uff1a${error.message}`;
   }
 });
 

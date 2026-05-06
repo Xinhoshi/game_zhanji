@@ -67,7 +67,7 @@ def identity_alias_key(zone: int | None, name: str | None) -> tuple[int, str] | 
 
 def parse_identity(line: str) -> dict[str, Any] | None:
     clean = compact_text(line)
-    match = re.match(r"^(\d+)\D{0,4}#\s*(.+)$", clean)
+    match = re.search(r"(\d+)\D{0,4}#\s*(.+)$", clean)
     if not match:
         return None
     zone = int(match.group(1))
@@ -75,6 +75,14 @@ def parse_identity(line: str) -> dict[str, Any] | None:
     if not name:
         return None
     return {"zone": zone, "name": name, "key": player_key(zone, name), "raw": line}
+
+
+def parse_partial_identity_name(line: str) -> str:
+    clean = compact_text(line)
+    if "#" in clean:
+        name = clean.split("#", 1)[1].strip()
+        return name
+    return clean
 
 
 def parse_number(line: str) -> int | None:
@@ -93,7 +101,12 @@ def coerce_int(value: Any) -> int | None:
 
 
 def parse_rank(line: str) -> int | None:
-    match = re.search(r"[Nn][Oo0O]\s*[\.,]?\s*(\d+)", normalize_text(line))
+    text = normalize_text(line).replace("№", "No")
+    compact = compact_text(text).replace("№", "No").replace("0,N0", "No").replace("N0", "No")
+    match = re.search(r"[Nn][Oo0O]\s*[\.,]?\s*(\d+)", text)
+    if match:
+        return int(match.group(1))
+    match = re.search(r"[Nn][Oo0O]\s*[\.,]?\s*(\d+)", compact)
     if match:
         return int(match.group(1))
     digits = re.findall(r"\d+", line)
@@ -187,7 +200,7 @@ def looks_like_identity(line: str) -> bool:
         return False
     if "伤害" in line or "职务" in line or "战斗力" in line:
         return False
-    return bool(re.match(r"^\d+\D{0,4}#", text))
+    return True
 
 
 def parse_members(lines: list[str]) -> list[dict[str, Any]]:
@@ -206,6 +219,7 @@ def parse_members(lines: list[str]) -> list[dict[str, Any]]:
                 "role": "",
                 "power": None,
                 "last_online": None,
+                "in_group": False,
                 "raw": {"identity": identity["raw"], "role": "", "power": "", "last_online": ""},
                 "needs_review": [],
             }
@@ -253,6 +267,7 @@ def parse_members(lines: list[str]) -> list[dict[str, Any]]:
 def parse_boss(lines: list[str]) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     current: dict[str, Any] | None = None
+    pending_identity_line = ""
 
     def new_row(identity: dict[str, Any] | None = None) -> dict[str, Any]:
         if identity:
@@ -281,19 +296,39 @@ def parse_boss(lines: list[str]) -> list[dict[str, Any]]:
         rows.append(row)
         return row
 
+    def backfill_missing_ranks() -> None:
+        used = {int(row["rank"]) for row in rows if row.get("rank") is not None}
+        ordered = sorted(rows, key=lambda item: item.get("damage_k") if item.get("damage_k") is not None else -1, reverse=True)
+        next_rank = 1
+        for row in ordered:
+            if row.get("rank") is not None or row.get("damage_k") is None:
+                continue
+            while next_rank in used:
+                next_rank += 1
+            row["rank"] = next_rank
+            row.setdefault("raw", {})["rank"] = "auto-filled by damage order"
+            row["rank_inferred"] = True
+            if "rank" not in row.setdefault("needs_review", []):
+                row["needs_review"].append("rank")
+            used.add(next_rank)
+
     for line in lines:
         normalized = normalize_text(line)
         if looks_like_identity(normalized):
             identity = parse_identity(normalized)
+            current = new_row(identity) if identity else new_row()
+            current["raw"]["identity"] = line
             if not identity:
-                continue
-            current = new_row(identity)
+                partial_name = parse_partial_identity_name(normalized)
+                if partial_name:
+                    current["name"] = partial_name
+                    current["key"] = partial_name
             continue
 
-        if current is None:
-            continue
-
-        if re.search(r"[Nn][Oo0O]", normalized):
+        if parse_rank(normalized) is not None and re.search(r"[Nn][Oo0O]|№", normalized.replace(" ", "")):
+            pending_identity_line = ""
+            if current is None:
+                current = new_row()
             if current.get("rank") is not None and current.get("damage_k") is not None:
                 current = new_row()
             current["rank"] = parse_rank(normalized)
@@ -301,12 +336,31 @@ def parse_boss(lines: list[str]) -> list[dict[str, Any]]:
             if current["rank"] is None:
                 current["needs_review"].append("rank")
         elif "伤" in normalized or "害" in normalized:
+            if current is not None and current.get("damage_k") is not None and current.get("rank") is None:
+                current = new_row()
+                current["raw"]["identity"] = pending_identity_line
+                partial_name = parse_partial_identity_name(pending_identity_line)
+                if partial_name:
+                    current["name"] = partial_name
+                    current["key"] = partial_name
+            if current is None:
+                current = new_row()
+                current["raw"]["identity"] = pending_identity_line
+                partial_name = parse_partial_identity_name(pending_identity_line)
+                if partial_name:
+                    current["name"] = partial_name
+                    current["key"] = partial_name
             value = parse_number(normalized)
             current["damage_k"] = value
             current["damage"] = value * 1000 if value is not None else None
             current["raw"]["damage"] = line
             if value is None:
                 current["needs_review"].append("damage")
+            pending_identity_line = ""
+        elif (current is None or (current.get("damage_k") is not None and current.get("rank") is None)) and re.search(r"[#A-Za-z\u4e00-\u9fff]", normalized):
+            pending_identity_line = line
+
+    backfill_missing_ranks()
 
     for row in rows:
         if row["rank"] is None:
@@ -467,20 +521,40 @@ def save_corrections(root: Path, corrections: dict[str, Any]) -> None:
     (data_dir / CORRECTIONS_FILE).write_text(json.dumps(corrections, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def same_optional_text(left: Any, right: Any) -> bool:
+    return (str(left or "").strip() or None) == (str(right or "").strip() or None)
+
+
 def apply_member_values(row: dict[str, Any], values: dict[str, Any]) -> dict[str, Any]:
-    zone = coerce_int(values.get("zone", row.get("zone")))
-    name = str(values.get("name", row.get("name") or "")).strip()
-    power = coerce_int(values.get("power", row.get("power")))
-    last_online = str(values.get("last_online", row.get("last_online") or "")).strip() or None
+    old_zone = row.get("zone")
+    old_name = row.get("name") or ""
+    old_power = row.get("power")
+    old_last_online = row.get("last_online")
+    old_in_group = row.get("in_group", False)
+
+    zone = coerce_int(values.get("zone", old_zone))
+    name = str(values.get("name", old_name) or "").strip()
+    power = coerce_int(values.get("power", old_power))
+    last_online = str(values.get("last_online", old_last_online or "")).strip() or None
+    new_in_group = values.get("in_group", old_in_group) in (True, "true", "on", "1", 1)
+    note = str(values.get("note", "") or "")
+
+    group_only = values.get("group_only") in (True, "true", "on", "1", 1)
+    data_changed = False if group_only else zone != old_zone or name != old_name or power != old_power or not same_optional_text(last_online, old_last_online)
+    note_changed = False if group_only else bool(note) and note != str(row.get("raw", {}).get("correction_note", "") or "")
 
     row["zone"] = zone
     row["name"] = name
     row["key"] = player_key(zone, name)
     row["power"] = power
     row["last_online"] = last_online
-    row["corrected"] = True
-    row["needs_review"] = [] if values.get("reviewed", True) else row.get("needs_review", [])
-    row.setdefault("raw", {})["correction_note"] = values.get("note", "")
+    row["in_group"] = new_in_group
+    if group_only and not row.get("manual"):
+        row.pop("corrected", None)
+    elif data_changed or note_changed or row.get("manual"):
+        row["corrected"] = True
+        row["needs_review"] = [] if values.get("reviewed", True) else row.get("needs_review", [])
+    row.setdefault("raw", {})["correction_note"] = note
     return row
 
 
@@ -786,12 +860,47 @@ def latest_snapshots_by_day(snapshots: list[dict[str, Any]]) -> list[dict[str, A
 
 def repair_missing_boss_identities(snapshots: list[dict[str, Any]]) -> None:
     previous_by_week_rank: dict[str, dict[int, dict[str, Any]]] = {}
+    previous_by_week: dict[str, list[dict[str, Any]]] = {}
+
+    def replace_boss_identity(boss: dict[str, Any], previous: dict[str, Any], used_keys: set[str]) -> None:
+        original_key = boss.get("key")
+        boss["zone"] = previous.get("zone")
+        boss["name"] = previous.get("name")
+        boss["key"] = previous.get("key")
+        boss["identity_matched"] = True
+        boss["missing_identity"] = False
+        boss.setdefault("raw", {})["identity_matched_from"] = original_key
+        boss["needs_review"] = [item for item in boss.get("needs_review", []) if item != "name"]
+        used_keys.add(boss["key"])
+
+    def match_previous_by_name(boss: dict[str, Any], previous_rows: list[dict[str, Any]], used_keys: set[str]) -> dict[str, Any] | None:
+        name = boss.get("name") or boss.get("key") or ""
+        if not name:
+            return None
+        candidates = [row for row in previous_rows if row.get("key") not in used_keys]
+        if not candidates:
+            return None
+        scored = sorted(((identity_similarity(name, candidate), candidate) for candidate in candidates), key=lambda item: item[0], reverse=True)
+        best_score, best = scored[0]
+        second_score = scored[1][0] if len(scored) > 1 else 0.0
+        rank_close = boss.get("rank") is not None and best.get("rank") is not None and abs(int(boss["rank"]) - int(best["rank"])) <= 4
+        damage_ok = boss.get("damage_k") is None or best.get("damage_k") is None or int(boss["damage_k"]) >= int(best["damage_k"])
+        if damage_ok and ((rank_close and best_score >= 0.6) or best_score >= 0.68) and (best_score - second_score >= 0.08 or rank_close):
+            return best
+        return None
+
     for snapshot in sorted(snapshots, key=lambda item: item["captured_at"]):
         week = snapshot["week_id"]
         previous_rank_map = previous_by_week_rank.get(week, {})
+        previous_rows = previous_by_week.get(week, [])
         used_keys = {boss.get("key") for boss in snapshot.get("boss", []) if boss.get("key") and not boss.get("missing_identity")}
 
         for boss in snapshot.get("boss", []):
+            previous = match_previous_by_name(boss, previous_rows, used_keys)
+            if previous and previous.get("key") != boss.get("key"):
+                replace_boss_identity(boss, previous, used_keys)
+                continue
+
             if not boss.get("missing_identity") and boss.get("name"):
                 continue
             rank = boss.get("rank")
@@ -806,21 +915,19 @@ def repair_missing_boss_identities(snapshots: list[dict[str, Any]]) -> None:
             if current_damage is not None and previous_damage is not None and current_damage < previous_damage:
                 continue
 
-            original_key = boss.get("key")
-            boss["zone"] = previous.get("zone")
-            boss["name"] = previous.get("name")
-            boss["key"] = previous.get("key")
             boss["missing_identity_repaired"] = True
-            boss["missing_identity"] = False
-            boss.setdefault("raw", {})["identity_matched_from"] = original_key or f"missing-rank-{rank}"
-            boss["needs_review"] = [item for item in boss.get("needs_review", []) if item != "name"]
-            used_keys.add(boss["key"])
+            replace_boss_identity(boss, previous, used_keys)
 
         previous_by_week_rank[week] = {
             int(boss["rank"]): boss
             for boss in snapshot.get("boss", [])
             if boss.get("rank") is not None and boss.get("key") and not boss.get("missing_identity")
         }
+        previous_by_week[week] = [
+            boss
+            for boss in snapshot.get("boss", [])
+            if boss.get("key") and not boss.get("missing_identity")
+        ]
 
 
 def carry_forward_missing_data(snapshots: list[dict[str, Any]]) -> None:
@@ -926,6 +1033,66 @@ def apply_archived_boss_data(snapshots: list[dict[str, Any]], archives: dict[str
         target["boss_archive_source"] = archive.get("source_snapshot_id")
 
 
+def build_archive_stats(archives: dict[str, dict[str, Any]]) -> dict[str, Any]:
+    rows: list[dict[str, Any]] = []
+    unique_members: set[str] = set()
+    total_damage_k = 0
+    for archive in sorted(archives.values(), key=lambda item: item.get("week_id", ""), reverse=True):
+        boss_rows = archive.get("boss", [])
+        members = [item for item in boss_rows if item.get("key")]
+        for item in members:
+            unique_members.add(item["key"])
+        week_total = archive.get("total_damage_k")
+        if week_total is None:
+            week_total = sum(item.get("damage_k") or 0 for item in boss_rows)
+        total_damage_k += week_total or 0
+        leader = sorted(boss_rows, key=lambda item: item.get("rank") or 9999)[0] if boss_rows else {}
+        rows.append(
+            {
+                "week_id": archive.get("week_id"),
+                "archived_at": archive.get("archived_at"),
+                "source_snapshot_id": archive.get("source_snapshot_id"),
+                "source_captured_at": archive.get("source_captured_at"),
+                "member_count": len(members),
+                "total_damage_k": week_total or 0,
+                "leader_key": leader.get("key"),
+                "leader_damage_k": leader.get("damage_k"),
+            }
+        )
+    return {
+        "week_count": len(rows),
+        "total_damage_k": total_damage_k,
+        "member_count": len(unique_members),
+        "rows": rows,
+    }
+
+
+
+
+def dedupe_members(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    merged: list[dict[str, Any]] = []
+    by_key: dict[str, dict[str, Any]] = {}
+    for row in rows:
+        key = row.get("key")
+        if not key:
+            merged.append(row)
+            continue
+        current = by_key.get(key)
+        if current is None:
+            by_key[key] = row
+            merged.append(row)
+            continue
+        current["in_group"] = bool(current.get("in_group")) or bool(row.get("in_group"))
+        current["corrected"] = bool(current.get("corrected")) or bool(row.get("corrected"))
+        current["manual"] = bool(current.get("manual")) or bool(row.get("manual"))
+        current["needs_review"] = sorted(set(current.get("needs_review", [])) | set(row.get("needs_review", [])))
+        if (row.get("power") or 0) > (current.get("power") or 0):
+            current["power"] = row.get("power")
+            current.setdefault("raw", {})["deduped_power_from"] = row.get("row_id")
+        current.setdefault("raw", {})["deduped_row_ids"] = sorted(set(current.get("raw", {}).get("deduped_row_ids", [])) | {str(row.get("row_id", ""))})
+    return merged
+
+
 def apply_corrections_to_snapshot(snapshot: dict[str, Any], corrections: dict[str, Any], aliases: dict[str, dict[str, Any]]) -> dict[str, Any]:
     snapshot = copy.deepcopy(snapshot)
     apply_identity_aliases_to_snapshot(snapshot, aliases)
@@ -946,13 +1113,16 @@ def apply_corrections_to_snapshot(snapshot: dict[str, Any], corrections: dict[st
 
     boss_corrections = snapshot_corrections.get("boss", {})
     boss_by_id = {row.get("row_id"): row for row in snapshot.get("boss", [])}
+    boss_by_rank = {str(row.get("rank")): row for row in snapshot.get("boss", []) if row.get("rank") is not None}
     for row_id, values in boss_corrections.items():
         if row_id in boss_by_id:
             apply_boss_values(boss_by_id[row_id], values)
+        elif str(coerce_int(values.get("rank"))) in boss_by_rank:
+            apply_boss_values(boss_by_rank[str(coerce_int(values.get("rank")))], values)
         else:
             snapshot.setdefault("boss", []).append(manual_boss(row_id, values))
 
-    snapshot["members"] = sorted(snapshot.get("members", []), key=lambda item: item.get("row_id", ""))
+    snapshot["members"] = dedupe_members(sorted(snapshot.get("members", []), key=lambda item: item.get("row_id", "")))
     snapshot["boss"] = sorted(snapshot.get("boss", []), key=lambda item: item.get("rank") or 9999)
     snapshot["corrections"] = snapshot_corrections
     return snapshot
@@ -973,6 +1143,9 @@ def build_state(root: Path, snapshots: list[dict[str, Any]] | None = None) -> di
     archived_weeks = set(archives)
     for snapshot in snapshots:
         snapshot["boss_archived"] = snapshot["week_id"] in archived_weeks
+        snapshot["members"] = dedupe_members(snapshot.get("members", []))
+        for member in snapshot.get("members", []):
+            member.setdefault("in_group", False)
 
     players: dict[str, dict[str, Any]] = {}
     for snapshot in snapshots:
@@ -1019,6 +1192,7 @@ def build_state(root: Path, snapshots: list[dict[str, Any]] | None = None) -> di
         "players": sorted(players.values(), key=lambda item: item["key"]),
         "boss_history": boss_history,
         "boss_archives": sorted(archives.values(), key=lambda item: item["week_id"], reverse=True),
+        "archive_stats": build_archive_stats(archives),
         "archived_boss_weeks": sorted(archives.keys(), reverse=True),
     }
 

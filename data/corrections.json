@@ -289,6 +289,467 @@
           "last_online": "2025-10-28T01:10:23",
           "note": "",
           "reviewed": true
+        },
+        "m002": {
+          "zone": "28",
+          "name": "米拉",
+          "power": "411278840",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "group_only": false,
+          "reviewed": true
+        },
+        "m001": {
+          "zone": "28",
+          "name": "伊之猪",
+          "power": "253396556",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m025": {
+          "zone": "81",
+          "name": "酒酿圆子",
+          "power": "374031637",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m003": {
+          "zone": "71",
+          "name": "梁师娘LUONG",
+          "power": "282704094",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m004": {
+          "zone": "301",
+          "name": "玄枵",
+          "power": "27924106",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m007": {
+          "zone": "306",
+          "name": "大雷芙提雅",
+          "power": "23700118",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m037": {
+          "zone": "117",
+          "name": "合欢宗宗主",
+          "power": "148208604",
+          "last_online": "2026-05-04T17:00:49",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m036": {
+          "zone": "83",
+          "name": "菜豆芽",
+          "power": "134691616",
+          "last_online": "2026-05-04T17:07:45",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m035": {
+          "zone": "72",
+          "name": "随风倒柳",
+          "power": "186811728",
+          "last_online": "2026-05-04T17:19:54",
+          "note": "",
+          "in_group": false,
+          "group_only": true,
+          "reviewed": true
+        },
+        "m034": {
+          "zone": "72",
+          "name": "远青",
+          "power": "267192447",
+          "last_online": "2026-05-04T17:23:51",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m033": {
+          "zone": "75",
+          "name": "半个西瓜",
+          "power": "196751703",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m032": {
+          "zone": "226",
+          "name": "禾田",
+          "power": "143380345",
+          "last_online": "2026-05-04T18:45:26",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m049": {
+          "zone": "289",
+          "name": "不是笨蛋",
+          "power": "39486126",
+          "last_online": "2026-05-04T11:57:04",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m009": {
+          "zone": "306",
+          "name": "梁师娘",
+          "power": "25124827",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m010": {
+          "zone": "311",
+          "name": "SNK梁师娘",
+          "power": "24227629",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m042": {
+          "zone": "300",
+          "name": "神王婉",
+          "power": "60078588",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m014": {
+          "zone": "301",
+          "name": "亚加拉达",
+          "power": "98871036",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m015": {
+          "zone": "78",
+          "name": "燃烧的俗物",
+          "power": "208903029",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m016": {
+          "zone": "69",
+          "name": "师娘",
+          "power": "136972068",
+          "last_online": "",
+          "note": "",
+          "in_group": false,
+          "group_only": true,
+          "reviewed": true
+        },
+        "m017": {
+          "zone": "81",
+          "name": "师娘小号玲",
+          "power": "134666539",
+          "last_online": "",
+          "note": "",
+          "in_group": false,
+          "group_only": true,
+          "reviewed": true
+        },
+        "m019": {
+          "zone": "205",
+          "name": "搁浅づ",
+          "power": "284718358",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m020": {
+          "zone": "283",
+          "name": "夏一鸽",
+          "power": "110265712",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m029": {
+          "zone": "1",
+          "name": "Zero卐",
+          "power": "293412314",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m040": {
+          "zone": "63",
+          "name": "若语",
+          "power": "71872723",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m044": {
+          "zone": "101",
+          "name": "积极又向上",
+          "power": "155434308",
+          "last_online": "2026-05-04T13:28:35",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m045": {
+          "zone": "208",
+          "name": "咸鱼W",
+          "power": "110136414",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m048": {
+          "zone": "284",
+          "name": "Iouyexue",
+          "power": "67404308",
+          "last_online": "2026-05-04T12:01:10",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m053": {
+          "zone": "86",
+          "name": "摆烂小咸鱼",
+          "power": "77605321",
+          "last_online": "2026-05-04T09:34:30",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m023": {
+          "zone": "58",
+          "name": "SOULBS",
+          "power": "157225591",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        }
+      }
+    },
+    "2026年5月5日221354_Boss": {
+      "members": {
+        "manual-m-1778042405870": {
+          "zone": "1",
+          "name": "121313",
+          "power": "312312312",
+          "last_online": "",
+          "note": "",
+          "reviewed": true
+        },
+        "manual-m-1778044250484": {
+          "zone": "1",
+          "name": "dsdas",
+          "power": "",
+          "last_online": "",
+          "note": "",
+          "reviewed": true
+        },
+        "m001": {
+          "zone": "28",
+          "name": "伊之猪",
+          "power": "253396556",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "reviewed": true
+        },
+        "m002": {
+          "zone": "28",
+          "name": "米拉",
+          "power": "411278841",
+          "last_online": "",
+          "note": "",
+          "in_group": false,
+          "reviewed": true
+        }
+      },
+      "boss": {
+        "b001": {
+          "zone": "28",
+          "name": "米拉",
+          "rank": "1",
+          "damage_k": "25817694",
+          "note": "",
+          "reviewed": true
+        }
+      }
+    },
+    "2026年4月28日193228_联盟": {
+      "members": {}
+    },
+    "2026年5月6日175813_Boss": {
+      "boss": {
+        "b035": {
+          "zone": "205",
+          "name": "搁浅つ",
+          "rank": "35",
+          "damage_k": "193202",
+          "note": "截图选中态导致 OCR 漏读伤害，按原图补入",
+          "reviewed": true
+        },
+        "b004": {
+          "zone": "28",
+          "name": "伊之猪",
+          "rank": "4",
+          "damage_k": "13803359",
+          "note": "",
+          "reviewed": true
+        },
+        "b007": {
+          "zone": "205",
+          "name": "搁浅づ",
+          "rank": "7",
+          "damage_k": "12479873",
+          "note": "",
+          "reviewed": true
+        },
+        "b005": {
+          "zone": "205",
+          "name": "搁浅づ",
+          "rank": "5",
+          "damage_k": "12979237",
+          "note": "",
+          "reviewed": true
+        },
+        "b008": {
+          "zone": "72",
+          "name": "随风倒柳",
+          "rank": "8",
+          "damage_k": "6886192",
+          "note": "",
+          "reviewed": true
+        },
+        "b006": {
+          "zone": "72",
+          "name": "远青",
+          "rank": "6",
+          "damage_k": "12642636",
+          "note": "",
+          "reviewed": true
+        },
+        "b009": {
+          "zone": "202",
+          "name": "ElsieBlaker",
+          "rank": "9",
+          "damage_k": "6375907",
+          "note": "",
+          "reviewed": true
+        },
+        "b028": {
+          "zone": "58",
+          "name": "メジロマックイーン",
+          "rank": "28",
+          "damage_k": "373691",
+          "note": "",
+          "reviewed": true
+        },
+        "b003": {
+          "zone": "71",
+          "name": "梁师娘LUONG",
+          "rank": "3",
+          "damage_k": "14458466",
+          "note": "",
+          "reviewed": true
+        },
+        "b002": {
+          "zone": "81",
+          "name": "酒酿圆子",
+          "rank": "2",
+          "damage_k": "20598265",
+          "note": "",
+          "reviewed": true
+        },
+        "b001": {
+          "zone": "28",
+          "name": "米拉",
+          "rank": "1",
+          "damage_k": "35126262",
+          "note": "",
+          "reviewed": true
+        }
+      }
+    },
+    "2026年5月6日214514_Boss": {
+      "boss": {
+        "b004": {
+          "zone": "28",
+          "name": "伊之猪",
+          "rank": "4",
+          "damage_k": "13803359",
+          "note": "",
+          "reviewed": true
+        },
+        "b024": {
+          "zone": "58",
+          "name": "メジロマックイーン",
+          "rank": "24",
+          "damage_k": "483607",
+          "note": "",
+          "reviewed": true
+        },
+        "b041": {
+          "zone": "80",
+          "name": "BUBULAW",
+          "rank": "44",
+          "damage_k": "21498",
+          "note": "",
+          "reviewed": true
         }
       }
     }
@@ -300,8 +761,8 @@
         "source_name": "米拉",
         "zone": 28,
         "name": "米拉",
-        "source_power": 4105836,
-        "power": 410645836
+        "source_power": 411278840,
+        "power": 411278840
       },
       {
         "source_zone": 205,
@@ -356,8 +817,8 @@
         "source_name": "SNK梁师娘",
         "zone": 311,
         "name": "SNK梁师娘",
-        "source_power": 120616,
-        "power": 12440616
+        "source_power": 24227629,
+        "power": 24227629
       },
       {
         "source_zone": 103,
@@ -380,8 +841,8 @@
         "source_name": "搁浅0",
         "zone": 205,
         "name": "搁浅づ",
-        "source_power": 296746583,
-        "power": 296746583
+        "source_power": 284718358,
+        "power": 284718358
       },
       {
         "source_zone": 308,
@@ -398,6 +859,222 @@
         "name": "雨婷私密处",
         "source_power": 23816049,
         "power": 23816049
+      },
+      {
+        "source_zone": 28,
+        "source_name": "伊之猪",
+        "zone": 28,
+        "name": "伊之猪",
+        "source_power": 253396556,
+        "power": 253396556
+      },
+      {
+        "source_zone": 81,
+        "source_name": "酒酿圓子",
+        "zone": 81,
+        "name": "酒酿圆子",
+        "source_power": 374031637,
+        "power": 374031637
+      },
+      {
+        "source_zone": 71,
+        "source_name": "梁师娘LUONG",
+        "zone": 71,
+        "name": "梁师娘LUONG",
+        "source_power": 282704094,
+        "power": 282704094
+      },
+      {
+        "source_zone": 301,
+        "source_name": "玄枵",
+        "zone": 301,
+        "name": "玄枵",
+        "source_power": 27924106,
+        "power": 27924106
+      },
+      {
+        "source_zone": 306,
+        "source_name": "大雷芙提雅",
+        "zone": 306,
+        "name": "大雷芙提雅",
+        "source_power": 23700118,
+        "power": 23700118
+      },
+      {
+        "source_zone": 117,
+        "source_name": "合欢宗宗主",
+        "zone": 117,
+        "name": "合欢宗宗主",
+        "source_power": 148208604,
+        "power": 148208604
+      },
+      {
+        "source_zone": 83,
+        "source_name": "菜豆芽",
+        "zone": 83,
+        "name": "菜豆芽",
+        "source_power": 134691616,
+        "power": 134691616
+      },
+      {
+        "source_zone": 72,
+        "source_name": "随风倒柳",
+        "zone": 72,
+        "name": "随风倒柳",
+        "source_power": 186811728,
+        "power": 186811728
+      },
+      {
+        "source_zone": 72,
+        "source_name": "远青",
+        "zone": 72,
+        "name": "远青",
+        "source_power": 2671927,
+        "power": 267192447
+      },
+      {
+        "source_zone": 75,
+        "source_name": "半个西瓜",
+        "zone": 75,
+        "name": "半个西瓜",
+        "source_power": 196751703,
+        "power": 196751703
+      },
+      {
+        "source_zone": 226,
+        "source_name": "禾田",
+        "zone": 226,
+        "name": "禾田",
+        "source_power": 143380345,
+        "power": 143380345
+      },
+      {
+        "source_zone": 289,
+        "source_name": "不是笨蛋",
+        "zone": 289,
+        "name": "不是笨蛋",
+        "source_power": 39486126,
+        "power": 39486126
+      },
+      {
+        "source_zone": 306,
+        "source_name": "梁师娘",
+        "zone": 306,
+        "name": "大雷芙提雅",
+        "source_power": 25124827,
+        "power": 25124827
+      },
+      {
+        "source_zone": 306,
+        "source_name": "梁师娘",
+        "zone": 306,
+        "name": "梁师娘",
+        "source_power": 25124827,
+        "power": 25124827
+      },
+      {
+        "source_zone": 300,
+        "source_name": "神王婉",
+        "zone": 300,
+        "name": "神王婉",
+        "source_power": 60078588,
+        "power": 60078588
+      },
+      {
+        "source_zone": 301,
+        "source_name": "亚加拉达",
+        "zone": 301,
+        "name": "亚加拉达",
+        "source_power": 98871036,
+        "power": 98871036
+      },
+      {
+        "source_zone": 78,
+        "source_name": "燃烧的俗物",
+        "zone": 78,
+        "name": "燃烧的俗物",
+        "source_power": 208903029,
+        "power": 208903029
+      },
+      {
+        "source_zone": 69,
+        "source_name": "师娘",
+        "zone": 69,
+        "name": "师娘",
+        "source_power": 136972068,
+        "power": 136972068
+      },
+      {
+        "source_zone": 81,
+        "source_name": "师娘小号玲",
+        "zone": 81,
+        "name": "师娘小号玲",
+        "source_power": 134666539,
+        "power": 134666539
+      },
+      {
+        "source_zone": 283,
+        "source_name": "夏一鸽",
+        "zone": 283,
+        "name": "夏一鸽",
+        "source_power": 110265712,
+        "power": 110265712
+      },
+      {
+        "source_zone": 1,
+        "source_name": "Zer04i",
+        "zone": 1,
+        "name": "Zero卐",
+        "source_power": 293412314,
+        "power": 293412314
+      },
+      {
+        "source_zone": 63,
+        "source_name": "若语",
+        "zone": 63,
+        "name": "若语",
+        "source_power": 71872723,
+        "power": 71872723
+      },
+      {
+        "source_zone": 101,
+        "source_name": "积极又向上",
+        "zone": 101,
+        "name": "积极又向上",
+        "source_power": 155434308,
+        "power": 155434308
+      },
+      {
+        "source_zone": 208,
+        "source_name": "咸鱼W",
+        "zone": 208,
+        "name": "咸鱼W",
+        "source_power": 110136414,
+        "power": 110136414
+      },
+      {
+        "source_zone": 284,
+        "source_name": "Iouyexue",
+        "zone": 284,
+        "name": "Iouyexue",
+        "source_power": 67404308,
+        "power": 67404308
+      },
+      {
+        "source_zone": 86,
+        "source_name": "摆烂小咸鱼",
+        "zone": 86,
+        "name": "摆烂小咸鱼",
+        "source_power": 77605321,
+        "power": 77605321
+      },
+      {
+        "source_zone": 58,
+        "source_name": "SOULBS",
+        "zone": 58,
+        "name": "SOULBS",
+        "source_power": 157225591,
+        "power": 157225591
       }
     ],
     "boss": [
@@ -520,6 +1197,96 @@
         "source_damage_k": 6474968,
         "rank": 6,
         "damage_k": 6474968
+      },
+      {
+        "source_zone": 28,
+        "source_name": "米拉",
+        "zone": 28,
+        "name": "米拉",
+        "source_rank": 1,
+        "source_damage_k": 25817694,
+        "rank": 1,
+        "damage_k": 25817694
+      },
+      {
+        "source_zone": 8,
+        "source_name": "伊之猪",
+        "zone": 28,
+        "name": "伊之猪",
+        "source_rank": 4,
+        "source_damage_k": 13803359,
+        "rank": 4,
+        "damage_k": 13803359
+      },
+      {
+        "source_zone": 5,
+        "source_name": "搁浅0",
+        "zone": 205,
+        "name": "搁浅づ",
+        "source_rank": 5,
+        "source_damage_k": 12979237,
+        "rank": 5,
+        "damage_k": 12979237
+      },
+      {
+        "source_zone": 2,
+        "source_name": "随风倒柳",
+        "zone": 72,
+        "name": "随风倒柳",
+        "source_rank": 8,
+        "source_damage_k": 6886192,
+        "rank": 8,
+        "damage_k": 6886192
+      },
+      {
+        "source_zone": 2,
+        "source_name": "远青",
+        "zone": 72,
+        "name": "远青",
+        "source_rank": 6,
+        "source_damage_k": 12642636,
+        "rank": 6,
+        "damage_k": 12642636
+      },
+      {
+        "source_zone": 202,
+        "source_name": "ElsieBIaker",
+        "zone": 202,
+        "name": "ElsieBlaker",
+        "source_rank": 9,
+        "source_damage_k": 6375907,
+        "rank": 9,
+        "damage_k": 6375907
+      },
+      {
+        "source_zone": 58,
+        "source_name": "区冫口又,丿夕亻一",
+        "zone": 58,
+        "name": "メジロマックイーン",
+        "source_rank": 28,
+        "source_damage_k": 373691,
+        "rank": 28,
+        "damage_k": 373691
+      },
+      {
+        "source_zone": 205,
+        "source_name": "搁浅0",
+        "zone": 205,
+        "name": "搁浅つ",
+        "source_rank": 35,
+        "source_damage_k": null,
+        "rank": 35,
+        "damage_k": 193202
+      },
+      {
+        "source_zone": 58,
+        "source_name": "区冫口,丿夕亻一冫",
+        "zone": 58,
+        "name": "メジロマックイーン",
+        "source_rank": 24,
+        "source_damage_k": 483607,
+        "rank": 24,
+        "damage_k": 483607
       }
     ]
   }

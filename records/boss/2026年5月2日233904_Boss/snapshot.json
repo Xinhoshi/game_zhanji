@@ -325,7 +325,7 @@
       "damage_k": 3328999,
       "damage": 3328999000,
       "raw": {
-        "identity": "81 # 师 娘 小 号 玲",
+        "identity": "． 81 # 师 娘 小 号 玲",
         "rank": "NO ， 15",
         "damage": "伤 害 ： 3 ， 328 ， 999k"
       },
@@ -633,7 +633,7 @@
       "damage_k": 507151,
       "damage": 507151000,
       "raw": {
-        "identity": "58 # 只 冫 口 , 丿 夕 亻 一",
+        "identity": "58 # 只 冫 口 、 丿 夕 亻 一",
         "rank": "NO ． 29",
         "damage": "伤 害 ： 507 ， 151k"
       },
@@ -956,26 +956,23 @@
       }
     },
     {
-      "zone": null,
-      "name": "",
-      "key": "未知Boss#44",
+      "zone": 75,
+      "name": "CaseyDyer",
+      "key": "75#CaseyDyer",
       "rank": 44,
       "damage_k": 17364,
       "damage": 17364000,
       "raw": {
-        "identity": "",
+        "identity": "、 · 75#CaseyDyer",
         "rank": "No ． 44",
         "damage": "伤 害 ： 17 ， 364k"
       },
-      "needs_review": [
-        "name"
-      ],
-      "missing_identity": true,
+      "needs_review": [],
       "row_id": "b044",
       "ocr": {
-        "zone": null,
-        "name": "",
-        "key": "未知Boss#44",
+        "zone": 75,
+        "name": "CaseyDyer",
+        "key": "75#CaseyDyer",
         "rank": 44,
         "damage_k": 17364
       }
@@ -1054,7 +1051,7 @@
       "damage_k": 10737,
       "damage": 10737000,
       "raw": {
-        "identity": "80#BUBULAW",
+        "identity": "， 80#BUBULAW",
         "rank": "No ． 48",
         "damage": "伤 害 ： 10 ， 737k"
       },
@@ -1186,7 +1183,7 @@
       "damage_k": 1913,
       "damage": 1913000,
       "raw": {
-        "identity": "170#MaddoxRoth7",
+        "identity": "． 、 ． 170#MaddoxRoth7",
         "rank": "No ， 54",
         "damage": "伤 害 ： 1 ， 913k"
       },

@@ -45,13 +45,13 @@
   },
   {
     "zone": null,
-    "name": "",
-    "key": "未知Boss#3",
+    "name": "伊之猪",
+    "key": "伊之猪",
     "rank": 3,
     "damage_k": 14020087,
     "damage": 14020087000,
     "raw": {
-      "identity": "",
+      "identity": "〕 g # 伊 之 猪",
       "rank": "No ． 3",
       "damage": "伤 害 ： 14 ， 020 ， 087k"
     },
@@ -62,8 +62,8 @@
     "row_id": "b003",
     "ocr": {
       "zone": null,
-      "name": "",
-      "key": "未知Boss#3",
+      "name": "伊之猪",
+      "key": "伊之猪",
       "rank": 3,
       "damage_k": 14020087
     }
@@ -670,7 +670,7 @@
     "damage_k": 404874,
     "damage": 404874000,
     "raw": {
-      "identity": "58 # 区 冫 囗 , 丿 夕 亻 一",
+      "identity": "58 # 区 冫 囗 、 丿 夕 亻 一",
       "rank": "No ． 31",
       "damage": "伤 害 ： 404 ， 874k"
     },

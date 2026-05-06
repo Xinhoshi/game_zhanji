@@ -15,6 +15,7 @@
       "role": "职务盟主",
       "power": 250069537,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "28 # 伊 之 猪",
         "role": "职 务 ： 盟 主",
@@ -38,6 +39,7 @@
       "role": "职务副盟主1",
       "power": 410881748,
       "last_online": "2026-04-30T04:28:21",
+      "in_group": false,
       "raw": {
         "identity": "28 # 米 拉",
         "role": "职 务 ： 副 盟 主 1",
@@ -61,6 +63,7 @@
       "role": "职务副盟主2",
       "power": 296746583,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "205 # 搁 浅 0",
         "role": "职 务 ： 副 盟 主 2",
@@ -84,6 +87,7 @@
       "role": "职务成员",
       "power": 26324769,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "301 # 玄 枵",
         "role": "职 务 ： 成 员",
@@ -107,6 +111,7 @@
       "role": "职务成员",
       "power": 48836970,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "288 # 花 田 綽",
         "role": "职 务 ： 成 员",
@@ -130,6 +135,7 @@
       "role": "职务成员",
       "power": 15309667,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "288 # 伐 克 斯",
         "role": "职 务 ： 成 员",
@@ -153,6 +159,7 @@
       "role": "职务成员",
       "power": 296977899,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "1#Zer04i",
         "role": "职 务 ： 成 员",
@@ -176,6 +183,7 @@
       "role": "职务成员",
       "power": 83981977,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "205 # 搁 浅 0",
         "role": "职 务 ： 成 员",
@@ -199,6 +207,7 @@
       "role": "职务成员",
       "power": 134143469,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "83 # 菜 豆 芽",
         "role": "职 务 ： 成 员",
@@ -222,6 +231,7 @@
       "role": "职务成员",
       "power": 128712704,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "58 # 只 口 彳 夕 亻",
         "role": "职 务 ： 成 员",
@@ -245,6 +255,7 @@
       "role": "职务成员",
       "power": 153094069,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "101 # 积 极 又 向 上",
         "role": "职 务 ： 成 员",
@@ -268,6 +279,7 @@
       "role": "职务成员",
       "power": 205282439,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "78 # 燃 烧 的 俗 物",
         "role": "职 务 ： 成 员",
@@ -291,6 +303,7 @@
       "role": "职务成员",
       "power": 95014462,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "301 # 亚 加 拉 达",
         "role": "职 务 ： 成 员",
@@ -314,6 +327,7 @@
       "role": "职务成员",
       "power": 282615017,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "71# 梁 师 娘 LUONG",
         "role": "职 务 ： 成 员",
@@ -337,6 +351,7 @@
       "role": "职务成员",
       "power": 26413387,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "306 # 梁 师 娘",
         "role": "职 务 ： 成 员",
@@ -360,6 +375,7 @@
       "role": "职务成员",
       "power": 147216478,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "81 # 师 娘 小 号 玲",
         "role": "职 务 ： 成 员",
@@ -383,6 +399,7 @@
       "role": "职务成员",
       "power": 120616,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "311#SNK 梁 师 娘",
         "role": "职 务 ： 成 员",
@@ -408,6 +425,7 @@
       "role": "职务成员",
       "power": 135966171,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "69 # 师 娘",
         "role": "职 务 ： 成 员",
@@ -431,6 +449,7 @@
       "role": "职务成员",
       "power": 20747120,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "306 # 大 雷 芙 提 雅",
         "role": "职 务 ： 成 员",
@@ -454,6 +473,7 @@
       "role": "职务成员",
       "power": 59258307,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "300 # 神 王 婉",
         "role": "职 务 ： 成 员",
@@ -477,6 +497,7 @@
       "role": "职务成员",
       "power": 20097606,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "305#KaiserL",
         "role": "职 务 ： 成 员",
@@ -500,6 +521,7 @@
       "role": "职务成员",
       "power": 50692742,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "223#YangJu",
         "role": "职 务 ： 成 员",
@@ -523,6 +545,7 @@
       "role": "职务成员",
       "power": 124815700,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "252 # 縫 星 辰",
         "role": "职 务 ： 成 员",
@@ -546,6 +569,7 @@
       "role": "职务成员",
       "power": 18210062,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "304#PueqrnVebnsyxl",
         "role": "职 务 ： 成 员",
@@ -569,6 +593,7 @@
       "role": "职务成员",
       "power": 70382540,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "63 # 若 语",
         "role": "职 务 ： 成 员",
@@ -592,6 +617,7 @@
       "role": "职务成员",
       "power": 22515456,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "293#FvwJcjz",
         "role": "职 务 ： 成 员",
@@ -615,6 +641,7 @@
       "role": "职务成员",
       "power": 153154668,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "58#SOULBS",
         "role": "职 务 ： 成 员",
@@ -638,6 +665,7 @@
       "role": "职务成员",
       "power": 80116049,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "200 # 關 你 屁 事",
         "role": "职 务 ： 成 员",
@@ -661,6 +689,7 @@
       "role": "职务成员",
       "power": 19782085,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "288 # 紫 星 塵",
         "role": "职 务 ： 成 员",
@@ -684,6 +713,7 @@
       "role": "职务成员",
       "power": 135542415,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "241 # 小 野 莓",
         "role": "职 务 ： 成 员",
@@ -707,6 +737,7 @@
       "role": "职务成员",
       "power": 63995415,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "288#EricJ",
         "role": "职 务 ： 成 员",
@@ -730,6 +761,7 @@
       "role": "职务成员",
       "power": 154704665,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "200#HoneyKoch",
         "role": "职 务 ： 成 员",
@@ -753,6 +785,7 @@
       "role": "职务成员",
       "power": 38211359,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "28#CadenWise",
         "role": "职 务 ： 成 员",
@@ -776,6 +809,7 @@
       "role": "职务成员",
       "power": 38369793,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "75#CaseyDyer",
         "role": "职 务 ： 成 员",
@@ -799,6 +833,7 @@
       "role": "职务成员",
       "power": 151435468,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "87 # 大 根 珍 珠 棒",
         "role": "职 务 ： 成 员",
@@ -822,6 +857,7 @@
       "role": "职务成员",
       "power": 77360170,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "86 # 摆 烂 小 咸 鱼",
         "role": "职 务 ： 成 员",
@@ -845,6 +881,7 @@
       "role": "职务成员",
       "power": 84877907,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "179 # 波 蒙 的 狗 狗",
         "role": "职 务 ： 成 员",
@@ -868,6 +905,7 @@
       "role": "职务成员",
       "power": 49763072,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "264#ShuA",
         "role": "职 务 ： 成 员",
@@ -891,6 +929,7 @@
       "role": "职务成员",
       "power": 201889094,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "202#ElsieBlaker",
         "role": "职 务 ： 成 员",
@@ -914,6 +953,7 @@
       "role": "职务成员",
       "power": 146233749,
       "last_online": "2026-04-30T09:03:51",
+      "in_group": false,
       "raw": {
         "identity": "7#ArcheNorth",
         "role": "职 务 ： 成 员",
@@ -937,6 +977,7 @@
       "role": "职务成员",
       "power": 126623149,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "103#arianacomodo",
         "role": "职 务 ： 成 员",
@@ -962,6 +1003,7 @@
       "role": "职务成员",
       "power": 65895382,
       "last_online": "2026-04-30T03:20:33",
+      "in_group": false,
       "raw": {
         "identity": "284#Iouyexue",
         "role": "职 务 ： 成 员",
@@ -985,6 +1027,7 @@
       "role": "职务成员",
       "power": 110181636,
       "last_online": "2026-04-30T03:19:21",
+      "in_group": false,
       "raw": {
         "identity": "283 # 夏 一 鸽",
         "role": "职 务 ： 成 员",
@@ -1008,6 +1051,7 @@
       "role": "职务成员",
       "power": 95281883,
       "last_online": "2026-04-30T02:57:40",
+      "in_group": false,
       "raw": {
         "identity": "28#AshtonParry",
         "role": "职 务 ： 成 员",
@@ -1031,6 +1075,7 @@
       "role": "职务成员",
       "power": 147857280,
       "last_online": "2026-04-30T01:20:47",
+      "in_group": false,
       "raw": {
         "identity": "117 # 合 欢 宗 宗 主",
         "role": "职 务 ： 成 员",
@@ -1054,6 +1099,7 @@
       "role": "职务成员",
       "power": 836588,
       "last_online": "2026-04-30T00:41:51",
+      "in_group": false,
       "raw": {
         "identity": "170#MaddoxRoth7",
         "role": "职 务 ： 成 员",
@@ -1079,6 +1125,7 @@
       "role": "职务成员",
       "power": 90507795,
       "last_online": "2026-04-29T22:57:05",
+      "in_group": false,
       "raw": {
         "identity": "1#WuDan",
         "role": "职 务 ： 成 员",
@@ -1102,6 +1149,7 @@
       "role": "职务成员",
       "power": 141278141,
       "last_online": "2026-04-29T19:00:19",
+      "in_group": false,
       "raw": {
         "identity": "226 # 禾 田",
         "role": "职 务 ： 成 员",
@@ -1125,6 +1173,7 @@
       "role": "职务成员",
       "power": 181616310,
       "last_online": "2026-04-29T01:08:59",
+      "in_group": false,
       "raw": {
         "identity": "72 # 随 风 倒 柳",
         "role": "职 务 ： 成 员",
@@ -1148,6 +1197,7 @@
       "role": "职务成员",
       "power": 269903941,
       "last_online": "2026-04-29T01:08:59",
+      "in_group": false,
       "raw": {
         "identity": "72 # 远 青",
         "role": "职 务 ： 成 员",
@@ -1171,6 +1221,7 @@
       "role": "职务成员",
       "power": 93322891,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "231 # 炖 煮 红 尘",
         "role": "职 务 ： 成 员",
@@ -1194,6 +1245,7 @@
       "role": "职务成员",
       "power": 108282243,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "208 # 咸 鱼 W",
         "role": "职 务 ： 成 员",
@@ -1217,6 +1269,7 @@
       "role": "职务成员",
       "power": 3020,
       "last_online": "2026-04-29T15:18:51",
+      "in_group": false,
       "raw": {
         "identity": "80#BUBULAW",
         "role": "职 务 ： 成 员",
@@ -1242,6 +1295,7 @@
       "role": "职务成员",
       "power": 39475756,
       "last_online": "2026-04-29T14:51:15",
+      "in_group": false,
       "raw": {
         "identity": "289 # 不 是 笨 蛋",
         "role": "职 务 ： 成 员",
@@ -1265,6 +1319,7 @@
       "role": "职务成员",
       "power": 12302582,
       "last_online": "2026-04-29T11:11:48",
+      "in_group": false,
       "raw": {
         "identity": "308#RfkchzXqhgthxz",
         "role": "职 务 ： 成 员",
@@ -1288,6 +1343,7 @@
       "role": "职务成员",
       "power": 195153297,
       "last_online": null,
+      "in_group": false,
       "raw": {
         "identity": "75 # 半 个 西 瓜",
         "role": "职 务 ： 成 员",
@@ -1311,6 +1367,7 @@
       "role": "职务成员",
       "power": 168358717,
       "last_online": "2026-04-27T22:34:38",
+      "in_group": false,
       "raw": {
         "identity": "223 # 八 方 來 財",
         "role": "职 务 ： 成 员",
@@ -1334,6 +1391,7 @@
       "role": "职务成员",
       "power": 110112438,
       "last_online": "2026-04-27T15:04:57",
+      "in_group": false,
       "raw": {
         "identity": "205 # 水 寅 月 星 夢",
         "role": "职 务 ： 成 员",
@@ -1357,6 +1415,7 @@
       "role": "职务成员",
       "power": 87403889,
       "last_online": "2026-04-18T19:05:59",
+      "in_group": false,
       "raw": {
         "identity": "209 # 萧 诧",
         "role": "职 务 ： 成 员",
@@ -1380,6 +1439,7 @@
       "role": "职务成员",
       "power": 23816049,
       "last_online": "2025-10-28T01:10:23",
+      "in_group": false,
       "raw": {
         "identity": "37 # 雨 婷 私 密 处",
         "role": "职 务 ： 成 员",

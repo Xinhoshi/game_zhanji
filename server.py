@@ -168,7 +168,7 @@ class Handler(SimpleHTTPRequestHandler):
         has_member = valid_upload(member_field)
         has_boss = valid_upload(boss_field)
         if not has_member and not has_boss:
-            self.send_json({"error": "请至少上传联盟截图或Boss截图中的一张"}, 400)
+            self.send_json({"error": "请至少上传联盟截图或 Boss 截图中的一张"}, 400)
             return
 
         parsed_snapshot = None
@@ -216,11 +216,11 @@ class Handler(SimpleHTTPRequestHandler):
         row_id = payload.get("row_id")
         values = payload.get("values") or {}
         if not snapshot_id or kind not in ("members", "boss") or not row_id:
-            self.send_json({"error": "snapshot_id、kind、row_id不能为空"}, 400)
+            self.send_json({"error": "snapshot_id、kind、row_id 不能为空"}, 400)
             return
         original_snapshot = find_snapshot(snapshot_id)
         if kind == "boss" and original_snapshot and original_snapshot.get("week_id") in load_boss_archives(ROOT):
-            self.send_json({"error": "该周Boss数据已归档锁定，不能再修改"}, 423)
+            self.send_json({"error": "该周 Boss 数据已归档锁定，不能再修改"}, 423)
             return
 
         corrections = load_corrections(ROOT)
@@ -236,7 +236,7 @@ class Handler(SimpleHTTPRequestHandler):
                 remember_identity_alias(corrections, original_snapshot, kind, row_id, values)
 
         save_corrections(ROOT, corrections)
-        state = read_state()
+        state = build_state(ROOT)
         write_state_files(ROOT, state)
         self.send_json({"state": state, "corrections": corrections})
 

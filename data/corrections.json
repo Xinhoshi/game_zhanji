@@ -752,6 +752,18 @@
           "reviewed": true
         }
       }
+    },
+    "2026年5月7日235653_Boss": {
+      "boss": {
+        "b003": {
+          "zone": "28",
+          "name": "伊之猪",
+          "rank": "3",
+          "damage_k": "18089970",
+          "note": "",
+          "reviewed": true
+        }
+      }
     }
   },
   "aliases": {

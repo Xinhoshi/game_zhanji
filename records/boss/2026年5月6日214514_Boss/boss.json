@@ -516,7 +516,7 @@
     "damage_k": 483607,
     "damage": 483607000,
     "raw": {
-      "identity": "58 # 区 冫 口 , 丿 夕 亻 一 冫",
+      "identity": "58 # 区 冫 口 、 丿 夕 亻 一 冫",
       "rank": "No ． 24",
       "damage": "伤 害 ： 483 ， 607k"
     },
@@ -885,26 +885,23 @@
     }
   },
   {
-    "zone": null,
-    "name": "",
-    "key": "未知Boss#44",
+    "zone": 80,
+    "name": "BUBULAW",
+    "key": "80#BUBULAW",
     "rank": 44,
     "damage_k": 21498,
     "damage": 21498000,
     "raw": {
-      "identity": "",
+      "identity": "． · 80#BUBULAW",
       "rank": "NO ． 44",
       "damage": "伤 害 ： 21 ， 498k"
     },
-    "needs_review": [
-      "name"
-    ],
-    "missing_identity": true,
+    "needs_review": [],
     "row_id": "b041",
     "ocr": {
-      "zone": null,
-      "name": "",
-      "key": "未知Boss#44",
+      "zone": 80,
+      "name": "BUBULAW",
+      "key": "80#BUBULAW",
       "rank": 44,
       "damage_k": 21498
     }

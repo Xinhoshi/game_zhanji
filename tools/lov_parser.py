@@ -144,6 +144,18 @@ def week_id(value: str) -> str:
     return start.isoformat()
 
 
+def boss_effective_datetime(value: str) -> datetime:
+    return datetime.fromisoformat(value) - timedelta(hours=8)
+
+
+def boss_week_id(value: str) -> str:
+    return week_id(boss_effective_datetime(value).isoformat(timespec="seconds"))
+
+
+def boss_day_index(value: str) -> int:
+    return boss_effective_datetime(value).weekday()
+
+
 def relative_folder(root: Path | None, folder: Path) -> str:
     if root:
         try:
@@ -399,11 +411,15 @@ async def parse_snapshot(folder: Path, root: Path | None = None) -> dict[str, An
         boss_lines = await ocr_lines(boss_image, (120, 0, min(520, boss_size[0]), boss_size[1]))
 
     captured_at = parse_folder_time(folder)
+    effective_boss_at = boss_effective_datetime(captured_at).isoformat(timespec="seconds") if boss_image.exists() else None
     snapshot = {
         "id": folder.name,
         "folder": relative_folder(root, folder),
         "captured_at": captured_at,
         "week_id": week_id(captured_at),
+        "boss_captured_at": effective_boss_at,
+        "boss_week_id": boss_week_id(captured_at) if boss_image.exists() else week_id(captured_at),
+        "boss_day_index": boss_day_index(captured_at) if boss_image.exists() else None,
         "images": {"members": MEMBER_IMAGE if member_image.exists() else None, "boss": BOSS_IMAGE if boss_image.exists() else None},
         "members": parse_members(member_lines),
         "boss": parse_boss(boss_lines),
@@ -854,7 +870,10 @@ def apply_identity_aliases_to_snapshot(snapshot: dict[str, Any], aliases: dict[s
 def latest_snapshots_by_day(snapshots: list[dict[str, Any]]) -> list[dict[str, Any]]:
     latest: dict[str, dict[str, Any]] = {}
     for snapshot in sorted(snapshots, key=lambda item: item["captured_at"]):
-        latest[snapshot["captured_at"].split("T", 1)[0]] = snapshot
+        member_key = snapshot["captured_at"].split("T", 1)[0]
+        if snapshot_record_kind(snapshot) == "boss":
+            member_key = f"boss:{(snapshot.get('boss_captured_at') or snapshot['captured_at']).split('T', 1)[0]}"
+        latest[member_key] = snapshot
     return sorted(latest.values(), key=lambda item: item["captured_at"])
 
 
@@ -890,7 +909,7 @@ def repair_missing_boss_identities(snapshots: list[dict[str, Any]]) -> None:
         return None
 
     for snapshot in sorted(snapshots, key=lambda item: item["captured_at"]):
-        week = snapshot["week_id"]
+        week = snapshot.get("boss_week_id") or snapshot["week_id"]
         previous_rank_map = previous_by_week_rank.get(week, {})
         previous_rows = previous_by_week.get(week, [])
         used_keys = {boss.get("key") for boss in snapshot.get("boss", []) if boss.get("key") and not boss.get("missing_identity")}
@@ -991,7 +1010,7 @@ def load_boss_archives(root: Path) -> dict[str, dict[str, Any]]:
 
 def archive_closed_boss_weeks(root: Path, snapshots: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
     archives = load_boss_archives(root)
-    weeks = sorted({snapshot["week_id"] for snapshot in snapshots})
+    weeks = sorted({snapshot.get("boss_week_id") or snapshot["week_id"] for snapshot in snapshots})
     if len(weeks) <= 1:
         return archives
 
@@ -1002,7 +1021,7 @@ def archive_closed_boss_weeks(root: Path, snapshots: list[dict[str, Any]]) -> di
     for week in weeks:
         if week == current_week or week in archives:
             continue
-        week_snapshots = [snapshot for snapshot in snapshots if snapshot["week_id"] == week and snapshot.get("boss") and not snapshot.get("boss_carried_forward")]
+        week_snapshots = [snapshot for snapshot in snapshots if (snapshot.get("boss_week_id") or snapshot["week_id"]) == week and snapshot.get("boss") and not snapshot.get("boss_carried_forward")]
         if not week_snapshots:
             continue
         final_snapshot = sorted(week_snapshots, key=lambda item: item["captured_at"])[-1]
@@ -1022,7 +1041,7 @@ def archive_closed_boss_weeks(root: Path, snapshots: list[dict[str, Any]]) -> di
 
 def apply_archived_boss_data(snapshots: list[dict[str, Any]], archives: dict[str, dict[str, Any]]) -> None:
     for week, archive in archives.items():
-        week_snapshots = [snapshot for snapshot in snapshots if snapshot["week_id"] == week]
+        week_snapshots = [snapshot for snapshot in snapshots if (snapshot.get("boss_week_id") or snapshot["week_id"]) == week]
         if not week_snapshots:
             continue
         target = next((snapshot for snapshot in week_snapshots if snapshot["id"] == archive.get("source_snapshot_id")), None)
@@ -1142,7 +1161,7 @@ def build_state(root: Path, snapshots: list[dict[str, Any]] | None = None) -> di
     apply_archived_boss_data(snapshots, archives)
     archived_weeks = set(archives)
     for snapshot in snapshots:
-        snapshot["boss_archived"] = snapshot["week_id"] in archived_weeks
+        snapshot["boss_archived"] = (snapshot.get("boss_week_id") or snapshot["week_id"]) in archived_weeks
         snapshot["members"] = dedupe_members(snapshot.get("members", []))
         for member in snapshot.get("members", []):
             member.setdefault("in_group", False)
@@ -1163,7 +1182,7 @@ def build_state(root: Path, snapshots: list[dict[str, Any]] | None = None) -> di
     boss_history: dict[str, list[dict[str, Any]]] = {}
     previous_by_week: dict[str, dict[str, int]] = {}
     for snapshot in snapshots:
-        current_week = snapshot["week_id"]
+        current_week = snapshot.get("boss_week_id") or snapshot["week_id"]
         previous = previous_by_week.setdefault(current_week, {})
         for boss in snapshot.get("boss", []):
             key = boss["key"]

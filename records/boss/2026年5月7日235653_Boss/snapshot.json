@@ -3,6 +3,9 @@
   "folder": "records/boss/2026年5月7日235653_Boss",
   "captured_at": "2026-05-07T23:56:53",
   "week_id": "2026-05-04",
+  "boss_captured_at": "2026-05-07T15:56:53",
+  "boss_week_id": "2026-05-04",
+  "boss_day_index": 3,
   "images": {
     "members": null,
     "boss": "Boss.png"

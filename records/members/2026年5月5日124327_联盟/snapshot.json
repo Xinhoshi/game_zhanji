@@ -3,6 +3,9 @@
   "folder": "records/members/2026年5月5日124327_联盟",
   "captured_at": "2026-05-05T12:43:27",
   "week_id": "2026-05-04",
+  "boss_captured_at": null,
+  "boss_week_id": "2026-05-04",
+  "boss_day_index": null,
   "images": {
     "members": "盟.png",
     "boss": null

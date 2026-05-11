@@ -49,6 +49,11 @@ const formatDateTime = (value) => {
   return date.toLocaleString("zh-CN", { hour12: false });
 };
 
+const bossBusinessLabel = (snapshot) => {
+  if (!snapshot?.boss_captured_at) return "";
+  return ` \u00b7 Boss\u5f52\u5c5e ${formatDateTime(snapshot.boss_captured_at)}`;
+};
+
 const encodePath = (value) => String(value || "").split("/").map(encodeURIComponent).join("/");
 const imageUrl = (folder, file) => {
   if (!file) return "";
@@ -134,8 +139,9 @@ function hasMatchingMember(item, members, itemNameCounts, memberNameCounts) {
 }
 
 function getBossDeltas(current) {
+  const currentWeek = current.boss_week_id || current.week_id;
   const previous = state.data.snapshots
-    .filter((snapshot) => snapshot.week_id === current.week_id && snapshot.captured_at < current.captured_at)
+    .filter((snapshot) => (snapshot.boss_week_id || snapshot.week_id) === currentWeek && snapshot.captured_at < current.captured_at)
     .at(-1);
   const previousMap = previous ? byKey(previous.boss) : new Map();
   return current.boss.map((boss) => {
@@ -148,20 +154,20 @@ function getBossDeltas(current) {
 function renderSnapshotOptions() {
   const select = $("#snapshotSelect");
   const current = selectedSnapshot();
-  const week = state.selectedWeek || current.week_id;
-  const snapshots = state.data.snapshots.filter((snapshot) => snapshot.week_id === week);
+  const week = state.selectedWeek || current.boss_week_id || current.week_id;
+  const snapshots = state.data.snapshots.filter((snapshot) => (snapshot.boss_week_id || snapshot.week_id) === week && snapshot.boss?.length);
   const fallback = snapshots.at(-1) || current;
   if (!snapshots.some((snapshot) => snapshot.id === state.selectedId)) {
     state.selectedId = fallback?.id;
   }
   select.innerHTML = snapshots
-    .map((snapshot) => `<option value="${escapeHtml(snapshot.id)}">${formatDateTime(snapshot.captured_at)} · ${escapeHtml(snapshot.id)}</option>`)
+    .map((snapshot) => `<option value="${escapeHtml(snapshot.id)}">${formatDateTime(snapshot.captured_at)}${bossBusinessLabel(snapshot)} \u00b7 ${escapeHtml(snapshot.id)}</option>`)
     .join("");
   select.value = state.selectedId;
 }
 
 function availableWeeks() {
-  return [...new Set(state.data.snapshots.map((snapshot) => snapshot.week_id))].sort().reverse();
+  return [...new Set(state.data.snapshots.map((snapshot) => snapshot.boss_week_id || snapshot.week_id))].sort().reverse();
 }
 
 function isWeekArchived(week) {
@@ -171,28 +177,32 @@ function isWeekArchived(week) {
 function renderWeekOptions() {
   const select = $("#weekSelect");
   const current = selectedSnapshot();
-  state.selectedWeek = state.selectedWeek || current.week_id;
+  state.selectedWeek = state.selectedWeek || current.boss_week_id || current.week_id;
   const weeks = availableWeeks();
   select.innerHTML = weeks
     .map((week) => `<option value="${escapeHtml(week)}">\u5468\u8d77\u59cb ${escapeHtml(week)}${isWeekArchived(week) ? " \u00b7 \u5df2\u5f52\u6863" : ""}</option>`)
     .join("");
-  if (!weeks.includes(state.selectedWeek)) state.selectedWeek = weeks[0] || current.week_id;
+  if (!weeks.includes(state.selectedWeek)) state.selectedWeek = weeks[0] || current.boss_week_id || current.week_id;
   select.value = state.selectedWeek;
 }
 
 function selectedBossSnapshot() {
   const current = selectedSnapshot();
-  const week = state.selectedWeek || current.week_id;
-  const snapshots = state.data.snapshots.filter((snapshot) => snapshot.week_id === week && snapshot.boss?.length);
+  const week = state.selectedWeek || current.boss_week_id || current.week_id;
+  const snapshots = state.data.snapshots.filter((snapshot) => (snapshot.boss_week_id || snapshot.week_id) === week && snapshot.boss?.length);
   return snapshots.find((snapshot) => snapshot.id === state.selectedId) || snapshots.at(-1) || current;
 }
 
 function bossSnapshotsForWeek(weekId) {
-  return state.data.snapshots.filter((snapshot) => snapshot.week_id === weekId && snapshot.boss?.length);
+  return state.data.snapshots.filter((snapshot) => (snapshot.boss_week_id || snapshot.week_id) === weekId && snapshot.boss?.length);
 }
 
 function snapshotDayIndex(snapshot) {
+  if (snapshot.boss_day_index !== undefined && snapshot.boss_day_index !== null) return snapshot.boss_day_index;
+  const value = snapshot.boss_captured_at || snapshot.captured_at;
   const date = new Date(snapshot.captured_at);
+  const effectiveDate = new Date(value);
+  if (!Number.isNaN(effectiveDate.getTime())) return (effectiveDate.getDay() + 6) % 7;
   if (Number.isNaN(date.getTime())) return null;
   return (date.getDay() + 6) % 7;
 }
@@ -213,7 +223,7 @@ function bossMap(snapshot) {
 }
 
 function previousBossSnapshotInWeek(current) {
-  return bossSnapshotsForWeek(current.week_id).filter((snapshot) => snapshot.captured_at < current.captured_at).at(-1);
+  return bossSnapshotsForWeek(current.boss_week_id || current.week_id).filter((snapshot) => snapshot.captured_at < current.captured_at).at(-1);
 }
 
 function bossDailyDelta(item, daySnapshot, weekSnapshots) {
@@ -282,13 +292,13 @@ function renderStats(current, previous) {
   const correctedCount = members.filter((item) => item.corrected).length + boss.filter((item) => item.corrected).length;
   const archiveNote = current.boss_archived ? "Boss\u5468\u6570\u636e\u5df2\u5f52\u6863\u9501\u5b9a" : `\u5df2\u4eba\u5de5\u4fee\u6b63 ${correctedCount} \u6761`;
   $("#captureMeta").textContent = `\u6700\u65b0\u8282\u70b9 ${formatDateTime(current.captured_at)}`;
-  $("#archiveMeta").textContent = current.boss_archived ? `Boss\u5468 ${current.week_id} \u5df2\u5f52\u6863\u9501\u5b9a` : `Boss\u5468 ${current.week_id} \u53ef\u7ee7\u7eed\u6838\u5bf9`;
+  $("#archiveMeta").textContent = current.boss_archived ? `Boss\u5468 ${current.boss_week_id || current.week_id} \u5df2\u5f52\u6863\u9501\u5b9a` : `Boss\u5468 ${current.boss_week_id || current.week_id} \u53ef\u7ee7\u7eed\u6838\u5bf9`;
   $("#statsGrid").innerHTML = [["members", "\u6210\u5458\u6570", members.length, `\u65b0\u589e ${newCount} / \u7f3a\u5931 ${missingCount}`], ["power", "\u603b\u6218\u6597\u529b", formatNumber(powerTotal), `\u7ea6 ${compactNumber(powerTotal)}`], ["boss", "Boss\u672c\u5468\u7d2f\u8ba1", `${formatNumber(bossTotal)}k`, `\u7edf\u8ba1 ${boss.length} \u4eba`], ["review", "\u9700\u590d\u6838", reviewCount, archiveNote]].map(([type, label, value, note]) => `<article class="stat stat-${type}"><span>${label}</span><strong>${value}</strong><small>${note}</small></article>`).join("");
 }
 
 function renderBars(current) {
   const boss = current.boss.slice(0, 10);
-  $("#bossWeekLabel").textContent = `\u5468\u8d77\u59cb ${current.week_id}`;
+  $("#bossWeekLabel").textContent = `\u5468\u8d77\u59cb ${current.boss_week_id || current.week_id}`;
   renderRankingBars($("#bossBars"), boss, "damage_k", formatDamage, "\u8fd8\u6ca1\u6709 Boss \u8bc6\u522b\u6570\u636e");
 
   const members = current.members
@@ -305,10 +315,11 @@ function reviewTags(item) {
 }
 
 function renderBossTable(current) {
-  const weekSnapshots = bossSnapshotsForWeek(current.week_id);
+  const currentWeek = current.boss_week_id || current.week_id;
+  const weekSnapshots = bossSnapshotsForWeek(currentWeek);
   const previousSnapshot = previousBossSnapshotInWeek(current);
   const previousMap = bossMap(previousSnapshot);
-  const dailySnapshots = latestBossSnapshotsByDay(current.week_id);
+  const dailySnapshots = latestBossSnapshotsByDay(currentWeek);
   const dayOrder = visibleBossDayOrder(current);
   const headerRow = $("#bossHeaderRow");
   if (headerRow) {
@@ -319,7 +330,7 @@ function renderBossTable(current) {
     const delta = old && boss.damage_k !== null && old.damage_k !== null ? boss.damage_k - old.damage_k : null;
     return { ...boss, delta_k: delta !== null && delta >= 0 ? delta : null, is_baseline: !old, daily_deltas: Object.fromEntries(dayOrder.map((day) => [day, bossDailyDelta(boss, dailySnapshots.get(day), weekSnapshots)])) };
   });
-  const locked = isWeekArchived(current.week_id);
+  const locked = isWeekArchived(currentWeek);
   const columnCount = dayOrder.length + 6;
   $("#bossTable").innerHTML = rows.length ? rows.map((item) => {
     const review = reviewTags(item) || `<span class="tag">\u6b63\u5e38</span>`;
@@ -457,8 +468,9 @@ function render() {
 
 async function reloadState() {
   state.data = await fetchState();
-  state.selectedWeek = state.data.snapshots.at(-1)?.week_id;
-  state.selectedId = state.data.snapshots.filter((snapshot) => snapshot.week_id === state.selectedWeek).at(-1)?.id;
+  const latestBoss = state.data.snapshots.filter((snapshot) => snapshot.boss?.length).at(-1) || state.data.snapshots.at(-1);
+  state.selectedWeek = latestBoss?.boss_week_id || latestBoss?.week_id;
+  state.selectedId = state.data.snapshots.filter((snapshot) => (snapshot.boss_week_id || snapshot.week_id) === state.selectedWeek && snapshot.boss?.length).at(-1)?.id;
   render();
 }
 

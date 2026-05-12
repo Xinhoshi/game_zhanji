@@ -404,8 +404,8 @@ h2 {
 
 .upload-fields {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-3);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2);
 }
 
 .upload-card label,
@@ -432,13 +432,22 @@ select {
   padding: 8px 10px;
 }
 
+.upload-card input[type="file"] {
+  min-height: 34px;
+  padding: 6px 8px;
+}
+
 input::placeholder {
   color: var(--muted-2);
 }
 
+.pcap-field {
+  grid-column: 1 / -1;
+}
+
 .upload-actions {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.95fr) minmax(0, 0.85fr);
   gap: var(--space-2);
 }
 
@@ -1292,7 +1301,7 @@ tbody tr.member-in-group td:first-child {
   }
 
   .overview {
-    grid-template-rows: minmax(184px, 0.58fr) auto minmax(300px, 1fr);
+    grid-template-rows: minmax(220px, 0.64fr) auto minmax(300px, 1fr);
     gap: 10px;
   }
 
@@ -1384,11 +1393,16 @@ tbody tr.member-in-group td:first-child {
 
   .upload-fields {
     grid-template-columns: 1fr 1fr;
-    gap: 7px;
+    gap: 6px;
+  }
+
+  .pcap-field {
+    grid-column: 1 / -1;
   }
 
   .upload-card label {
-    gap: 4px;
+    gap: 3px;
+    font-size: 0.76rem;
   }
 
   input,
@@ -1404,6 +1418,68 @@ tbody tr.member-in-group td:first-child {
     min-height: 31px;
     padding-top: 5px;
     padding-bottom: 5px;
+  }
+
+  .upload-card input[type="file"] {
+    min-height: 29px;
+    padding: 4px 7px;
+  }
+}
+
+@media (max-height: 520px) and (min-width: 1100px) {
+  .overview {
+    grid-template-rows: minmax(150px, 0.5fr) auto minmax(260px, 1fr);
+  }
+
+  .upload-card {
+    gap: 5px;
+    padding: 8px 10px;
+  }
+
+  .upload-head {
+    gap: 8px;
+  }
+
+  .upload-card h2 {
+    font-size: 0.95rem;
+  }
+
+  .upload-head .hint {
+    max-width: none;
+    font-size: 0.68rem;
+    line-height: 1.25;
+  }
+
+  .upload-fields {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 5px;
+  }
+
+  .pcap-field {
+    grid-column: auto;
+  }
+
+  .upload-card label {
+    gap: 2px;
+    font-size: 0.7rem;
+  }
+
+  .upload-card input[type="file"] {
+    min-height: 26px;
+    padding: 3px 5px;
+    font-size: 0.72rem;
+  }
+
+  .upload-actions {
+    gap: 6px;
+  }
+
+  button,
+  .secondary-button,
+  .mini-button {
+    min-height: 29px;
+    padding: 4px 8px;
+    font-size: 0.78rem;
   }
 }
 

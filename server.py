@@ -30,6 +30,7 @@ from tools.lov_parser import (
     snapshot_folders,
     write_state_files,
 )
+from tools.packet_importer import import_pcapng
 
 
 ROOT = Path(__file__).resolve().parent
@@ -157,6 +158,9 @@ class Handler(SimpleHTTPRequestHandler):
             if path == "/api/upload":
                 self.handle_upload()
                 return
+            if path == "/api/import-pcap":
+                self.handle_pcap_import()
+                return
             self.send_json({"error": "not_found"}, 404)
         except Exception as exc:
             self.send_json({"error": str(exc)}, 500)
@@ -201,6 +205,42 @@ class Handler(SimpleHTTPRequestHandler):
         write_state_files(ROOT, state)
         selected_snapshot = state.get("snapshots", [])[-1] if state.get("snapshots") else parsed_snapshot
         self.send_json({"snapshot": selected_snapshot, "uploaded": [str(folder.relative_to(ROOT)) for folder in created_folders], "state": state})
+
+    def handle_pcap_import(self) -> None:
+        form = cgi.FieldStorage(fp=self.rfile, headers=self.headers, environ={"REQUEST_METHOD": "POST", "CONTENT_TYPE": self.headers.get("Content-Type")})
+        pcap_field = form["pcap"] if "pcap" in form else None
+        if not valid_upload(pcap_field):
+            self.send_json({"error": "请选择 .pcapng 抓包文件"}, 400)
+            return
+
+        imports_root = ROOT / RECORDS_DIR / "imports"
+        imports_root.mkdir(parents=True, exist_ok=True)
+        safe_name = Path(getattr(pcap_field, "filename", "capture.pcapng")).name or "capture.pcapng"
+        upload_path = imports_root / f"{datetime.now():%Y%m%d%H%M%S}_{safe_name}"
+        with upload_path.open("wb") as target:
+            shutil.copyfileobj(pcap_field.file, target)
+
+        imported = import_pcapng(ROOT, upload_path)
+        if not imported.get("snapshots"):
+            self.send_json({"error": "没有在抓包中找到联盟或 Boss 排行数据", "diagnostics": imported.get("diagnostics", [])}, 422)
+            return
+
+        state = read_state()
+        write_state_files(ROOT, state)
+        selected_snapshot = state.get("snapshots", [])[-1] if state.get("snapshots") else imported["snapshots"][-1]
+        summary = {
+            "members": sum(len(snapshot.get("members", [])) for snapshot in imported["snapshots"]),
+            "boss": sum(len(snapshot.get("boss", [])) for snapshot in imported["snapshots"]),
+        }
+        self.send_json(
+            {
+                "snapshot": selected_snapshot,
+                "imported": [snapshot["folder"] for snapshot in imported["snapshots"]],
+                "summary": summary,
+                "diagnostics": imported.get("diagnostics", []),
+                "state": state,
+            }
+        )
 
     def read_json_body(self) -> dict:
         content_length = int(self.headers.get("Content-Length", "0") or "0")

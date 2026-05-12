@@ -127,10 +127,13 @@ function memberMatches(left, right, leftNameCounts = new Map(), rightNameCounts 
 
   const leftName = normalizedName(left.name);
   const rightName = normalizedName(right.name);
-  if (!leftName || leftName !== rightName) return false;
+  if (!leftName || !rightName) return false;
 
   const sameZone = left.zone !== undefined && left.zone !== null && left.zone === right.zone;
   const uniqueName = (leftNameCounts.get(leftName) || 0) === 1 && (rightNameCounts.get(rightName) || 0) === 1;
+  const hasCjk = /[\u4e00-\u9fff]/.test(`${left.name || ""}${right.name || ""}`);
+  const similarSameZone = sameZone && hasCjk && leftName.length === rightName.length && leftName.length >= 2 && (leftName[0] === rightName[0] || leftName.at(-1) === rightName.at(-1));
+  if (leftName !== rightName) return similarSameZone;
   return sameZone || uniqueName;
 }
 
@@ -138,10 +141,14 @@ function hasMatchingMember(item, members, itemNameCounts, memberNameCounts) {
   return members.some((member) => memberMatches(item, member, itemNameCounts, memberNameCounts));
 }
 
+function hasOwnBossData(snapshot) {
+  return Boolean(snapshot?.boss?.length) && !snapshot.boss_carried_forward;
+}
+
 function getBossDeltas(current) {
   const currentWeek = current.boss_week_id || current.week_id;
   const previous = state.data.snapshots
-    .filter((snapshot) => (snapshot.boss_week_id || snapshot.week_id) === currentWeek && snapshot.captured_at < current.captured_at)
+    .filter((snapshot) => hasOwnBossData(snapshot) && (snapshot.boss_week_id || snapshot.week_id) === currentWeek && snapshot.captured_at < current.captured_at)
     .at(-1);
   const previousMap = previous ? byKey(previous.boss) : new Map();
   return current.boss.map((boss) => {
@@ -155,7 +162,7 @@ function renderSnapshotOptions() {
   const select = $("#snapshotSelect");
   const current = selectedSnapshot();
   const week = state.selectedWeek || current.boss_week_id || current.week_id;
-  const snapshots = state.data.snapshots.filter((snapshot) => (snapshot.boss_week_id || snapshot.week_id) === week && snapshot.boss?.length);
+  const snapshots = state.data.snapshots.filter((snapshot) => hasOwnBossData(snapshot) && (snapshot.boss_week_id || snapshot.week_id) === week);
   const fallback = snapshots.at(-1) || current;
   if (!snapshots.some((snapshot) => snapshot.id === state.selectedId)) {
     state.selectedId = fallback?.id;
@@ -189,12 +196,12 @@ function renderWeekOptions() {
 function selectedBossSnapshot() {
   const current = selectedSnapshot();
   const week = state.selectedWeek || current.boss_week_id || current.week_id;
-  const snapshots = state.data.snapshots.filter((snapshot) => (snapshot.boss_week_id || snapshot.week_id) === week && snapshot.boss?.length);
+  const snapshots = state.data.snapshots.filter((snapshot) => hasOwnBossData(snapshot) && (snapshot.boss_week_id || snapshot.week_id) === week);
   return snapshots.find((snapshot) => snapshot.id === state.selectedId) || snapshots.at(-1) || current;
 }
 
 function bossSnapshotsForWeek(weekId) {
-  return state.data.snapshots.filter((snapshot) => (snapshot.boss_week_id || snapshot.week_id) === weekId && snapshot.boss?.length);
+  return state.data.snapshots.filter((snapshot) => hasOwnBossData(snapshot) && (snapshot.boss_week_id || snapshot.week_id) === weekId);
 }
 
 function snapshotDayIndex(snapshot) {
@@ -388,7 +395,7 @@ function renderMemberTable(current, previous) {
   const missing = previous
     ? previousList
         .filter((item) => !hasMatchingMember(item, currentList, previousNameCounts, currentNameCounts))
-        .map((item) => ({ ...item, missing: true, source_snapshot_id: previous.id }))
+        .map((item) => ({ ...item, missing: true, source_snapshot_id: previous.member_source_id || previous.id }))
     : [];
   const rows = sortMembers(
     [...current.members, ...missing].filter((item) => {
@@ -408,7 +415,7 @@ function renderMemberTable(current, previous) {
             item.missing ? `<span class="tag missing">\u7f3a\u5931</span>` : "",
             reviewTags(item),
           ].join("");
-          const rowSnapshotId = current.id;
+          const rowSnapshotId = item.source_snapshot_id || current.id;
           const saveSnapshotId = item.source_snapshot_id || current.member_source_id || current.id;
           const raw = item.raw ? `<details><summary>\u67e5\u770b</summary><code>${escapeHtml([item.raw.identity, item.raw.power, item.raw.last_online].filter(Boolean).join("\n"))}</code></details>` : "";
           const nameClass = item.in_group ? "cell-name in-group-name" : "cell-name";
@@ -468,9 +475,9 @@ function render() {
 
 async function reloadState() {
   state.data = await fetchState();
-  const latestBoss = state.data.snapshots.filter((snapshot) => snapshot.boss?.length).at(-1) || state.data.snapshots.at(-1);
+  const latestBoss = state.data.snapshots.filter(hasOwnBossData).at(-1) || state.data.snapshots.at(-1);
   state.selectedWeek = latestBoss?.boss_week_id || latestBoss?.week_id;
-  state.selectedId = state.data.snapshots.filter((snapshot) => (snapshot.boss_week_id || snapshot.week_id) === state.selectedWeek && snapshot.boss?.length).at(-1)?.id;
+  state.selectedId = state.data.snapshots.filter((snapshot) => hasOwnBossData(snapshot) && (snapshot.boss_week_id || snapshot.week_id) === state.selectedWeek).at(-1)?.id;
   render();
 }
 
@@ -758,6 +765,65 @@ $("#reparseButton").addEventListener("click", async () => {
     render();
   } catch (error) {
     status.textContent = `\u91cd\u65b0\u8bc6\u522b\u5931\u8d25\uff1a${error.message}`;
+  }
+});
+
+
+$("#importPcapButton")?.addEventListener("click", async () => {
+  const form = $("#uploadForm");
+  const status = $("#uploadStatus");
+  const importButton = $("#importPcapButton");
+  const submitButton = form.querySelector('button[type="submit"]');
+  const reparseButton = $("#reparseButton");
+  const pcapFile = form.elements.pcap?.files?.[0];
+  if (!pcapFile) {
+    status.textContent = "\u8bf7\u9009\u62e9 .pcapng \u6293\u5305\u6587\u4ef6\u3002";
+    return;
+  }
+  const body = new FormData();
+  body.append("pcap", pcapFile);
+  const originalLabel = importButton?.textContent || "\u5bfc\u5165\u6293\u5305";
+  if (importButton) {
+    importButton.disabled = true;
+    importButton.textContent = "\u5bfc\u5165\u4e2d...";
+  }
+  if (submitButton) submitButton.disabled = true;
+  if (reparseButton) reparseButton.disabled = true;
+  status.textContent = "\u6b63\u5728\u4e0a\u4f20\u6293\u5305\u6587\u4ef6...";
+  try {
+    await new Promise((resolve) => setTimeout(resolve, 30));
+    status.textContent = "\u6b63\u5728\u89e3\u6790\u6293\u5305\uff0c\u8bc6\u522b\u8054\u76df\u548c Boss \u6570\u636e...";
+    const response = await fetch("/api/import-pcap", { method: "POST", body });
+    const payload = await response.json();
+    if (!response.ok) throw new Error(payload.error || "\u6293\u5305\u5bfc\u5165\u5931\u8d25");
+    state.data = payload.state;
+    const latestBoss = payload.state.snapshots.filter(hasOwnBossData).at(-1) || payload.snapshot;
+    state.selectedWeek = latestBoss?.boss_week_id || latestBoss?.week_id;
+    state.selectedId = payload.state.snapshots.filter((snapshot) => hasOwnBossData(snapshot) && (snapshot.boss_week_id || snapshot.week_id) === state.selectedWeek).at(-1)?.id;
+    form.elements.pcap.value = "";
+    const labels = new Map([
+      ["SCLogic_RankInfoBack", "Boss"],
+      ["SCLogic_GetUnionMebInfoBack", "\u8054\u76df"],
+    ]);
+    const summaryParts = [
+      payload.summary?.members ? `\u8054\u76df ${payload.summary.members} \u6761` : "",
+      payload.summary?.boss ? `Boss ${payload.summary.boss} \u6761` : "",
+    ].filter(Boolean);
+    const counts = summaryParts.length ? summaryParts.join(" / ") : payload.diagnostics
+      ?.filter((item) => labels.has(item.packet))
+      .map((item) => `${labels.get(item.packet)} ${item.rows} \u6761`)
+      .join(" / ");
+    status.textContent = `\u6293\u5305\u5bfc\u5165\u5b8c\u6210\uff1a${counts || payload.imported.join("\u3001")}`;
+    render();
+  } catch (error) {
+    status.textContent = `\u6293\u5305\u5bfc\u5165\u5931\u8d25\uff1a${error.message}`;
+  } finally {
+    if (importButton) {
+      importButton.disabled = false;
+      importButton.textContent = originalLabel;
+    }
+    if (submitButton) submitButton.disabled = false;
+    if (reparseButton) reparseButton.disabled = false;
   }
 });
 

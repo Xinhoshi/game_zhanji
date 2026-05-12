@@ -764,6 +764,34 @@
           "reviewed": true
         }
       }
+    },
+    "2026年5月12日194438_Boss": {
+      "members": {
+        "m008": {
+          "zone": "288",
+          "name": "縌星辰",
+          "power": "22653625",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "group_only": false,
+          "reviewed": true
+        }
+      }
+    },
+    "2026年5月12日194438_联盟": {
+      "members": {
+        "m008": {
+          "zone": "288",
+          "name": "紫星塵",
+          "power": "22653625",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "group_only": false,
+          "reviewed": true
+        }
+      }
     }
   },
   "aliases": {
@@ -1087,6 +1115,14 @@
         "name": "SOULBS",
         "source_power": 157225591,
         "power": 157225591
+      },
+      {
+        "source_zone": 288,
+        "source_name": "紫星塵",
+        "zone": 288,
+        "name": "紫星塵",
+        "source_power": 22653625,
+        "power": 22653625
       }
     ],
     "boss": [

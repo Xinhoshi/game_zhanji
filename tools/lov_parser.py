@@ -5,7 +5,9 @@ import asyncio
 import copy
 from difflib import SequenceMatcher
 import json
+import os
 import re
+import time
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any
@@ -189,7 +191,7 @@ async def ocr_lines(image_path: Path, crop_box: tuple[int, int, int, int] | None
     if crop_box:
         image = Image.open(image_path)
         crop = image.crop(crop_box)
-        temp_path = image_path.parent / f".ocr_{image_path.stem}_{crop_box[0]}_{crop_box[2]}.png"
+        temp_path = image_path.parent / f".ocr_{image_path.stem}_{crop_box[0]}_{crop_box[2]}_{os.getpid()}_{time.time_ns()}.png"
         crop.save(temp_path)
         source = temp_path
 
@@ -203,7 +205,10 @@ async def ocr_lines(image_path: Path, crop_box: tuple[int, int, int, int] | None
         return [line.text for line in result.lines if normalize_text(line.text)]
     finally:
         if temp_path and temp_path.exists():
-            temp_path.unlink()
+            try:
+                temp_path.unlink()
+            except PermissionError:
+                pass
 
 
 def looks_like_identity(line: str) -> bool:
@@ -398,6 +403,40 @@ def parse_boss(lines: list[str]) -> list[dict[str, Any]]:
 
 
 async def parse_snapshot(folder: Path, root: Path | None = None) -> dict[str, Any]:
+    if (folder / "snapshot.json").exists() and not (folder / MEMBER_IMAGE).exists() and not (folder / BOSS_IMAGE).exists():
+        snapshot = load_snapshot(folder)
+        if snapshot:
+            packet_import = snapshot.get("packet_import") or {}
+            packet_path = packet_import.get("source_path") or packet_import.get("source_file")
+            candidates = []
+            if packet_path:
+                candidates.append((root / packet_path) if root else (folder / packet_path))
+                candidates.append(folder / Path(packet_path).name)
+            candidates.extend(folder.glob("*.pcapng"))
+            source = next((path for path in candidates if path and path.exists()), None)
+            if source:
+                try:
+                    from tools.packet_importer import extract_packets
+                except ModuleNotFoundError:
+                    import sys
+
+                    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+                    from tools.packet_importer import extract_packets
+
+                extracted = extract_packets(source)
+                if snapshot_record_kind(snapshot) == "members" and extracted.get("members"):
+                    snapshot["members"] = extracted["members"]
+                    (folder / "members.json").write_text(json.dumps(snapshot["members"], ensure_ascii=False, indent=2), encoding="utf-8")
+                if snapshot_record_kind(snapshot) == "boss" and extracted.get("boss"):
+                    snapshot["boss"] = extracted["boss"]
+                    (folder / "boss.json").write_text(json.dumps(snapshot["boss"], ensure_ascii=False, indent=2), encoding="utf-8")
+                snapshot["packet_import"] = {
+                    "source_file": source.name,
+                    "source_path": f"{relative_folder(root, folder)}/{source.name}",
+                }
+                (folder / "snapshot.json").write_text(json.dumps(snapshot, ensure_ascii=False, indent=2), encoding="utf-8")
+            return snapshot
+
     member_image = folder / MEMBER_IMAGE
     boss_image = folder / BOSS_IMAGE
 

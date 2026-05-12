@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>玉子烧的小屋</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css?v=20260506g" />
+    <link rel="stylesheet" href="./styles.css?v=20260512pcap2" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">跳到主要内容</a>
@@ -19,7 +19,7 @@
       <section id="visualization" class="overview section-block" aria-labelledby="overviewTitle">
         <div class="overview-top">
           <div class="report-title"><p class="eyebrow">Alliance Report</p><h1 id="overviewTitle">玉子烧的小屋</h1><p class="lede">联盟成员、战斗力、Boss 周累计与 OCR 复核集中查看。首页始终展示最新战报。</p><div class="meta-line" aria-label="当前归档状态"><span id="archiveMeta">Boss 周数据未归档</span></div></div>
-          <form id="uploadForm" class="upload-card" aria-label="截图上传识别"><div class="upload-head"><div><p class="eyebrow">Capture</p><h2>上传截图</h2><p id="uploadStatus" class="hint">同一天多次上传时，只保留当天最后一次记录。</p></div><span class="small-badge">可单独上传</span></div><div class="upload-fields"><label><span>联盟截图</span><input name="member" type="file" accept="image/*" /></label><label><span>Boss 截图</span><input name="boss" type="file" accept="image/*" /></label></div><div class="upload-actions"><button type="submit">上传并识别</button><button id="reparseButton" class="secondary-button" type="button">重扫本地</button></div></form>
+          <form id="uploadForm" class="upload-card" aria-label="截图和抓包导入"><div class="upload-head"><div><p class="eyebrow">Capture</p><h2>上传数据</h2><p id="uploadStatus" class="hint">截图走 OCR，抓包会直接导入联盟和 Boss 数据。</p></div><span class="small-badge">可单独上传</span></div><div class="upload-fields"><label><span>联盟截图</span><input name="member" type="file" accept="image/*" /></label><label><span>Boss 截图</span><input name="boss" type="file" accept="image/*" /></label><label class="pcap-field"><span>抓包文件</span><input name="pcap" type="file" accept=".pcapng,application/vnd.tcpdump.pcap" /></label></div><div class="upload-actions"><button type="submit">上传并识别</button><button id="importPcapButton" class="secondary-button" type="button">导入抓包</button><button id="reparseButton" class="secondary-button subtle-button" type="button">重扫本地</button></div></form>
         </div>
         <section class="stats-grid" id="statsGrid" aria-label="战报指标"></section>
         <section class="leaderboard-grid" aria-label="最新排行"><article class="panel ranking-panel"><div class="panel-head compact"><div><p class="eyebrow">Boss</p><h2>Boss 本周伤害排行</h2></div><span id="bossWeekLabel" class="badge"></span></div><div id="bossBars" class="bars"></div></article><article class="panel ranking-panel"><div class="panel-head compact"><div><p class="eyebrow">Members</p><h2>战力 Top 10</h2></div></div><div id="powerBars" class="bars"></div></article></section>
@@ -29,6 +29,6 @@
       <section id="archive-history" class="section-block detail-section" aria-labelledby="archiveHistoryTitle"><section class="panel detail-panel archive-history-panel"><div class="panel-head compact"><div><p class="eyebrow">Archive</p><h2 id="archiveHistoryTitle">历史归档统计</h2></div></div><section class="archive-summary" id="archiveSummary" aria-label="历史归档汇总"></section><div class="table-wrap archive-table-wrap"><table><thead><tr><th>周起始</th><th>归档时间</th><th>来源节点</th><th>成员数</th><th>总伤害</th><th>第一名</th><th>第一名伤害</th></tr></thead><tbody id="archiveTable"></tbody></table></div></section></section>
       <section class="section-block detail-section"><section class="panel image-panel" aria-label="截图预览"><figure><figcaption>联盟截图</figcaption><img id="memberImage" alt="联盟截图" /></figure><figure><figcaption>Boss 截图</figcaption><img id="bossImage" alt="Boss 截图" /></figure></section></section>
     </main>
-    <script src="./data/state.js?v=20260506g"></script><script src="./app.js?v=20260506g"></script>
+    <script src="./data/state.js?v=20260512pcap2"></script><script src="./app.js?v=20260512pcap2"></script>
   </body>
 </html>

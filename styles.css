@@ -1573,9 +1573,42 @@ tbody tr.member-in-group td:first-child {
     grid-template-columns: 1fr;
   }
 
+  .ranking-panel {
+    padding: 16px;
+  }
+
+  .ranking-panel .bars {
+    grid-template-rows: none;
+    gap: 9px;
+    align-content: start;
+  }
+
   .bar-row {
-    grid-template-columns: 50px minmax(0, 1fr) minmax(82px, auto);
-    min-height: 34px;
+    position: relative;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas:
+      "rank name"
+      "rank track"
+      "value value";
+    gap: 7px 10px;
+    min-height: 84px;
+    padding: 10px 12px 11px;
+    border: 1px solid oklch(72% 0.05 214 / 0.16);
+    border-radius: 8px;
+    background: oklch(92% 0.01 252 / 0.045);
+    box-shadow: inset 0 1px 0 oklch(100% 0 0 / 0.035);
+  }
+
+  .bar-row + .bar-row {
+    margin-top: 0;
+  }
+
+  .rank-pill {
+    grid-area: rank;
+    align-self: start;
+    min-width: 58px;
+    height: 26px;
+    font-size: 0.72rem;
   }
 
   .small-badge {
@@ -1583,12 +1616,38 @@ tbody tr.member-in-group td:first-child {
   }
 
   .bar-track {
-    grid-column: 2 / -1;
+    grid-area: track;
+    width: 100%;
+    height: 10px;
   }
 
   .bar-name {
+    grid-area: name;
+    align-self: center;
+    min-height: 1.25rem;
     white-space: normal;
     overflow-wrap: anywhere;
+    line-height: 1.25;
+  }
+
+  .bar-row strong {
+    grid-area: value;
+    justify-self: start;
+    margin-left: 68px;
+    padding-top: 2px;
+    color: oklch(83% 0.12 214);
+    font-size: 0.9rem;
+    line-height: 1.15;
+    text-align: left;
+  }
+
+  .bar-row strong::before {
+    content: "\6218\529b";
+    margin-right: 7px;
+    color: var(--muted-2);
+    font-size: 0.68rem;
+    font-weight: 850;
+    letter-spacing: 0.04em;
   }
 
   th,

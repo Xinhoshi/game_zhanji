@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-13T00:26:03",
-  "snapshot_count": 18,
+  "generated_at": "2026-05-13T11:23:12",
+  "snapshot_count": 19,
   "snapshots": [
     {
       "id": "2026年4月28日193228_Boss",
@@ -44503,7 +44503,7 @@
       "boss_day_index": null,
       "images": {
         "members": null,
-        "boss": null
+        "boss": "records/boss/2026年5月11日193407_Boss/Boss.png"
       },
       "members": [
         {
@@ -45693,14 +45693,15 @@
           "level": 200,
           "power": 271063012,
           "last_online": null,
-          "in_group": false,
+          "in_group": true,
           "raw": {
             "source": "pcapng",
             "identity": "72#远青",
             "level": 200,
             "extra1": 30053,
             "extra2": 6045,
-            "flag": 0
+            "flag": 0,
+            "correction_note": ""
           },
           "needs_review": [],
           "row_id": "m043",
@@ -45805,14 +45806,15 @@
           "level": 196,
           "power": 152289973,
           "last_online": null,
-          "in_group": false,
+          "in_group": true,
           "raw": {
             "source": "pcapng",
             "identity": "117#合欢宗宗主",
             "level": 196,
             "extra1": 8,
             "extra2": 6037,
-            "flag": 0
+            "flag": 0,
+            "correction_note": ""
           },
           "needs_review": [],
           "row_id": "m047",
@@ -45833,14 +45835,15 @@
           "level": 167,
           "power": 78165161,
           "last_online": null,
-          "in_group": false,
+          "in_group": true,
           "raw": {
             "source": "pcapng",
             "identity": "86#摆烂小咸鱼",
             "level": 167,
             "extra1": 70054,
             "extra2": 6042,
-            "flag": 0
+            "flag": 0,
+            "correction_note": ""
           },
           "needs_review": [],
           "row_id": "m048",
@@ -46168,12 +46171,12 @@
           "name": "米拉",
           "key": "28#米拉",
           "rank": 1,
-          "damage_k": 29465945,
-          "damage": 29465945000,
+          "damage_k": 14630947,
+          "damage": 14630947000,
           "raw": {
-            "source": "pcapng",
-            "identity": "28#米拉",
-            "damage": "29,465,945k"
+            "identity": "28 # 米 拉",
+            "rank": "NO ． 1",
+            "damage": "伤 害 ： 14 ， 630 ， 947k"
           },
           "needs_review": [],
           "row_id": "b001",
@@ -46182,21 +46185,20 @@
             "name": "米拉",
             "key": "28#米拉",
             "rank": 1,
-            "damage_k": 29465945
-          },
-          "imported": true
+            "damage_k": 14630947
+          }
         },
         {
           "zone": 81,
           "name": "酒酿圆子",
           "key": "81#酒酿圆子",
           "rank": 2,
-          "damage_k": 18928528,
-          "damage": 18928528000,
+          "damage_k": 10062883,
+          "damage": 10062883000,
           "raw": {
-            "source": "pcapng",
-            "identity": "81#酒酿圆子",
-            "damage": "18,928,528k"
+            "identity": "81 # 酒 酿 圆 子",
+            "rank": "NO ． 2",
+            "damage": "伤 害 ： 10 ， 062 ， 883k"
           },
           "needs_review": [],
           "row_id": "b002",
@@ -46205,90 +46207,90 @@
             "name": "酒酿圆子",
             "key": "81#酒酿圆子",
             "rank": 2,
-            "damage_k": 18928528
-          },
-          "imported": true
+            "damage_k": 10062883
+          }
         },
         {
           "zone": 1,
           "name": "Zero卐",
           "key": "1#Zero卐",
           "rank": 3,
-          "damage_k": 13642838,
-          "damage": 13642838000,
+          "damage_k": 8160303,
+          "damage": 8160303000,
           "raw": {
-            "source": "pcapng",
-            "identity": "1#Zero卐",
-            "damage": "13,642,838k"
+            "identity": "1#Zero",
+            "rank": "No ． 3",
+            "damage": "伤 害 ： 8 ， 160 ， 303k",
+            "identity_matched_from": "1#Zero"
           },
           "needs_review": [],
           "row_id": "b003",
           "ocr": {
             "zone": 1,
-            "name": "Zero卐",
-            "key": "1#Zero卐",
+            "name": "Zero",
+            "key": "1#Zero",
             "rank": 3,
-            "damage_k": 13642838
+            "damage_k": 8160303
           },
-          "imported": true
-        },
-        {
-          "zone": 28,
-          "name": "伊之猪",
-          "key": "28#伊之猪",
-          "rank": 4,
-          "damage_k": 12736506,
-          "damage": 12736506000,
-          "raw": {
-            "source": "pcapng",
-            "identity": "28#伊之猪",
-            "damage": "12,736,506k"
-          },
-          "needs_review": [],
-          "row_id": "b004",
-          "ocr": {
-            "zone": 28,
-            "name": "伊之猪",
-            "key": "28#伊之猪",
-            "rank": 4,
-            "damage_k": 12736506
-          },
-          "imported": true
+          "identity_matched": true
         },
         {
           "zone": 205,
           "name": "搁浅づ",
           "key": "205#搁浅づ",
-          "rank": 5,
-          "damage_k": 10843371,
-          "damage": 10843371000,
+          "rank": 4,
+          "damage_k": 7298962,
+          "damage": 7298962000,
           "raw": {
-            "source": "pcapng",
-            "identity": "205#搁浅づ",
-            "damage": "10,843,371k"
+            "identity": "205 # 搁 浅 0",
+            "rank": "No ． 4",
+            "damage": "伤 害 ： 7 ， 298 ， 962k",
+            "identity_matched_from": "205#搁浅0"
+          },
+          "needs_review": [],
+          "row_id": "b004",
+          "ocr": {
+            "zone": 205,
+            "name": "搁浅0",
+            "key": "205#搁浅0",
+            "rank": 4,
+            "damage_k": 7298962
+          },
+          "identity_matched": true
+        },
+        {
+          "zone": 28,
+          "name": "伊之猪",
+          "key": "28#伊之猪",
+          "rank": 5,
+          "damage_k": 6830047,
+          "damage": 6830047000,
+          "raw": {
+            "identity": "28 # 伊 之 猪",
+            "rank": "No ， 5",
+            "damage": "伤 害 ： 6 ， 830 ， 047k"
           },
           "needs_review": [],
           "row_id": "b005",
           "ocr": {
-            "zone": 205,
-            "name": "搁浅づ",
-            "key": "205#搁浅づ",
+            "zone": 28,
+            "name": "伊之猪",
+            "key": "28#伊之猪",
             "rank": 5,
-            "damage_k": 10843371
-          },
-          "imported": true
+            "damage_k": 6830047
+          }
         },
         {
           "zone": 71,
           "name": "梁师娘LUONG",
           "key": "71#梁师娘LUONG",
           "rank": 6,
-          "damage_k": 7647127,
-          "damage": 7647127000,
+          "damage_k": 4275186,
+          "damage": 4275186000,
           "raw": {
-            "source": "pcapng",
-            "identity": "71#梁师娘LUONG",
-            "damage": "7,647,127k"
+            "identity": "71 # 梁 师 娘 LUONG",
+            "rank": "No ． 6",
+            "damage": "伤 害 ： 4 ， 275 ， 186k"
           },
           "needs_review": [],
           "row_id": "b006",
@@ -46297,67 +46299,64 @@
             "name": "梁师娘LUONG",
             "key": "71#梁师娘LUONG",
             "rank": 6,
-            "damage_k": 7647127
-          },
-          "imported": true
-        },
-        {
-          "zone": 241,
-          "name": "小野莓",
-          "key": "241#小野莓",
-          "rank": 7,
-          "damage_k": 3880536,
-          "damage": 3880536000,
-          "raw": {
-            "source": "pcapng",
-            "identity": "241#小野莓",
-            "damage": "3,880,536k"
-          },
-          "needs_review": [],
-          "row_id": "b007",
-          "ocr": {
-            "zone": 241,
-            "name": "小野莓",
-            "key": "241#小野莓",
-            "rank": 7,
-            "damage_k": 3880536
-          },
-          "imported": true
+            "damage_k": 4275186
+          }
         },
         {
           "zone": 72,
           "name": "远青",
           "key": "72#远青",
-          "rank": 8,
+          "rank": 7,
           "damage_k": 3509818,
           "damage": 3509818000,
           "raw": {
-            "source": "pcapng",
-            "identity": "72#远青",
-            "damage": "3,509,818k"
+            "identity": "72 # 远 青",
+            "rank": "No ． 7",
+            "damage": "伤 害 ： 3 ， 509 ， 818k"
           },
           "needs_review": [],
-          "row_id": "b008",
+          "row_id": "b007",
           "ocr": {
             "zone": 72,
             "name": "远青",
             "key": "72#远青",
-            "rank": 8,
+            "rank": 7,
             "damage_k": 3509818
+          }
+        },
+        {
+          "zone": 241,
+          "name": "小野莓",
+          "key": "241#小野莓",
+          "rank": 8,
+          "damage_k": 2940597,
+          "damage": 2940597000,
+          "raw": {
+            "identity": "241 # 小 野 莓",
+            "rank": "No ． 8",
+            "damage": "伤 害 ： 2 ， 940 ， 597k"
           },
-          "imported": true
+          "needs_review": [],
+          "row_id": "b008",
+          "ocr": {
+            "zone": 241,
+            "name": "小野莓",
+            "key": "241#小野莓",
+            "rank": 8,
+            "damage_k": 2940597
+          }
         },
         {
           "zone": 283,
           "name": "夏一鸽",
           "key": "283#夏一鸽",
           "rank": 9,
-          "damage_k": 3115277,
-          "damage": 3115277000,
+          "damage_k": 2671426,
+          "damage": 2671426000,
           "raw": {
-            "source": "pcapng",
-            "identity": "283#夏一鸽",
-            "damage": "3,115,277k"
+            "identity": "283 # 夏 一 鸽",
+            "rank": "No ． 9",
+            "damage": "伤 害 ： 2 ， 671 ， 426k"
           },
           "needs_review": [],
           "row_id": "b009",
@@ -46366,1029 +46365,738 @@
             "name": "夏一鸽",
             "key": "283#夏一鸽",
             "rank": 9,
-            "damage_k": 3115277
-          },
-          "imported": true
-        },
-        {
-          "zone": 75,
-          "name": "半个西瓜",
-          "key": "75#半个西瓜",
-          "rank": 10,
-          "damage_k": 2585053,
-          "damage": 2585053000,
-          "raw": {
-            "source": "pcapng",
-            "identity": "75#半个西瓜",
-            "damage": "2,585,053k"
-          },
-          "needs_review": [],
-          "row_id": "b010",
-          "ocr": {
-            "zone": 75,
-            "name": "半个西瓜",
-            "key": "75#半个西瓜",
-            "rank": 10,
-            "damage_k": 2585053
-          },
-          "imported": true
+            "damage_k": 2671426
+          }
         },
         {
           "zone": 81,
           "name": "师娘小号玲",
           "key": "81#师娘小号玲",
-          "rank": 11,
-          "damage_k": 2547172,
-          "damage": 2547172000,
+          "rank": 10,
+          "damage_k": 2369507,
+          "damage": 2369507000,
           "raw": {
-            "source": "pcapng",
-            "identity": "81#师娘小号玲",
-            "damage": "2,547,172k"
+            "identity": "81 # 师 娘 小 号 玲",
+            "rank": "NO ． 10",
+            "damage": "伤 害 ： 2 ， 369 ， 507k"
           },
           "needs_review": [],
-          "row_id": "b011",
+          "row_id": "b010",
           "ocr": {
             "zone": 81,
             "name": "师娘小号玲",
             "key": "81#师娘小号玲",
-            "rank": 11,
-            "damage_k": 2547172
-          },
-          "imported": true
+            "rank": 10,
+            "damage_k": 2369507
+          }
         },
         {
           "zone": 72,
           "name": "随风倒柳",
           "key": "72#随风倒柳",
-          "rank": 12,
+          "rank": 11,
           "damage_k": 2214510,
           "damage": 2214510000,
           "raw": {
-            "source": "pcapng",
-            "identity": "72#随风倒柳",
-            "damage": "2,214,510k"
+            "identity": "72 # 随 风 倒 柳",
+            "rank": "No ． 11",
+            "damage": "伤 害 ： 2 ， 214 ， 510k"
           },
           "needs_review": [],
-          "row_id": "b012",
+          "row_id": "b011",
           "ocr": {
             "zone": 72,
             "name": "随风倒柳",
             "key": "72#随风倒柳",
-            "rank": 12,
+            "rank": 11,
             "damage_k": 2214510
-          },
-          "imported": true
-        },
-        {
-          "zone": 58,
-          "name": "SOULBS",
-          "key": "58#SOULBS",
-          "rank": 13,
-          "damage_k": 2107352,
-          "damage": 2107352000,
-          "raw": {
-            "source": "pcapng",
-            "identity": "58#SOULBS",
-            "damage": "2,107,352k"
-          },
-          "needs_review": [],
-          "row_id": "b013",
-          "ocr": {
-            "zone": 58,
-            "name": "SOULBS",
-            "key": "58#SOULBS",
-            "rank": 13,
-            "damage_k": 2107352
-          },
-          "imported": true
-        },
-        {
-          "zone": 202,
-          "name": "ElsieBlaker",
-          "key": "202#ElsieBlaker",
-          "rank": 14,
-          "damage_k": 1935705,
-          "damage": 1935705000,
-          "raw": {
-            "source": "pcapng",
-            "identity": "202#ElsieBlaker",
-            "damage": "1,935,705k"
-          },
-          "needs_review": [],
-          "row_id": "b014",
-          "ocr": {
-            "zone": 202,
-            "name": "ElsieBlaker",
-            "key": "202#ElsieBlaker",
-            "rank": 14,
-            "damage_k": 1935705
-          },
-          "imported": true
-        },
-        {
-          "zone": 87,
-          "name": "大根珍珠棒",
-          "key": "87#大根珍珠棒",
-          "rank": 15,
-          "damage_k": 1869943,
-          "damage": 1869943000,
-          "raw": {
-            "source": "pcapng",
-            "identity": "87#大根珍珠棒",
-            "damage": "1,869,943k"
-          },
-          "needs_review": [],
-          "row_id": "b015",
-          "ocr": {
-            "zone": 87,
-            "name": "大根珍珠棒",
-            "key": "87#大根珍珠棒",
-            "rank": 15,
-            "damage_k": 1869943
-          },
-          "imported": true
+          }
         },
         {
           "zone": 226,
           "name": "禾田",
           "key": "226#禾田",
-          "rank": 16,
+          "rank": 12,
           "damage_k": 1810274,
           "damage": 1810274000,
           "raw": {
-            "source": "pcapng",
-            "identity": "226#禾田",
-            "damage": "1,810,274k"
+            "identity": "226 # 禾 田",
+            "rank": "NO ． 12",
+            "damage": "伤 害 ： 1 ， 810 ， 274k"
           },
           "needs_review": [],
-          "row_id": "b016",
+          "row_id": "b012",
           "ocr": {
             "zone": 226,
             "name": "禾田",
             "key": "226#禾田",
-            "rank": 16,
+            "rank": 12,
             "damage_k": 1810274
+          }
+        },
+        {
+          "zone": 87,
+          "name": "大根珍珠棒",
+          "key": "87#大根珍珠棒",
+          "rank": 13,
+          "damage_k": 1505791,
+          "damage": 1505791000,
+          "raw": {
+            "identity": "87 # 大 根 珍 珠 棒",
+            "rank": "NO ． 13",
+            "damage": "伤 害 ： 1 ， 505 ， 791k"
           },
-          "imported": true
+          "needs_review": [],
+          "row_id": "b013",
+          "ocr": {
+            "zone": 87,
+            "name": "大根珍珠棒",
+            "key": "87#大根珍珠棒",
+            "rank": 13,
+            "damage_k": 1505791
+          }
         },
         {
           "zone": 69,
           "name": "师娘",
           "key": "69#师娘",
-          "rank": 17,
-          "damage_k": 1640129,
-          "damage": 1640129000,
+          "rank": 14,
+          "damage_k": 1450378,
+          "damage": 1450378000,
           "raw": {
-            "source": "pcapng",
-            "identity": "69#师娘",
-            "damage": "1,640,129k"
+            "identity": "69 # 师 娘",
+            "rank": "NO ． 14",
+            "damage": "伤 害 ： 1 ， 450 ， 378k"
           },
           "needs_review": [],
-          "row_id": "b017",
+          "row_id": "b014",
           "ocr": {
             "zone": 69,
             "name": "师娘",
             "key": "69#师娘",
-            "rank": 17,
-            "damage_k": 1640129
-          },
-          "imported": true
+            "rank": 14,
+            "damage_k": 1450378
+          }
         },
         {
-          "zone": 78,
-          "name": "燃烧的俗物",
-          "key": "78#燃烧的俗物",
-          "rank": 18,
-          "damage_k": 1637180,
-          "damage": 1637180000,
+          "zone": 75,
+          "name": "半个西瓜",
+          "key": "75#半个西瓜",
+          "rank": 15,
+          "damage_k": 1290952,
+          "damage": 1290952000,
           "raw": {
-            "source": "pcapng",
-            "identity": "78#燃烧的俗物",
-            "damage": "1,637,180k"
+            "identity": "75 # 半 个 西 瓜",
+            "rank": "NO ． 15",
+            "damage": "伤 害 ： 1 ， 290 ， 952k"
           },
           "needs_review": [],
-          "row_id": "b018",
+          "row_id": "b015",
           "ocr": {
-            "zone": 78,
-            "name": "燃烧的俗物",
-            "key": "78#燃烧的俗物",
-            "rank": 18,
-            "damage_k": 1637180
+            "zone": 75,
+            "name": "半个西瓜",
+            "key": "75#半个西瓜",
+            "rank": 15,
+            "damage_k": 1290952
+          }
+        },
+        {
+          "zone": 58,
+          "name": "SOULBS",
+          "key": "58#SOULBS",
+          "rank": 16,
+          "damage_k": 985837,
+          "damage": 985837000,
+          "raw": {
+            "identity": "58#SOULBS",
+            "rank": "NO ． 16",
+            "damage": "伤 害 ： 985 ， 837k"
           },
-          "imported": true
+          "needs_review": [],
+          "row_id": "b016",
+          "ocr": {
+            "zone": 58,
+            "name": "SOULBS",
+            "key": "58#SOULBS",
+            "rank": 16,
+            "damage_k": 985837
+          }
         },
         {
           "zone": 101,
           "name": "积极又向上",
           "key": "101#积极又向上",
-          "rank": 19,
-          "damage_k": 1288695,
-          "damage": 1288695000,
+          "rank": 17,
+          "damage_k": 891318,
+          "damage": 891318000,
           "raw": {
-            "source": "pcapng",
-            "identity": "101#积极又向上",
-            "damage": "1,288,695k"
+            "identity": "101 # 积 极 又 向 上",
+            "rank": "NO ． 17",
+            "damage": "伤 害 ： 891 ， 318k"
           },
           "needs_review": [],
-          "row_id": "b019",
+          "row_id": "b017",
           "ocr": {
             "zone": 101,
             "name": "积极又向上",
             "key": "101#积极又向上",
-            "rank": 19,
-            "damage_k": 1288695
-          },
-          "imported": true
+            "rank": 17,
+            "damage_k": 891318
+          }
         },
         {
           "zone": 252,
           "name": "縫星辰",
           "key": "252#縫星辰",
-          "rank": 20,
-          "damage_k": 1043665,
-          "damage": 1043665000,
+          "rank": 18,
+          "damage_k": 860455,
+          "damage": 860455000,
           "raw": {
-            "source": "pcapng",
-            "identity": "252#縌星辰",
-            "damage": "1,043,665k",
-            "identity_matched_from": "252#縌星辰"
+            "identity": "252 # 縫 星 辰",
+            "rank": "NO ． 18",
+            "damage": "伤 害 ： 860 ， 455k"
           },
           "needs_review": [],
-          "row_id": "b020",
+          "row_id": "b018",
           "ocr": {
             "zone": 252,
-            "name": "縌星辰",
-            "key": "252#縌星辰",
-            "rank": 20,
-            "damage_k": 1043665
-          },
-          "imported": true,
-          "identity_matched": true,
-          "missing_identity": false
-        },
-        {
-          "zone": 117,
-          "name": "合欢宗宗主",
-          "key": "117#合欢宗宗主",
-          "rank": 21,
-          "damage_k": 948585,
-          "damage": 948585000,
-          "raw": {
-            "source": "pcapng",
-            "identity": "117#合欢宗宗主",
-            "damage": "948,585k"
-          },
-          "needs_review": [],
-          "row_id": "b021",
-          "ocr": {
-            "zone": 117,
-            "name": "合欢宗宗主",
-            "key": "117#合欢宗宗主",
-            "rank": 21,
-            "damage_k": 948585
-          },
-          "imported": true
+            "name": "縫星辰",
+            "key": "252#縫星辰",
+            "rank": 18,
+            "damage_k": 860455
+          }
         },
         {
           "zone": 205,
           "name": "搁浅0",
           "key": "205#搁浅0",
-          "rank": 22,
-          "damage_k": 885155,
-          "damage": 885155000,
+          "rank": 19,
+          "damage_k": 753310,
+          "damage": 753310000,
           "raw": {
-            "source": "pcapng",
-            "identity": "205#搁浅つ",
-            "damage": "885,155k",
-            "identity_matched_from": "205#搁浅つ"
+            "identity": "205 # 搁 浅 0",
+            "rank": "No ． 19",
+            "damage": "伤 害 ： 753 ， 310k"
           },
           "needs_review": [],
-          "row_id": "b022",
+          "row_id": "b019",
           "ocr": {
             "zone": 205,
-            "name": "搁浅つ",
-            "key": "205#搁浅つ",
-            "rank": 22,
-            "damage_k": 885155
-          },
-          "imported": true,
-          "identity_matched": true,
-          "missing_identity": false
-        },
-        {
-          "zone": 7,
-          "name": "ArcheNorth",
-          "key": "7#ArcheNorth",
-          "rank": 23,
-          "damage_k": 785467,
-          "damage": 785467000,
-          "raw": {
-            "source": "pcapng",
-            "identity": "7#ArcheNorth",
-            "damage": "785,467k"
-          },
-          "needs_review": [],
-          "row_id": "b023",
-          "ocr": {
-            "zone": 7,
-            "name": "ArcheNorth",
-            "key": "7#ArcheNorth",
-            "rank": 23,
-            "damage_k": 785467
-          },
-          "imported": true
+            "name": "搁浅0",
+            "key": "205#搁浅0",
+            "rank": 19,
+            "damage_k": 753310
+          }
         },
         {
           "zone": 301,
           "name": "亚加拉达",
           "key": "301#亚加拉达",
-          "rank": 24,
-          "damage_k": 727086,
-          "damage": 727086000,
+          "rank": 20,
+          "damage_k": 388733,
+          "damage": 388733000,
           "raw": {
-            "source": "pcapng",
-            "identity": "301#亚加拉达",
-            "damage": "727,086k"
+            "identity": "301 # 亚 加 拉 达",
+            "rank": "NO ． 20",
+            "damage": "伤 害 ： 388 ， 733k"
           },
           "needs_review": [],
-          "row_id": "b024",
+          "row_id": "b020",
           "ocr": {
             "zone": 301,
             "name": "亚加拉达",
             "key": "301#亚加拉达",
-            "rank": 24,
-            "damage_k": 727086
-          },
-          "imported": true
+            "rank": 20,
+            "damage_k": 388733
+          }
         },
         {
           "zone": 103,
           "name": "arianacomodo",
           "key": "103#arianacomodo",
-          "rank": 25,
-          "damage_k": 604994,
-          "damage": 604994000,
+          "rank": 21,
+          "damage_k": 356004,
+          "damage": 356004000,
           "raw": {
-            "source": "pcapng",
             "identity": "103#arianacomodo",
-            "damage": "604,994k"
+            "rank": "NO ， 21",
+            "damage": "伤 害 ： 356 ， 004k"
           },
           "needs_review": [],
-          "row_id": "b025",
+          "row_id": "b021",
           "ocr": {
             "zone": 103,
             "name": "arianacomodo",
             "key": "103#arianacomodo",
-            "rank": 25,
-            "damage_k": 604994
-          },
-          "imported": true
+            "rank": 21,
+            "damage_k": 356004
+          }
         },
         {
           "zone": 83,
           "name": "菜豆芽",
           "key": "83#菜豆芽",
-          "rank": 26,
-          "damage_k": 513593,
-          "damage": 513593000,
+          "rank": 22,
+          "damage_k": 350520,
+          "damage": 350520000,
           "raw": {
-            "source": "pcapng",
-            "identity": "83#菜豆芽",
-            "damage": "513,593k"
+            "identity": "83 # 菜 豆 芽",
+            "rank": "NO ． 22",
+            "damage": "伤 害 ： 350 ， 520k"
           },
           "needs_review": [],
-          "row_id": "b026",
+          "row_id": "b022",
           "ocr": {
             "zone": 83,
             "name": "菜豆芽",
             "key": "83#菜豆芽",
-            "rank": 26,
-            "damage_k": 513593
-          },
-          "imported": true
-        },
-        {
-          "zone": 208,
-          "name": "咸鱼W",
-          "key": "208#咸鱼W",
-          "rank": 27,
-          "damage_k": 448600,
-          "damage": 448600000,
-          "raw": {
-            "source": "pcapng",
-            "identity": "208#咸鱼W",
-            "damage": "448,600k"
-          },
-          "needs_review": [],
-          "row_id": "b027",
-          "ocr": {
-            "zone": 208,
-            "name": "咸鱼W",
-            "key": "208#咸鱼W",
-            "rank": 27,
-            "damage_k": 448600
-          },
-          "imported": true
+            "rank": 22,
+            "damage_k": 350520
+          }
         },
         {
           "zone": 58,
           "name": "メジロマックイーン",
           "key": "58#メジロマックイーン",
-          "rank": 28,
+          "rank": 23,
           "damage_k": 290774,
           "damage": 290774000,
           "raw": {
-            "source": "pcapng",
-            "identity": "58#メジロマックイーン",
-            "damage": "290,774k"
+            "identity": "58 # 只 冫 口 、 丿 夕 亻",
+            "rank": "No ． 23",
+            "damage": "伤 害 ： 290 ， 774k",
+            "identity_matched_from": "58#只冫口,丿夕亻"
           },
           "needs_review": [],
-          "row_id": "b028",
+          "row_id": "b023",
           "ocr": {
             "zone": 58,
-            "name": "メジロマックイーン",
-            "key": "58#メジロマックイーン",
-            "rank": 28,
+            "name": "只冫口,丿夕亻",
+            "key": "58#只冫口,丿夕亻",
+            "rank": 23,
             "damage_k": 290774
           },
-          "imported": true
-        },
-        {
-          "zone": 200,
-          "name": "HoneyKoch",
-          "key": "200#HoneyKoch",
-          "rank": 29,
-          "damage_k": 222266,
-          "damage": 222266000,
-          "raw": {
-            "source": "pcapng",
-            "identity": "200#HoneyKoch",
-            "damage": "222,266k"
-          },
-          "needs_review": [],
-          "row_id": "b029",
-          "ocr": {
-            "zone": 200,
-            "name": "HoneyKoch",
-            "key": "200#HoneyKoch",
-            "rank": 29,
-            "damage_k": 222266
-          },
-          "imported": true
+          "identity_matched": true
         },
         {
           "zone": 264,
           "name": "ShuA",
           "key": "264#ShuA",
-          "rank": 30,
+          "rank": 24,
           "damage_k": 221570,
           "damage": 221570000,
           "raw": {
-            "source": "pcapng",
             "identity": "264#ShuA",
-            "damage": "221,570k"
+            "rank": "No ． 24",
+            "damage": "伤 害 ： 221 ， 570k"
           },
           "needs_review": [],
-          "row_id": "b030",
+          "row_id": "b024",
           "ocr": {
             "zone": 264,
             "name": "ShuA",
             "key": "264#ShuA",
-            "rank": 30,
+            "rank": 24,
             "damage_k": 221570
-          },
-          "imported": true
-        },
-        {
-          "zone": 179,
-          "name": "波蒙的狗狗",
-          "key": "179#波蒙的狗狗",
-          "rank": 31,
-          "damage_k": 216576,
-          "damage": 216576000,
-          "raw": {
-            "source": "pcapng",
-            "identity": "179#波蒙的狗狗",
-            "damage": "216,576k"
-          },
-          "needs_review": [],
-          "row_id": "b031",
-          "ocr": {
-            "zone": 179,
-            "name": "波蒙的狗狗",
-            "key": "179#波蒙的狗狗",
-            "rank": 31,
-            "damage_k": 216576
-          },
-          "imported": true
+          }
         },
         {
           "zone": 301,
           "name": "玄枵",
           "key": "301#玄枵",
-          "rank": 32,
-          "damage_k": 202225,
-          "damage": 202225000,
+          "rank": 25,
+          "damage_k": 198735,
+          "damage": 198735000,
           "raw": {
-            "source": "pcapng",
-            "identity": "301#玄枵",
-            "damage": "202,225k"
+            "identity": "301 # 玄 枵",
+            "rank": "NO ． 25",
+            "damage": "伤 害 ： 198 ， 735k"
           },
           "needs_review": [],
-          "row_id": "b032",
+          "row_id": "b025",
           "ocr": {
             "zone": 301,
             "name": "玄枵",
             "key": "301#玄枵",
-            "rank": 32,
-            "damage_k": 202225
+            "rank": 25,
+            "damage_k": 198735
+          }
+        },
+        {
+          "zone": 200,
+          "name": "HoneyKoch",
+          "key": "200#HoneyKoch",
+          "rank": 26,
+          "damage_k": 159791,
+          "damage": 159791000,
+          "raw": {
+            "identity": "200#HoneyKoch",
+            "rank": "NO ． 26",
+            "damage": "伤 害 ： 159 ， 791k"
           },
-          "imported": true
+          "needs_review": [],
+          "row_id": "b026",
+          "ocr": {
+            "zone": 200,
+            "name": "HoneyKoch",
+            "key": "200#HoneyKoch",
+            "rank": 26,
+            "damage_k": 159791
+          }
         },
         {
           "zone": 311,
           "name": "SNK梁师娘",
           "key": "311#SNK梁师娘",
-          "rank": 33,
-          "damage_k": 110372,
-          "damage": 110372000,
+          "rank": 27,
+          "damage_k": 109904,
+          "damage": 109904000,
           "raw": {
-            "source": "pcapng",
-            "identity": "311#SNK梁师娘",
-            "damage": "110,372k"
+            "identity": "311 # SNK 梁 师 娘",
+            "rank": "No ． 27",
+            "damage": "伤 害 ： 109 ， 904k"
           },
           "needs_review": [],
-          "row_id": "b033",
+          "row_id": "b027",
           "ocr": {
             "zone": 311,
             "name": "SNK梁师娘",
             "key": "311#SNK梁师娘",
-            "rank": 33,
-            "damage_k": 110372
-          },
-          "imported": true
+            "rank": 27,
+            "damage_k": 109904
+          }
         },
         {
-          "zone": 284,
-          "name": "Iouyexue",
-          "key": "284#Iouyexue",
-          "rank": 34,
-          "damage_k": 107656,
-          "damage": 107656000,
+          "zone": 179,
+          "name": "波蒙的狗狗",
+          "key": "179#波蒙的狗狗",
+          "rank": 28,
+          "damage_k": 106359,
+          "damage": 106359000,
           "raw": {
-            "source": "pcapng",
-            "identity": "284#louyexue",
-            "damage": "107,656k",
-            "identity_matched_from": "284#louyexue"
+            "identity": "179 # 波 蒙 的 狗 狗",
+            "rank": "NO ． 28",
+            "damage": "伤 害 ： 106 ， 359k"
           },
           "needs_review": [],
-          "row_id": "b034",
+          "row_id": "b028",
           "ocr": {
-            "zone": 284,
-            "name": "louyexue",
-            "key": "284#louyexue",
-            "rank": 34,
-            "damage_k": 107656
-          },
-          "imported": true,
-          "identity_matched": true
-        },
-        {
-          "zone": 231,
-          "name": "炖煮红尘",
-          "key": "231#炖煮红尘",
-          "rank": 35,
-          "damage_k": 107572,
-          "damage": 107572000,
-          "raw": {
-            "source": "pcapng",
-            "identity": "231#炖煮红尘",
-            "damage": "107,572k"
-          },
-          "needs_review": [],
-          "row_id": "b035",
-          "ocr": {
-            "zone": 231,
-            "name": "炖煮红尘",
-            "key": "231#炖煮红尘",
-            "rank": 35,
-            "damage_k": 107572
-          },
-          "imported": true
+            "zone": 179,
+            "name": "波蒙的狗狗",
+            "key": "179#波蒙的狗狗",
+            "rank": 28,
+            "damage_k": 106359
+          }
         },
         {
           "zone": 306,
           "name": "梁师娘",
           "key": "306#梁师娘",
-          "rank": 36,
-          "damage_k": 106944,
-          "damage": 106944000,
+          "rank": 29,
+          "damage_k": 106161,
+          "damage": 106161000,
           "raw": {
-            "source": "pcapng",
-            "identity": "306#梁师娘",
-            "damage": "106,944k"
+            "identity": "306 # 梁 师 娘",
+            "rank": "No ． 29",
+            "damage": "伤 害 ： 106 ， 161k"
           },
           "needs_review": [],
-          "row_id": "b036",
+          "row_id": "b029",
           "ocr": {
             "zone": 306,
             "name": "梁师娘",
             "key": "306#梁师娘",
-            "rank": 36,
-            "damage_k": 106944
+            "rank": 29,
+            "damage_k": 106161
+          }
+        },
+        {
+          "zone": 284,
+          "name": "Iouyexue",
+          "key": "284#Iouyexue",
+          "rank": 30,
+          "damage_k": 76166,
+          "damage": 76166000,
+          "raw": {
+            "identity": "284#louyexue",
+            "rank": "No ． 30",
+            "damage": "伤 害 ： 76 ， 166k",
+            "identity_matched_from": "284#louyexue"
           },
-          "imported": true
+          "needs_review": [],
+          "row_id": "b030",
+          "ocr": {
+            "zone": 284,
+            "name": "louyexue",
+            "key": "284#louyexue",
+            "rank": 30,
+            "damage_k": 76166
+          },
+          "identity_matched": true
         },
         {
           "zone": 304,
           "name": "PueqrnVebnsyxl",
           "key": "304#PueqrnVebnsyxl",
-          "rank": 37,
-          "damage_k": 56642,
-          "damage": 56642000,
+          "rank": 31,
+          "damage_k": 56541,
+          "damage": 56541000,
           "raw": {
-            "source": "pcapng",
-            "identity": "304#PueqrnVebnsyxl",
-            "damage": "56,642k"
+            "identity": "304 # Pu eq rnVeb nsyxl",
+            "rank": "NO ． 31",
+            "damage": "伤 害 ： 56 ， 541k"
           },
           "needs_review": [],
-          "row_id": "b037",
+          "row_id": "b031",
           "ocr": {
             "zone": 304,
             "name": "PueqrnVebnsyxl",
             "key": "304#PueqrnVebnsyxl",
-            "rank": 37,
-            "damage_k": 56642
-          },
-          "imported": true
+            "rank": 31,
+            "damage_k": 56541
+          }
         },
         {
           "zone": 306,
           "name": "大雷芙提雅",
           "key": "306#大雷芙提雅",
-          "rank": 38,
-          "damage_k": 53397,
-          "damage": 53397000,
+          "rank": 32,
+          "damage_k": 52789,
+          "damage": 52789000,
           "raw": {
-            "source": "pcapng",
-            "identity": "306#大雷芙提雅",
-            "damage": "53,397k"
+            "identity": "306 # 大 雷 芙 提 雅",
+            "rank": "NO ， 32",
+            "damage": "伤 害 ： 52 ， 789k"
           },
           "needs_review": [],
-          "row_id": "b038",
+          "row_id": "b032",
           "ocr": {
             "zone": 306,
             "name": "大雷芙提雅",
             "key": "306#大雷芙提雅",
-            "rank": 38,
-            "damage_k": 53397
-          },
-          "imported": true
+            "rank": 32,
+            "damage_k": 52789
+          }
         },
         {
           "zone": 288,
           "name": "花田綽",
           "key": "288#花田綽",
-          "rank": 39,
+          "rank": 33,
           "damage_k": 18947,
           "damage": 18947000,
           "raw": {
-            "source": "pcapng",
-            "identity": "288#花田綽",
-            "damage": "18,947k"
+            "identity": "288 # 花 田 綽",
+            "rank": "No ， 33",
+            "damage": "伤 害 ： 18 ， 947k"
           },
           "needs_review": [],
-          "row_id": "b039",
+          "row_id": "b033",
           "ocr": {
             "zone": 288,
             "name": "花田綽",
             "key": "288#花田綽",
-            "rank": 39,
+            "rank": 33,
             "damage_k": 18947
-          },
-          "imported": true
-        },
-        {
-          "zone": 86,
-          "name": "摆烂小咸鱼",
-          "key": "86#摆烂小咸鱼",
-          "rank": 40,
-          "damage_k": 16272,
-          "damage": 16272000,
-          "raw": {
-            "source": "pcapng",
-            "identity": "86#摆烂小咸鱼",
-            "damage": "16,272k"
-          },
-          "needs_review": [],
-          "row_id": "b040",
-          "ocr": {
-            "zone": 86,
-            "name": "摆烂小咸鱼",
-            "key": "86#摆烂小咸鱼",
-            "rank": 40,
-            "damage_k": 16272
-          },
-          "imported": true
+          }
         },
         {
           "zone": 28,
           "name": "AshtonParry",
           "key": "28#AshtonParry",
-          "rank": 41,
-          "damage_k": 15424,
-          "damage": 15424000,
+          "rank": 34,
+          "damage_k": 10760,
+          "damage": 10760000,
           "raw": {
-            "source": "pcapng",
             "identity": "28#AshtonParry",
-            "damage": "15,424k"
+            "rank": "NO ． 34",
+            "damage": "伤 害 ： 10 ， 760k"
           },
           "needs_review": [],
-          "row_id": "b041",
+          "row_id": "b034",
           "ocr": {
             "zone": 28,
             "name": "AshtonParry",
             "key": "28#AshtonParry",
-            "rank": 41,
-            "damage_k": 15424
-          },
-          "imported": true
-        },
-        {
-          "zone": 75,
-          "name": "CaseyDyer",
-          "key": "75#CaseyDyer",
-          "rank": 42,
-          "damage_k": 8279,
-          "damage": 8279000,
-          "raw": {
-            "source": "pcapng",
-            "identity": "75#CaseyDyer",
-            "damage": "8,279k"
-          },
-          "needs_review": [],
-          "row_id": "b042",
-          "ocr": {
-            "zone": 75,
-            "name": "CaseyDyer",
-            "key": "75#CaseyDyer",
-            "rank": 42,
-            "damage_k": 8279
-          },
-          "imported": true
+            "rank": 34,
+            "damage_k": 10760
+          }
         },
         {
           "zone": 63,
           "name": "若语",
           "key": "63#若语",
-          "rank": 43,
-          "damage_k": 6311,
-          "damage": 6311000,
+          "rank": 35,
+          "damage_k": 4385,
+          "damage": 4385000,
           "raw": {
-            "source": "pcapng",
-            "identity": "63#若语",
-            "damage": "6,311k"
+            "identity": "63 # 若 语",
+            "rank": "NO ． 35",
+            "damage": "伤 害 ： 4 ， 385k"
           },
           "needs_review": [],
-          "row_id": "b043",
+          "row_id": "b035",
           "ocr": {
             "zone": 63,
             "name": "若语",
             "key": "63#若语",
-            "rank": 43,
-            "damage_k": 6311
-          },
-          "imported": true
-        },
-        {
-          "zone": 300,
-          "name": "神王婉",
-          "key": "300#神王婉",
-          "rank": 44,
-          "damage_k": 5021,
-          "damage": 5021000,
-          "raw": {
-            "source": "pcapng",
-            "identity": "300#神王婉",
-            "damage": "5,021k"
-          },
-          "needs_review": [],
-          "row_id": "b044",
-          "ocr": {
-            "zone": 300,
-            "name": "神王婉",
-            "key": "300#神王婉",
-            "rank": 44,
-            "damage_k": 5021
-          },
-          "imported": true
-        },
-        {
-          "zone": 80,
-          "name": "BUBULAW",
-          "key": "80#BUBULAW",
-          "rank": 45,
-          "damage_k": 4634,
-          "damage": 4634000,
-          "raw": {
-            "source": "pcapng",
-            "identity": "80#BUBULAW",
-            "damage": "4,634k"
-          },
-          "needs_review": [],
-          "row_id": "b045",
-          "ocr": {
-            "zone": 80,
-            "name": "BUBULAW",
-            "key": "80#BUBULAW",
-            "rank": 45,
-            "damage_k": 4634
-          },
-          "imported": true
+            "rank": 35,
+            "damage_k": 4385
+          }
         },
         {
           "zone": 200,
           "name": "關你屁事",
           "key": "200#關你屁事",
-          "rank": 46,
+          "rank": 36,
           "damage_k": 4115,
           "damage": 4115000,
           "raw": {
-            "source": "pcapng",
-            "identity": "200#關你屁事",
-            "damage": "4,115k"
+            "identity": "200 # 關 你 屁 事",
+            "rank": "NO ． 36",
+            "damage": "伤 害 ： 4 ， 115k"
           },
           "needs_review": [],
-          "row_id": "b046",
+          "row_id": "b036",
           "ocr": {
             "zone": 200,
             "name": "關你屁事",
             "key": "200#關你屁事",
-            "rank": 46,
+            "rank": 36,
             "damage_k": 4115
+          }
+        },
+        {
+          "zone": 300,
+          "name": "神王婉",
+          "key": "300#神王婉",
+          "rank": 37,
+          "damage_k": 3365,
+          "damage": 3365000,
+          "raw": {
+            "identity": "300 # 神 王 婉",
+            "rank": "No ． 37",
+            "damage": "伤 害 ： 3 ， 365k"
           },
-          "imported": true
+          "needs_review": [],
+          "row_id": "b037",
+          "ocr": {
+            "zone": 300,
+            "name": "神王婉",
+            "key": "300#神王婉",
+            "rank": 37,
+            "damage_k": 3365
+          }
         },
         {
           "zone": 288,
           "name": "EricJ",
           "key": "288#EricJ",
-          "rank": 47,
-          "damage_k": 3257,
-          "damage": 3257000,
+          "rank": 38,
+          "damage_k": 2531,
+          "damage": 2531000,
           "raw": {
-            "source": "pcapng",
-            "identity": "288#EricJ",
-            "damage": "3,257k"
+            "identity": "288 # E ricJ",
+            "rank": "No ． 38",
+            "damage": "伤 害 ： 2 ， 531k"
           },
           "needs_review": [],
-          "row_id": "b047",
+          "row_id": "b038",
           "ocr": {
             "zone": 288,
             "name": "EricJ",
             "key": "288#EricJ",
-            "rank": 47,
-            "damage_k": 3257
-          },
-          "imported": true
+            "rank": 38,
+            "damage_k": 2531
+          }
         },
         {
           "zone": 305,
           "name": "KaiserL",
           "key": "305#KaiserL",
-          "rank": 48,
-          "damage_k": 2797,
-          "damage": 2797000,
+          "rank": 39,
+          "damage_k": 1237,
+          "damage": 1237000,
           "raw": {
-            "source": "pcapng",
             "identity": "305#KaiserL",
-            "damage": "2,797k"
+            "rank": "NO ， 39",
+            "damage": "伤 害 ： 1 ， 237k"
           },
           "needs_review": [],
-          "row_id": "b048",
+          "row_id": "b039",
           "ocr": {
             "zone": 305,
             "name": "KaiserL",
             "key": "305#KaiserL",
-            "rank": 48,
-            "damage_k": 2797
-          },
-          "imported": true
-        },
-        {
-          "zone": 223,
-          "name": "YangJu",
-          "key": "223#YangJu",
-          "rank": 49,
-          "damage_k": 2293,
-          "damage": 2293000,
-          "raw": {
-            "source": "pcapng",
-            "identity": "223#YangJu",
-            "damage": "2,293k"
-          },
-          "needs_review": [],
-          "row_id": "b049",
-          "ocr": {
-            "zone": 223,
-            "name": "YangJu",
-            "key": "223#YangJu",
-            "rank": 49,
-            "damage_k": 2293
-          },
-          "imported": true
+            "rank": 39,
+            "damage_k": 1237
+          }
         },
         {
           "zone": 288,
           "name": "紫星塵",
           "key": "288#紫星塵",
-          "rank": 50,
-          "damage_k": 781,
-          "damage": 781000,
+          "rank": 40,
+          "damage_k": 540,
+          "damage": 540000,
           "raw": {
-            "source": "pcapng",
-            "identity": "288#紫星塵",
-            "damage": "781k"
+            "identity": "288 # 紫 星 塵",
+            "rank": "NO ． 40",
+            "damage": "伤 害 ： 540k"
           },
           "needs_review": [],
-          "row_id": "b050",
+          "row_id": "b040",
           "ocr": {
             "zone": 288,
             "name": "紫星塵",
             "key": "288#紫星塵",
-            "rank": 50,
-            "damage_k": 781
-          },
-          "imported": true
+            "rank": 40,
+            "damage_k": 540
+          }
         },
         {
           "zone": 289,
           "name": "不是笨蛋",
           "key": "289#不是笨蛋",
-          "rank": 51,
+          "rank": 41,
           "damage_k": 211,
           "damage": 211000,
           "raw": {
-            "source": "pcapng",
-            "identity": "289#不是笨蛋",
-            "damage": "211k"
+            "identity": "289 # 不 是 笨 蛋",
+            "rank": "NO ， 41",
+            "damage": "伤 害 ： 211k"
           },
           "needs_review": [],
-          "row_id": "b051",
+          "row_id": "b041",
           "ocr": {
             "zone": 289,
             "name": "不是笨蛋",
             "key": "289#不是笨蛋",
-            "rank": 51,
+            "rank": 41,
             "damage_k": 211
-          },
-          "imported": true
-        },
-        {
-          "zone": 293,
-          "name": "FvwJcjz",
-          "key": "293#FvwJcjz",
-          "rank": 52,
-          "damage_k": 134,
-          "damage": 134000,
-          "raw": {
-            "source": "pcapng",
-            "identity": "293#FvwJcjz",
-            "damage": "134k"
-          },
-          "needs_review": [],
-          "row_id": "b052",
-          "ocr": {
-            "zone": 293,
-            "name": "FvwJcjz",
-            "key": "293#FvwJcjz",
-            "rank": 52,
-            "damage_k": 134
-          },
-          "imported": true
+          }
         },
         {
           "zone": 288,
           "name": "伐克斯",
           "key": "288#伐克斯",
-          "rank": 53,
+          "rank": 42,
           "damage_k": 41,
           "damage": 41000,
           "raw": {
-            "source": "pcapng",
-            "identity": "288#伐克斯",
-            "damage": "41k"
+            "identity": "288 # 伐 克 斯",
+            "rank": "NO ， 42",
+            "damage": "伤 害 ： 41k"
           },
           "needs_review": [],
-          "row_id": "b053",
+          "row_id": "b042",
           "ocr": {
             "zone": 288,
             "name": "伐克斯",
             "key": "288#伐克斯",
-            "rank": 53,
+            "rank": 42,
             "damage_k": 41
-          },
-          "imported": true
+          }
         }
       ],
       "raw_ocr": {
@@ -47410,11 +47118,41 @@
             "note": "",
             "group_only": false,
             "reviewed": true
+          },
+          "m047": {
+            "zone": "117",
+            "name": "合欢宗宗主",
+            "power": "152289973",
+            "last_online": "",
+            "in_group": true,
+            "note": "",
+            "group_only": true,
+            "reviewed": true
+          },
+          "m048": {
+            "zone": "86",
+            "name": "摆烂小咸鱼",
+            "power": "78165161",
+            "last_online": "",
+            "in_group": true,
+            "note": "",
+            "group_only": true,
+            "reviewed": true
+          },
+          "m043": {
+            "zone": "72",
+            "name": "远青",
+            "power": "271063012",
+            "last_online": "",
+            "in_group": true,
+            "note": "",
+            "group_only": true,
+            "reviewed": true
           }
         }
       },
       "member_source_id": "2026年5月12日194438_联盟",
-      "boss_source_id": "2026年5月12日194438_Boss",
+      "boss_source_id": "2026年5月11日193407_Boss",
       "boss_carried_forward": true,
       "boss_archived": false
     },
@@ -48618,14 +48356,15 @@
           "level": 200,
           "power": 271063012,
           "last_online": null,
-          "in_group": false,
+          "in_group": true,
           "raw": {
             "source": "pcapng",
             "identity": "72#远青",
             "level": 200,
             "extra1": 30053,
             "extra2": 6045,
-            "flag": 0
+            "flag": 0,
+            "correction_note": ""
           },
           "needs_review": [],
           "row_id": "m043",
@@ -48730,14 +48469,15 @@
           "level": 196,
           "power": 152289973,
           "last_online": null,
-          "in_group": false,
+          "in_group": true,
           "raw": {
             "source": "pcapng",
             "identity": "117#合欢宗宗主",
             "level": 196,
             "extra1": 8,
             "extra2": 6037,
-            "flag": 0
+            "flag": 0,
+            "correction_note": ""
           },
           "needs_review": [],
           "row_id": "m047",
@@ -48758,14 +48498,15 @@
           "level": 167,
           "power": 78165161,
           "last_online": null,
-          "in_group": false,
+          "in_group": true,
           "raw": {
             "source": "pcapng",
             "identity": "86#摆烂小咸鱼",
             "level": 167,
             "extra1": 70054,
             "extra2": 6042,
-            "flag": 0
+            "flag": 0,
+            "correction_note": ""
           },
           "needs_review": [],
           "row_id": "m048",
@@ -50329,6 +50070,2944 @@
       "members_carried_forward": true,
       "boss_source_id": "2026年5月13日002534_Boss",
       "boss_archived": false
+    },
+    {
+      "id": "2026年5月13日103203_Boss",
+      "folder": "records/boss/2026年5月13日103203_Boss",
+      "captured_at": "2026-05-13T10:32:03",
+      "week_id": "2026-05-11",
+      "images": {
+        "members": null,
+        "boss": null
+      },
+      "members": [
+        {
+          "zone": 28,
+          "name": "伊之猪",
+          "key": "28#伊之猪",
+          "role": "成员",
+          "level": 200,
+          "power": 255564343,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "28#伊之猪",
+            "level": 200,
+            "extra1": 110079,
+            "extra2": 6045,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m001",
+          "ocr": {
+            "zone": 28,
+            "name": "伊之猪",
+            "key": "28#伊之猪",
+            "power": 255564343,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 28,
+          "name": "米拉",
+          "key": "28#米拉",
+          "role": "成员",
+          "level": 200,
+          "power": 415409476,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "28#米拉",
+            "level": 200,
+            "extra1": 20066,
+            "extra2": 6046,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m002",
+          "ocr": {
+            "zone": 28,
+            "name": "米拉",
+            "key": "28#米拉",
+            "power": 415409476,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 71,
+          "name": "梁师娘LUONG",
+          "key": "71#梁师娘LUONG",
+          "role": "成员",
+          "level": 200,
+          "power": 282971849,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "71#梁师娘LUONG",
+            "level": 200,
+            "extra1": 100054,
+            "extra2": 6045,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m003",
+          "ocr": {
+            "zone": 71,
+            "name": "梁师娘LUONG",
+            "key": "71#梁师娘LUONG",
+            "power": 282971849,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 75,
+          "name": "CaseyDyer",
+          "key": "75#CaseyDyer",
+          "role": "成员",
+          "level": 171,
+          "power": 38372053,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "75#CaseyDyer",
+            "level": 171,
+            "extra1": 70052,
+            "extra2": 6042,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m004",
+          "ocr": {
+            "zone": 75,
+            "name": "CaseyDyer",
+            "key": "75#CaseyDyer",
+            "power": 38372053,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 306,
+          "name": "大雷芙提雅",
+          "key": "306#大雷芙提雅",
+          "role": "成员",
+          "level": 127,
+          "power": 26621147,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "306#大雷芙提雅",
+            "level": 127,
+            "extra1": 70054,
+            "extra2": 6031,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m005",
+          "ocr": {
+            "zone": 306,
+            "name": "大雷芙提雅",
+            "key": "306#大雷芙提雅",
+            "power": 26621147,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 311,
+          "name": "SNK梁师娘",
+          "key": "311#SNK梁师娘",
+          "role": "成员",
+          "level": 122,
+          "power": 27213683,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "311#SNK梁师娘",
+            "level": 122,
+            "extra1": 54,
+            "extra2": 6028,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m006",
+          "ocr": {
+            "zone": 311,
+            "name": "SNK梁师娘",
+            "key": "311#SNK梁师娘",
+            "power": 27213683,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 300,
+          "name": "神王婉",
+          "key": "300#神王婉",
+          "role": "成员",
+          "level": 141,
+          "power": 62349389,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "300#神王婉",
+            "level": 141,
+            "extra1": 80054,
+            "extra2": 6029,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m007",
+          "ocr": {
+            "zone": 300,
+            "name": "神王婉",
+            "key": "300#神王婉",
+            "power": 62349389,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 288,
+          "name": "紫星塵",
+          "key": "288#紫星塵",
+          "role": "成员",
+          "level": 125,
+          "power": 22653625,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "288#紫星塵",
+            "level": 125,
+            "extra1": 54,
+            "extra2": 0,
+            "flag": 1,
+            "correction_note": ""
+          },
+          "needs_review": [],
+          "row_id": "m008",
+          "ocr": {
+            "zone": 288,
+            "name": "紫星塵",
+            "key": "288#紫星塵",
+            "power": 22653625,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 78,
+          "name": "燃烧的俗物",
+          "key": "78#燃烧的俗物",
+          "role": "成员",
+          "level": 200,
+          "power": 210288456,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "78#燃烧的俗物",
+            "level": 200,
+            "extra1": 10,
+            "extra2": 6045,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m009",
+          "ocr": {
+            "zone": 78,
+            "name": "燃烧的俗物",
+            "key": "78#燃烧的俗物",
+            "power": 210288456,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 288,
+          "name": "EricJ",
+          "key": "288#EricJ",
+          "role": "成员",
+          "level": 161,
+          "power": 67303137,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "288#EricJ",
+            "level": 161,
+            "extra1": 70052,
+            "extra2": 6032,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m010",
+          "ocr": {
+            "zone": 288,
+            "name": "EricJ",
+            "key": "288#EricJ",
+            "power": 67303137,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 87,
+          "name": "大根珍珠棒",
+          "key": "87#大根珍珠棒",
+          "role": "成员",
+          "level": 200,
+          "power": 151074556,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "87#大根珍珠棒",
+            "level": 200,
+            "extra1": 80075,
+            "extra2": 6037,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m011",
+          "ocr": {
+            "zone": 87,
+            "name": "大根珍珠棒",
+            "key": "87#大根珍珠棒",
+            "power": 151074556,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 252,
+          "name": "縌星辰",
+          "key": "252#縌星辰",
+          "role": "成员",
+          "level": 175,
+          "power": 128546759,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "252#縌星辰",
+            "level": 175,
+            "extra1": 110054,
+            "extra2": 6028,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m012",
+          "ocr": {
+            "zone": 252,
+            "name": "縌星辰",
+            "key": "252#縌星辰",
+            "power": 128546759,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 1,
+          "name": "Zero卐",
+          "key": "1#Zero卐",
+          "role": "成员",
+          "level": 200,
+          "power": 294754484,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "1#Zero卐",
+            "level": 200,
+            "extra1": 30071,
+            "extra2": 6045,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m013",
+          "ocr": {
+            "zone": 1,
+            "name": "Zero卐",
+            "key": "1#Zero卐",
+            "power": 294754484,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 200,
+          "name": "HoneyKoch",
+          "key": "200#HoneyKoch",
+          "role": "成员",
+          "level": 187,
+          "power": 158335619,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "200#HoneyKoch",
+            "level": 187,
+            "extra1": 20054,
+            "extra2": 6040,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m014",
+          "ocr": {
+            "zone": 200,
+            "name": "HoneyKoch",
+            "key": "200#HoneyKoch",
+            "power": 158335619,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 289,
+          "name": "不是笨蛋",
+          "key": "289#不是笨蛋",
+          "role": "成员",
+          "level": 142,
+          "power": 41882905,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "289#不是笨蛋",
+            "level": 142,
+            "extra1": 65,
+            "extra2": 6004,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m015",
+          "ocr": {
+            "zone": 289,
+            "name": "不是笨蛋",
+            "key": "289#不是笨蛋",
+            "power": 41882905,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 101,
+          "name": "积极又向上",
+          "key": "101#积极又向上",
+          "role": "成员",
+          "level": 200,
+          "power": 156672993,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "101#积极又向上",
+            "level": 200,
+            "extra1": 54,
+            "extra2": 6040,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m016",
+          "ocr": {
+            "zone": 101,
+            "name": "积极又向上",
+            "key": "101#积极又向上",
+            "power": 156672993,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 179,
+          "name": "波蒙的狗狗",
+          "key": "179#波蒙的狗狗",
+          "role": "成员",
+          "level": 162,
+          "power": 90290009,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "179#波蒙的狗狗",
+            "level": 162,
+            "extra1": 110054,
+            "extra2": 6042,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m017",
+          "ocr": {
+            "zone": 179,
+            "name": "波蒙的狗狗",
+            "key": "179#波蒙的狗狗",
+            "power": 90290009,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 264,
+          "name": "ShuA",
+          "key": "264#ShuA",
+          "role": "成员",
+          "level": 151,
+          "power": 52806342,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "264#ShuA",
+            "level": 151,
+            "extra1": 65,
+            "extra2": 6036,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m018",
+          "ocr": {
+            "zone": 264,
+            "name": "ShuA",
+            "key": "264#ShuA",
+            "power": 52806342,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 284,
+          "name": "Iouyexue",
+          "key": "284#Iouyexue",
+          "role": "成员",
+          "level": 156,
+          "power": 70502812,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "284#louyexue",
+            "level": 156,
+            "extra1": 80054,
+            "extra2": 0,
+            "flag": 1,
+            "identity_matched_from": "284#louyexue"
+          },
+          "needs_review": [],
+          "row_id": "m019",
+          "ocr": {
+            "zone": 284,
+            "name": "louyexue",
+            "key": "284#louyexue",
+            "power": 70502812,
+            "last_online": null
+          },
+          "imported": true,
+          "identity_matched": true
+        },
+        {
+          "zone": 202,
+          "name": "ElsieBlaker",
+          "key": "202#ElsieBlaker",
+          "role": "成员",
+          "level": 200,
+          "power": 202542773,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "202#ElsieBlaker",
+            "level": 200,
+            "extra1": 80075,
+            "extra2": 6007,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m020",
+          "ocr": {
+            "zone": 202,
+            "name": "ElsieBlaker",
+            "key": "202#ElsieBlaker",
+            "power": 202542773,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 83,
+          "name": "菜豆芽",
+          "key": "83#菜豆芽",
+          "role": "成员",
+          "level": 196,
+          "power": 135257813,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "83#菜豆芽",
+            "level": 196,
+            "extra1": 110079,
+            "extra2": 6035,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m021",
+          "ocr": {
+            "zone": 83,
+            "name": "菜豆芽",
+            "key": "83#菜豆芽",
+            "power": 135257813,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 241,
+          "name": "小野莓",
+          "key": "241#小野莓",
+          "role": "成员",
+          "level": 179,
+          "power": 138239951,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "241#小野莓",
+            "level": 179,
+            "extra1": 80054,
+            "extra2": 6039,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m022",
+          "ocr": {
+            "zone": 241,
+            "name": "小野莓",
+            "key": "241#小野莓",
+            "power": 138239951,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 58,
+          "name": "SOULBS",
+          "key": "58#SOULBS",
+          "role": "成员",
+          "level": 195,
+          "power": 158388246,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "58#SOULBS",
+            "level": 195,
+            "extra1": 90069,
+            "extra2": 6037,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m023",
+          "ocr": {
+            "zone": 58,
+            "name": "SOULBS",
+            "key": "58#SOULBS",
+            "power": 158388246,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 301,
+          "name": "玄枵",
+          "key": "301#玄枵",
+          "role": "成员",
+          "level": 133,
+          "power": 28899089,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "301#玄枵",
+            "level": 133,
+            "extra1": 33,
+            "extra2": 0,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m024",
+          "ocr": {
+            "zone": 301,
+            "name": "玄枵",
+            "key": "301#玄枵",
+            "power": 28899089,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 283,
+          "name": "夏一鸽",
+          "key": "283#夏一鸽",
+          "role": "成员",
+          "level": 165,
+          "power": 111638771,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "283#夏一鸽",
+            "level": 165,
+            "extra1": 67,
+            "extra2": 6038,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m025",
+          "ocr": {
+            "zone": 283,
+            "name": "夏一鸽",
+            "key": "283#夏一鸽",
+            "power": 111638771,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 69,
+          "name": "师娘",
+          "key": "69#师娘",
+          "role": "成员",
+          "level": 197,
+          "power": 139542581,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "69#师娘",
+            "level": 197,
+            "extra1": 30073,
+            "extra2": 6002,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m026",
+          "ocr": {
+            "zone": 69,
+            "name": "师娘",
+            "key": "69#师娘",
+            "power": 139542581,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 306,
+          "name": "梁师娘",
+          "key": "306#梁师娘",
+          "role": "成员",
+          "level": 130,
+          "power": 24837388,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "306#梁师娘",
+            "level": 130,
+            "extra1": 90079,
+            "extra2": 0,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m027",
+          "ocr": {
+            "zone": 306,
+            "name": "梁师娘",
+            "key": "306#梁师娘",
+            "power": 24837388,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 81,
+          "name": "师娘小号玲",
+          "key": "81#师娘小号玲",
+          "role": "成员",
+          "level": 199,
+          "power": 135217928,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "81#师娘小号玲",
+            "level": 199,
+            "extra1": 30074,
+            "extra2": 6042,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m028",
+          "ocr": {
+            "zone": 81,
+            "name": "师娘小号玲",
+            "key": "81#师娘小号玲",
+            "power": 135217928,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 103,
+          "name": "arianacomodo",
+          "key": "103#arianacomodo",
+          "role": "成员",
+          "level": 183,
+          "power": 130918594,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "103#arianacomodo",
+            "level": 183,
+            "extra1": 80054,
+            "extra2": 6040,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m029",
+          "ocr": {
+            "zone": 103,
+            "name": "arianacomodo",
+            "key": "103#arianacomodo",
+            "power": 130918594,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 28,
+          "name": "AshtonParry",
+          "key": "28#AshtonParry",
+          "role": "成员",
+          "level": 171,
+          "power": 97844866,
+          "last_online": null,
+          "in_group": false,
+          "raw": {
+            "source": "pcapng",
+            "identity": "28#AshtonParry",
+            "level": 171,
+            "extra1": 100054,
+            "extra2": 6043,
+            "flag": 0
+          },
+          "needs_review": [],
+          "row_id": "m030",
+          "ocr": {
+            "zone": 28,
+            "name": "AshtonParry",
+            "key": "28#AshtonParry",
+            "power": 97844866,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 304,
+          "name": "PueqrnVebnsyxl",
+          "key": "304#PueqrnVebnsyxl",
+          "role": "成员",
+          "level": 122,
+          "power": 21148942,
+          "last_online": null,
+          "in_group": false,
+          "raw": {
+            "source": "pcapng",
+            "identity": "304#PueqrnVebnsyxl",
+            "level": 122,
+            "extra1": 45,
+            "extra2": 6031,
+            "flag": 0
+          },
+          "needs_review": [],
+          "row_id": "m031",
+          "ocr": {
+            "zone": 304,
+            "name": "PueqrnVebnsyxl",
+            "key": "304#PueqrnVebnsyxl",
+            "power": 21148942,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 205,
+          "name": "搁浅づ",
+          "key": "205#搁浅づ",
+          "role": "成员",
+          "level": 200,
+          "power": 300055675,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "205#搁浅づ",
+            "level": 200,
+            "extra1": 20067,
+            "extra2": 6041,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m032",
+          "ocr": {
+            "zone": 205,
+            "name": "搁浅づ",
+            "key": "205#搁浅づ",
+            "power": 300055675,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 205,
+          "name": "搁浅つ",
+          "key": "205#搁浅つ",
+          "role": "成员",
+          "level": 164,
+          "power": 86268773,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "205#搁浅つ",
+            "level": 164,
+            "extra1": 52,
+            "extra2": 6040,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m033",
+          "ocr": {
+            "zone": 205,
+            "name": "搁浅つ",
+            "key": "205#搁浅つ",
+            "power": 86268773,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 301,
+          "name": "亚加拉达",
+          "key": "301#亚加拉达",
+          "role": "成员",
+          "level": 159,
+          "power": 103490213,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "301#亚加拉达",
+            "level": 159,
+            "extra1": 40054,
+            "extra2": 6037,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m034",
+          "ocr": {
+            "zone": 301,
+            "name": "亚加拉达",
+            "key": "301#亚加拉达",
+            "power": 103490213,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 288,
+          "name": "花田綽",
+          "key": "288#花田綽",
+          "role": "成员",
+          "level": 148,
+          "power": 52761136,
+          "last_online": null,
+          "in_group": false,
+          "raw": {
+            "source": "pcapng",
+            "identity": "288#花田綽",
+            "level": 148,
+            "extra1": 20067,
+            "extra2": 6008,
+            "flag": 0
+          },
+          "needs_review": [],
+          "row_id": "m035",
+          "ocr": {
+            "zone": 288,
+            "name": "花田綽",
+            "key": "288#花田綽",
+            "power": 52761136,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 288,
+          "name": "伐克斯",
+          "key": "288#伐克斯",
+          "role": "成员",
+          "level": 129,
+          "power": 18623342,
+          "last_online": null,
+          "in_group": false,
+          "raw": {
+            "source": "pcapng",
+            "identity": "288#伐克斯",
+            "level": 129,
+            "extra1": 26,
+            "extra2": 0,
+            "flag": 0
+          },
+          "needs_review": [],
+          "row_id": "m036",
+          "ocr": {
+            "zone": 288,
+            "name": "伐克斯",
+            "key": "288#伐克斯",
+            "power": 18623342,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 223,
+          "name": "YangJu",
+          "key": "223#YangJu",
+          "role": "成员",
+          "level": 157,
+          "power": 55258325,
+          "last_online": null,
+          "in_group": false,
+          "raw": {
+            "source": "pcapng",
+            "identity": "223#YangJu",
+            "level": 157,
+            "extra1": 53,
+            "extra2": 0,
+            "flag": 0
+          },
+          "needs_review": [],
+          "row_id": "m037",
+          "ocr": {
+            "zone": 223,
+            "name": "YangJu",
+            "key": "223#YangJu",
+            "power": 55258325,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 293,
+          "name": "FvwJcjz",
+          "key": "293#FvwJcjz",
+          "role": "成员",
+          "level": 125,
+          "power": 24323489,
+          "last_online": null,
+          "in_group": false,
+          "raw": {
+            "source": "pcapng",
+            "identity": "293#FvwJcjz",
+            "level": 125,
+            "extra1": 36,
+            "extra2": 0,
+            "flag": 0
+          },
+          "needs_review": [],
+          "row_id": "m038",
+          "ocr": {
+            "zone": 293,
+            "name": "FvwJcjz",
+            "key": "293#FvwJcjz",
+            "power": 24323489,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 305,
+          "name": "KaiserL",
+          "key": "305#KaiserL",
+          "role": "成员",
+          "level": 123,
+          "power": 24337415,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "305#KaiserL",
+            "level": 123,
+            "extra1": 50061,
+            "extra2": 6031,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m039",
+          "ocr": {
+            "zone": 305,
+            "name": "KaiserL",
+            "key": "305#KaiserL",
+            "power": 24337415,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 63,
+          "name": "若语",
+          "key": "63#若语",
+          "role": "成员",
+          "level": 167,
+          "power": 72411382,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "63#若语",
+            "level": 167,
+            "extra1": 50079,
+            "extra2": 6043,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m040",
+          "ocr": {
+            "zone": 63,
+            "name": "若语",
+            "key": "63#若语",
+            "power": 72411382,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 80,
+          "name": "BUBULAW",
+          "key": "80#BUBULAW",
+          "role": "成员",
+          "level": 177,
+          "power": 64364238,
+          "last_online": null,
+          "in_group": false,
+          "raw": {
+            "source": "pcapng",
+            "identity": "80#BUBULAW",
+            "level": 177,
+            "extra1": 8,
+            "extra2": 6042,
+            "flag": 0
+          },
+          "needs_review": [],
+          "row_id": "m041",
+          "ocr": {
+            "zone": 80,
+            "name": "BUBULAW",
+            "key": "80#BUBULAW",
+            "power": 64364238,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 72,
+          "name": "随风倒柳",
+          "key": "72#随风倒柳",
+          "role": "成员",
+          "level": 200,
+          "power": 187487354,
+          "last_online": null,
+          "in_group": false,
+          "raw": {
+            "source": "pcapng",
+            "identity": "72#随风倒柳",
+            "level": 200,
+            "extra1": 70069,
+            "extra2": 6045,
+            "flag": 0
+          },
+          "needs_review": [],
+          "row_id": "m042",
+          "ocr": {
+            "zone": 72,
+            "name": "随风倒柳",
+            "key": "72#随风倒柳",
+            "power": 187487354,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 72,
+          "name": "远青",
+          "key": "72#远青",
+          "role": "成员",
+          "level": 200,
+          "power": 271063012,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "72#远青",
+            "level": 200,
+            "extra1": 30053,
+            "extra2": 6045,
+            "flag": 0,
+            "correction_note": ""
+          },
+          "needs_review": [],
+          "row_id": "m043",
+          "ocr": {
+            "zone": 72,
+            "name": "远青",
+            "key": "72#远青",
+            "power": 271063012,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 226,
+          "name": "禾田",
+          "key": "226#禾田",
+          "role": "成员",
+          "level": 185,
+          "power": 147654504,
+          "last_online": null,
+          "in_group": false,
+          "raw": {
+            "source": "pcapng",
+            "identity": "226#禾田",
+            "level": 185,
+            "extra1": 80069,
+            "extra2": 6035,
+            "flag": 0
+          },
+          "needs_review": [],
+          "row_id": "m044",
+          "ocr": {
+            "zone": 226,
+            "name": "禾田",
+            "key": "226#禾田",
+            "power": 147654504,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 81,
+          "name": "酒酿圆子",
+          "key": "81#酒酿圆子",
+          "role": "成员",
+          "level": 200,
+          "power": 374925192,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "81#酒酿圆子",
+            "level": 200,
+            "extra1": 80075,
+            "extra2": 6046,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m045",
+          "ocr": {
+            "zone": 81,
+            "name": "酒酿圆子",
+            "key": "81#酒酿圆子",
+            "power": 374925192,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 75,
+          "name": "半个西瓜",
+          "key": "75#半个西瓜",
+          "role": "成员",
+          "level": 200,
+          "power": 196996507,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "75#半个西瓜",
+            "level": 200,
+            "extra1": 80075,
+            "extra2": 6045,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m046",
+          "ocr": {
+            "zone": 75,
+            "name": "半个西瓜",
+            "key": "75#半个西瓜",
+            "power": 196996507,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 117,
+          "name": "合欢宗宗主",
+          "key": "117#合欢宗宗主",
+          "role": "成员",
+          "level": 196,
+          "power": 152289973,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "117#合欢宗宗主",
+            "level": 196,
+            "extra1": 8,
+            "extra2": 6037,
+            "flag": 0,
+            "correction_note": ""
+          },
+          "needs_review": [],
+          "row_id": "m047",
+          "ocr": {
+            "zone": 117,
+            "name": "合欢宗宗主",
+            "key": "117#合欢宗宗主",
+            "power": 152289973,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 86,
+          "name": "摆烂小咸鱼",
+          "key": "86#摆烂小咸鱼",
+          "role": "成员",
+          "level": 167,
+          "power": 78165161,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "86#摆烂小咸鱼",
+            "level": 167,
+            "extra1": 70054,
+            "extra2": 6042,
+            "flag": 0,
+            "correction_note": ""
+          },
+          "needs_review": [],
+          "row_id": "m048",
+          "ocr": {
+            "zone": 86,
+            "name": "摆烂小咸鱼",
+            "key": "86#摆烂小咸鱼",
+            "power": 78165161,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 7,
+          "name": "ArcheNorth",
+          "key": "7#ArcheNorth",
+          "role": "成员",
+          "level": 200,
+          "power": 148131770,
+          "last_online": null,
+          "in_group": false,
+          "raw": {
+            "source": "pcapng",
+            "identity": "7#ArcheNorth",
+            "level": 200,
+            "extra1": 110054,
+            "extra2": 6035,
+            "flag": 0
+          },
+          "needs_review": [],
+          "row_id": "m049",
+          "ocr": {
+            "zone": 7,
+            "name": "ArcheNorth",
+            "key": "7#ArcheNorth",
+            "power": 148131770,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 200,
+          "name": "關你屁事",
+          "key": "200#關你屁事",
+          "role": "成员",
+          "level": 162,
+          "power": 82900584,
+          "last_online": null,
+          "in_group": false,
+          "raw": {
+            "source": "pcapng",
+            "identity": "200#關你屁事",
+            "level": 162,
+            "extra1": 58,
+            "extra2": 6042,
+            "flag": 0
+          },
+          "needs_review": [],
+          "row_id": "m050",
+          "ocr": {
+            "zone": 200,
+            "name": "關你屁事",
+            "key": "200#關你屁事",
+            "power": 82900584,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 58,
+          "name": "メジロマックイーン",
+          "key": "58#メジロマックイーン",
+          "role": "成员",
+          "level": 200,
+          "power": 130937509,
+          "last_online": null,
+          "in_group": false,
+          "raw": {
+            "source": "pcapng",
+            "identity": "58#メジロマックイーン",
+            "level": 200,
+            "extra1": 75,
+            "extra2": 0,
+            "flag": 0
+          },
+          "needs_review": [],
+          "row_id": "m051",
+          "ocr": {
+            "zone": 58,
+            "name": "メジロマックイーン",
+            "key": "58#メジロマックイーン",
+            "power": 130937509,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 1,
+          "name": "WuDan",
+          "key": "1#WuDan",
+          "role": "成员",
+          "level": 164,
+          "power": 90718059,
+          "last_online": null,
+          "in_group": false,
+          "raw": {
+            "source": "pcapng",
+            "identity": "1#WuDan",
+            "level": 164,
+            "extra1": 10052,
+            "extra2": 6043,
+            "flag": 0
+          },
+          "needs_review": [],
+          "row_id": "m052",
+          "ocr": {
+            "zone": 1,
+            "name": "WuDan",
+            "key": "1#WuDan",
+            "power": 90718059,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 291,
+          "name": "你在偷看我",
+          "key": "291#你在偷看我",
+          "role": "成员",
+          "level": 134,
+          "power": 31572712,
+          "last_online": null,
+          "in_group": false,
+          "raw": {
+            "source": "pcapng",
+            "identity": "291#你在偷看我",
+            "level": 134,
+            "extra1": 80052,
+            "extra2": 6007,
+            "flag": 0
+          },
+          "needs_review": [],
+          "row_id": "m053",
+          "ocr": {
+            "zone": 291,
+            "name": "你在偷看我",
+            "key": "291#你在偷看我",
+            "power": 31572712,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 208,
+          "name": "咸鱼W",
+          "key": "208#咸鱼W",
+          "role": "成员",
+          "level": 177,
+          "power": 112383869,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "208#咸鱼W",
+            "level": 177,
+            "extra1": 10054,
+            "extra2": 6035,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m054",
+          "ocr": {
+            "zone": 208,
+            "name": "咸鱼W",
+            "key": "208#咸鱼W",
+            "power": 112383869,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 28,
+          "name": "CadenWise",
+          "key": "28#CadenWise",
+          "role": "成员",
+          "level": 137,
+          "power": 39368014,
+          "last_online": null,
+          "in_group": false,
+          "raw": {
+            "source": "pcapng",
+            "identity": "28#CadenWise",
+            "level": 137,
+            "extra1": 0,
+            "extra2": 6042,
+            "flag": 0
+          },
+          "needs_review": [],
+          "row_id": "m055",
+          "ocr": {
+            "zone": 28,
+            "name": "CadenWise",
+            "key": "28#CadenWise",
+            "power": 39368014,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 231,
+          "name": "炖煮红尘",
+          "key": "231#炖煮红尘",
+          "role": "成员",
+          "level": 171,
+          "power": 96582418,
+          "last_online": null,
+          "in_group": true,
+          "raw": {
+            "source": "pcapng",
+            "identity": "231#炖煮红尘",
+            "level": 171,
+            "extra1": 10052,
+            "extra2": 6028,
+            "flag": 1
+          },
+          "needs_review": [],
+          "row_id": "m056",
+          "ocr": {
+            "zone": 231,
+            "name": "炖煮红尘",
+            "key": "231#炖煮红尘",
+            "power": 96582418,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 170,
+          "name": "MaddoxRoth7",
+          "key": "170#MaddoxRoth7",
+          "role": "成员",
+          "level": 162,
+          "power": 65642854,
+          "last_online": null,
+          "in_group": false,
+          "raw": {
+            "source": "pcapng",
+            "identity": "170#MaddoxRoth7",
+            "level": 162,
+            "extra1": 79,
+            "extra2": 6042,
+            "flag": 0
+          },
+          "needs_review": [],
+          "row_id": "m057",
+          "ocr": {
+            "zone": 170,
+            "name": "MaddoxRoth7",
+            "key": "170#MaddoxRoth7",
+            "power": 65642854,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 308,
+          "name": "RfkchzXqhgthxz",
+          "key": "308#RfkchzXqhgthxz",
+          "role": "成员",
+          "level": 115,
+          "power": 12311189,
+          "last_online": null,
+          "in_group": false,
+          "raw": {
+            "source": "pcapng",
+            "identity": "308#RfkchzXqhgthxz",
+            "level": 115,
+            "extra1": 69,
+            "extra2": 6001,
+            "flag": 0
+          },
+          "needs_review": [],
+          "row_id": "m058",
+          "ocr": {
+            "zone": 308,
+            "name": "RfkchzXqhgthxz",
+            "key": "308#RfkchzXqhgthxz",
+            "power": 12311189,
+            "last_online": null
+          },
+          "imported": true
+        },
+        {
+          "zone": 37,
+          "name": "雨婷私密处",
+          "key": "37#雨婷私密处",
+          "role": "成员",
+          "level": 127,
+          "power": 23816049,
+          "last_online": null,
+          "in_group": false,
+          "raw": {
+            "source": "pcapng",
+            "identity": "37#雨婷私密处",
+            "level": 127,
+            "extra1": 70054,
+            "extra2": 6042,
+            "flag": 0
+          },
+          "needs_review": [],
+          "row_id": "m059",
+          "ocr": {
+            "zone": 37,
+            "name": "雨婷私密处",
+            "key": "37#雨婷私密处",
+            "power": 23816049,
+            "last_online": null
+          },
+          "imported": true
+        }
+      ],
+      "boss": [
+        {
+          "zone": 28,
+          "name": "米拉",
+          "key": "28#米拉",
+          "rank": 1,
+          "damage_k": 38187275,
+          "damage": 38187275000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "28#米拉",
+            "damage": "38,187,275k"
+          },
+          "needs_review": [],
+          "row_id": "b001",
+          "ocr": {
+            "zone": 28,
+            "name": "米拉",
+            "key": "28#米拉",
+            "rank": 1,
+            "damage_k": 38187275
+          },
+          "imported": true
+        },
+        {
+          "zone": 81,
+          "name": "酒酿圆子",
+          "key": "81#酒酿圆子",
+          "rank": 2,
+          "damage_k": 18928528,
+          "damage": 18928528000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "81#酒酿圆子",
+            "damage": "18,928,528k"
+          },
+          "needs_review": [],
+          "row_id": "b002",
+          "ocr": {
+            "zone": 81,
+            "name": "酒酿圆子",
+            "key": "81#酒酿圆子",
+            "rank": 2,
+            "damage_k": 18928528
+          },
+          "imported": true
+        },
+        {
+          "zone": 1,
+          "name": "Zero卐",
+          "key": "1#Zero卐",
+          "rank": 3,
+          "damage_k": 17187786,
+          "damage": 17187786000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "1#Zero卐",
+            "damage": "17,187,786k"
+          },
+          "needs_review": [],
+          "row_id": "b003",
+          "ocr": {
+            "zone": 1,
+            "name": "Zero卐",
+            "key": "1#Zero卐",
+            "rank": 3,
+            "damage_k": 17187786
+          },
+          "imported": true
+        },
+        {
+          "zone": 28,
+          "name": "伊之猪",
+          "key": "28#伊之猪",
+          "rank": 4,
+          "damage_k": 17050126,
+          "damage": 17050126000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "28#伊之猪",
+            "damage": "17,050,126k"
+          },
+          "needs_review": [],
+          "row_id": "b004",
+          "ocr": {
+            "zone": 28,
+            "name": "伊之猪",
+            "key": "28#伊之猪",
+            "rank": 4,
+            "damage_k": 17050126
+          },
+          "imported": true
+        },
+        {
+          "zone": 205,
+          "name": "搁浅づ",
+          "key": "205#搁浅づ",
+          "rank": 5,
+          "damage_k": 13936762,
+          "damage": 13936762000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "205#搁浅づ",
+            "damage": "13,936,762k"
+          },
+          "needs_review": [],
+          "row_id": "b005",
+          "ocr": {
+            "zone": 205,
+            "name": "搁浅づ",
+            "key": "205#搁浅づ",
+            "rank": 5,
+            "damage_k": 13936762
+          },
+          "imported": true
+        },
+        {
+          "zone": 71,
+          "name": "梁师娘LUONG",
+          "key": "71#梁师娘LUONG",
+          "rank": 6,
+          "damage_k": 9523013,
+          "damage": 9523013000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "71#梁师娘LUONG",
+            "damage": "9,523,013k"
+          },
+          "needs_review": [],
+          "row_id": "b006",
+          "ocr": {
+            "zone": 71,
+            "name": "梁师娘LUONG",
+            "key": "71#梁师娘LUONG",
+            "rank": 6,
+            "damage_k": 9523013
+          },
+          "imported": true
+        },
+        {
+          "zone": 72,
+          "name": "远青",
+          "key": "72#远青",
+          "rank": 7,
+          "damage_k": 5648353,
+          "damage": 5648353000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "72#远青",
+            "damage": "5,648,353k"
+          },
+          "needs_review": [],
+          "row_id": "b007",
+          "ocr": {
+            "zone": 72,
+            "name": "远青",
+            "key": "72#远青",
+            "rank": 7,
+            "damage_k": 5648353
+          },
+          "imported": true
+        },
+        {
+          "zone": 202,
+          "name": "ElsieBlaker",
+          "key": "202#ElsieBlaker",
+          "rank": 8,
+          "damage_k": 4753693,
+          "damage": 4753693000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "202#ElsieBlaker",
+            "damage": "4,753,693k"
+          },
+          "needs_review": [],
+          "row_id": "b008",
+          "ocr": {
+            "zone": 202,
+            "name": "ElsieBlaker",
+            "key": "202#ElsieBlaker",
+            "rank": 8,
+            "damage_k": 4753693
+          },
+          "imported": true
+        },
+        {
+          "zone": 72,
+          "name": "随风倒柳",
+          "key": "72#随风倒柳",
+          "rank": 9,
+          "damage_k": 3909739,
+          "damage": 3909739000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "72#随风倒柳",
+            "damage": "3,909,739k"
+          },
+          "needs_review": [],
+          "row_id": "b009",
+          "ocr": {
+            "zone": 72,
+            "name": "随风倒柳",
+            "key": "72#随风倒柳",
+            "rank": 9,
+            "damage_k": 3909739
+          },
+          "imported": true
+        },
+        {
+          "zone": 241,
+          "name": "小野莓",
+          "key": "241#小野莓",
+          "rank": 10,
+          "damage_k": 3880536,
+          "damage": 3880536000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "241#小野莓",
+            "damage": "3,880,536k"
+          },
+          "needs_review": [],
+          "row_id": "b010",
+          "ocr": {
+            "zone": 241,
+            "name": "小野莓",
+            "key": "241#小野莓",
+            "rank": 10,
+            "damage_k": 3880536
+          },
+          "imported": true
+        },
+        {
+          "zone": 78,
+          "name": "燃烧的俗物",
+          "key": "78#燃烧的俗物",
+          "rank": 11,
+          "damage_k": 3548815,
+          "damage": 3548815000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "78#燃烧的俗物",
+            "damage": "3,548,815k"
+          },
+          "needs_review": [],
+          "row_id": "b011",
+          "ocr": {
+            "zone": 78,
+            "name": "燃烧的俗物",
+            "key": "78#燃烧的俗物",
+            "rank": 11,
+            "damage_k": 3548815
+          },
+          "imported": true
+        },
+        {
+          "zone": 283,
+          "name": "夏一鸽",
+          "key": "283#夏一鸽",
+          "rank": 12,
+          "damage_k": 3153669,
+          "damage": 3153669000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "283#夏一鸽",
+            "damage": "3,153,669k"
+          },
+          "needs_review": [],
+          "row_id": "b012",
+          "ocr": {
+            "zone": 283,
+            "name": "夏一鸽",
+            "key": "283#夏一鸽",
+            "rank": 12,
+            "damage_k": 3153669
+          },
+          "imported": true
+        },
+        {
+          "zone": 226,
+          "name": "禾田",
+          "key": "226#禾田",
+          "rank": 13,
+          "damage_k": 2713124,
+          "damage": 2713124000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "226#禾田",
+            "damage": "2,713,124k"
+          },
+          "needs_review": [],
+          "row_id": "b013",
+          "ocr": {
+            "zone": 226,
+            "name": "禾田",
+            "key": "226#禾田",
+            "rank": 13,
+            "damage_k": 2713124
+          },
+          "imported": true
+        },
+        {
+          "zone": 81,
+          "name": "师娘小号玲",
+          "key": "81#师娘小号玲",
+          "rank": 14,
+          "damage_k": 2650509,
+          "damage": 2650509000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "81#师娘小号玲",
+            "damage": "2,650,509k"
+          },
+          "needs_review": [],
+          "row_id": "b014",
+          "ocr": {
+            "zone": 81,
+            "name": "师娘小号玲",
+            "key": "81#师娘小号玲",
+            "rank": 14,
+            "damage_k": 2650509
+          },
+          "imported": true
+        },
+        {
+          "zone": 75,
+          "name": "半个西瓜",
+          "key": "75#半个西瓜",
+          "rank": 15,
+          "damage_k": 2585053,
+          "damage": 2585053000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "75#半个西瓜",
+            "damage": "2,585,053k"
+          },
+          "needs_review": [],
+          "row_id": "b015",
+          "ocr": {
+            "zone": 75,
+            "name": "半个西瓜",
+            "key": "75#半个西瓜",
+            "rank": 15,
+            "damage_k": 2585053
+          },
+          "imported": true
+        },
+        {
+          "zone": 117,
+          "name": "合欢宗宗主",
+          "key": "117#合欢宗宗主",
+          "rank": 16,
+          "damage_k": 2412038,
+          "damage": 2412038000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "117#合欢宗宗主",
+            "damage": "2,412,038k"
+          },
+          "needs_review": [],
+          "row_id": "b016",
+          "ocr": {
+            "zone": 117,
+            "name": "合欢宗宗主",
+            "key": "117#合欢宗宗主",
+            "rank": 16,
+            "damage_k": 2412038
+          },
+          "imported": true
+        },
+        {
+          "zone": 87,
+          "name": "大根珍珠棒",
+          "key": "87#大根珍珠棒",
+          "rank": 17,
+          "damage_k": 2348916,
+          "damage": 2348916000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "87#大根珍珠棒",
+            "damage": "2,348,916k"
+          },
+          "needs_review": [],
+          "row_id": "b017",
+          "ocr": {
+            "zone": 87,
+            "name": "大根珍珠棒",
+            "key": "87#大根珍珠棒",
+            "rank": 17,
+            "damage_k": 2348916
+          },
+          "imported": true
+        },
+        {
+          "zone": 58,
+          "name": "SOULBS",
+          "key": "58#SOULBS",
+          "rank": 18,
+          "damage_k": 2107352,
+          "damage": 2107352000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "58#SOULBS",
+            "damage": "2,107,352k"
+          },
+          "needs_review": [],
+          "row_id": "b018",
+          "ocr": {
+            "zone": 58,
+            "name": "SOULBS",
+            "key": "58#SOULBS",
+            "rank": 18,
+            "damage_k": 2107352
+          },
+          "imported": true
+        },
+        {
+          "zone": 69,
+          "name": "师娘",
+          "key": "69#师娘",
+          "rank": 19,
+          "damage_k": 1785139,
+          "damage": 1785139000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "69#师娘",
+            "damage": "1,785,139k"
+          },
+          "needs_review": [],
+          "row_id": "b019",
+          "ocr": {
+            "zone": 69,
+            "name": "师娘",
+            "key": "69#师娘",
+            "rank": 19,
+            "damage_k": 1785139
+          },
+          "imported": true
+        },
+        {
+          "zone": 7,
+          "name": "ArcheNorth",
+          "key": "7#ArcheNorth",
+          "rank": 20,
+          "damage_k": 1328786,
+          "damage": 1328786000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "7#ArcheNorth",
+            "damage": "1,328,786k"
+          },
+          "needs_review": [],
+          "row_id": "b020",
+          "ocr": {
+            "zone": 7,
+            "name": "ArcheNorth",
+            "key": "7#ArcheNorth",
+            "rank": 20,
+            "damage_k": 1328786
+          },
+          "imported": true
+        },
+        {
+          "zone": 101,
+          "name": "积极又向上",
+          "key": "101#积极又向上",
+          "rank": 21,
+          "damage_k": 1288695,
+          "damage": 1288695000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "101#积极又向上",
+            "damage": "1,288,695k"
+          },
+          "needs_review": [],
+          "row_id": "b021",
+          "ocr": {
+            "zone": 101,
+            "name": "积极又向上",
+            "key": "101#积极又向上",
+            "rank": 21,
+            "damage_k": 1288695
+          },
+          "imported": true
+        },
+        {
+          "zone": 252,
+          "name": "縫星辰",
+          "key": "252#縫星辰",
+          "rank": 22,
+          "damage_k": 1104650,
+          "damage": 1104650000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "252#縌星辰",
+            "damage": "1,104,650k",
+            "identity_matched_from": "252#縌星辰"
+          },
+          "needs_review": [],
+          "row_id": "b022",
+          "ocr": {
+            "zone": 252,
+            "name": "縌星辰",
+            "key": "252#縌星辰",
+            "rank": 22,
+            "damage_k": 1104650
+          },
+          "imported": true,
+          "identity_matched": true,
+          "missing_identity": false
+        },
+        {
+          "zone": 205,
+          "name": "搁浅0",
+          "key": "205#搁浅0",
+          "rank": 23,
+          "damage_k": 947478,
+          "damage": 947478000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "205#搁浅つ",
+            "damage": "947,478k",
+            "identity_matched_from": "205#搁浅つ"
+          },
+          "needs_review": [],
+          "row_id": "b023",
+          "ocr": {
+            "zone": 205,
+            "name": "搁浅つ",
+            "key": "205#搁浅つ",
+            "rank": 23,
+            "damage_k": 947478
+          },
+          "imported": true,
+          "identity_matched": true,
+          "missing_identity": false
+        },
+        {
+          "zone": 301,
+          "name": "亚加拉达",
+          "key": "301#亚加拉达",
+          "rank": 24,
+          "damage_k": 768210,
+          "damage": 768210000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "301#亚加拉达",
+            "damage": "768,210k"
+          },
+          "needs_review": [],
+          "row_id": "b024",
+          "ocr": {
+            "zone": 301,
+            "name": "亚加拉达",
+            "key": "301#亚加拉达",
+            "rank": 24,
+            "damage_k": 768210
+          },
+          "imported": true
+        },
+        {
+          "zone": 103,
+          "name": "arianacomodo",
+          "key": "103#arianacomodo",
+          "rank": 25,
+          "damage_k": 680310,
+          "damage": 680310000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "103#arianacomodo",
+            "damage": "680,310k"
+          },
+          "needs_review": [],
+          "row_id": "b025",
+          "ocr": {
+            "zone": 103,
+            "name": "arianacomodo",
+            "key": "103#arianacomodo",
+            "rank": 25,
+            "damage_k": 680310
+          },
+          "imported": true
+        },
+        {
+          "zone": 58,
+          "name": "メジロマックイーン",
+          "key": "58#メジロマックイーン",
+          "rank": 26,
+          "damage_k": 566222,
+          "damage": 566222000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "58#メジロマックイーン",
+            "damage": "566,222k"
+          },
+          "needs_review": [],
+          "row_id": "b026",
+          "ocr": {
+            "zone": 58,
+            "name": "メジロマックイーン",
+            "key": "58#メジロマックイーン",
+            "rank": 26,
+            "damage_k": 566222
+          },
+          "imported": true
+        },
+        {
+          "zone": 83,
+          "name": "菜豆芽",
+          "key": "83#菜豆芽",
+          "rank": 27,
+          "damage_k": 513593,
+          "damage": 513593000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "83#菜豆芽",
+            "damage": "513,593k"
+          },
+          "needs_review": [],
+          "row_id": "b027",
+          "ocr": {
+            "zone": 83,
+            "name": "菜豆芽",
+            "key": "83#菜豆芽",
+            "rank": 27,
+            "damage_k": 513593
+          },
+          "imported": true
+        },
+        {
+          "zone": 208,
+          "name": "咸鱼W",
+          "key": "208#咸鱼W",
+          "rank": 28,
+          "damage_k": 448600,
+          "damage": 448600000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "208#咸鱼W",
+            "damage": "448,600k"
+          },
+          "needs_review": [],
+          "row_id": "b028",
+          "ocr": {
+            "zone": 208,
+            "name": "咸鱼W",
+            "key": "208#咸鱼W",
+            "rank": 28,
+            "damage_k": 448600
+          },
+          "imported": true
+        },
+        {
+          "zone": 264,
+          "name": "ShuA",
+          "key": "264#ShuA",
+          "rank": 29,
+          "damage_k": 229329,
+          "damage": 229329000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "264#ShuA",
+            "damage": "229,329k"
+          },
+          "needs_review": [],
+          "row_id": "b029",
+          "ocr": {
+            "zone": 264,
+            "name": "ShuA",
+            "key": "264#ShuA",
+            "rank": 29,
+            "damage_k": 229329
+          },
+          "imported": true
+        },
+        {
+          "zone": 200,
+          "name": "HoneyKoch",
+          "key": "200#HoneyKoch",
+          "rank": 30,
+          "damage_k": 222266,
+          "damage": 222266000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "200#HoneyKoch",
+            "damage": "222,266k"
+          },
+          "needs_review": [],
+          "row_id": "b030",
+          "ocr": {
+            "zone": 200,
+            "name": "HoneyKoch",
+            "key": "200#HoneyKoch",
+            "rank": 30,
+            "damage_k": 222266
+          },
+          "imported": true
+        },
+        {
+          "zone": 179,
+          "name": "波蒙的狗狗",
+          "key": "179#波蒙的狗狗",
+          "rank": 31,
+          "damage_k": 216576,
+          "damage": 216576000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "179#波蒙的狗狗",
+            "damage": "216,576k"
+          },
+          "needs_review": [],
+          "row_id": "b031",
+          "ocr": {
+            "zone": 179,
+            "name": "波蒙的狗狗",
+            "key": "179#波蒙的狗狗",
+            "rank": 31,
+            "damage_k": 216576
+          },
+          "imported": true
+        },
+        {
+          "zone": 301,
+          "name": "玄枵",
+          "key": "301#玄枵",
+          "rank": 32,
+          "damage_k": 202225,
+          "damage": 202225000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "301#玄枵",
+            "damage": "202,225k"
+          },
+          "needs_review": [],
+          "row_id": "b032",
+          "ocr": {
+            "zone": 301,
+            "name": "玄枵",
+            "key": "301#玄枵",
+            "rank": 32,
+            "damage_k": 202225
+          },
+          "imported": true
+        },
+        {
+          "zone": 231,
+          "name": "炖煮红尘",
+          "key": "231#炖煮红尘",
+          "rank": 33,
+          "damage_k": 199129,
+          "damage": 199129000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "231#炖煮红尘",
+            "damage": "199,129k"
+          },
+          "needs_review": [],
+          "row_id": "b033",
+          "ocr": {
+            "zone": 231,
+            "name": "炖煮红尘",
+            "key": "231#炖煮红尘",
+            "rank": 33,
+            "damage_k": 199129
+          },
+          "imported": true
+        },
+        {
+          "zone": 311,
+          "name": "SNK梁师娘",
+          "key": "311#SNK梁师娘",
+          "rank": 34,
+          "damage_k": 110455,
+          "damage": 110455000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "311#SNK梁师娘",
+            "damage": "110,455k"
+          },
+          "needs_review": [],
+          "row_id": "b034",
+          "ocr": {
+            "zone": 311,
+            "name": "SNK梁师娘",
+            "key": "311#SNK梁师娘",
+            "rank": 34,
+            "damage_k": 110455
+          },
+          "imported": true
+        },
+        {
+          "zone": 284,
+          "name": "Iouyexue",
+          "key": "284#Iouyexue",
+          "rank": 35,
+          "damage_k": 107656,
+          "damage": 107656000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "284#louyexue",
+            "damage": "107,656k",
+            "identity_matched_from": "284#louyexue"
+          },
+          "needs_review": [],
+          "row_id": "b035",
+          "ocr": {
+            "zone": 284,
+            "name": "louyexue",
+            "key": "284#louyexue",
+            "rank": 35,
+            "damage_k": 107656
+          },
+          "imported": true,
+          "identity_matched": true
+        },
+        {
+          "zone": 306,
+          "name": "梁师娘",
+          "key": "306#梁师娘",
+          "rank": 36,
+          "damage_k": 107045,
+          "damage": 107045000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "306#梁师娘",
+            "damage": "107,045k"
+          },
+          "needs_review": [],
+          "row_id": "b036",
+          "ocr": {
+            "zone": 306,
+            "name": "梁师娘",
+            "key": "306#梁师娘",
+            "rank": 36,
+            "damage_k": 107045
+          },
+          "imported": true
+        },
+        {
+          "zone": 304,
+          "name": "PueqrnVebnsyxl",
+          "key": "304#PueqrnVebnsyxl",
+          "rank": 37,
+          "damage_k": 56966,
+          "damage": 56966000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "304#PueqrnVebnsyxl",
+            "damage": "56,966k"
+          },
+          "needs_review": [],
+          "row_id": "b037",
+          "ocr": {
+            "zone": 304,
+            "name": "PueqrnVebnsyxl",
+            "key": "304#PueqrnVebnsyxl",
+            "rank": 37,
+            "damage_k": 56966
+          },
+          "imported": true
+        },
+        {
+          "zone": 306,
+          "name": "大雷芙提雅",
+          "key": "306#大雷芙提雅",
+          "rank": 38,
+          "damage_k": 53442,
+          "damage": 53442000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "306#大雷芙提雅",
+            "damage": "53,442k"
+          },
+          "needs_review": [],
+          "row_id": "b038",
+          "ocr": {
+            "zone": 306,
+            "name": "大雷芙提雅",
+            "key": "306#大雷芙提雅",
+            "rank": 38,
+            "damage_k": 53442
+          },
+          "imported": true
+        },
+        {
+          "zone": 288,
+          "name": "花田綽",
+          "key": "288#花田綽",
+          "rank": 39,
+          "damage_k": 35367,
+          "damage": 35367000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "288#花田綽",
+            "damage": "35,367k"
+          },
+          "needs_review": [],
+          "row_id": "b039",
+          "ocr": {
+            "zone": 288,
+            "name": "花田綽",
+            "key": "288#花田綽",
+            "rank": 39,
+            "damage_k": 35367
+          },
+          "imported": true
+        },
+        {
+          "zone": 86,
+          "name": "摆烂小咸鱼",
+          "key": "86#摆烂小咸鱼",
+          "rank": 40,
+          "damage_k": 31293,
+          "damage": 31293000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "86#摆烂小咸鱼",
+            "damage": "31,293k"
+          },
+          "needs_review": [],
+          "row_id": "b040",
+          "ocr": {
+            "zone": 86,
+            "name": "摆烂小咸鱼",
+            "key": "86#摆烂小咸鱼",
+            "rank": 40,
+            "damage_k": 31293
+          },
+          "imported": true
+        },
+        {
+          "zone": 28,
+          "name": "AshtonParry",
+          "key": "28#AshtonParry",
+          "rank": 41,
+          "damage_k": 15424,
+          "damage": 15424000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "28#AshtonParry",
+            "damage": "15,424k"
+          },
+          "needs_review": [],
+          "row_id": "b041",
+          "ocr": {
+            "zone": 28,
+            "name": "AshtonParry",
+            "key": "28#AshtonParry",
+            "rank": 41,
+            "damage_k": 15424
+          },
+          "imported": true
+        },
+        {
+          "zone": 1,
+          "name": "WuDan",
+          "key": "1#WuDan",
+          "rank": 42,
+          "damage_k": 12648,
+          "damage": 12648000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "1#WuDan",
+            "damage": "12,648k"
+          },
+          "needs_review": [],
+          "row_id": "b042",
+          "ocr": {
+            "zone": 1,
+            "name": "WuDan",
+            "key": "1#WuDan",
+            "rank": 42,
+            "damage_k": 12648
+          },
+          "imported": true
+        },
+        {
+          "zone": 80,
+          "name": "BUBULAW",
+          "key": "80#BUBULAW",
+          "rank": 43,
+          "damage_k": 9595,
+          "damage": 9595000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "80#BUBULAW",
+            "damage": "9,595k"
+          },
+          "needs_review": [],
+          "row_id": "b043",
+          "ocr": {
+            "zone": 80,
+            "name": "BUBULAW",
+            "key": "80#BUBULAW",
+            "rank": 43,
+            "damage_k": 9595
+          },
+          "imported": true
+        },
+        {
+          "zone": 75,
+          "name": "CaseyDyer",
+          "key": "75#CaseyDyer",
+          "rank": 44,
+          "damage_k": 8279,
+          "damage": 8279000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "75#CaseyDyer",
+            "damage": "8,279k"
+          },
+          "needs_review": [],
+          "row_id": "b044",
+          "ocr": {
+            "zone": 75,
+            "name": "CaseyDyer",
+            "key": "75#CaseyDyer",
+            "rank": 44,
+            "damage_k": 8279
+          },
+          "imported": true
+        },
+        {
+          "zone": 300,
+          "name": "神王婉",
+          "key": "300#神王婉",
+          "rank": 45,
+          "damage_k": 7464,
+          "damage": 7464000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "300#神王婉",
+            "damage": "7,464k"
+          },
+          "needs_review": [],
+          "row_id": "b045",
+          "ocr": {
+            "zone": 300,
+            "name": "神王婉",
+            "key": "300#神王婉",
+            "rank": 45,
+            "damage_k": 7464
+          },
+          "imported": true
+        },
+        {
+          "zone": 200,
+          "name": "關你屁事",
+          "key": "200#關你屁事",
+          "rank": 46,
+          "damage_k": 7216,
+          "damage": 7216000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "200#關你屁事",
+            "damage": "7,216k"
+          },
+          "needs_review": [],
+          "row_id": "b046",
+          "ocr": {
+            "zone": 200,
+            "name": "關你屁事",
+            "key": "200#關你屁事",
+            "rank": 46,
+            "damage_k": 7216
+          },
+          "imported": true
+        },
+        {
+          "zone": 63,
+          "name": "若语",
+          "key": "63#若语",
+          "rank": 47,
+          "damage_k": 6311,
+          "damage": 6311000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "63#若语",
+            "damage": "6,311k"
+          },
+          "needs_review": [],
+          "row_id": "b047",
+          "ocr": {
+            "zone": 63,
+            "name": "若语",
+            "key": "63#若语",
+            "rank": 47,
+            "damage_k": 6311
+          },
+          "imported": true
+        },
+        {
+          "zone": 305,
+          "name": "KaiserL",
+          "key": "305#KaiserL",
+          "rank": 48,
+          "damage_k": 4561,
+          "damage": 4561000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "305#KaiserL",
+            "damage": "4,561k"
+          },
+          "needs_review": [],
+          "row_id": "b048",
+          "ocr": {
+            "zone": 305,
+            "name": "KaiserL",
+            "key": "305#KaiserL",
+            "rank": 48,
+            "damage_k": 4561
+          },
+          "imported": true
+        },
+        {
+          "zone": 223,
+          "name": "YangJu",
+          "key": "223#YangJu",
+          "rank": 49,
+          "damage_k": 3613,
+          "damage": 3613000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "223#YangJu",
+            "damage": "3,613k"
+          },
+          "needs_review": [],
+          "row_id": "b049",
+          "ocr": {
+            "zone": 223,
+            "name": "YangJu",
+            "key": "223#YangJu",
+            "rank": 49,
+            "damage_k": 3613
+          },
+          "imported": true
+        },
+        {
+          "zone": 288,
+          "name": "EricJ",
+          "key": "288#EricJ",
+          "rank": 50,
+          "damage_k": 3257,
+          "damage": 3257000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "288#EricJ",
+            "damage": "3,257k"
+          },
+          "needs_review": [],
+          "row_id": "b050",
+          "ocr": {
+            "zone": 288,
+            "name": "EricJ",
+            "key": "288#EricJ",
+            "rank": 50,
+            "damage_k": 3257
+          },
+          "imported": true
+        },
+        {
+          "zone": 288,
+          "name": "紫星塵",
+          "key": "288#紫星塵",
+          "rank": 51,
+          "damage_k": 781,
+          "damage": 781000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "288#紫星塵",
+            "damage": "781k"
+          },
+          "needs_review": [],
+          "row_id": "b051",
+          "ocr": {
+            "zone": 288,
+            "name": "紫星塵",
+            "key": "288#紫星塵",
+            "rank": 51,
+            "damage_k": 781
+          },
+          "imported": true
+        },
+        {
+          "zone": 293,
+          "name": "FvwJcjz",
+          "key": "293#FvwJcjz",
+          "rank": 52,
+          "damage_k": 301,
+          "damage": 301000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "293#FvwJcjz",
+            "damage": "301k"
+          },
+          "needs_review": [],
+          "row_id": "b052",
+          "ocr": {
+            "zone": 293,
+            "name": "FvwJcjz",
+            "key": "293#FvwJcjz",
+            "rank": 52,
+            "damage_k": 301
+          },
+          "imported": true
+        },
+        {
+          "zone": 289,
+          "name": "不是笨蛋",
+          "key": "289#不是笨蛋",
+          "rank": 53,
+          "damage_k": 211,
+          "damage": 211000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "289#不是笨蛋",
+            "damage": "211k"
+          },
+          "needs_review": [],
+          "row_id": "b053",
+          "ocr": {
+            "zone": 289,
+            "name": "不是笨蛋",
+            "key": "289#不是笨蛋",
+            "rank": 53,
+            "damage_k": 211
+          },
+          "imported": true
+        },
+        {
+          "zone": 288,
+          "name": "伐克斯",
+          "key": "288#伐克斯",
+          "rank": 54,
+          "damage_k": 147,
+          "damage": 147000,
+          "raw": {
+            "source": "pcapng",
+            "identity": "288#伐克斯",
+            "damage": "147k"
+          },
+          "needs_review": [],
+          "row_id": "b054",
+          "ocr": {
+            "zone": 288,
+            "name": "伐克斯",
+            "key": "288#伐克斯",
+            "rank": 54,
+            "damage_k": 147
+          },
+          "imported": true
+        }
+      ],
+      "raw_ocr": {
+        "members": [],
+        "boss": []
+      },
+      "boss_captured_at": "2026-05-13T02:32:03",
+      "boss_week_id": "2026-05-11",
+      "boss_day_index": 2,
+      "packet_import": {
+        "source_file": "20260513103233_1.pcapng",
+        "source_path": "records/boss/2026年5月13日103203_Boss/20260513103233_1.pcapng"
+      },
+      "corrections": {},
+      "member_source_id": "2026年5月12日194438_联盟",
+      "members_carried_forward": true,
+      "boss_source_id": "2026年5月13日103203_Boss",
+      "boss_archived": false
     }
   ],
   "players": [
@@ -50337,7 +53016,7 @@
       "zone": 1,
       "name": "WuDan",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -50355,7 +53034,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -50363,7 +53043,7 @@
       "zone": 1,
       "name": "Zero卐",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -50381,7 +53061,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -50389,7 +53070,7 @@
       "zone": 101,
       "name": "积极又向上",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -50407,7 +53088,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -50415,7 +53097,7 @@
       "zone": 103,
       "name": "arianacomodo",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -50433,7 +53115,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -50441,7 +53124,7 @@
       "zone": 117,
       "name": "合欢宗宗主",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -50459,7 +53142,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -50467,7 +53151,7 @@
       "zone": 170,
       "name": "MaddoxRoth7",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -50485,7 +53169,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -50493,7 +53178,7 @@
       "zone": 179,
       "name": "波蒙的狗狗",
       "first_seen": "2026-05-01T02:15:12",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年5月1日021512_联盟",
         "2026年5月1日211113_Boss",
@@ -50508,7 +53193,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -50516,7 +53202,7 @@
       "zone": 200,
       "name": "HoneyKoch",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -50534,7 +53220,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -50542,7 +53229,7 @@
       "zone": 200,
       "name": "關你屁事",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -50560,7 +53247,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -50568,7 +53256,7 @@
       "zone": 202,
       "name": "ElsieBlaker",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -50586,7 +53274,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -50594,7 +53283,7 @@
       "zone": 205,
       "name": "搁浅つ",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -50612,7 +53301,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -50620,7 +53310,7 @@
       "zone": 205,
       "name": "搁浅づ",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -50638,7 +53328,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -50670,7 +53361,7 @@
       "zone": 208,
       "name": "咸鱼W",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -50688,7 +53379,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -50722,7 +53414,7 @@
       "zone": 223,
       "name": "YangJu",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -50740,7 +53432,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -50772,7 +53465,7 @@
       "zone": 226,
       "name": "禾田",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -50790,7 +53483,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -50798,7 +53492,7 @@
       "zone": 231,
       "name": "炖煮红尘",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -50816,7 +53510,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -50824,7 +53519,7 @@
       "zone": 241,
       "name": "小野莓",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -50842,7 +53537,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -50850,10 +53546,11 @@
       "zone": 252,
       "name": "縌星辰",
       "first_seen": "2026-05-12T19:44:38",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -50885,7 +53582,7 @@
       "zone": 264,
       "name": "ShuA",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -50903,7 +53600,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -50911,7 +53609,7 @@
       "zone": 28,
       "name": "AshtonParry",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -50929,7 +53627,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -50937,7 +53636,7 @@
       "zone": 28,
       "name": "CadenWise",
       "first_seen": "2026-05-01T02:15:12",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年5月1日021512_联盟",
         "2026年5月1日211113_Boss",
@@ -50952,7 +53651,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -50960,7 +53660,7 @@
       "zone": 28,
       "name": "伊之猪",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -50978,7 +53678,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -50986,7 +53687,7 @@
       "zone": 28,
       "name": "米拉",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51004,7 +53705,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51012,7 +53714,7 @@
       "zone": 283,
       "name": "夏一鸽",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51030,7 +53732,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51038,7 +53741,7 @@
       "zone": 284,
       "name": "Iouyexue",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51056,7 +53759,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51064,7 +53768,7 @@
       "zone": 288,
       "name": "EricJ",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51082,7 +53786,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51090,7 +53795,7 @@
       "zone": 288,
       "name": "伐克斯",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51108,7 +53813,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51116,7 +53822,7 @@
       "zone": 288,
       "name": "紫星塵",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51134,7 +53840,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51142,7 +53849,7 @@
       "zone": 288,
       "name": "花田綽",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51160,7 +53867,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51168,7 +53876,7 @@
       "zone": 289,
       "name": "不是笨蛋",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51186,7 +53894,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51194,10 +53903,11 @@
       "zone": 291,
       "name": "你在偷看我",
       "first_seen": "2026-05-12T19:44:38",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51217,7 +53927,7 @@
       "zone": 293,
       "name": "FvwJcjz",
       "first_seen": "2026-05-01T02:15:12",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年5月1日021512_联盟",
         "2026年5月1日211113_Boss",
@@ -51232,7 +53942,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51240,7 +53951,7 @@
       "zone": 300,
       "name": "神王婉",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51258,7 +53969,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51266,7 +53978,7 @@
       "zone": 301,
       "name": "亚加拉达",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51284,7 +53996,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51292,7 +54005,7 @@
       "zone": 301,
       "name": "玄枵",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51310,7 +54023,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51318,7 +54032,7 @@
       "zone": 304,
       "name": "PueqrnVebnsyxl",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51336,7 +54050,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51344,7 +54059,7 @@
       "zone": 305,
       "name": "KaiserL",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51362,7 +54077,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51370,7 +54086,7 @@
       "zone": 306,
       "name": "大雷芙提雅",
       "first_seen": "2026-05-01T02:15:12",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年5月1日021512_联盟",
         "2026年5月1日211113_Boss",
@@ -51385,7 +54101,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51393,7 +54110,7 @@
       "zone": 306,
       "name": "梁师娘",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51411,7 +54128,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51419,7 +54137,7 @@
       "zone": 308,
       "name": "RfkchzXqhgthxz",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51437,7 +54155,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51457,7 +54176,7 @@
       "zone": 311,
       "name": "SNK梁师娘",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51475,7 +54194,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51483,7 +54203,7 @@
       "zone": 37,
       "name": "雨婷私密处",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51501,7 +54221,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51509,7 +54230,7 @@
       "zone": 58,
       "name": "SOULBS",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51527,7 +54248,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51535,7 +54257,7 @@
       "zone": 58,
       "name": "メジロマックイーン",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51553,7 +54275,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51561,7 +54284,7 @@
       "zone": 63,
       "name": "若语",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51579,7 +54302,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51587,7 +54311,7 @@
       "zone": 69,
       "name": "师娘",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51605,7 +54329,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51613,7 +54338,7 @@
       "zone": 7,
       "name": "ArcheNorth",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51631,7 +54356,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51639,7 +54365,7 @@
       "zone": 71,
       "name": "梁师娘LUONG",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51657,7 +54383,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51665,7 +54392,7 @@
       "zone": 72,
       "name": "远青",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51683,7 +54410,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51691,7 +54419,7 @@
       "zone": 72,
       "name": "随风倒柳",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51709,7 +54437,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51717,7 +54446,7 @@
       "zone": 75,
       "name": "CaseyDyer",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51735,7 +54464,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51743,7 +54473,7 @@
       "zone": 75,
       "name": "半个西瓜",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51761,7 +54491,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51769,7 +54500,7 @@
       "zone": 78,
       "name": "燃烧的俗物",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51787,7 +54518,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51795,7 +54527,7 @@
       "zone": 80,
       "name": "BUBULAW",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51813,7 +54545,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51821,7 +54554,7 @@
       "zone": 81,
       "name": "师娘小号玲",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51839,7 +54572,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51847,7 +54581,7 @@
       "zone": 81,
       "name": "酒酿圆子",
       "first_seen": "2026-05-05T12:43:27",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年5月5日124327_联盟",
         "2026年5月5日221354_Boss",
@@ -51857,7 +54591,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51865,7 +54600,7 @@
       "zone": 83,
       "name": "菜豆芽",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51883,7 +54618,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51891,7 +54627,7 @@
       "zone": 86,
       "name": "摆烂小咸鱼",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51909,7 +54645,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     },
     {
@@ -51917,7 +54654,7 @@
       "zone": 87,
       "name": "大根珍珠棒",
       "first_seen": "2026-04-28T19:32:28",
-      "last_seen": "2026-05-13T00:25:34",
+      "last_seen": "2026-05-13T10:32:03",
       "snapshots": [
         "2026年4月28日193228_联盟",
         "2026年4月29日191642_Boss",
@@ -51935,7 +54672,8 @@
         "2026年5月9日234133_Boss",
         "2026年5月11日193407_Boss",
         "2026年5月12日194438_联盟",
-        "2026年5月13日002534_Boss"
+        "2026年5月13日002534_Boss",
+        "2026年5月13日103203_Boss"
       ]
     }
   ],
@@ -52058,8 +54796,8 @@
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
         "rank": 1,
-        "damage_k": 29465945,
-        "delta_k": 14834998
+        "damage_k": 14630947,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
@@ -52067,7 +54805,15 @@
         "week_id": "2026-05-11",
         "rank": 1,
         "damage_k": 29465945,
-        "delta_k": 0
+        "delta_k": 14834998
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 1,
+        "damage_k": 38187275,
+        "delta_k": 8721330
       }
     ],
     "205#搁浅づ": [
@@ -52203,9 +54949,9 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 5,
-        "damage_k": 10843371,
-        "delta_k": 3544409
+        "rank": 4,
+        "damage_k": 7298962,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
@@ -52213,7 +54959,15 @@
         "week_id": "2026-05-11",
         "rank": 5,
         "damage_k": 10843371,
-        "delta_k": 0
+        "delta_k": 3544409
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 5,
+        "damage_k": 13936762,
+        "delta_k": 3093391
       }
     ],
     "28#伊之猪": [
@@ -52349,9 +55103,9 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 4,
-        "damage_k": 12736506,
-        "delta_k": 5906459
+        "rank": 5,
+        "damage_k": 6830047,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
@@ -52359,7 +55113,15 @@
         "week_id": "2026-05-11",
         "rank": 4,
         "damage_k": 12736506,
-        "delta_k": 0
+        "delta_k": 5906459
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 4,
+        "damage_k": 17050126,
+        "delta_k": 4313620
       }
     ],
     "72#远青": [
@@ -52495,7 +55257,7 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 8,
+        "rank": 7,
         "damage_k": 3509818,
         "delta_k": 0
       },
@@ -52506,6 +55268,14 @@
         "rank": 7,
         "damage_k": 5648353,
         "delta_k": 2138535
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 7,
+        "damage_k": 5648353,
+        "delta_k": 0
       }
     ],
     "1#Zero卐": [
@@ -52642,8 +55412,8 @@
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
         "rank": 3,
-        "damage_k": 13642838,
-        "delta_k": 5482535
+        "damage_k": 8160303,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
@@ -52651,7 +55421,15 @@
         "week_id": "2026-05-11",
         "rank": 3,
         "damage_k": 13642838,
-        "delta_k": 0
+        "delta_k": 5482535
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 3,
+        "damage_k": 17187786,
+        "delta_k": 3544948
       }
     ],
     "71#梁师娘LUONG": [
@@ -52788,8 +55566,8 @@
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
         "rank": 6,
-        "damage_k": 7647127,
-        "delta_k": 3371941
+        "damage_k": 4275186,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
@@ -52797,7 +55575,15 @@
         "week_id": "2026-05-11",
         "rank": 6,
         "damage_k": 7647127,
-        "delta_k": 0
+        "delta_k": 3371941
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 6,
+        "damage_k": 9523013,
+        "delta_k": 1875886
       }
     ],
     "241#小野莓": [
@@ -52933,13 +55719,21 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 7,
-        "damage_k": 3880536,
-        "delta_k": 939939
+        "rank": 8,
+        "damage_k": 2940597,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
         "captured_at": "2026-05-13T00:25:34",
+        "week_id": "2026-05-11",
+        "rank": 10,
+        "damage_k": 3880536,
+        "delta_k": 939939
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
         "week_id": "2026-05-11",
         "rank": 10,
         "damage_k": 3880536,
@@ -53079,15 +55873,23 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 10,
-        "damage_k": 2585053,
-        "delta_k": 1294101
+        "rank": 15,
+        "damage_k": 1290952,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
         "captured_at": "2026-05-13T00:25:34",
         "week_id": "2026-05-11",
         "rank": 14,
+        "damage_k": 2585053,
+        "delta_k": 1294101
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 15,
         "damage_k": 2585053,
         "delta_k": 0
       }
@@ -53225,7 +56027,7 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 12,
+        "rank": 11,
         "damage_k": 2214510,
         "delta_k": 0
       },
@@ -53236,6 +56038,14 @@
         "rank": 9,
         "damage_k": 3909739,
         "delta_k": 1695229
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 9,
+        "damage_k": 3909739,
+        "delta_k": 0
       }
     ],
     "7#ArcheNorth": [
@@ -53360,20 +56170,20 @@
         "delta_k": 117863
       },
       {
-        "snapshot_id": "2026年5月12日194438_联盟",
-        "captured_at": "2026-05-12T19:44:38",
-        "week_id": "2026-05-11",
-        "rank": 23,
-        "damage_k": 785467,
-        "delta_k": null
-      },
-      {
         "snapshot_id": "2026年5月13日002534_Boss",
         "captured_at": "2026-05-13T00:25:34",
         "week_id": "2026-05-11",
         "rank": 20,
         "damage_k": 1328786,
-        "delta_k": 543319
+        "delta_k": null
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 20,
+        "damage_k": 1328786,
+        "delta_k": 0
       }
     ],
     "81#师娘小号玲": [
@@ -53509,9 +56319,9 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 11,
-        "damage_k": 2547172,
-        "delta_k": 177665
+        "rank": 10,
+        "damage_k": 2369507,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
@@ -53519,7 +56329,15 @@
         "week_id": "2026-05-11",
         "rank": 15,
         "damage_k": 2547172,
-        "delta_k": 0
+        "delta_k": 177665
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 14,
+        "damage_k": 2650509,
+        "delta_k": 103337
       }
     ],
     "226#禾田": [
@@ -53655,7 +56473,7 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 16,
+        "rank": 12,
         "damage_k": 1810274,
         "delta_k": 0
       },
@@ -53666,6 +56484,14 @@
         "rank": 13,
         "damage_k": 2713124,
         "delta_k": 902850
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 13,
+        "damage_k": 2713124,
+        "delta_k": 0
       }
     ],
     "117#合欢宗宗主": [
@@ -53790,20 +56616,20 @@
         "delta_k": 412850
       },
       {
-        "snapshot_id": "2026年5月12日194438_联盟",
-        "captured_at": "2026-05-12T19:44:38",
-        "week_id": "2026-05-11",
-        "rank": 21,
-        "damage_k": 948585,
-        "delta_k": null
-      },
-      {
         "snapshot_id": "2026年5月13日002534_Boss",
         "captured_at": "2026-05-13T00:25:34",
         "week_id": "2026-05-11",
         "rank": 17,
         "damage_k": 2023000,
-        "delta_k": 1074415
+        "delta_k": null
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 16,
+        "damage_k": 2412038,
+        "delta_k": 389038
       }
     ],
     "78#燃烧的俗物": [
@@ -53912,20 +56738,20 @@
         "delta_k": 1073941
       },
       {
-        "snapshot_id": "2026年5月12日194438_联盟",
-        "captured_at": "2026-05-12T19:44:38",
-        "week_id": "2026-05-11",
-        "rank": 18,
-        "damage_k": 1637180,
-        "delta_k": null
-      },
-      {
         "snapshot_id": "2026年5月13日002534_Boss",
         "captured_at": "2026-05-13T00:25:34",
         "week_id": "2026-05-11",
         "rank": 11,
         "damage_k": 3548815,
-        "delta_k": 1911635
+        "delta_k": null
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 11,
+        "damage_k": 3548815,
+        "delta_k": 0
       }
     ],
     "283#夏一鸽": [
@@ -54062,8 +56888,8 @@
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
         "rank": 9,
-        "damage_k": 3115277,
-        "delta_k": 443851
+        "damage_k": 2671426,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
@@ -54071,7 +56897,15 @@
         "week_id": "2026-05-11",
         "rank": 12,
         "damage_k": 3115277,
-        "delta_k": 0
+        "delta_k": 443851
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 12,
+        "damage_k": 3153669,
+        "delta_k": 38392
       }
     ],
     "58#SOULBS": [
@@ -54207,15 +57041,23 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 13,
-        "damage_k": 2107352,
-        "delta_k": 1121515
+        "rank": 16,
+        "damage_k": 985837,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
         "captured_at": "2026-05-13T00:25:34",
         "week_id": "2026-05-11",
         "rank": 16,
+        "damage_k": 2107352,
+        "delta_k": 1121515
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 18,
         "damage_k": 2107352,
         "delta_k": 0
       }
@@ -54342,20 +57184,20 @@
         "delta_k": 49715
       },
       {
-        "snapshot_id": "2026年5月12日194438_联盟",
-        "captured_at": "2026-05-12T19:44:38",
-        "week_id": "2026-05-11",
-        "rank": 35,
-        "damage_k": 107572,
-        "delta_k": null
-      },
-      {
         "snapshot_id": "2026年5月13日002534_Boss",
         "captured_at": "2026-05-13T00:25:34",
         "week_id": "2026-05-11",
         "rank": 33,
         "damage_k": 199129,
-        "delta_k": 91557
+        "delta_k": null
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 33,
+        "damage_k": 199129,
+        "delta_k": 0
       }
     ],
     "202#ElsieBlaker": [
@@ -54480,20 +57322,20 @@
         "delta_k": 619775
       },
       {
-        "snapshot_id": "2026年5月12日194438_联盟",
-        "captured_at": "2026-05-12T19:44:38",
-        "week_id": "2026-05-11",
-        "rank": 14,
-        "damage_k": 1935705,
-        "delta_k": null
-      },
-      {
         "snapshot_id": "2026年5月13日002534_Boss",
         "captured_at": "2026-05-13T00:25:34",
         "week_id": "2026-05-11",
         "rank": 8,
         "damage_k": 4753693,
-        "delta_k": 2817988
+        "delta_k": null
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 8,
+        "damage_k": 4753693,
+        "delta_k": 0
       }
     ],
     "87#大根珍珠棒": [
@@ -54629,9 +57471,9 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 15,
-        "damage_k": 1869943,
-        "delta_k": 364152
+        "rank": 13,
+        "damage_k": 1505791,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
@@ -54639,7 +57481,15 @@
         "week_id": "2026-05-11",
         "rank": 18,
         "damage_k": 1869943,
-        "delta_k": 0
+        "delta_k": 364152
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 17,
+        "damage_k": 2348916,
+        "delta_k": 478973
       }
     ],
     "208#咸鱼W": [
@@ -54748,16 +57598,16 @@
         "delta_k": 69626
       },
       {
-        "snapshot_id": "2026年5月12日194438_联盟",
-        "captured_at": "2026-05-12T19:44:38",
+        "snapshot_id": "2026年5月13日002534_Boss",
+        "captured_at": "2026-05-13T00:25:34",
         "week_id": "2026-05-11",
-        "rank": 27,
+        "rank": 28,
         "damage_k": 448600,
         "delta_k": null
       },
       {
-        "snapshot_id": "2026年5月13日002534_Boss",
-        "captured_at": "2026-05-13T00:25:34",
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
         "week_id": "2026-05-11",
         "rank": 28,
         "damage_k": 448600,
@@ -54963,13 +57813,21 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 19,
-        "damage_k": 1288695,
-        "delta_k": 397377
+        "rank": 17,
+        "damage_k": 891318,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
         "captured_at": "2026-05-13T00:25:34",
+        "week_id": "2026-05-11",
+        "rank": 21,
+        "damage_k": 1288695,
+        "delta_k": 397377
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
         "week_id": "2026-05-11",
         "rank": 21,
         "damage_k": 1288695,
@@ -55109,9 +57967,9 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 20,
-        "damage_k": 1043665,
-        "delta_k": 183210
+        "rank": 18,
+        "damage_k": 860455,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
@@ -55119,7 +57977,15 @@
         "week_id": "2026-05-11",
         "rank": 22,
         "damage_k": 1043665,
-        "delta_k": 0
+        "delta_k": 183210
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 22,
+        "damage_k": 1104650,
+        "delta_k": 60985
       }
     ],
     "69#师娘": [
@@ -55255,9 +58121,9 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 17,
-        "damage_k": 1640129,
-        "delta_k": 189751
+        "rank": 14,
+        "damage_k": 1450378,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
@@ -55265,7 +58131,15 @@
         "week_id": "2026-05-11",
         "rank": 19,
         "damage_k": 1640129,
-        "delta_k": 0
+        "delta_k": 189751
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 19,
+        "damage_k": 1785139,
+        "delta_k": 145010
       }
     ],
     "83#菜豆芽": [
@@ -55385,13 +58259,21 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 26,
-        "damage_k": 513593,
-        "delta_k": 163073
+        "rank": 22,
+        "damage_k": 350520,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
         "captured_at": "2026-05-13T00:25:34",
+        "week_id": "2026-05-11",
+        "rank": 27,
+        "damage_k": 513593,
+        "delta_k": 163073
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
         "week_id": "2026-05-11",
         "rank": 27,
         "damage_k": 513593,
@@ -55645,9 +58527,9 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 24,
-        "damage_k": 727086,
-        "delta_k": 338353
+        "rank": 20,
+        "damage_k": 388733,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
@@ -55655,7 +58537,15 @@
         "week_id": "2026-05-11",
         "rank": 24,
         "damage_k": 727086,
-        "delta_k": 0
+        "delta_k": 338353
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 24,
+        "damage_k": 768210,
+        "delta_k": 41124
       }
     ],
     "103#arianacomodo": [
@@ -55791,9 +58681,9 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 25,
-        "damage_k": 604994,
-        "delta_k": 248990
+        "rank": 21,
+        "damage_k": 356004,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
@@ -55801,7 +58691,15 @@
         "week_id": "2026-05-11",
         "rank": 25,
         "damage_k": 604994,
-        "delta_k": 0
+        "delta_k": 248990
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 25,
+        "damage_k": 680310,
+        "delta_k": 75316
       }
     ],
     "205#水寅月星夢": [
@@ -55995,15 +58893,23 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 47,
-        "damage_k": 3257,
-        "delta_k": 726
+        "rank": 38,
+        "damage_k": 2531,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
         "captured_at": "2026-05-13T00:25:34",
         "week_id": "2026-05-11",
         "rank": 48,
+        "damage_k": 3257,
+        "delta_k": 726
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 50,
         "damage_k": 3257,
         "delta_k": 0
       }
@@ -56141,15 +59047,23 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 29,
-        "damage_k": 222266,
-        "delta_k": 62475
+        "rank": 26,
+        "damage_k": 159791,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
         "captured_at": "2026-05-13T00:25:34",
         "week_id": "2026-05-11",
         "rank": 29,
+        "damage_k": 222266,
+        "delta_k": 62475
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 30,
         "damage_k": 222266,
         "delta_k": 0
       }
@@ -56287,7 +59201,7 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 30,
+        "rank": 24,
         "damage_k": 221570,
         "delta_k": 0
       },
@@ -56298,6 +59212,14 @@
         "rank": 30,
         "damage_k": 221570,
         "delta_k": 0
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 29,
+        "damage_k": 229329,
+        "delta_k": 7759
       }
     ],
     "58#メジロマックイーン": [
@@ -56401,7 +59323,7 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 28,
+        "rank": 23,
         "damage_k": 290774,
         "delta_k": 0
       },
@@ -56412,6 +59334,14 @@
         "rank": 26,
         "damage_k": 566222,
         "delta_k": 275448
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 26,
+        "damage_k": 566222,
+        "delta_k": 0
       }
     ],
     "301#玄枵": [
@@ -56547,13 +59477,21 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
+        "rank": 25,
+        "damage_k": 198735,
+        "delta_k": 0
+      },
+      {
+        "snapshot_id": "2026年5月13日002534_Boss",
+        "captured_at": "2026-05-13T00:25:34",
+        "week_id": "2026-05-11",
         "rank": 32,
         "damage_k": 202225,
         "delta_k": 3490
       },
       {
-        "snapshot_id": "2026年5月13日002534_Boss",
-        "captured_at": "2026-05-13T00:25:34",
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
         "week_id": "2026-05-11",
         "rank": 32,
         "damage_k": 202225,
@@ -56693,9 +59631,9 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 44,
-        "damage_k": 5021,
-        "delta_k": 1656
+        "rank": 37,
+        "damage_k": 3365,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
@@ -56703,7 +59641,15 @@
         "week_id": "2026-05-11",
         "rank": 46,
         "damage_k": 5021,
-        "delta_k": 0
+        "delta_k": 1656
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 45,
+        "damage_k": 7464,
+        "delta_k": 2443
       }
     ],
     "284#Iouyexue": [
@@ -56839,13 +59785,21 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 34,
-        "damage_k": 107656,
-        "delta_k": 31490
+        "rank": 30,
+        "damage_k": 76166,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
         "captured_at": "2026-05-13T00:25:34",
+        "week_id": "2026-05-11",
+        "rank": 35,
+        "damage_k": 107656,
+        "delta_k": 31490
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
         "week_id": "2026-05-11",
         "rank": 35,
         "damage_k": 107656,
@@ -56985,9 +59939,9 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 36,
-        "damage_k": 106944,
-        "delta_k": 783
+        "rank": 29,
+        "damage_k": 106161,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
@@ -56995,7 +59949,15 @@
         "week_id": "2026-05-11",
         "rank": 36,
         "damage_k": 106944,
-        "delta_k": 0
+        "delta_k": 783
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 36,
+        "damage_k": 107045,
+        "delta_k": 101
       }
     ],
     "28#AshtonParry": [
@@ -57131,13 +60093,21 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
+        "rank": 34,
+        "damage_k": 10760,
+        "delta_k": 0
+      },
+      {
+        "snapshot_id": "2026年5月13日002534_Boss",
+        "captured_at": "2026-05-13T00:25:34",
+        "week_id": "2026-05-11",
         "rank": 41,
         "damage_k": 15424,
         "delta_k": 4664
       },
       {
-        "snapshot_id": "2026年5月13日002534_Boss",
-        "captured_at": "2026-05-13T00:25:34",
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
         "week_id": "2026-05-11",
         "rank": 41,
         "damage_k": 15424,
@@ -57277,9 +60247,9 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 33,
-        "damage_k": 110372,
-        "delta_k": 468
+        "rank": 27,
+        "damage_k": 109904,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
@@ -57287,7 +60257,15 @@
         "week_id": "2026-05-11",
         "rank": 34,
         "damage_k": 110372,
-        "delta_k": 0
+        "delta_k": 468
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 34,
+        "damage_k": 110455,
+        "delta_k": 83
       }
     ],
     "1#WuDan": [
@@ -57386,6 +60364,14 @@
         "rank": 43,
         "damage_k": 30606,
         "delta_k": 7271
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 42,
+        "damage_k": 12648,
+        "delta_k": null
       }
     ],
     "63#若语": [
@@ -57521,15 +60507,23 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 43,
-        "damage_k": 6311,
-        "delta_k": 1926
+        "rank": 35,
+        "damage_k": 4385,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
         "captured_at": "2026-05-13T00:25:34",
         "week_id": "2026-05-11",
         "rank": 45,
+        "damage_k": 6311,
+        "delta_k": 1926
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 47,
         "damage_k": 6311,
         "delta_k": 0
       }
@@ -57648,20 +60642,20 @@
         "delta_k": 5447
       },
       {
-        "snapshot_id": "2026年5月12日194438_联盟",
-        "captured_at": "2026-05-12T19:44:38",
-        "week_id": "2026-05-11",
-        "rank": 40,
-        "damage_k": 16272,
-        "delta_k": null
-      },
-      {
         "snapshot_id": "2026年5月13日002534_Boss",
         "captured_at": "2026-05-13T00:25:34",
         "week_id": "2026-05-11",
         "rank": 40,
         "damage_k": 31293,
-        "delta_k": 15021
+        "delta_k": null
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 40,
+        "damage_k": 31293,
+        "delta_k": 0
       }
     ],
     "288#花田綽": [
@@ -57781,7 +60775,7 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 39,
+        "rank": 33,
         "damage_k": 18947,
         "delta_k": 0
       },
@@ -57792,6 +60786,14 @@
         "rank": 39,
         "damage_k": 35367,
         "delta_k": 16420
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 39,
+        "damage_k": 35367,
+        "delta_k": 0
       }
     ],
     "75#CaseyDyer": [
@@ -57900,18 +60902,18 @@
         "delta_k": 2113
       },
       {
-        "snapshot_id": "2026年5月12日194438_联盟",
-        "captured_at": "2026-05-12T19:44:38",
-        "week_id": "2026-05-11",
-        "rank": 42,
-        "damage_k": 8279,
-        "delta_k": null
-      },
-      {
         "snapshot_id": "2026年5月13日002534_Boss",
         "captured_at": "2026-05-13T00:25:34",
         "week_id": "2026-05-11",
         "rank": 43,
+        "damage_k": 8279,
+        "delta_k": null
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 44,
         "damage_k": 8279,
         "delta_k": 0
       }
@@ -58022,20 +61024,20 @@
         "delta_k": 910
       },
       {
-        "snapshot_id": "2026年5月12日194438_联盟",
-        "captured_at": "2026-05-12T19:44:38",
-        "week_id": "2026-05-11",
-        "rank": 49,
-        "damage_k": 2293,
-        "delta_k": null
-      },
-      {
         "snapshot_id": "2026年5月13日002534_Boss",
         "captured_at": "2026-05-13T00:25:34",
         "week_id": "2026-05-11",
         "rank": 47,
         "damage_k": 3613,
-        "delta_k": 1320
+        "delta_k": null
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 49,
+        "damage_k": 3613,
+        "delta_k": 0
       }
     ],
     "200#關你屁事": [
@@ -58155,7 +61157,7 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 46,
+        "rank": 36,
         "damage_k": 4115,
         "delta_k": 0
       },
@@ -58166,6 +61168,14 @@
         "rank": 44,
         "damage_k": 7216,
         "delta_k": 3101
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 46,
+        "damage_k": 7216,
+        "delta_k": 0
       }
     ],
     "289#不是笨蛋": [
@@ -58285,7 +61295,7 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 51,
+        "rank": 41,
         "damage_k": 211,
         "delta_k": 0
       },
@@ -58294,6 +61304,14 @@
         "captured_at": "2026-05-13T00:25:34",
         "week_id": "2026-05-11",
         "rank": 52,
+        "damage_k": 211,
+        "delta_k": 0
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 53,
         "damage_k": 211,
         "delta_k": 0
       }
@@ -58431,9 +61449,9 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 48,
-        "damage_k": 2797,
-        "delta_k": 1560
+        "rank": 39,
+        "damage_k": 1237,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
@@ -58441,7 +61459,15 @@
         "week_id": "2026-05-11",
         "rank": 49,
         "damage_k": 2797,
-        "delta_k": 0
+        "delta_k": 1560
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 48,
+        "damage_k": 4561,
+        "delta_k": 1764
       }
     ],
     "308#RfkchzXqhgthxz": [
@@ -58627,7 +61653,7 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 53,
+        "rank": 42,
         "damage_k": 41,
         "delta_k": 0
       },
@@ -58638,6 +61664,14 @@
         "rank": 53,
         "damage_k": 147,
         "delta_k": 106
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 54,
+        "damage_k": 147,
+        "delta_k": 0
       }
     ],
     "304#PueqrnVebnsyxI": [
@@ -58823,15 +61857,23 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 50,
-        "damage_k": 781,
-        "delta_k": 241
+        "rank": 40,
+        "damage_k": 540,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
         "captured_at": "2026-05-13T00:25:34",
         "week_id": "2026-05-11",
         "rank": 50,
+        "damage_k": 781,
+        "delta_k": 241
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 51,
         "damage_k": 781,
         "delta_k": 0
       }
@@ -58942,20 +61984,20 @@
         "delta_k": 345
       },
       {
-        "snapshot_id": "2026年5月12日194438_联盟",
-        "captured_at": "2026-05-12T19:44:38",
-        "week_id": "2026-05-11",
-        "rank": 52,
-        "damage_k": 134,
-        "delta_k": null
-      },
-      {
         "snapshot_id": "2026年5月13日002534_Boss",
         "captured_at": "2026-05-13T00:25:34",
         "week_id": "2026-05-11",
         "rank": 51,
         "damage_k": 301,
-        "delta_k": 167
+        "delta_k": null
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 52,
+        "damage_k": 301,
+        "delta_k": 0
       }
     ],
     "80#BUBULAW": [
@@ -59048,20 +62090,20 @@
         "delta_k": 3907
       },
       {
-        "snapshot_id": "2026年5月12日194438_联盟",
-        "captured_at": "2026-05-12T19:44:38",
-        "week_id": "2026-05-11",
-        "rank": 45,
-        "damage_k": 4634,
-        "delta_k": null
-      },
-      {
         "snapshot_id": "2026年5月13日002534_Boss",
         "captured_at": "2026-05-13T00:25:34",
         "week_id": "2026-05-11",
         "rank": 42,
         "damage_k": 9595,
-        "delta_k": 4961
+        "delta_k": null
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 43,
+        "damage_k": 9595,
+        "delta_k": 0
       }
     ],
     "58#区冫囗,丿夕亻一": [
@@ -59191,13 +62233,21 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
+        "rank": 28,
+        "damage_k": 106359,
+        "delta_k": 0
+      },
+      {
+        "snapshot_id": "2026年5月13日002534_Boss",
+        "captured_at": "2026-05-13T00:25:34",
+        "week_id": "2026-05-11",
         "rank": 31,
         "damage_k": 216576,
         "delta_k": 110217
       },
       {
-        "snapshot_id": "2026年5月13日002534_Boss",
-        "captured_at": "2026-05-13T00:25:34",
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
         "week_id": "2026-05-11",
         "rank": 31,
         "damage_k": 216576,
@@ -59453,9 +62503,9 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 38,
-        "damage_k": 53397,
-        "delta_k": 608
+        "rank": 32,
+        "damage_k": 52789,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
@@ -59463,7 +62513,15 @@
         "week_id": "2026-05-11",
         "rank": 38,
         "damage_k": 53397,
-        "delta_k": 0
+        "delta_k": 608
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 38,
+        "damage_k": 53442,
+        "delta_k": 45
       }
     ],
     "304#PueqrnVebnsyxl": [
@@ -59543,9 +62601,9 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 37,
-        "damage_k": 56642,
-        "delta_k": 101
+        "rank": 31,
+        "damage_k": 56541,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
@@ -59553,7 +62611,15 @@
         "week_id": "2026-05-11",
         "rank": 37,
         "damage_k": 56642,
-        "delta_k": 0
+        "delta_k": 101
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 37,
+        "damage_k": 56966,
+        "delta_k": 324
       }
     ],
     "81#酒酿圆子": [
@@ -59626,12 +62692,20 @@
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
         "rank": 2,
-        "damage_k": 18928528,
-        "delta_k": 8865645
+        "damage_k": 10062883,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
         "captured_at": "2026-05-13T00:25:34",
+        "week_id": "2026-05-11",
+        "rank": 2,
+        "damage_k": 18928528,
+        "delta_k": 8865645
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
         "week_id": "2026-05-11",
         "rank": 2,
         "damage_k": 18928528,
@@ -59661,9 +62735,9 @@
         "snapshot_id": "2026年5月12日194438_联盟",
         "captured_at": "2026-05-12T19:44:38",
         "week_id": "2026-05-11",
-        "rank": 22,
-        "damage_k": 885155,
-        "delta_k": 131845
+        "rank": 19,
+        "damage_k": 753310,
+        "delta_k": 0
       },
       {
         "snapshot_id": "2026年5月13日002534_Boss",
@@ -59671,7 +62745,15 @@
         "week_id": "2026-05-11",
         "rank": 23,
         "damage_k": 885155,
-        "delta_k": 0
+        "delta_k": 131845
+      },
+      {
+        "snapshot_id": "2026年5月13日103203_Boss",
+        "captured_at": "2026-05-13T10:32:03",
+        "week_id": "2026-05-11",
+        "rank": 23,
+        "damage_k": 947478,
+        "delta_k": 62323
       }
     ]
   },

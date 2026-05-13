@@ -17,6 +17,7 @@ from tools.lov_parser import (
     MEMBER_RECORDS_DIR,
     RECORDS_DIR,
     archive_closed_boss_weeks,
+    boss_effective_datetime,
     build_state,
     load_corrections,
     load_boss_archives,
@@ -74,6 +75,38 @@ def same_day_folders(root: Path, day: str, kind: str | None = None) -> list[Path
     if kind:
         folders = [folder for folder in folders if folder_kind(folder) == kind]
     return folders
+
+
+def snapshot_business_day(snapshot: dict, kind: str) -> str:
+    captured_at = snapshot.get("captured_at") or datetime.now().isoformat(timespec="seconds")
+    if kind == "boss":
+        return str(snapshot.get("boss_captured_at") or boss_effective_datetime(captured_at).isoformat(timespec="seconds")).split("T", 1)[0]
+    return captured_at.split("T", 1)[0]
+
+
+def folder_business_day(folder: Path, kind: str) -> str:
+    snapshot = load_snapshot(folder) or {"captured_at": parse_folder_time(folder)}
+    return snapshot_business_day(snapshot, kind)
+
+
+def cleanup_previous_imports(root: Path, imported_snapshots: list[dict]) -> None:
+    imported_folders = {(root / snapshot["folder"]).resolve() for snapshot in imported_snapshots if snapshot.get("folder")}
+    targets = []
+    for snapshot in imported_snapshots:
+        kind = "boss" if snapshot.get("boss") else "members" if snapshot.get("members") else None
+        if not kind:
+            continue
+        targets.append((kind, snapshot_business_day(snapshot, kind)))
+
+    for kind, business_day in targets:
+        for folder in snapshot_folders(root):
+            if folder.resolve() in imported_folders or folder_kind(folder) != kind:
+                continue
+            snapshot = load_snapshot(folder) or {}
+            if not snapshot.get("packet_import"):
+                continue
+            if folder_business_day(folder, kind) == business_day:
+                shutil.rmtree(folder)
 
 
 def latest_file_source(root: Path, filename: str, preferred: list[Path] | None = None) -> Path | None:
@@ -145,7 +178,7 @@ class Handler(SimpleHTTPRequestHandler):
         path = urlparse(self.path).path
         try:
             if path == "/api/reparse":
-                state = asyncio.run(parse_all(ROOT))
+                state = asyncio.run(parse_all(ROOT, active_only=True))
                 self.send_json(state)
                 return
             if path == "/api/archive-boss-weeks":
@@ -224,6 +257,7 @@ class Handler(SimpleHTTPRequestHandler):
         if not imported.get("snapshots"):
             self.send_json({"error": "没有在抓包中找到联盟或 Boss 排行数据", "diagnostics": imported.get("diagnostics", [])}, 422)
             return
+        cleanup_previous_imports(ROOT, imported["snapshots"])
 
         state = read_state()
         write_state_files(ROOT, state)

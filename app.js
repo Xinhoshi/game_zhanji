@@ -49,9 +49,11 @@ const formatDateTime = (value) => {
   return date.toLocaleString("zh-CN", { hour12: false });
 };
 
-const bossBusinessLabel = (snapshot) => {
-  if (!snapshot?.boss_captured_at) return "";
-  return ` \u00b7 Boss\u5f52\u5c5e ${formatDateTime(snapshot.boss_captured_at)}`;
+const snapshotOptionLabel = (snapshot) => {
+  const uploadLabel = `\u4e0a\u4f20 ${formatDateTime(snapshot.captured_at)}`;
+  const identity = escapeHtml(snapshot.id);
+  if (!snapshot?.boss_captured_at) return `${uploadLabel} \u00b7 ${identity}`;
+  return `Boss\u5f52\u5c5e ${formatDateTime(snapshot.boss_captured_at)} \u00b7 ${uploadLabel} \u00b7 ${identity}`;
 };
 
 const encodePath = (value) => String(value || "").split("/").map(encodeURIComponent).join("/");
@@ -168,7 +170,7 @@ function renderSnapshotOptions() {
     state.selectedId = fallback?.id;
   }
   select.innerHTML = snapshots
-    .map((snapshot) => `<option value="${escapeHtml(snapshot.id)}">${formatDateTime(snapshot.captured_at)}${bossBusinessLabel(snapshot)} \u00b7 ${escapeHtml(snapshot.id)}</option>`)
+    .map((snapshot) => `<option value="${escapeHtml(snapshot.id)}">${snapshotOptionLabel(snapshot)}</option>`)
     .join("");
   select.value = state.selectedId;
 }
@@ -753,15 +755,17 @@ $("#uploadForm").addEventListener("submit", async (event) => {
 
 $("#reparseButton").addEventListener("click", async () => {
   const status = $("#uploadStatus");
-  status.textContent = "\u6b63\u5728\u91cd\u65b0\u8bc6\u522b\u6240\u6709\u672c\u5730\u65f6\u95f4\u8282\u70b9...";
+  status.textContent = "\u6b63\u5728\u91cd\u626b\u672a\u5f52\u6863\u5468\u7684\u672c\u5730\u622a\u56fe\u548c\u6293\u5305\u6570\u636e...";
   try {
     const response = await fetch("/api/reparse", { method: "POST" });
     const payload = await response.json();
     if (!response.ok) throw new Error(payload.error || "\u91cd\u65b0\u8bc6\u522b\u5931\u8d25");
     state.data = payload;
-    state.selectedWeek = payload.snapshots.at(-1)?.week_id;
-    state.selectedId = payload.snapshots.filter((snapshot) => snapshot.week_id === state.selectedWeek).at(-1)?.id;
-    status.textContent = `\u5df2\u91cd\u65b0\u8bc6\u522b ${payload.snapshot_count} \u4e2a\u65f6\u95f4\u8282\u70b9\uff0c\u4eba\u5de5\u4fee\u6b63\u4f1a\u7ee7\u7eed\u751f\u6548`;
+    const latestBoss = payload.snapshots.filter(hasOwnBossData).at(-1) || payload.snapshots.at(-1);
+    state.selectedWeek = latestBoss?.boss_week_id || latestBoss?.week_id;
+    state.selectedId = payload.snapshots.filter((snapshot) => hasOwnBossData(snapshot) && (snapshot.boss_week_id || snapshot.week_id) === state.selectedWeek).at(-1)?.id;
+    const summary = payload.reparse_summary || {};
+    status.textContent = `\u5df2\u91cd\u626b\u672a\u5f52\u6863\u8282\u70b9 ${summary.reparsed_count ?? payload.snapshot_count} \u4e2a\uff0c\u6293\u5305 ${summary.packet_count ?? 0} \u4e2a\uff0c\u5df2\u8df3\u8fc7\u5f52\u6863\u8282\u70b9 ${summary.loaded_archived_count ?? 0} \u4e2a`;
     render();
   } catch (error) {
     status.textContent = `\u91cd\u65b0\u8bc6\u522b\u5931\u8d25\uff1a${error.message}`;

@@ -133,7 +133,8 @@ def parse_folder_time(folder: Path) -> str:
     if match:
         y, mo, d, h, mi, s = map(int, match.groups())
         return datetime(y, mo, d, h, mi, s).isoformat(timespec="seconds")
-    mtimes = [path.stat().st_mtime for path in (folder / MEMBER_IMAGE, folder / BOSS_IMAGE, folder / "snapshot.json") if path.exists()]
+    candidates = [folder / MEMBER_IMAGE, folder / BOSS_IMAGE, folder / "snapshot.json", *folder.glob("*.pcapng")]
+    mtimes = [path.stat().st_mtime for path in candidates if path.exists()]
     if not mtimes:
         raise FileNotFoundError(f"No snapshot files in {folder}")
     ts = max(mtimes)
@@ -403,39 +404,55 @@ def parse_boss(lines: list[str]) -> list[dict[str, Any]]:
 
 
 async def parse_snapshot(folder: Path, root: Path | None = None) -> dict[str, Any]:
-    if (folder / "snapshot.json").exists() and not (folder / MEMBER_IMAGE).exists() and not (folder / BOSS_IMAGE).exists():
-        snapshot = load_snapshot(folder)
-        if snapshot:
-            packet_import = snapshot.get("packet_import") or {}
-            packet_path = packet_import.get("source_path") or packet_import.get("source_file")
-            candidates = []
-            if packet_path:
-                candidates.append((root / packet_path) if root else (folder / packet_path))
-                candidates.append(folder / Path(packet_path).name)
-            candidates.extend(folder.glob("*.pcapng"))
-            source = next((path for path in candidates if path and path.exists()), None)
-            if source:
-                try:
-                    from tools.packet_importer import extract_packets
-                except ModuleNotFoundError:
-                    import sys
+    packet_files = list(folder.glob("*.pcapng"))
+    if not (folder / MEMBER_IMAGE).exists() and not (folder / BOSS_IMAGE).exists() and ((folder / "snapshot.json").exists() or packet_files):
+        snapshot = load_snapshot(folder) or {
+            "id": folder.name,
+            "folder": relative_folder(root, folder),
+            "captured_at": parse_folder_time(folder),
+            "week_id": week_id(parse_folder_time(folder)),
+            "images": {"members": None, "boss": None},
+            "members": [],
+            "boss": [],
+            "raw_ocr": {"members": [], "boss": []},
+        }
+        packet_import = snapshot.get("packet_import") or {}
+        packet_path = packet_import.get("source_path") or packet_import.get("source_file")
+        candidates = []
+        if packet_path:
+            candidates.append((root / packet_path) if root else (folder / packet_path))
+            candidates.append(folder / Path(packet_path).name)
+        candidates.extend(packet_files)
+        source = next((path for path in candidates if path and path.exists()), None)
+        if source:
+            try:
+                from tools.packet_importer import extract_packets
+            except ModuleNotFoundError:
+                import sys
 
-                    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-                    from tools.packet_importer import extract_packets
+                sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+                from tools.packet_importer import extract_packets
 
-                extracted = extract_packets(source)
-                if snapshot_record_kind(snapshot) == "members" and extracted.get("members"):
-                    snapshot["members"] = extracted["members"]
-                    (folder / "members.json").write_text(json.dumps(snapshot["members"], ensure_ascii=False, indent=2), encoding="utf-8")
-                if snapshot_record_kind(snapshot) == "boss" and extracted.get("boss"):
-                    snapshot["boss"] = extracted["boss"]
-                    (folder / "boss.json").write_text(json.dumps(snapshot["boss"], ensure_ascii=False, indent=2), encoding="utf-8")
-                snapshot["packet_import"] = {
-                    "source_file": source.name,
-                    "source_path": f"{relative_folder(root, folder)}/{source.name}",
-                }
-                (folder / "snapshot.json").write_text(json.dumps(snapshot, ensure_ascii=False, indent=2), encoding="utf-8")
-            return snapshot
+            extracted = extract_packets(source)
+            kind = snapshot_record_kind(snapshot)
+            if kind == "members" and extracted.get("members"):
+                snapshot["members"] = extracted["members"]
+                snapshot["boss"] = []
+                (folder / "members.json").write_text(json.dumps(snapshot["members"], ensure_ascii=False, indent=2), encoding="utf-8")
+            if kind == "boss" and extracted.get("boss"):
+                snapshot["boss"] = extracted["boss"]
+                snapshot["members"] = []
+                captured_at = snapshot.get("captured_at") or parse_folder_time(folder)
+                snapshot["boss_captured_at"] = boss_effective_datetime(captured_at).isoformat(timespec="seconds")
+                snapshot["boss_week_id"] = boss_week_id(captured_at)
+                snapshot["boss_day_index"] = boss_day_index(captured_at)
+                (folder / "boss.json").write_text(json.dumps(snapshot["boss"], ensure_ascii=False, indent=2), encoding="utf-8")
+            snapshot["packet_import"] = {
+                "source_file": source.name,
+                "source_path": f"{relative_folder(root, folder)}/{source.name}",
+            }
+            (folder / "snapshot.json").write_text(json.dumps(snapshot, ensure_ascii=False, indent=2), encoding="utf-8")
+        return snapshot
 
     member_image = folder / MEMBER_IMAGE
     boss_image = folder / BOSS_IMAGE
@@ -478,10 +495,13 @@ async def parse_snapshot(folder: Path, root: Path | None = None) -> dict[str, An
 
 
 def snapshot_folders(root: Path) -> list[Path]:
+    def has_snapshot_source(path: Path) -> bool:
+        return (path / MEMBER_IMAGE).exists() or (path / BOSS_IMAGE).exists() or (path / "snapshot.json").exists() or any(path.glob("*.pcapng"))
+
     folders = [
         path
         for path in root.iterdir()
-        if path.is_dir() and ((path / MEMBER_IMAGE).exists() or (path / BOSS_IMAGE).exists() or (path / "snapshot.json").exists())
+        if path.is_dir() and has_snapshot_source(path)
     ]
     records_root = root / RECORDS_DIR
     for bucket in (MEMBER_RECORDS_DIR, BOSS_RECORDS_DIR):
@@ -490,7 +510,7 @@ def snapshot_folders(root: Path) -> list[Path]:
             folders.extend(
                 path
                 for path in bucket_root.iterdir()
-                if path.is_dir() and ((path / MEMBER_IMAGE).exists() or (path / BOSS_IMAGE).exists() or (path / "snapshot.json").exists())
+                if path.is_dir() and has_snapshot_source(path)
             )
     return sorted(folders, key=snapshot_sort_key)
 
@@ -521,6 +541,20 @@ def load_snapshot_by_id(root: Path, snapshot_id: str, kind: str | None = None) -
         if snapshot:
             return snapshot
     return None
+
+
+def snapshot_archive_week(snapshot: dict[str, Any]) -> str:
+    if snapshot_record_kind(snapshot) == "boss":
+        return snapshot.get("boss_week_id") or snapshot.get("week_id", "")
+    return snapshot.get("week_id", "")
+
+
+def folder_archive_week(folder: Path) -> str:
+    snapshot = load_snapshot(folder)
+    if snapshot:
+        return snapshot_archive_week(snapshot)
+    captured_at = parse_folder_time(folder)
+    return boss_week_id(captured_at) if folder_kind(folder) == "boss" else week_id(captured_at)
 
 
 def correction_bucket_for_snapshot(corrections: dict[str, Any], snapshot: dict[str, Any]) -> dict[str, Any]:
@@ -1255,11 +1289,33 @@ def build_state(root: Path, snapshots: list[dict[str, Any]] | None = None) -> di
     }
 
 
-async def parse_all(root: Path) -> dict[str, Any]:
+async def parse_all(root: Path, active_only: bool = False) -> dict[str, Any]:
     parsed = []
+    archived_weeks = set(load_boss_archives(root)) if active_only else set()
+    reparse_summary = {
+        "active_only": active_only,
+        "reparsed_count": 0,
+        "loaded_archived_count": 0,
+        "packet_count": 0,
+        "image_count": 0,
+    }
     for folder in snapshot_folders(root):
-        parsed.append(await parse_snapshot(folder, root))
+        if active_only and folder_archive_week(folder) in archived_weeks:
+            snapshot = load_snapshot(folder)
+            if snapshot:
+                parsed.append(snapshot)
+                reparse_summary["loaded_archived_count"] += 1
+            continue
+        snapshot = await parse_snapshot(folder, root)
+        parsed.append(snapshot)
+        reparse_summary["reparsed_count"] += 1
+        if snapshot.get("packet_import"):
+            reparse_summary["packet_count"] += 1
+        else:
+            reparse_summary["image_count"] += 1
     state = build_state(root, parsed)
+    if active_only:
+        state["reparse_summary"] = reparse_summary
     write_state_files(root, state)
     return state
 

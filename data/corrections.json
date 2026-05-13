@@ -790,6 +790,36 @@
           "note": "",
           "group_only": false,
           "reviewed": true
+        },
+        "m047": {
+          "zone": "117",
+          "name": "合欢宗宗主",
+          "power": "152289973",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m048": {
+          "zone": "86",
+          "name": "摆烂小咸鱼",
+          "power": "78165161",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m043": {
+          "zone": "72",
+          "name": "远青",
+          "power": "271063012",
+          "last_online": "",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
         }
       }
     }
@@ -945,8 +975,8 @@
         "source_name": "合欢宗宗主",
         "zone": 117,
         "name": "合欢宗宗主",
-        "source_power": 148208604,
-        "power": 148208604
+        "source_power": 152289973,
+        "power": 152289973
       },
       {
         "source_zone": 83,
@@ -969,8 +999,8 @@
         "source_name": "远青",
         "zone": 72,
         "name": "远青",
-        "source_power": 2671927,
-        "power": 267192447
+        "source_power": 271063012,
+        "power": 271063012
       },
       {
         "source_zone": 75,
@@ -1105,8 +1135,8 @@
         "source_name": "摆烂小咸鱼",
         "zone": 86,
         "name": "摆烂小咸鱼",
-        "source_power": 77605321,
-        "power": 77605321
+        "source_power": 78165161,
+        "power": 78165161
       },
       {
         "source_zone": 58,

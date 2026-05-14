@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>抓包内容解析</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css?v=20260514pcapInspectFull" />
+    <link rel="stylesheet" href="./pcap-inspector.css?v=20260514pcapInspectFull" />
+  </head>
+  <body>
+    <a class="skip-link" href="#packet-main">跳到抓包内容</a>
+    <header class="site-header" aria-label="主导航">
+      <a class="brand" href="./index.html#visualization" aria-label="返回首页"><span>玉子烧</span><span>的小屋</span></a>
+      <div class="identity"><span class="identity-dot"></span><span><strong>Packet Inspector</strong><small>PCAPNG Review</small></span></div>
+      <nav class="nav-links" aria-label="功能板块"><a href="./index.html#visualization">战报</a><a href="./pcap.html" aria-current="page">抓包内容</a></nav>
+      <div class="header-status" aria-label="解析状态"><span class="status-dot"></span><span id="packetHeaderStatus">等待文件</span></div>
+    </header>
+
+    <main id="packet-main" class="packet-shell">
+      <aside class="packet-sidebar panel">
+        <div class="panel-head compact">
+          <div>
+            <p class="eyebrow">Capture</p>
+            <h1>抓包内容</h1>
+          </div>
+        </div>
+        <form id="packetForm" class="packet-form">
+          <label>
+            <span>抓包文件</span>
+            <input id="packetFile" name="pcap" type="file" accept=".pcapng,application/vnd.tcpdump.pcap" />
+          </label>
+          <div class="packet-actions">
+            <button type="submit">解析文件</button>
+            <button id="clearPacketButton" class="secondary-button subtle-button" type="button">清空</button>
+          </div>
+        </form>
+        <p id="packetStatus" class="hint">选择 Wireshark 导出的 .pcapng 后解析。</p>
+        <section class="packet-metrics" id="packetMetrics" aria-label="抓包统计"></section>
+        <section class="flow-section" aria-labelledby="flowListTitle">
+          <h2 id="flowListTitle">TCP 流</h2>
+          <div id="flowList" class="flow-list"></div>
+        </section>
+      </aside>
+
+      <section class="packet-workspace">
+        <section class="panel packet-list-panel" aria-labelledby="payloadListTitle">
+          <div class="panel-head compact">
+            <div>
+              <p class="eyebrow">Payloads</p>
+              <h2 id="payloadListTitle">解压内容</h2>
+            </div>
+            <span id="payloadCountBadge" class="badge">0</span>
+          </div>
+          <div id="payloadList" class="payload-list" aria-live="polite"></div>
+        </section>
+
+        <section class="panel packet-detail-panel" aria-labelledby="payloadDetailTitle">
+          <div class="panel-head compact">
+            <div>
+              <p class="eyebrow">Detail</p>
+              <h2 id="payloadDetailTitle">选择一个 payload</h2>
+            </div>
+            <div class="packet-detail-actions">
+              <button id="copyPayloadButton" class="secondary-button subtle-button" type="button" disabled>复制文本</button>
+              <button id="openPayloadButton" class="secondary-button" type="button" disabled>弹框查看</button>
+            </div>
+          </div>
+          <div id="payloadMeta" class="payload-meta"></div>
+          <h3>解析提示</h3>
+          <div id="insightList" class="insight-list"></div>
+          <div class="packet-detail-grid">
+            <section>
+              <h3>可读字符串</h3>
+              <div id="stringList" class="string-list"></div>
+            </section>
+            <section>
+              <h3>结构化行</h3>
+              <div id="rowPreview" class="row-preview"></div>
+            </section>
+          </div>
+          <h3>二进制字段</h3>
+          <div id="wordPreview" class="word-preview"></div>
+          <h3>解压文本</h3>
+          <pre id="payloadText" class="payload-text">尚未解析抓包。</pre>
+        </section>
+      </section>
+    </main>
+
+    <dialog id="payloadDialog" class="payload-dialog">
+      <form method="dialog" class="payload-dialog-shell">
+        <div class="panel-head compact">
+          <div>
+            <p class="eyebrow">Raw Text</p>
+            <h2 id="dialogTitle">Payload 内容</h2>
+          </div>
+          <button class="secondary-button subtle-button" value="close">关闭</button>
+        </div>
+        <pre id="dialogText" class="dialog-text"></pre>
+      </form>
+    </dialog>
+
+    <script src="./pcap-inspector.js?v=20260514pcapInspectFull"></script>
+  </body>
+</html>

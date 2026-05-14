@@ -772,6 +772,21 @@ $("#reparseButton").addEventListener("click", async () => {
   }
 });
 
+const formatPcapSummary = (payload, prefix) => {
+  const summary = payload.summary || {};
+  const parts = [
+    summary.members ? `\u8054\u76df ${summary.members} \u6761` : "",
+    summary.boss ? `Boss ${summary.boss} \u6761` : "",
+  ].filter(Boolean);
+  const bossTop = summary.boss_preview?.[0];
+  const memberFirst = summary.member_preview?.[0];
+  const previewParts = [
+    bossTop ? `Boss Top1 ${bossTop.zone ? `${bossTop.zone}#` : ""}${bossTop.name || "-"}` : "",
+    memberFirst ? `\u8054\u76df\u9996\u6761 ${memberFirst.zone ? `${memberFirst.zone}#` : ""}${memberFirst.name || "-"}` : "",
+  ].filter(Boolean);
+  const counts = parts.length ? parts.join(" / ") : "\u672a\u8bc6\u522b\u5230\u8054\u76df\u6216 Boss \u6570\u636e";
+  return `${prefix}\uff1a${counts}${previewParts.length ? `\uff1b${previewParts.join(" / ")}` : ""}`;
+};
 
 $("#importPcapButton")?.addEventListener("click", async () => {
   const form = $("#uploadForm");
@@ -805,19 +820,7 @@ $("#importPcapButton")?.addEventListener("click", async () => {
     state.selectedWeek = latestBoss?.boss_week_id || latestBoss?.week_id;
     state.selectedId = payload.state.snapshots.filter((snapshot) => hasOwnBossData(snapshot) && (snapshot.boss_week_id || snapshot.week_id) === state.selectedWeek).at(-1)?.id;
     form.elements.pcap.value = "";
-    const labels = new Map([
-      ["SCLogic_RankInfoBack", "Boss"],
-      ["SCLogic_GetUnionMebInfoBack", "\u8054\u76df"],
-    ]);
-    const summaryParts = [
-      payload.summary?.members ? `\u8054\u76df ${payload.summary.members} \u6761` : "",
-      payload.summary?.boss ? `Boss ${payload.summary.boss} \u6761` : "",
-    ].filter(Boolean);
-    const counts = summaryParts.length ? summaryParts.join(" / ") : payload.diagnostics
-      ?.filter((item) => labels.has(item.packet))
-      .map((item) => `${labels.get(item.packet)} ${item.rows} \u6761`)
-      .join(" / ");
-    status.textContent = `\u6293\u5305\u5bfc\u5165\u5b8c\u6210\uff1a${counts || payload.imported.join("\u3001")}`;
+    status.textContent = formatPcapSummary(payload, "\u6293\u5305\u5bfc\u5165\u5b8c\u6210");
     render();
   } catch (error) {
     status.textContent = `\u6293\u5305\u5bfc\u5165\u5931\u8d25\uff1a${error.message}`;

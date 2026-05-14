@@ -31,7 +31,7 @@ from tools.lov_parser import (
     snapshot_folders,
     write_state_files,
 )
-from tools.packet_importer import import_pcapng
+from tools.packet_importer import extract_packets, import_pcapng, inspect_pcapng
 
 
 ROOT = Path(__file__).resolve().parent
@@ -194,6 +194,9 @@ class Handler(SimpleHTTPRequestHandler):
             if path == "/api/import-pcap":
                 self.handle_pcap_import()
                 return
+            if path == "/api/inspect-pcap":
+                self.handle_pcap_inspect()
+                return
             self.send_json({"error": "not_found"}, 404)
         except Exception as exc:
             self.send_json({"error": str(exc)}, 500)
@@ -275,6 +278,27 @@ class Handler(SimpleHTTPRequestHandler):
                 "state": state,
             }
         )
+
+    def handle_pcap_inspect(self) -> None:
+        form = cgi.FieldStorage(fp=self.rfile, headers=self.headers, environ={"REQUEST_METHOD": "POST", "CONTENT_TYPE": self.headers.get("Content-Type")})
+        pcap_field = form["pcap"] if "pcap" in form else None
+        if not valid_upload(pcap_field):
+            self.send_json({"error": "\u8bf7\u9009\u62e9 .pcapng \u6293\u5305\u6587\u4ef6"}, 400)
+            return
+
+        imports_root = ROOT / RECORDS_DIR / "imports"
+        imports_root.mkdir(parents=True, exist_ok=True)
+        safe_name = Path(getattr(pcap_field, "filename", "capture.pcapng")).name or "capture.pcapng"
+        upload_path = imports_root / f"{datetime.now():%Y%m%d%H%M%S}_inspect_{safe_name}"
+        try:
+            with upload_path.open("wb") as target:
+                shutil.copyfileobj(pcap_field.file, target)
+
+            inspection = inspect_pcapng(upload_path)
+            self.send_json(inspection)
+        finally:
+            if upload_path.exists():
+                upload_path.unlink()
 
     def read_json_body(self) -> dict:
         content_length = int(self.headers.get("Content-Length", "0") or "0")

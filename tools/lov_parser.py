@@ -620,15 +620,15 @@ def apply_member_values(row: dict[str, Any], values: dict[str, Any]) -> dict[str
     old_power = row.get("power")
     old_last_online = row.get("last_online")
     old_in_group = row.get("in_group", False)
+    group_only = values.get("group_only") in (True, "true", "on", "1", 1)
 
-    zone = coerce_int(values.get("zone", old_zone))
-    name = str(values.get("name", old_name) or "").strip()
-    power = coerce_int(values.get("power", old_power))
-    last_online = str(values.get("last_online", old_last_online or "")).strip() or None
+    zone = old_zone if group_only else coerce_int(values.get("zone", old_zone))
+    name = old_name if group_only else str(values.get("name", old_name) or "").strip()
+    power = old_power if group_only else coerce_int(values.get("power", old_power))
+    last_online = old_last_online if group_only else str(values.get("last_online", old_last_online or "")).strip() or None
     new_in_group = values.get("in_group", old_in_group) in (True, "true", "on", "1", 1)
     note = str(values.get("note", "") or "")
 
-    group_only = values.get("group_only") in (True, "true", "on", "1", 1)
     data_changed = False if group_only else zone != old_zone or name != old_name or power != old_power or not same_optional_text(last_online, old_last_online)
     note_changed = False if group_only else bool(note) and note != str(row.get("raw", {}).get("correction_note", "") or "")
 
@@ -1178,6 +1178,11 @@ def dedupe_members(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
         current["corrected"] = bool(current.get("corrected")) or bool(row.get("corrected"))
         current["manual"] = bool(current.get("manual")) or bool(row.get("manual"))
         current["needs_review"] = sorted(set(current.get("needs_review", [])) | set(row.get("needs_review", [])))
+        if row.get("last_online") and not current.get("last_online"):
+            current["last_online"] = row.get("last_online")
+            current.setdefault("raw", {})["deduped_last_online_from"] = row.get("row_id")
+            if row.get("raw", {}).get("last_online"):
+                current.setdefault("raw", {})["last_online"] = row["raw"]["last_online"]
         if (row.get("power") or 0) > (current.get("power") or 0):
             current["power"] = row.get("power")
             current.setdefault("raw", {})["deduped_power_from"] = row.get("row_id")

@@ -183,6 +183,22 @@ def _split_identity(identity: str) -> tuple[int | None, str, str]:
     return zone, name or identity, key
 
 
+def _parse_member_last_online(payload: bytes, offset: int) -> tuple[str | None, str | None]:
+    if offset + 4 > len(payload):
+        return None, None
+    length = struct.unpack_from("<I", payload, offset)[0]
+    if not 10 <= length <= 32 or offset + 4 + length > len(payload):
+        return None, None
+    raw = payload[offset + 4 : offset + 4 + length]
+    try:
+        value = raw.decode("utf-8").strip()
+    except UnicodeDecodeError:
+        return None, None
+    if not re.match(r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$", value):
+        return None, value or None
+    return datetime.strptime(value, "%Y-%m-%d %H:%M:%S").isoformat(timespec="seconds"), value
+
+
 def _parse_rank_packet(payload: bytes) -> list[dict[str, Any]]:
     names: list[tuple[int, str]] = []
     for offset, value in _length_prefixed_strings(payload):
@@ -234,6 +250,7 @@ def _parse_member_packet(payload: bytes) -> list[dict[str, Any]]:
         extra1 = struct.unpack_from("<I", payload, end + 8)[0] if end + 12 <= len(payload) else None
         extra2 = struct.unpack_from("<I", payload, end + 12)[0] if end + 16 <= len(payload) else None
         flag = struct.unpack_from("<I", payload, end + 16)[0] if end + 20 <= len(payload) else 0
+        last_online, last_online_raw = _parse_member_last_online(payload, end + 20) if flag == 0 else (None, None)
         row_index = len(rows) + 1
         rows.append(
             {
@@ -243,12 +260,12 @@ def _parse_member_packet(payload: bytes) -> list[dict[str, Any]]:
                 "role": "成员",
                 "level": level,
                 "power": power,
-                "last_online": None,
+                "last_online": last_online,
                 "in_group": bool(flag),
-                "raw": {"source": "pcapng", "identity": identity, "level": level, "extra1": extra1, "extra2": extra2, "flag": flag},
+                "raw": {"source": "pcapng", "identity": identity, "level": level, "extra1": extra1, "extra2": extra2, "flag": flag, "last_online": last_online_raw},
                 "needs_review": [],
                 "row_id": f"m{row_index:03d}",
-                "ocr": {"zone": zone, "name": name, "key": key, "power": power, "last_online": None},
+                "ocr": {"zone": zone, "name": name, "key": key, "power": power, "last_online": last_online},
                 "imported": True,
             }
         )

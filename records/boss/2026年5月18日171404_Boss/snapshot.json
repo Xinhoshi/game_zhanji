@@ -1,0 +1,898 @@
+{
+  "id": "2026年5月18日171404_Boss",
+  "folder": "records/boss/2026年5月18日171404_Boss",
+  "captured_at": "2026-05-18T17:14:04",
+  "week_id": "2026-05-18",
+  "boss_captured_at": "2026-05-18T09:14:04",
+  "boss_week_id": "2026-05-18",
+  "boss_day_index": 0,
+  "images": {
+    "members": null,
+    "boss": null
+  },
+  "members": [],
+  "boss": [
+    {
+      "zone": 28,
+      "name": "米拉",
+      "key": "28#米拉",
+      "rank": 1,
+      "damage_k": 14428936,
+      "damage": 14428936000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "28#米拉",
+        "damage": "14,428,936k"
+      },
+      "needs_review": [],
+      "row_id": "b001",
+      "ocr": {
+        "zone": 28,
+        "name": "米拉",
+        "key": "28#米拉",
+        "rank": 1,
+        "damage_k": 14428936
+      },
+      "imported": true
+    },
+    {
+      "zone": 81,
+      "name": "酒酿圆子",
+      "key": "81#酒酿圆子",
+      "rank": 2,
+      "damage_k": 8978345,
+      "damage": 8978345000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "81#酒酿圆子",
+        "damage": "8,978,345k"
+      },
+      "needs_review": [],
+      "row_id": "b002",
+      "ocr": {
+        "zone": 81,
+        "name": "酒酿圆子",
+        "key": "81#酒酿圆子",
+        "rank": 2,
+        "damage_k": 8978345
+      },
+      "imported": true
+    },
+    {
+      "zone": 1,
+      "name": "Zero卐",
+      "key": "1#Zero卐",
+      "rank": 3,
+      "damage_k": 7657323,
+      "damage": 7657323000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "1#Zero卐",
+        "damage": "7,657,323k"
+      },
+      "needs_review": [],
+      "row_id": "b003",
+      "ocr": {
+        "zone": 1,
+        "name": "Zero卐",
+        "key": "1#Zero卐",
+        "rank": 3,
+        "damage_k": 7657323
+      },
+      "imported": true
+    },
+    {
+      "zone": 28,
+      "name": "伊之猪",
+      "key": "28#伊之猪",
+      "rank": 4,
+      "damage_k": 6635931,
+      "damage": 6635931000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "28#伊之猪",
+        "damage": "6,635,931k"
+      },
+      "needs_review": [],
+      "row_id": "b004",
+      "ocr": {
+        "zone": 28,
+        "name": "伊之猪",
+        "key": "28#伊之猪",
+        "rank": 4,
+        "damage_k": 6635931
+      },
+      "imported": true
+    },
+    {
+      "zone": 241,
+      "name": "小野莓",
+      "key": "241#小野莓",
+      "rank": 5,
+      "damage_k": 3840528,
+      "damage": 3840528000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "241#小野莓",
+        "damage": "3,840,528k"
+      },
+      "needs_review": [],
+      "row_id": "b005",
+      "ocr": {
+        "zone": 241,
+        "name": "小野莓",
+        "key": "241#小野莓",
+        "rank": 5,
+        "damage_k": 3840528
+      },
+      "imported": true
+    },
+    {
+      "zone": 71,
+      "name": "梁师娘LUONG",
+      "key": "71#梁师娘LUONG",
+      "rank": 6,
+      "damage_k": 3709031,
+      "damage": 3709031000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "71#梁师娘LUONG",
+        "damage": "3,709,031k"
+      },
+      "needs_review": [],
+      "row_id": "b006",
+      "ocr": {
+        "zone": 71,
+        "name": "梁师娘LUONG",
+        "key": "71#梁师娘LUONG",
+        "rank": 6,
+        "damage_k": 3709031
+      },
+      "imported": true
+    },
+    {
+      "zone": 58,
+      "name": "SOULBS",
+      "key": "58#SOULBS",
+      "rank": 7,
+      "damage_k": 3207396,
+      "damage": 3207396000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "58#SOULBS",
+        "damage": "3,207,396k"
+      },
+      "needs_review": [],
+      "row_id": "b007",
+      "ocr": {
+        "zone": 58,
+        "name": "SOULBS",
+        "key": "58#SOULBS",
+        "rank": 7,
+        "damage_k": 3207396
+      },
+      "imported": true
+    },
+    {
+      "zone": 205,
+      "name": "搁浅づ",
+      "key": "205#搁浅づ",
+      "rank": 8,
+      "damage_k": 3043768,
+      "damage": 3043768000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "205#搁浅づ",
+        "damage": "3,043,768k"
+      },
+      "needs_review": [],
+      "row_id": "b008",
+      "ocr": {
+        "zone": 205,
+        "name": "搁浅づ",
+        "key": "205#搁浅づ",
+        "rank": 8,
+        "damage_k": 3043768
+      },
+      "imported": true
+    },
+    {
+      "zone": 117,
+      "name": "合欢宗宗主",
+      "key": "117#合欢宗宗主",
+      "rank": 9,
+      "damage_k": 2672696,
+      "damage": 2672696000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "117#合欢宗宗主",
+        "damage": "2,672,696k"
+      },
+      "needs_review": [],
+      "row_id": "b009",
+      "ocr": {
+        "zone": 117,
+        "name": "合欢宗宗主",
+        "key": "117#合欢宗宗主",
+        "rank": 9,
+        "damage_k": 2672696
+      },
+      "imported": true
+    },
+    {
+      "zone": 69,
+      "name": "师娘",
+      "key": "69#师娘",
+      "rank": 10,
+      "damage_k": 2327184,
+      "damage": 2327184000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "69#师娘",
+        "damage": "2,327,184k"
+      },
+      "needs_review": [],
+      "row_id": "b010",
+      "ocr": {
+        "zone": 69,
+        "name": "师娘",
+        "key": "69#师娘",
+        "rank": 10,
+        "damage_k": 2327184
+      },
+      "imported": true
+    },
+    {
+      "zone": 101,
+      "name": "积极又向上",
+      "key": "101#积极又向上",
+      "rank": 11,
+      "damage_k": 1646077,
+      "damage": 1646077000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "101#积极又向上",
+        "damage": "1,646,077k"
+      },
+      "needs_review": [],
+      "row_id": "b011",
+      "ocr": {
+        "zone": 101,
+        "name": "积极又向上",
+        "key": "101#积极又向上",
+        "rank": 11,
+        "damage_k": 1646077
+      },
+      "imported": true
+    },
+    {
+      "zone": 301,
+      "name": "亚加拉达",
+      "key": "301#亚加拉达",
+      "rank": 12,
+      "damage_k": 1503688,
+      "damage": 1503688000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "301#亚加拉达",
+        "damage": "1,503,688k"
+      },
+      "needs_review": [],
+      "row_id": "b012",
+      "ocr": {
+        "zone": 301,
+        "name": "亚加拉达",
+        "key": "301#亚加拉达",
+        "rank": 12,
+        "damage_k": 1503688
+      },
+      "imported": true
+    },
+    {
+      "zone": 75,
+      "name": "半个西瓜",
+      "key": "75#半个西瓜",
+      "rank": 13,
+      "damage_k": 1225366,
+      "damage": 1225366000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "75#半个西瓜",
+        "damage": "1,225,366k"
+      },
+      "needs_review": [],
+      "row_id": "b013",
+      "ocr": {
+        "zone": 75,
+        "name": "半个西瓜",
+        "key": "75#半个西瓜",
+        "rank": 13,
+        "damage_k": 1225366
+      },
+      "imported": true
+    },
+    {
+      "zone": 81,
+      "name": "师娘小号玲",
+      "key": "81#师娘小号玲",
+      "rank": 14,
+      "damage_k": 1074482,
+      "damage": 1074482000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "81#师娘小号玲",
+        "damage": "1,074,482k"
+      },
+      "needs_review": [],
+      "row_id": "b014",
+      "ocr": {
+        "zone": 81,
+        "name": "师娘小号玲",
+        "key": "81#师娘小号玲",
+        "rank": 14,
+        "damage_k": 1074482
+      },
+      "imported": true
+    },
+    {
+      "zone": 103,
+      "name": "arianacomodo",
+      "key": "103#arianacomodo",
+      "rank": 15,
+      "damage_k": 804803,
+      "damage": 804803000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "103#arianacomodo",
+        "damage": "804,803k"
+      },
+      "needs_review": [],
+      "row_id": "b015",
+      "ocr": {
+        "zone": 103,
+        "name": "arianacomodo",
+        "key": "103#arianacomodo",
+        "rank": 15,
+        "damage_k": 804803
+      },
+      "imported": true
+    },
+    {
+      "zone": 200,
+      "name": "HoneyKoch",
+      "key": "200#HoneyKoch",
+      "rank": 16,
+      "damage_k": 728456,
+      "damage": 728456000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "200#HoneyKoch",
+        "damage": "728,456k"
+      },
+      "needs_review": [],
+      "row_id": "b016",
+      "ocr": {
+        "zone": 200,
+        "name": "HoneyKoch",
+        "key": "200#HoneyKoch",
+        "rank": 16,
+        "damage_k": 728456
+      },
+      "imported": true
+    },
+    {
+      "zone": 205,
+      "name": "搁浅つ",
+      "key": "205#搁浅つ",
+      "rank": 17,
+      "damage_k": 554876,
+      "damage": 554876000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "205#搁浅つ",
+        "damage": "554,876k"
+      },
+      "needs_review": [],
+      "row_id": "b017",
+      "ocr": {
+        "zone": 205,
+        "name": "搁浅つ",
+        "key": "205#搁浅つ",
+        "rank": 17,
+        "damage_k": 554876
+      },
+      "imported": true
+    },
+    {
+      "zone": 87,
+      "name": "大根珍珠棒",
+      "key": "87#大根珍珠棒",
+      "rank": 18,
+      "damage_k": 526809,
+      "damage": 526809000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "87#大根珍珠棒",
+        "damage": "526,809k"
+      },
+      "needs_review": [],
+      "row_id": "b018",
+      "ocr": {
+        "zone": 87,
+        "name": "大根珍珠棒",
+        "key": "87#大根珍珠棒",
+        "rank": 18,
+        "damage_k": 526809
+      },
+      "imported": true
+    },
+    {
+      "zone": 283,
+      "name": "夏一鸽",
+      "key": "283#夏一鸽",
+      "rank": 19,
+      "damage_k": 465705,
+      "damage": 465705000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "283#夏一鸽",
+        "damage": "465,705k"
+      },
+      "needs_review": [],
+      "row_id": "b019",
+      "ocr": {
+        "zone": 283,
+        "name": "夏一鸽",
+        "key": "283#夏一鸽",
+        "rank": 19,
+        "damage_k": 465705
+      },
+      "imported": true
+    },
+    {
+      "zone": 306,
+      "name": "大雷芙提雅",
+      "key": "306#大雷芙提雅",
+      "rank": 20,
+      "damage_k": 357774,
+      "damage": 357774000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "306#大雷芙提雅",
+        "damage": "357,774k"
+      },
+      "needs_review": [],
+      "row_id": "b020",
+      "ocr": {
+        "zone": 306,
+        "name": "大雷芙提雅",
+        "key": "306#大雷芙提雅",
+        "rank": 20,
+        "damage_k": 357774
+      },
+      "imported": true
+    },
+    {
+      "zone": 306,
+      "name": "梁师娘",
+      "key": "306#梁师娘",
+      "rank": 21,
+      "damage_k": 323260,
+      "damage": 323260000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "306#梁师娘",
+        "damage": "323,260k"
+      },
+      "needs_review": [],
+      "row_id": "b021",
+      "ocr": {
+        "zone": 306,
+        "name": "梁师娘",
+        "key": "306#梁师娘",
+        "rank": 21,
+        "damage_k": 323260
+      },
+      "imported": true
+    },
+    {
+      "zone": 300,
+      "name": "神王婉",
+      "key": "300#神王婉",
+      "rank": 22,
+      "damage_k": 317914,
+      "damage": 317914000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "300#神王婉",
+        "damage": "317,914k"
+      },
+      "needs_review": [],
+      "row_id": "b022",
+      "ocr": {
+        "zone": 300,
+        "name": "神王婉",
+        "key": "300#神王婉",
+        "rank": 22,
+        "damage_k": 317914
+      },
+      "imported": true
+    },
+    {
+      "zone": 63,
+      "name": "若语",
+      "key": "63#若语",
+      "rank": 23,
+      "damage_k": 228805,
+      "damage": 228805000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "63#若语",
+        "damage": "228,805k"
+      },
+      "needs_review": [],
+      "row_id": "b023",
+      "ocr": {
+        "zone": 63,
+        "name": "若语",
+        "key": "63#若语",
+        "rank": 23,
+        "damage_k": 228805
+      },
+      "imported": true
+    },
+    {
+      "zone": 311,
+      "name": "SNK梁师娘",
+      "key": "311#SNK梁师娘",
+      "rank": 24,
+      "damage_k": 202768,
+      "damage": 202768000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "311#SNK梁师娘",
+        "damage": "202,768k"
+      },
+      "needs_review": [],
+      "row_id": "b024",
+      "ocr": {
+        "zone": 311,
+        "name": "SNK梁师娘",
+        "key": "311#SNK梁师娘",
+        "rank": 24,
+        "damage_k": 202768
+      },
+      "imported": true
+    },
+    {
+      "zone": 231,
+      "name": "炖煮红尘",
+      "key": "231#炖煮红尘",
+      "rank": 25,
+      "damage_k": 199390,
+      "damage": 199390000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "231#炖煮红尘",
+        "damage": "199,390k"
+      },
+      "needs_review": [],
+      "row_id": "b025",
+      "ocr": {
+        "zone": 231,
+        "name": "炖煮红尘",
+        "key": "231#炖煮红尘",
+        "rank": 25,
+        "damage_k": 199390
+      },
+      "imported": true
+    },
+    {
+      "zone": 83,
+      "name": "菜豆芽",
+      "key": "83#菜豆芽",
+      "rank": 26,
+      "damage_k": 198735,
+      "damage": 198735000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "83#菜豆芽",
+        "damage": "198,735k"
+      },
+      "needs_review": [],
+      "row_id": "b026",
+      "ocr": {
+        "zone": 83,
+        "name": "菜豆芽",
+        "key": "83#菜豆芽",
+        "rank": 26,
+        "damage_k": 198735
+      },
+      "imported": true
+    },
+    {
+      "zone": 208,
+      "name": "咸鱼W",
+      "key": "208#咸鱼W",
+      "rank": 27,
+      "damage_k": 198456,
+      "damage": 198456000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "208#咸鱼W",
+        "damage": "198,456k"
+      },
+      "needs_review": [],
+      "row_id": "b027",
+      "ocr": {
+        "zone": 208,
+        "name": "咸鱼W",
+        "key": "208#咸鱼W",
+        "rank": 27,
+        "damage_k": 198456
+      },
+      "imported": true
+    },
+    {
+      "zone": 284,
+      "name": "louyexue",
+      "key": "284#louyexue",
+      "rank": 28,
+      "damage_k": 138758,
+      "damage": 138758000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "284#louyexue",
+        "damage": "138,758k"
+      },
+      "needs_review": [],
+      "row_id": "b028",
+      "ocr": {
+        "zone": 284,
+        "name": "louyexue",
+        "key": "284#louyexue",
+        "rank": 28,
+        "damage_k": 138758
+      },
+      "imported": true
+    },
+    {
+      "zone": 288,
+      "name": "EricJ",
+      "key": "288#EricJ",
+      "rank": 29,
+      "damage_k": 135614,
+      "damage": 135614000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "288#EricJ",
+        "damage": "135,614k"
+      },
+      "needs_review": [],
+      "row_id": "b029",
+      "ocr": {
+        "zone": 288,
+        "name": "EricJ",
+        "key": "288#EricJ",
+        "rank": 29,
+        "damage_k": 135614
+      },
+      "imported": true
+    },
+    {
+      "zone": 301,
+      "name": "玄枵",
+      "key": "301#玄枵",
+      "rank": 30,
+      "damage_k": 133768,
+      "damage": 133768000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "301#玄枵",
+        "damage": "133,768k"
+      },
+      "needs_review": [],
+      "row_id": "b030",
+      "ocr": {
+        "zone": 301,
+        "name": "玄枵",
+        "key": "301#玄枵",
+        "rank": 30,
+        "damage_k": 133768
+      },
+      "imported": true
+    },
+    {
+      "zone": 179,
+      "name": "波蒙的狗狗",
+      "key": "179#波蒙的狗狗",
+      "rank": 31,
+      "damage_k": 112288,
+      "damage": 112288000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "179#波蒙的狗狗",
+        "damage": "112,288k"
+      },
+      "needs_review": [],
+      "row_id": "b031",
+      "ocr": {
+        "zone": 179,
+        "name": "波蒙的狗狗",
+        "key": "179#波蒙的狗狗",
+        "rank": 31,
+        "damage_k": 112288
+      },
+      "imported": true
+    },
+    {
+      "zone": 28,
+      "name": "AshtonParry",
+      "key": "28#AshtonParry",
+      "rank": 32,
+      "damage_k": 75503,
+      "damage": 75503000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "28#AshtonParry",
+        "damage": "75,503k"
+      },
+      "needs_review": [],
+      "row_id": "b032",
+      "ocr": {
+        "zone": 28,
+        "name": "AshtonParry",
+        "key": "28#AshtonParry",
+        "rank": 32,
+        "damage_k": 75503
+      },
+      "imported": true
+    },
+    {
+      "zone": 86,
+      "name": "摆烂小咸鱼",
+      "key": "86#摆烂小咸鱼",
+      "rank": 33,
+      "damage_k": 53634,
+      "damage": 53634000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "86#摆烂小咸鱼",
+        "damage": "53,634k"
+      },
+      "needs_review": [],
+      "row_id": "b033",
+      "ocr": {
+        "zone": 86,
+        "name": "摆烂小咸鱼",
+        "key": "86#摆烂小咸鱼",
+        "rank": 33,
+        "damage_k": 53634
+      },
+      "imported": true
+    },
+    {
+      "zone": 252,
+      "name": "縌星辰",
+      "key": "252#縌星辰",
+      "rank": 34,
+      "damage_k": 52789,
+      "damage": 52789000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "252#縌星辰",
+        "damage": "52,789k"
+      },
+      "needs_review": [],
+      "row_id": "b034",
+      "ocr": {
+        "zone": 252,
+        "name": "縌星辰",
+        "key": "252#縌星辰",
+        "rank": 34,
+        "damage_k": 52789
+      },
+      "imported": true
+    },
+    {
+      "zone": 305,
+      "name": "KaiserL",
+      "key": "305#KaiserL",
+      "rank": 35,
+      "damage_k": 1368,
+      "damage": 1368000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "305#KaiserL",
+        "damage": "1,368k"
+      },
+      "needs_review": [],
+      "row_id": "b035",
+      "ocr": {
+        "zone": 305,
+        "name": "KaiserL",
+        "key": "305#KaiserL",
+        "rank": 35,
+        "damage_k": 1368
+      },
+      "imported": true
+    },
+    {
+      "zone": 288,
+      "name": "紫星塵",
+      "key": "288#紫星塵",
+      "rank": 36,
+      "damage_k": 525,
+      "damage": 525000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "288#紫星塵",
+        "damage": "525k"
+      },
+      "needs_review": [],
+      "row_id": "b036",
+      "ocr": {
+        "zone": 288,
+        "name": "紫星塵",
+        "key": "288#紫星塵",
+        "rank": 36,
+        "damage_k": 525
+      },
+      "imported": true
+    },
+    {
+      "zone": 291,
+      "name": "你在偷看我",
+      "key": "291#你在偷看我",
+      "rank": 37,
+      "damage_k": 348,
+      "damage": 348000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "291#你在偷看我",
+        "damage": "348k"
+      },
+      "needs_review": [],
+      "row_id": "b037",
+      "ocr": {
+        "zone": 291,
+        "name": "你在偷看我",
+        "key": "291#你在偷看我",
+        "rank": 37,
+        "damage_k": 348
+      },
+      "imported": true
+    },
+    {
+      "zone": 304,
+      "name": "PueqrnVebnsyxl",
+      "key": "304#PueqrnVebnsyxl",
+      "rank": 38,
+      "damage_k": 281,
+      "damage": 281000,
+      "raw": {
+        "source": "pcapng",
+        "identity": "304#PueqrnVebnsyxl",
+        "damage": "281k"
+      },
+      "needs_review": [],
+      "row_id": "b038",
+      "ocr": {
+        "zone": 304,
+        "name": "PueqrnVebnsyxl",
+        "key": "304#PueqrnVebnsyxl",
+        "rank": 38,
+        "damage_k": 281
+      },
+      "imported": true
+    }
+  ],
+  "raw_ocr": {
+    "members": [],
+    "boss": []
+  },
+  "packet_import": {
+    "source_file": "20260518171419_1.pcapng",
+    "source_path": "records/boss/2026年5月18日171404_Boss/20260518171419_1.pcapng"
+  }
+}

@@ -822,6 +822,220 @@
           "reviewed": true
         }
       }
+    },
+    "2026年5月24日191312_联盟": {
+      "members": {
+        "m042": {
+          "zone": "202",
+          "name": "ElsieBlaker",
+          "power": "218095904",
+          "last_online": "2026-05-24T02:34:13",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m043": {
+          "zone": "300",
+          "name": "神王婉",
+          "power": "66799528",
+          "last_online": "2026-05-24T01:53:29",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m047": {
+          "zone": "117",
+          "name": "合欢宗宗主",
+          "power": "156457307",
+          "last_online": "2026-05-24T01:02:27",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m054": {
+          "zone": "252",
+          "name": "縌星辰",
+          "power": "132482755",
+          "last_online": "2026-05-23T06:13:41",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m006": {
+          "zone": "58",
+          "name": "メジロマックイーン",
+          "power": "130937509",
+          "last_online": "",
+          "note": "",
+          "in_group": false,
+          "group_only": true,
+          "reviewed": true
+        },
+        "m008": {
+          "zone": "200",
+          "name": "HoneyKoch",
+          "power": "161756632",
+          "last_online": "",
+          "note": "",
+          "in_group": false,
+          "group_only": true,
+          "reviewed": true
+        },
+        "m009": {
+          "zone": "223",
+          "name": "YangJu",
+          "power": "57804616",
+          "last_online": "",
+          "note": "",
+          "in_group": false,
+          "group_only": true,
+          "reviewed": true
+        },
+        "m011": {
+          "zone": "288",
+          "name": "伐克斯",
+          "power": "22044087",
+          "last_online": "",
+          "note": "",
+          "in_group": false,
+          "group_only": true,
+          "reviewed": true
+        },
+        "m014": {
+          "zone": "7",
+          "name": "ArcheNorth",
+          "power": "149326537",
+          "last_online": "",
+          "note": "",
+          "in_group": false,
+          "group_only": true,
+          "reviewed": true
+        },
+        "m017": {
+          "zone": "305",
+          "name": "KaiserL",
+          "power": "27198372",
+          "last_online": "",
+          "note": "",
+          "in_group": false,
+          "group_only": true,
+          "reviewed": true
+        },
+        "m025": {
+          "zone": "61",
+          "name": "骁骑校尉",
+          "power": "68204667",
+          "last_online": "",
+          "note": "",
+          "in_group": false,
+          "group_only": true,
+          "reviewed": true
+        },
+        "m026": {
+          "zone": "28",
+          "name": "AshtonParry",
+          "power": "100034007",
+          "last_online": "",
+          "note": "",
+          "in_group": false,
+          "group_only": true,
+          "reviewed": true
+        },
+        "m027": {
+          "zone": "264",
+          "name": "ShuA",
+          "power": "54277201",
+          "last_online": "",
+          "note": "",
+          "in_group": false,
+          "group_only": true,
+          "reviewed": true
+        },
+        "m028": {
+          "zone": "288",
+          "name": "EricJ",
+          "power": "68585627",
+          "last_online": "",
+          "note": "",
+          "in_group": false,
+          "group_only": true,
+          "reviewed": true
+        },
+        "m029": {
+          "zone": "288",
+          "name": "花田綽",
+          "power": "54603038",
+          "last_online": "",
+          "note": "",
+          "in_group": false,
+          "group_only": true,
+          "reviewed": true
+        },
+        "m030": {
+          "zone": "103",
+          "name": "arianacomodo",
+          "power": "131854456",
+          "last_online": "",
+          "note": "",
+          "in_group": false,
+          "group_only": true,
+          "reviewed": true
+        },
+        "m031": {
+          "zone": "87",
+          "name": "大根珍珠棒",
+          "power": "156261077",
+          "last_online": "",
+          "note": "",
+          "in_group": false,
+          "group_only": true,
+          "reviewed": true
+        },
+        "m038": {
+          "zone": "241",
+          "name": "小野莓",
+          "power": "142158906",
+          "last_online": "",
+          "note": "",
+          "in_group": false,
+          "group_only": true,
+          "reviewed": true
+        },
+        "m040": {
+          "zone": "304",
+          "name": "PueqrnVebnsyxl",
+          "power": "22039066",
+          "last_online": "",
+          "note": "",
+          "in_group": false,
+          "group_only": true,
+          "reviewed": true
+        },
+        "m059": {
+          "zone": "289",
+          "name": "不是笨蛋",
+          "power": "41882905",
+          "last_online": "2026-05-12T08:57:13",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m060": {
+          "zone": "37",
+          "name": "雨婷私密处",
+          "power": "23816049",
+          "last_online": "2025-10-28T01:10:23",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        }
+      }
     }
   },
   "aliases": {
@@ -855,8 +1069,8 @@
         "source_name": "YangJu",
         "zone": 223,
         "name": "YangJu",
-        "source_power": 500551,
-        "power": 50440551
+        "source_power": 57804616,
+        "power": 57804616
       },
       {
         "source_zone": 205,
@@ -895,8 +1109,8 @@
         "source_name": "arianacomodo",
         "zone": 103,
         "name": "arianacomodo",
-        "source_power": 126623149,
-        "power": 126623149
+        "source_power": 131854456,
+        "power": 131854456
       },
       {
         "source_zone": 80,
@@ -975,8 +1189,8 @@
         "source_name": "合欢宗宗主",
         "zone": 117,
         "name": "合欢宗宗主",
-        "source_power": 152289973,
-        "power": 152289973
+        "source_power": 156457307,
+        "power": 156457307
       },
       {
         "source_zone": 83,
@@ -1023,8 +1237,8 @@
         "source_name": "不是笨蛋",
         "zone": 289,
         "name": "不是笨蛋",
-        "source_power": 39486126,
-        "power": 39486126
+        "source_power": 41882905,
+        "power": 41882905
       },
       {
         "source_zone": 306,
@@ -1047,8 +1261,8 @@
         "source_name": "神王婉",
         "zone": 300,
         "name": "神王婉",
-        "source_power": 60078588,
-        "power": 60078588
+        "source_power": 66799528,
+        "power": 66799528
       },
       {
         "source_zone": 301,
@@ -1153,6 +1367,126 @@
         "name": "紫星塵",
         "source_power": 22653625,
         "power": 22653625
+      },
+      {
+        "source_zone": 202,
+        "source_name": "ElsieBlaker",
+        "zone": 202,
+        "name": "ElsieBlaker",
+        "source_power": 218095904,
+        "power": 218095904
+      },
+      {
+        "source_zone": 252,
+        "source_name": "縌星辰",
+        "zone": 252,
+        "name": "縌星辰",
+        "source_power": 132482755,
+        "power": 132482755
+      },
+      {
+        "source_zone": 58,
+        "source_name": "メジロマックイーン",
+        "zone": 58,
+        "name": "メジロマックイーン",
+        "source_power": 130937509,
+        "power": 130937509
+      },
+      {
+        "source_zone": 200,
+        "source_name": "HoneyKoch",
+        "zone": 200,
+        "name": "HoneyKoch",
+        "source_power": 161756632,
+        "power": 161756632
+      },
+      {
+        "source_zone": 288,
+        "source_name": "伐克斯",
+        "zone": 288,
+        "name": "伐克斯",
+        "source_power": 22044087,
+        "power": 22044087
+      },
+      {
+        "source_zone": 7,
+        "source_name": "ArcheNorth",
+        "zone": 7,
+        "name": "ArcheNorth",
+        "source_power": 149326537,
+        "power": 149326537
+      },
+      {
+        "source_zone": 305,
+        "source_name": "KaiserL",
+        "zone": 305,
+        "name": "KaiserL",
+        "source_power": 27198372,
+        "power": 27198372
+      },
+      {
+        "source_zone": 61,
+        "source_name": "骁骑校尉",
+        "zone": 61,
+        "name": "骁骑校尉",
+        "source_power": 68204667,
+        "power": 68204667
+      },
+      {
+        "source_zone": 28,
+        "source_name": "AshtonParry",
+        "zone": 28,
+        "name": "AshtonParry",
+        "source_power": 100034007,
+        "power": 100034007
+      },
+      {
+        "source_zone": 264,
+        "source_name": "ShuA",
+        "zone": 264,
+        "name": "ShuA",
+        "source_power": 54277201,
+        "power": 54277201
+      },
+      {
+        "source_zone": 288,
+        "source_name": "EricJ",
+        "zone": 288,
+        "name": "EricJ",
+        "source_power": 68585627,
+        "power": 68585627
+      },
+      {
+        "source_zone": 288,
+        "source_name": "花田綽",
+        "zone": 288,
+        "name": "花田綽",
+        "source_power": 54603038,
+        "power": 54603038
+      },
+      {
+        "source_zone": 87,
+        "source_name": "大根珍珠棒",
+        "zone": 87,
+        "name": "大根珍珠棒",
+        "source_power": 156261077,
+        "power": 156261077
+      },
+      {
+        "source_zone": 241,
+        "source_name": "小野莓",
+        "zone": 241,
+        "name": "小野莓",
+        "source_power": 142158906,
+        "power": 142158906
+      },
+      {
+        "source_zone": 304,
+        "source_name": "PueqrnVebnsyxl",
+        "zone": 304,
+        "name": "PueqrnVebnsyxl",
+        "source_power": 22039066,
+        "power": 22039066
       }
     ],
     "boss": [

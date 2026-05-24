@@ -796,6 +796,25 @@ tbody tr:hover {
   font-variant-numeric: tabular-nums;
 }
 
+.index-cell {
+  color: var(--muted-2);
+  font-weight: 760;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.power-delta-up {
+  color: var(--green);
+}
+
+.power-delta-down {
+  color: oklch(78% 0.12 24);
+}
+
+.power-delta-flat {
+  color: var(--muted-2);
+}
+
 .sort-button {
   display: inline-flex;
   align-items: center;
@@ -1731,6 +1750,15 @@ tbody tr.member-in-group td:first-child {
 
 .day-cell {
   color: oklch(83% 0.07 148);
+}
+
+.boss-missing-row {
+  background: oklch(92% 0.01 252 / 0.035);
+}
+
+.boss-missing-row .cell-name,
+.boss-missing-row .metric-cell {
+  color: var(--muted);
 }
 
 .checkbox-field {

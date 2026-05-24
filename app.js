@@ -35,6 +35,12 @@ const formatDelta = (valueK) => {
   return `+${formatDamage(valueK)}`;
 };
 
+const formatPowerDelta = (value) => {
+  if (value === null || value === undefined) return "-";
+  const sign = value > 0 ? "+" : "";
+  return `${sign}${formatNumber(value)}`;
+};
+
 const compactNumber = (value) => {
   const number = Number(value || 0);
   if (number >= 100000000) return `${(number / 100000000).toFixed(2)}\u4ebf`;
@@ -96,6 +102,21 @@ function previousSnapshot(current) {
   return index > 0 ? state.data.snapshots[index - 1] : null;
 }
 
+function realMemberSnapshots() {
+  return state.data.snapshots.filter((snapshot) => snapshot.members?.length && !snapshot.members_carried_forward);
+}
+
+function latestMemberSnapshot() {
+  return realMemberSnapshots().at(-1) || latestSnapshotWith("members");
+}
+
+function previousMemberSnapshot(current) {
+  const snapshots = realMemberSnapshots();
+  const index = snapshots.findIndex((snapshot) => snapshot.id === current?.id);
+  if (index > 0) return snapshots[index - 1];
+  return snapshots.filter((snapshot) => snapshot.captured_at < (current?.captured_at || "")).at(-1) || null;
+}
+
 function byKey(items) {
   return new Map(items.map((item) => [item.key, item]));
 }
@@ -141,6 +162,10 @@ function memberMatches(left, right, leftNameCounts = new Map(), rightNameCounts 
 
 function hasMatchingMember(item, members, itemNameCounts, memberNameCounts) {
   return members.some((member) => memberMatches(item, member, itemNameCounts, memberNameCounts));
+}
+
+function findMatchingMember(item, members, itemNameCounts, memberNameCounts) {
+  return members.find((member) => memberMatches(item, member, itemNameCounts, memberNameCounts)) || null;
 }
 
 function hasOwnBossData(snapshot) {
@@ -229,6 +254,41 @@ function latestBossSnapshotsByDay(weekId) {
 
 function bossMap(snapshot) {
   return new Map((snapshot?.boss || []).map((item) => [item.key, item]));
+}
+
+function bossMemberMatches(boss, member) {
+  if (!boss || !member) return false;
+  if (boss.key && member.key && boss.key === member.key) return true;
+  return memberMatches(boss, member);
+}
+
+function membersForBossSnapshot(current) {
+  return latestMemberSnapshot()?.members || current.members || [];
+}
+
+function bossRowsWithMissingMembers(current, rows) {
+  const members = membersForBossSnapshot(current);
+  if (!members.length) return rows;
+  const matchedMembers = new Set();
+  rows.forEach((boss) => {
+    members.forEach((member, index) => {
+      if (!matchedMembers.has(index) && bossMemberMatches(boss, member)) matchedMembers.add(index);
+    });
+  });
+  const missingRows = members
+    .filter((_, index) => !matchedMembers.has(index))
+    .map((member, index) => ({
+      ...member,
+      rank: null,
+      damage_k: null,
+      damage: null,
+      delta_k: null,
+      is_missing_boss: true,
+      is_baseline: false,
+      daily_deltas: {},
+      row_id: `missing-boss-${member.row_id || index}`,
+    }));
+  return [...rows, ...missingRows];
 }
 
 function previousBossSnapshotInWeek(current) {
@@ -334,18 +394,25 @@ function renderBossTable(current) {
   if (headerRow) {
     headerRow.innerHTML = ["\u6392\u884c", "\u6210\u5458", "\u672c\u5468\u7d2f\u8ba1", ...dayOrder.map((day) => bossDayLabels.get(day)), "\u672c\u6b21\u589e\u91cf", "\u8bc6\u522b\u72b6\u6001", "\u64cd\u4f5c"].map((label) => `<th>${label}</th>`).join("");
   }
-  const rows = current.boss.map((boss) => {
+  const bossRows = current.boss.map((boss) => {
     const old = previousMap.get(boss.key);
     const delta = old && boss.damage_k !== null && old.damage_k !== null ? boss.damage_k - old.damage_k : null;
     return { ...boss, delta_k: delta !== null && delta >= 0 ? delta : null, is_baseline: !old, daily_deltas: Object.fromEntries(dayOrder.map((day) => [day, bossDailyDelta(boss, dailySnapshots.get(day), weekSnapshots)])) };
   });
+  const rows = bossRowsWithMissingMembers(current, bossRows);
+  const missingCount = rows.filter((item) => item.is_missing_boss).length;
+  const missingNote = $("#bossMissingNote");
+  if (missingNote) {
+    missingNote.textContent = missingCount ? `已在表格末尾补充 ${missingCount} 个当前联盟内未参与 Boss 的成员。` : "当前联盟成员都有 Boss 伤害记录。";
+  }
   const locked = isWeekArchived(currentWeek);
   const columnCount = dayOrder.length + 6;
   $("#bossTable").innerHTML = rows.length ? rows.map((item) => {
-    const review = reviewTags(item) || `<span class="tag">\u6b63\u5e38</span>`;
+    const review = item.is_missing_boss ? `<span class="tag missing">\u672a\u53c2\u4e0e</span>` : reviewTags(item) || `<span class="tag">\u6b63\u5e38</span>`;
     const dailyCells = dayOrder.map((day) => `<td class="metric-cell day-cell">${formatDelta(item.daily_deltas[day])}</td>`).join("");
-    const delta = item.is_baseline ? `<span class="warn">\u672c\u5468\u7d2f\u8ba1\u57fa\u7ebf</span>` : `<span class="delta">${formatDelta(item.delta_k || 0)}</span>`;
-    return `<tr class="${item.rank && item.rank <= 3 ? `rank-table-top-${item.rank}` : ""}"><td><span class="rank-pill table-rank">No.${item.rank || "-"}</span></td><td><strong class="cell-name">${escapeHtml(item.key)}</strong></td><td class="metric-cell">${formatDamage(item.damage_k)}</td>${dailyCells}<td class="metric-cell">${delta}</td><td>${locked ? `${review}<span class="tag corrected">\u5df2\u5f52\u6863</span>` : review}</td><td><button class="mini-button" data-edit-kind="boss" data-row-id="${escapeHtml(item.row_id)}" ${locked ? "disabled" : ""}>${locked ? "\u9501\u5b9a" : "\u6838\u5bf9"}</button></td></tr>`;
+    const delta = item.is_missing_boss ? `<span class="warn">\u65e0\u4f24\u5bb3</span>` : item.is_baseline ? `<span class="warn">\u672c\u5468\u7d2f\u8ba1\u57fa\u7ebf</span>` : `<span class="delta">${formatDelta(item.delta_k || 0)}</span>`;
+    const action = item.is_missing_boss ? `<span class="tag">\u8054\u76df\u6210\u5458</span>` : `<button class="mini-button" data-edit-kind="boss" data-row-id="${escapeHtml(item.row_id)}" ${locked ? "disabled" : ""}>${locked ? "\u9501\u5b9a" : "\u6838\u5bf9"}</button>`;
+    return `<tr class="${item.is_missing_boss ? "boss-missing-row" : item.rank && item.rank <= 3 ? `rank-table-top-${item.rank}` : ""}"><td><span class="rank-pill table-rank">${item.rank ? `No.${item.rank}` : "-"}</span></td><td><strong class="cell-name">${escapeHtml(item.key)}</strong></td><td class="metric-cell">${formatDamage(item.damage_k)}</td>${dailyCells}<td class="metric-cell">${delta}</td><td>${locked && !item.is_missing_boss ? `${review}<span class="tag corrected">\u5df2\u5f52\u6863</span>` : review}</td><td>${action}</td></tr>`;
   }).join("") : `<tr><td colspan="${columnCount}"><div class="empty-state table-empty">\u5f53\u524d\u5468\u8fd8\u6ca1\u6709 Boss \u6570\u636e</div></td></tr>`;
 }
 
@@ -387,13 +454,21 @@ function renderArchiveExpandedRow(weekId) {
 
 function renderArchiveDetail() {}
 
-function renderMemberTable(current, previous) {
+function renderMemberTable() {
   const search = $("#searchInput").value.trim().toLowerCase();
   const groupFilter = state.memberGroupFilter || "all";
+  const current = latestMemberSnapshot();
+  const previous = previousMemberSnapshot(current);
   const previousList = previous?.members || [];
   const currentList = current.members || [];
   const previousNameCounts = uniqueMemberNames(previousList);
   const currentNameCounts = uniqueMemberNames(currentList);
+  const compareNote = $("#memberCompareNote");
+  if (compareNote) {
+    compareNote.textContent = previous
+      ? `当前节点：${formatDateTime(current.captured_at)}；上次节点：${formatDateTime(previous.captured_at)}。`
+      : `当前节点：${formatDateTime(current.captured_at)}；暂无上次联盟节点。`;
+  }
   const missing = previous
     ? previousList
         .filter((item) => !hasMatchingMember(item, currentList, previousNameCounts, currentNameCounts))
@@ -410,8 +485,10 @@ function renderMemberTable(current, previous) {
 
   $("#memberTable").innerHTML = rows.length
     ? rows
-        .map((item) => {
-          const isNew = !item.missing && previous && !hasMatchingMember(item, previousList, currentNameCounts, previousNameCounts);
+        .map((item, index) => {
+          const previousMember = !item.missing && previous ? findMatchingMember(item, previousList, currentNameCounts, previousNameCounts) : null;
+          const powerDelta = previousMember && item.power !== null && item.power !== undefined && previousMember.power !== null && previousMember.power !== undefined ? item.power - previousMember.power : null;
+          const isNew = !item.missing && previous && !previousMember;
           const tags = [
             isNew ? `<span class="tag new">\u65b0\u589e</span>` : "",
             item.missing ? `<span class="tag missing">\u7f3a\u5931</span>` : "",
@@ -422,10 +499,11 @@ function renderMemberTable(current, previous) {
           const raw = item.raw ? `<details><summary>\u67e5\u770b</summary><code>${escapeHtml([item.raw.identity, item.raw.power, item.raw.last_online].filter(Boolean).join("\n"))}</code></details>` : "";
           const nameClass = item.in_group ? "cell-name in-group-name" : "cell-name";
           const deleteButton = item.manual && !item.missing ? `<button class="mini-button danger-button" data-delete-kind="members" data-row-id="${escapeHtml(item.row_id)}" data-save-snapshot-id="${escapeHtml(saveSnapshotId)}">\u5220\u9664</button>` : "";
-          return `<tr class="${item.in_group ? "member-in-group" : ""}"><td><strong class="${nameClass}">${escapeHtml(item.key)}</strong></td><td class="metric-cell">${formatNumber(item.power)}</td><td>${formatDateTime(item.last_online)}</td><td>${tags || `<span class="tag">\u5728\u76df</span>`}</td><td>${raw}</td><td><div class="row-actions"><button class="mini-button" data-edit-kind="members" data-row-id="${escapeHtml(item.row_id)}" data-snapshot-id="${escapeHtml(rowSnapshotId)}" data-save-snapshot-id="${escapeHtml(saveSnapshotId)}">\u6838\u5bf9</button>${deleteButton}</div></td></tr>`;
+          const deltaClass = powerDelta > 0 ? "power-delta-up" : powerDelta < 0 ? "power-delta-down" : "power-delta-flat";
+          return `<tr class="${item.in_group ? "member-in-group" : ""}"><td class="index-cell">${index + 1}</td><td><strong class="${nameClass}">${escapeHtml(item.key)}</strong></td><td class="metric-cell">${formatNumber(item.power)}</td><td class="metric-cell ${deltaClass}">${formatPowerDelta(powerDelta)}</td><td>${formatDateTime(item.last_online)}</td><td>${tags || `<span class="tag">\u5728\u76df</span>`}</td><td>${raw}</td><td><div class="row-actions"><button class="mini-button" data-edit-kind="members" data-row-id="${escapeHtml(item.row_id)}" data-snapshot-id="${escapeHtml(rowSnapshotId)}" data-save-snapshot-id="${escapeHtml(saveSnapshotId)}">\u6838\u5bf9</button>${deleteButton}</div></td></tr>`;
         })
         .join("")
-    : `<tr><td colspan="6"><div class="empty-state table-empty">\u6ca1\u6709\u5339\u914d\u7684\u6210\u5458</div></td></tr>`;
+    : `<tr><td colspan="8"><div class="empty-state table-empty">\u6ca1\u6709\u5339\u914d\u7684\u6210\u5458</div></td></tr>`;
 }
 
 function sortMembers(rows) {
@@ -468,7 +546,7 @@ function render() {
   renderStats(current, previous);
   renderBars(current);
   renderBossTable(selectedBossSnapshot());
-  renderMemberTable(current, previous);
+  renderMemberTable();
   renderImages(current);
   renderArchiveStatus();
   renderArchiveHistory();

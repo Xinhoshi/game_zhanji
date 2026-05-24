@@ -920,33 +920,10 @@
     "imported": true
   },
   {
-    "zone": 75,
-    "name": "CaseyDyer",
-    "key": "75#CaseyDyer",
-    "rank": 41,
-    "damage_k": 17153,
-    "damage": 17153000,
-    "raw": {
-      "source": "pcapng",
-      "identity": "75#CaseyDyer",
-      "damage": "17,153k"
-    },
-    "needs_review": [],
-    "row_id": "b041",
-    "ocr": {
-      "zone": 75,
-      "name": "CaseyDyer",
-      "key": "75#CaseyDyer",
-      "rank": 41,
-      "damage_k": 17153
-    },
-    "imported": true
-  },
-  {
     "zone": 80,
     "name": "BUBULAW",
     "key": "80#BUBULAW",
-    "rank": 42,
+    "rank": 41,
     "damage_k": 16231,
     "damage": 16231000,
     "raw": {
@@ -955,12 +932,12 @@
       "damage": "16,231k"
     },
     "needs_review": [],
-    "row_id": "b042",
+    "row_id": "b041",
     "ocr": {
       "zone": 80,
       "name": "BUBULAW",
       "key": "80#BUBULAW",
-      "rank": 42,
+      "rank": 41,
       "damage_k": 16231
     },
     "imported": true
@@ -969,7 +946,7 @@
     "zone": 200,
     "name": "關你屁事",
     "key": "200#關你屁事",
-    "rank": 43,
+    "rank": 42,
     "damage_k": 14479,
     "damage": 14479000,
     "raw": {
@@ -978,12 +955,12 @@
       "damage": "14,479k"
     },
     "needs_review": [],
-    "row_id": "b043",
+    "row_id": "b042",
     "ocr": {
       "zone": 200,
       "name": "關你屁事",
       "key": "200#關你屁事",
-      "rank": 43,
+      "rank": 42,
       "damage_k": 14479
     },
     "imported": true
@@ -992,7 +969,7 @@
     "zone": 223,
     "name": "YangJu",
     "key": "223#YangJu",
-    "rank": 44,
+    "rank": 43,
     "damage_k": 13111,
     "damage": 13111000,
     "raw": {
@@ -1001,12 +978,12 @@
       "damage": "13,111k"
     },
     "needs_review": [],
-    "row_id": "b044",
+    "row_id": "b043",
     "ocr": {
       "zone": 223,
       "name": "YangJu",
       "key": "223#YangJu",
-      "rank": 44,
+      "rank": 43,
       "damage_k": 13111
     },
     "imported": true
@@ -1015,7 +992,7 @@
     "zone": 61,
     "name": "骁骑校尉",
     "key": "61#骁骑校尉",
-    "rank": 45,
+    "rank": 44,
     "damage_k": 11798,
     "damage": 11798000,
     "raw": {
@@ -1024,12 +1001,12 @@
       "damage": "11,798k"
     },
     "needs_review": [],
-    "row_id": "b045",
+    "row_id": "b044",
     "ocr": {
       "zone": 61,
       "name": "骁骑校尉",
       "key": "61#骁骑校尉",
-      "rank": 45,
+      "rank": 44,
       "damage_k": 11798
     },
     "imported": true
@@ -1038,7 +1015,7 @@
     "zone": 288,
     "name": "花田綽",
     "key": "288#花田綽",
-    "rank": 46,
+    "rank": 45,
     "damage_k": 11354,
     "damage": 11354000,
     "raw": {
@@ -1047,12 +1024,12 @@
       "damage": "11,354k"
     },
     "needs_review": [],
-    "row_id": "b046",
+    "row_id": "b045",
     "ocr": {
       "zone": 288,
       "name": "花田綽",
       "key": "288#花田綽",
-      "rank": 46,
+      "rank": 45,
       "damage_k": 11354
     },
     "imported": true
@@ -1061,7 +1038,7 @@
     "zone": 305,
     "name": "KaiserL",
     "key": "305#KaiserL",
-    "rank": 47,
+    "rank": 46,
     "damage_k": 8559,
     "damage": 8559000,
     "raw": {
@@ -1070,12 +1047,12 @@
       "damage": "8,559k"
     },
     "needs_review": [],
-    "row_id": "b047",
+    "row_id": "b046",
     "ocr": {
       "zone": 305,
       "name": "KaiserL",
       "key": "305#KaiserL",
-      "rank": 47,
+      "rank": 46,
       "damage_k": 8559
     },
     "imported": true
@@ -1084,7 +1061,7 @@
     "zone": 81,
     "name": "未未啊",
     "key": "81#未未啊",
-    "rank": 48,
+    "rank": 47,
     "damage_k": 5934,
     "damage": 5934000,
     "raw": {
@@ -1093,12 +1070,12 @@
       "damage": "5,934k"
     },
     "needs_review": [],
-    "row_id": "b048",
+    "row_id": "b047",
     "ocr": {
       "zone": 81,
       "name": "未未啊",
       "key": "81#未未啊",
-      "rank": 48,
+      "rank": 47,
       "damage_k": 5934
     },
     "imported": true
@@ -1107,7 +1084,7 @@
     "zone": 35,
     "name": "辩论",
     "key": "35#辩论",
-    "rank": 49,
+    "rank": 48,
     "damage_k": 2745,
     "damage": 2745000,
     "raw": {
@@ -1116,12 +1093,12 @@
       "damage": "2,745k"
     },
     "needs_review": [],
-    "row_id": "b049",
+    "row_id": "b048",
     "ocr": {
       "zone": 35,
       "name": "辩论",
       "key": "35#辩论",
-      "rank": 49,
+      "rank": 48,
       "damage_k": 2745
     },
     "imported": true
@@ -1130,7 +1107,7 @@
     "zone": 288,
     "name": "紫星塵",
     "key": "288#紫星塵",
-    "rank": 50,
+    "rank": 49,
     "damage_k": 2081,
     "damage": 2081000,
     "raw": {
@@ -1139,12 +1116,12 @@
       "damage": "2,081k"
     },
     "needs_review": [],
-    "row_id": "b050",
+    "row_id": "b049",
     "ocr": {
       "zone": 288,
       "name": "紫星塵",
       "key": "288#紫星塵",
-      "rank": 50,
+      "rank": 49,
       "damage_k": 2081
     },
     "imported": true
@@ -1153,7 +1130,7 @@
     "zone": 304,
     "name": "PueqrnVebnsyxl",
     "key": "304#PueqrnVebnsyxl",
-    "rank": 51,
+    "rank": 50,
     "damage_k": 1520,
     "damage": 1520000,
     "raw": {
@@ -1162,12 +1139,12 @@
       "damage": "1,520k"
     },
     "needs_review": [],
-    "row_id": "b051",
+    "row_id": "b050",
     "ocr": {
       "zone": 304,
       "name": "PueqrnVebnsyxl",
       "key": "304#PueqrnVebnsyxl",
-      "rank": 51,
+      "rank": 50,
       "damage_k": 1520
     },
     "imported": true
@@ -1176,7 +1153,7 @@
     "zone": 288,
     "name": "伐克斯",
     "key": "288#伐克斯",
-    "rank": 52,
+    "rank": 51,
     "damage_k": 1510,
     "damage": 1510000,
     "raw": {
@@ -1185,12 +1162,12 @@
       "damage": "1,510k"
     },
     "needs_review": [],
-    "row_id": "b052",
+    "row_id": "b051",
     "ocr": {
       "zone": 288,
       "name": "伐克斯",
       "key": "288#伐克斯",
-      "rank": 52,
+      "rank": 51,
       "damage_k": 1510
     },
     "imported": true
@@ -1199,7 +1176,7 @@
     "zone": 301,
     "name": "zero零",
     "key": "301#zero零",
-    "rank": 53,
+    "rank": 52,
     "damage_k": 1202,
     "damage": 1202000,
     "raw": {
@@ -1208,12 +1185,12 @@
       "damage": "1,202k"
     },
     "needs_review": [],
-    "row_id": "b053",
+    "row_id": "b052",
     "ocr": {
       "zone": 301,
       "name": "zero零",
       "key": "301#zero零",
-      "rank": 53,
+      "rank": 52,
       "damage_k": 1202
     },
     "imported": true
@@ -1222,7 +1199,7 @@
     "zone": 291,
     "name": "你在偷看我",
     "key": "291#你在偷看我",
-    "rank": 54,
+    "rank": 53,
     "damage_k": 1174,
     "damage": 1174000,
     "raw": {
@@ -1231,12 +1208,12 @@
       "damage": "1,174k"
     },
     "needs_review": [],
-    "row_id": "b054",
+    "row_id": "b053",
     "ocr": {
       "zone": 291,
       "name": "你在偷看我",
       "key": "291#你在偷看我",
-      "rank": 54,
+      "rank": 53,
       "damage_k": 1174
     },
     "imported": true
@@ -1245,7 +1222,7 @@
     "zone": 293,
     "name": "FvwJcjz",
     "key": "293#FvwJcjz",
-    "rank": 55,
+    "rank": 54,
     "damage_k": 985,
     "damage": 985000,
     "raw": {
@@ -1254,59 +1231,13 @@
       "damage": "985k"
     },
     "needs_review": [],
-    "row_id": "b055",
+    "row_id": "b054",
     "ocr": {
       "zone": 293,
       "name": "FvwJcjz",
       "key": "293#FvwJcjz",
-      "rank": 55,
+      "rank": 54,
       "damage_k": 985
-    },
-    "imported": true
-  },
-  {
-    "zone": 212,
-    "name": "diddydoo",
-    "key": "212#diddydoo",
-    "rank": 56,
-    "damage_k": 123,
-    "damage": 123000,
-    "raw": {
-      "source": "pcapng",
-      "identity": "212#diddydoo",
-      "damage": "123k"
-    },
-    "needs_review": [],
-    "row_id": "b056",
-    "ocr": {
-      "zone": 212,
-      "name": "diddydoo",
-      "key": "212#diddydoo",
-      "rank": 56,
-      "damage_k": 123
-    },
-    "imported": true
-  },
-  {
-    "zone": 314,
-    "name": "Shiniz",
-    "key": "314#Shiniz",
-    "rank": 57,
-    "damage_k": 0,
-    "damage": 0,
-    "raw": {
-      "source": "pcapng",
-      "identity": "314#Shiniz",
-      "damage": "0k"
-    },
-    "needs_review": [],
-    "row_id": "b057",
-    "ocr": {
-      "zone": 314,
-      "name": "Shiniz",
-      "key": "314#Shiniz",
-      "rank": 57,
-      "damage_k": 0
     },
     "imported": true
   }

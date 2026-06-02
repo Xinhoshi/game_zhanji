@@ -291,6 +291,32 @@ function bossRowsWithMissingMembers(current, rows) {
   return [...rows, ...missingRows];
 }
 
+function bossMemberPowerRanks(members) {
+  const ranks = new Map();
+  members
+    .filter((member) => member.power !== null && member.power !== undefined && !Number.isNaN(Number(member.power)))
+    .slice()
+    .sort((a, b) => (Number(b.power) || 0) - (Number(a.power) || 0))
+    .forEach((member, index) => ranks.set(member, index + 1));
+  return ranks;
+}
+
+function bossPowerCardHtml(member, rank) {
+  if (!member) {
+    return `<div class="boss-member-power-empty">\u672a\u5339\u914d\u5230\u8054\u76df\u6210\u5458\u6218\u529b</div>`;
+  }
+  const groupLabel = member.in_group ? "\u5728\u7fa4" : "\u4e0d\u5728\u7fa4";
+  const groupClass = member.in_group ? "is-in-group" : "is-out-group";
+  return `<div class="boss-member-power-head"><span>\u8054\u76df\u6210\u5458\u6218\u529b</span><span class="boss-member-power-status ${groupClass}">${groupLabel}</span></div><div class="boss-member-power-value">${formatNumber(member.power)}</div><div class="boss-member-power-grid"><span>\u6218\u529b\u6392\u540d</span><strong>${rank ? `No.${rank}` : "-"}</strong><span>\u4e0a\u7ebf\u65f6\u95f4</span><strong>${formatDateTime(member.last_online)}</strong></div>`;
+}
+
+function bossMemberCellHtml(item, member, rank) {
+  const identity = String(item.row_id || item.key || "").replace(/[^a-zA-Z0-9_-]/g, "-");
+  const cardId = `boss-power-${identity || "member"}`;
+  const nameClass = member?.in_group ? "cell-name in-group-name" : "cell-name";
+  return `<div class="boss-member-cell"><button type="button" class="boss-member-trigger" data-boss-member-power aria-expanded="false" aria-describedby="${escapeHtml(cardId)}"><strong class="${nameClass}">${escapeHtml(item.key)}</strong></button><div class="boss-member-power-card" id="${escapeHtml(cardId)}" role="tooltip">${bossPowerCardHtml(member, rank)}</div></div>`;
+}
+
 function previousBossSnapshotInWeek(current) {
   return bossSnapshotsForWeek(current.boss_week_id || current.week_id).filter((snapshot) => snapshot.captured_at < current.captured_at).at(-1);
 }
@@ -390,6 +416,8 @@ function renderBossTable(current) {
   const previousMap = bossMap(previousSnapshot);
   const dailySnapshots = latestBossSnapshotsByDay(currentWeek);
   const dayOrder = visibleBossDayOrder(current);
+  const bossMembers = membersForBossSnapshot(current);
+  const powerRanks = bossMemberPowerRanks(bossMembers);
   const headerRow = $("#bossHeaderRow");
   if (headerRow) {
     headerRow.innerHTML = ["\u6392\u884c", "\u6210\u5458", "\u672c\u5468\u7d2f\u8ba1", ...dayOrder.map((day) => bossDayLabels.get(day)), "\u672c\u6b21\u589e\u91cf", "\u8bc6\u522b\u72b6\u6001", "\u64cd\u4f5c"].map((label) => `<th>${label}</th>`).join("");
@@ -408,11 +436,12 @@ function renderBossTable(current) {
   const locked = isWeekArchived(currentWeek);
   const columnCount = dayOrder.length + 6;
   $("#bossTable").innerHTML = rows.length ? rows.map((item) => {
+    const matchedMember = bossMembers.find((member) => bossMemberMatches(item, member));
     const review = item.is_missing_boss ? `<span class="tag missing">\u672a\u53c2\u4e0e</span>` : reviewTags(item) || `<span class="tag">\u6b63\u5e38</span>`;
     const dailyCells = dayOrder.map((day) => `<td class="metric-cell day-cell">${formatDelta(item.daily_deltas[day])}</td>`).join("");
     const delta = item.is_missing_boss ? `<span class="warn">\u65e0\u4f24\u5bb3</span>` : item.is_baseline ? `<span class="warn">\u672c\u5468\u7d2f\u8ba1\u57fa\u7ebf</span>` : `<span class="delta">${formatDelta(item.delta_k || 0)}</span>`;
     const action = item.is_missing_boss ? `<span class="tag">\u8054\u76df\u6210\u5458</span>` : `<button class="mini-button" data-edit-kind="boss" data-row-id="${escapeHtml(item.row_id)}" ${locked ? "disabled" : ""}>${locked ? "\u9501\u5b9a" : "\u6838\u5bf9"}</button>`;
-    return `<tr class="${item.is_missing_boss ? "boss-missing-row" : item.rank && item.rank <= 3 ? `rank-table-top-${item.rank}` : ""}"><td><span class="rank-pill table-rank">${item.rank ? `No.${item.rank}` : "-"}</span></td><td><strong class="cell-name">${escapeHtml(item.key)}</strong></td><td class="metric-cell">${formatDamage(item.damage_k)}</td>${dailyCells}<td class="metric-cell">${delta}</td><td>${locked && !item.is_missing_boss ? `${review}<span class="tag corrected">\u5df2\u5f52\u6863</span>` : review}</td><td>${action}</td></tr>`;
+    return `<tr class="${item.is_missing_boss ? "boss-missing-row" : item.rank && item.rank <= 3 ? `rank-table-top-${item.rank}` : ""}"><td><span class="rank-pill table-rank">${item.rank ? `No.${item.rank}` : "-"}</span></td><td>${bossMemberCellHtml(item, matchedMember, powerRanks.get(matchedMember))}</td><td class="metric-cell">${formatDamage(item.damage_k)}</td>${dailyCells}<td class="metric-cell">${delta}</td><td>${locked && !item.is_missing_boss ? `${review}<span class="tag corrected">\u5df2\u5f52\u6863</span>` : review}</td><td>${action}</td></tr>`;
   }).join("") : `<tr><td colspan="${columnCount}"><div class="empty-state table-empty">\u5f53\u524d\u5468\u8fd8\u6ca1\u6709 Boss \u6570\u636e</div></td></tr>`;
 }
 
@@ -736,6 +765,20 @@ async function deleteCorrection(kind, rowId, snapshotId) {
 }
 
 document.addEventListener("click", (event) => {
+  const powerTrigger = event.target.closest("[data-boss-member-power]");
+  document.querySelectorAll(".boss-member-cell.is-open").forEach((cell) => {
+    if (!powerTrigger || cell !== powerTrigger.closest(".boss-member-cell")) {
+      cell.classList.remove("is-open");
+      cell.querySelector("[data-boss-member-power]")?.setAttribute("aria-expanded", "false");
+    }
+  });
+  if (powerTrigger) {
+    const cell = powerTrigger.closest(".boss-member-cell");
+    const isOpen = !cell.classList.contains("is-open");
+    cell.classList.toggle("is-open", isOpen);
+    powerTrigger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    return;
+  }
   const editButton = event.target.closest("[data-edit-kind]");
   if (editButton) {
     openReview(editButton.dataset.editKind, editButton.dataset.rowId, editButton.dataset.snapshotId, editButton.dataset.saveSnapshotId);

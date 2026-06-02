@@ -1,5 +1,5 @@
 window.LOV_INITIAL_STATE = {
-  "generated_at": "2026-06-01T23:29:22",
+  "generated_at": "2026-06-02T11:47:11",
   "snapshot_count": 39,
   "snapshots": [
     {

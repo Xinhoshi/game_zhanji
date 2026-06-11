@@ -1050,6 +1050,20 @@
           "reviewed": true
         }
       }
+    },
+    "2026年6月8日225413_联盟": {
+      "members": {
+        "m002": {
+          "zone": "28",
+          "name": "米拉",
+          "power": "434524824",
+          "last_online": "2026-06-08T06:07:04",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        }
+      }
     }
   },
   "aliases": {
@@ -1059,8 +1073,8 @@
         "source_name": "米拉",
         "zone": 28,
         "name": "米拉",
-        "source_power": 423493536,
-        "power": 423493536
+        "source_power": 434524824,
+        "power": 434524824
       },
       {
         "source_zone": 205,

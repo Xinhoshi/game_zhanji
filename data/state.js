@@ -1,5 +1,5 @@
 window.LOV_INITIAL_STATE = {
-  "generated_at": "2026-06-12T00:05:29",
+  "generated_at": "2026-06-12T00:05:56",
   "snapshot_count": 49,
   "snapshots": [
     {
@@ -127878,7 +127878,7 @@ window.LOV_INITIAL_STATE = {
           "level": 200,
           "power": 434524824,
           "last_online": "2026-06-08T06:07:04",
-          "in_group": false,
+          "in_group": true,
           "raw": {
             "source": "pcapng",
             "identity": "28#米拉",
@@ -127886,7 +127886,8 @@ window.LOV_INITIAL_STATE = {
             "extra1": 20066,
             "extra2": 6049,
             "flag": 0,
-            "last_online": "2026-06-08 06:07:04"
+            "last_online": "2026-06-08 06:07:04",
+            "correction_note": ""
           },
           "needs_review": [],
           "row_id": "m002",
@@ -130728,7 +130729,20 @@ window.LOV_INITIAL_STATE = {
         "source_file": "20260608225509_联盟.pcapng",
         "source_path": "records/members/2026年6月8日225413_联盟/20260608225509_联盟.pcapng"
       },
-      "corrections": {},
+      "corrections": {
+        "members": {
+          "m002": {
+            "zone": "28",
+            "name": "米拉",
+            "power": "434524824",
+            "last_online": "2026-06-08T06:07:04",
+            "in_group": true,
+            "note": "",
+            "group_only": true,
+            "reviewed": true
+          }
+        }
+      },
       "member_source_id": "2026年6月8日225413_联盟",
       "boss_source_id": "2026年6月7日222057_Boss",
       "boss_carried_forward": true,
@@ -130784,7 +130798,7 @@ window.LOV_INITIAL_STATE = {
           "level": 200,
           "power": 434524824,
           "last_online": "2026-06-08T06:07:04",
-          "in_group": false,
+          "in_group": true,
           "raw": {
             "source": "pcapng",
             "identity": "28#米拉",
@@ -130792,7 +130806,8 @@ window.LOV_INITIAL_STATE = {
             "extra1": 20066,
             "extra2": 6049,
             "flag": 0,
-            "last_online": "2026-06-08 06:07:04"
+            "last_online": "2026-06-08 06:07:04",
+            "correction_note": ""
           },
           "needs_review": [],
           "row_id": "m002",
@@ -133509,7 +133524,7 @@ window.LOV_INITIAL_STATE = {
           "level": 200,
           "power": 434524824,
           "last_online": "2026-06-08T06:07:04",
-          "in_group": false,
+          "in_group": true,
           "raw": {
             "source": "pcapng",
             "identity": "28#米拉",
@@ -133517,7 +133532,8 @@ window.LOV_INITIAL_STATE = {
             "extra1": 20066,
             "extra2": 6049,
             "flag": 0,
-            "last_online": "2026-06-08 06:07:04"
+            "last_online": "2026-06-08 06:07:04",
+            "correction_note": ""
           },
           "needs_review": [],
           "row_id": "m002",
@@ -136369,7 +136385,7 @@ window.LOV_INITIAL_STATE = {
           "level": 200,
           "power": 434524824,
           "last_online": "2026-06-08T06:07:04",
-          "in_group": false,
+          "in_group": true,
           "raw": {
             "source": "pcapng",
             "identity": "28#米拉",
@@ -136377,7 +136393,8 @@ window.LOV_INITIAL_STATE = {
             "extra1": 20066,
             "extra2": 6049,
             "flag": 0,
-            "last_online": "2026-06-08 06:07:04"
+            "last_online": "2026-06-08 06:07:04",
+            "correction_note": ""
           },
           "needs_review": [],
           "row_id": "m002",
@@ -139229,7 +139246,7 @@ window.LOV_INITIAL_STATE = {
           "level": 200,
           "power": 434524824,
           "last_online": "2026-06-08T06:07:04",
-          "in_group": false,
+          "in_group": true,
           "raw": {
             "source": "pcapng",
             "identity": "28#米拉",
@@ -139237,7 +139254,8 @@ window.LOV_INITIAL_STATE = {
             "extra1": 20066,
             "extra2": 6049,
             "flag": 0,
-            "last_online": "2026-06-08 06:07:04"
+            "last_online": "2026-06-08 06:07:04",
+            "correction_note": ""
           },
           "needs_review": [],
           "row_id": "m002",

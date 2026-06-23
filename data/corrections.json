@@ -1064,6 +1064,30 @@
           "reviewed": true
         }
       }
+    },
+    "2026年6月23日162312_联盟": {
+      "members": {
+        "m042": {
+          "zone": "72",
+          "name": "远青",
+          "power": "278804899",
+          "last_online": "2026-06-22T19:43:20",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        },
+        "m049": {
+          "zone": "208",
+          "name": "咸鱼W",
+          "power": "121241092",
+          "last_online": "2026-06-22T16:02:33",
+          "in_group": true,
+          "note": "",
+          "group_only": true,
+          "reviewed": true
+        }
+      }
     }
   },
   "aliases": {
@@ -1241,8 +1265,8 @@
         "source_name": "远青",
         "zone": 72,
         "name": "远青",
-        "source_power": 271063012,
-        "power": 271063012
+        "source_power": 278804899,
+        "power": 278804899
       },
       {
         "source_zone": 75,
@@ -1361,8 +1385,8 @@
         "source_name": "咸鱼W",
         "zone": 208,
         "name": "咸鱼W",
-        "source_power": 110136414,
-        "power": 110136414
+        "source_power": 121241092,
+        "power": 121241092
       },
       {
         "source_zone": 284,
